@@ -415,6 +415,30 @@ class AppLocalizationsPt extends AppLocalizations {
       'Falsos Cognatos Relâmpago: Avançado';
 
   @override
+  String get territoryInglesPreposicoesBasico =>
+      'Preposições e Artigos: Básico';
+
+  @override
+  String get territoryInglesPreposicoesIntermediario =>
+      'Preposições e Artigos: Intermediário';
+
+  @override
+  String get territoryInglesPreposicoesAvancado =>
+      'Preposições e Artigos: Avançado';
+
+  @override
+  String get territoryInglesPreposicoesRelampagoBasico =>
+      'Preposições e Artigos Relâmpago: Básico';
+
+  @override
+  String get territoryInglesPreposicoesRelampagoIntermediario =>
+      'Preposições e Artigos Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesPreposicoesRelampagoAvancado =>
+      'Preposições e Artigos Relâmpago: Avançado';
+
+  @override
   String get territoryBolsa => 'Bolsa e Investimentos';
 
   @override

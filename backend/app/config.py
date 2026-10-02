@@ -301,6 +301,11 @@ IDIOMA_TERRITORY_IDS = {
     # Lingo deve alertar sobre falsos cognatos quando o jogador usar um de forma equivocada.
     "ingles_falsoscognatos_basico", "ingles_falsoscognatos_intermediario", "ingles_falsoscognatos_avancado",
     "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
+    # Preposições e Artigos (MUNDO_IDIOMAS_INGLES_PREPOSICOES_ARTIGOS_V1.md, 30/09/2026) —
+    # o Mental Lingo deve corrigir/explicar erros de preposição e artigo quando o jogador
+    # cometer um numa conversa (erro mais frequente de falantes de português).
+    "ingles_preposicoes_basico", "ingles_preposicoes_intermediario", "ingles_preposicoes_avancado",
+    "ingles_preposicoes_relampago_basico", "ingles_preposicoes_relampago_intermediario", "ingles_preposicoes_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -330,6 +335,9 @@ ALWAYS_TIMED_TERRITORIES = {
     # padrão normal de "frase + pergunta" (não é cápsula de texto), diferente de Compreensão
     # de Texto logo acima.
     "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
+    # Preposições e Artigos Relâmpago (MUNDO_IDIOMAS_INGLES_PREPOSICOES_ARTIGOS_V1.md,
+    # 30/09/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo distinto.
+    "ingles_preposicoes_relampago_basico", "ingles_preposicoes_relampago_intermediario", "ingles_preposicoes_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

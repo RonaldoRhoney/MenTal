@@ -808,6 +808,42 @@ abstract class AppLocalizations {
   /// **'Falsos Cognatos Relâmpago: Avançado'**
   String get territoryInglesFalsosCognatosRelampagoAvancado;
 
+  /// Territory display name — English prepositions and articles, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposições e Artigos: Básico'**
+  String get territoryInglesPreposicoesBasico;
+
+  /// Territory display name — English prepositions and articles, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposições e Artigos: Intermediário'**
+  String get territoryInglesPreposicoesIntermediario;
+
+  /// Territory display name — English prepositions and articles, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposições e Artigos: Avançado'**
+  String get territoryInglesPreposicoesAvancado;
+
+  /// Territory display name — English prepositions and articles, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposições e Artigos Relâmpago: Básico'**
+  String get territoryInglesPreposicoesRelampagoBasico;
+
+  /// Territory display name — English prepositions and articles, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposições e Artigos Relâmpago: Intermediário'**
+  String get territoryInglesPreposicoesRelampagoIntermediario;
+
+  /// Territory display name — English prepositions and articles, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Preposições e Artigos Relâmpago: Avançado'**
+  String get territoryInglesPreposicoesRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

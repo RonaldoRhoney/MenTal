@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Children depend ___ parents.\" Qual é a preposição correta?",
+    "options": [
+      "depend on parents",
+      "depend with parents",
+      "depend in parents",
+      "depend for parents"
+    ],
+    "correct_answer": "depend on parents",
+    "explanation": "\"To depend\" é sempre seguido de \"on\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"depend on parents\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Students listen ___ music.\" Qual é a preposição correta?",
+    "options": [
+      "listen with music",
+      "listen for music",
+      "listen to music",
+      "listen about music"
+    ],
+    "correct_answer": "listen to music",
+    "explanation": "\"To listen\" é sempre seguido de \"to\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"listen to music\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The team looks ___ a job.\" Qual é a preposição correta?",
+    "options": [
+      "looks about a job",
+      "looks for a job",
+      "looks with a job",
+      "looks to a job"
+    ],
+    "correct_answer": "looks for a job",
+    "explanation": "\"To look\" é sempre seguido de \"for\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"looks for a job\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"My sister waits ___ the bus.\" Qual é a preposição correta?",
+    "options": [
+      "waits at the bus",
+      "waits to the bus",
+      "waits in the bus",
+      "waits for the bus"
+    ],
+    "correct_answer": "waits for the bus",
+    "explanation": "\"To wait\" é sempre seguido de \"for\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"waits for the bus\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He thinks ___ the problem.\" Qual é a preposição correta?",
+    "options": [
+      "thinks to the problem",
+      "thinks about the problem",
+      "thinks on the problem",
+      "thinks with the problem"
+    ],
+    "correct_answer": "thinks about the problem",
+    "explanation": "\"To think\" é sempre seguido de \"about\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"thinks about the problem\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She believes ___ hard work.\" Qual é a preposição correta?",
+    "options": [
+      "believes on hard work",
+      "believes for hard work",
+      "believes with hard work",
+      "believes in hard work"
+    ],
+    "correct_answer": "believes in hard work",
+    "explanation": "\"To believe\" é sempre seguido de \"in\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"believes in hard work\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"We agree ___ the plan.\" Qual é a preposição correta?",
+    "options": [
+      "agree about the plan",
+      "agree at the plan",
+      "agree with the plan",
+      "agree on the plan"
+    ],
+    "correct_answer": "agree with the plan",
+    "explanation": "\"To agree\" é sempre seguido de \"with\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"agree with the plan\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They apologize ___ the mistake.\" Qual é a preposição correta?",
+    "options": [
+      "apologize with the mistake",
+      "apologize for the mistake",
+      "apologize to the mistake",
+      "apologize in the mistake"
+    ],
+    "correct_answer": "apologize for the mistake",
+    "explanation": "\"To apologize\" é sempre seguido de \"for\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"apologize for the mistake\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The company belongs ___ a club.\" Qual é a preposição correta?",
+    "options": [
+      "belongs in a club",
+      "belongs to a club",
+      "belongs for a club",
+      "belongs on a club"
+    ],
+    "correct_answer": "belongs to a club",
+    "explanation": "\"To belong\" é sempre seguido de \"to\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"belongs to a club\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everyone cares ___ the result.\" Qual é a preposição correta?",
+    "options": [
+      "cares for the result",
+      "cares about the result",
+      "cares to the result",
+      "cares in the result"
+    ],
+    "correct_answer": "cares about the result",
+    "explanation": "\"To care\" é sempre seguido de \"about\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"cares about the result\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Children deal ___ stress.\" Qual é a preposição correta?",
+    "options": [
+      "deal with stress",
+      "deal in stress",
+      "deal about stress",
+      "deal to stress"
+    ],
+    "correct_answer": "deal with stress",
+    "explanation": "\"To deal\" é sempre seguido de \"with\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"deal with stress\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Students laugh ___ jokes.\" Qual é a preposição correta?",
+    "options": [
+      "laugh at jokes",
+      "laugh for jokes",
+      "laugh about jokes",
+      "laugh to jokes"
+    ],
+    "correct_answer": "laugh at jokes",
+    "explanation": "\"To laugh\" é sempre seguido de \"at\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"laugh at jokes\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The team relies ___ technology.\" Qual é a preposição correta?",
+    "options": [
+      "relies with technology",
+      "relies on technology",
+      "relies in technology",
+      "relies about technology"
+    ],
+    "correct_answer": "relies on technology",
+    "explanation": "\"To rely\" é sempre seguido de \"on\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"relies on technology\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"My sister succeeds ___ business.\" Qual é a preposição correta?",
+    "options": [
+      "succeeds in business",
+      "succeeds on business",
+      "succeeds for business",
+      "succeeds at business"
+    ],
+    "correct_answer": "succeeds in business",
+    "explanation": "\"To succeed\" é sempre seguido de \"in\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"succeeds in business\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He worries ___ the exam.\" Qual é a preposição correta?",
+    "options": [
+      "worries to the exam",
+      "worries about the exam",
+      "worries on the exam",
+      "worries with the exam"
+    ],
+    "correct_answer": "worries about the exam",
+    "explanation": "\"To worry\" é sempre seguido de \"about\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"worries about the exam\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She insists ___ paying.\" Qual é a preposição correta?",
+    "options": [
+      "insists to paying",
+      "insists for paying",
+      "insists about paying",
+      "insists on paying"
+    ],
+    "correct_answer": "insists on paying",
+    "explanation": "\"To insist\" é sempre seguido de \"on\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"insists on paying\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"We hope ___ a solution.\" Qual é a preposição correta?",
+    "options": [
+      "hope at a solution",
+      "hope about a solution",
+      "hope with a solution",
+      "hope for a solution"
+    ],
+    "correct_answer": "hope for a solution",
+    "explanation": "\"To hope\" é sempre seguido de \"for\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"hope for a solution\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They complain ___ the noise.\" Qual é a preposição correta?",
+    "options": [
+      "complain at the noise",
+      "complain about the noise",
+      "complain with the noise",
+      "complain to the noise"
+    ],
+    "correct_answer": "complain about the noise",
+    "explanation": "\"To complain\" é sempre seguido de \"about\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"complain about the noise\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The company participates ___ the event.\" Qual é a preposição correta?",
+    "options": [
+      "participates for the event",
+      "participates at the event",
+      "participates to the event",
+      "participates in the event"
+    ],
+    "correct_answer": "participates in the event",
+    "explanation": "\"To participate\" é sempre seguido de \"in\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"participates in the event\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everyone approves ___ the decision.\" Qual é a preposição correta?",
+    "options": [
+      "approves to the decision",
+      "approves for the decision",
+      "approves about the decision",
+      "approves of the decision"
+    ],
+    "correct_answer": "approves of the decision",
+    "explanation": "\"To approve\" é sempre seguido de \"of\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"approves of the decision\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Children object ___ the idea.\" Qual é a preposição correta?",
+    "options": [
+      "object for the idea",
+      "object with the idea",
+      "object to the idea",
+      "object at the idea"
+    ],
+    "correct_answer": "object to the idea",
+    "explanation": "\"To object\" é sempre seguido de \"to\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"object to the idea\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Students suffer ___ allergies.\" Qual é a preposição correta?",
+    "options": [
+      "suffer about allergies",
+      "suffer from allergies",
+      "suffer to allergies",
+      "suffer on allergies"
+    ],
+    "correct_answer": "suffer from allergies",
+    "explanation": "\"To suffer\" é sempre seguido de \"from\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"suffer from allergies\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The team differs ___ the original.\" Qual é a preposição correta?",
+    "options": [
+      "differs for the original",
+      "differs in the original",
+      "differs to the original",
+      "differs from the original"
+    ],
+    "correct_answer": "differs from the original",
+    "explanation": "\"To differ\" é sempre seguido de \"from\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"differs from the original\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"My sister arrives ___ the station.\" Qual é a preposição correta?",
+    "options": [
+      "arrives for the station",
+      "arrives at the station",
+      "arrives on the station",
+      "arrives with the station"
+    ],
+    "correct_answer": "arrives at the station",
+    "explanation": "\"To arrive\" é sempre seguido de \"at\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"arrives at the station\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He focuses ___ the task.\" Qual é a preposição correta?",
+    "options": [
+      "focuses with the task",
+      "focuses to the task",
+      "focuses on the task",
+      "focuses about the task"
+    ],
+    "correct_answer": "focuses on the task",
+    "explanation": "\"To focus\" é sempre seguido de \"on\" nesse sentido — regência fixa, não traduza ao pé da letra do português. Aqui: \"focuses on the task\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: He goes to ___ every day to study.",
+    "options": [
+      "He goes to an school",
+      "He goes to school",
+      "He goes to the school",
+      "He goes to a school"
+    ],
+    "correct_answer": "He goes to school",
+    "explanation": "\"He goes to school\" é uma expressão idiomática sem artigo (sentido figurado, não o prédio em si). Aqui: \"He goes to school\".",
+    "hints": [
+      "Tema: Artigo em expressão idiomática de instituição (sem artigo).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: She goes to ___ early on weekdays.",
+    "options": [
+      "She goes to an bed",
+      "She goes to the bed",
+      "She goes to bed",
+      "She goes to a bed"
+    ],
+    "correct_answer": "She goes to bed",
+    "explanation": "\"She goes to bed\" é uma expressão idiomática sem artigo (sentido figurado, não o prédio em si). Aqui: \"She goes to bed\".",
+    "hints": [
+      "Tema: Artigo em expressão idiomática de instituição (sem artigo).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: They go to ___ on Sundays.",
+    "options": [
+      "They go to an church",
+      "They go to church",
+      "They go to the church",
+      "They go to a church"
+    ],
+    "correct_answer": "They go to church",
+    "explanation": "\"They go to church\" é uma expressão idiomática sem artigo (sentido figurado, não o prédio em si). Aqui: \"They go to church\".",
+    "hints": [
+      "Tema: Artigo em expressão idiomática de instituição (sem artigo).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: He leaves for ___ at eight.",
+    "options": [
+      "He leaves for work",
+      "He leaves for the work",
+      "He leaves for a work",
+      "He leaves for an work"
+    ],
+    "correct_answer": "He leaves for work",
+    "explanation": "\"He leaves for work\" é uma expressão idiomática sem artigo (sentido figurado, não o prédio em si). Aqui: \"He leaves for work\".",
+    "hints": [
+      "Tema: Artigo em expressão idiomática de instituição (sem artigo).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: He was taken to ___ after the accident.",
+    "options": [
+      "He was taken to the hospital",
+      "He was taken to a hospital",
+      "He was taken to an hospital",
+      "He was taken to hospital"
+    ],
+    "correct_answer": "He was taken to hospital",
+    "explanation": "\"He was taken to hospital\" é uma expressão idiomática sem artigo (sentido figurado, não o prédio em si) (regra do inglês britânico; no inglês americano é comum dizer \"the hospital\" mesmo nesse sentido). Aqui: \"He was taken to hospital\".",
+    "hints": [
+      "Tema: Artigo em expressão idiomática de instituição (sem artigo).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: He was sent to ___ for three years.",
+    "options": [
+      "He was sent to an prison",
+      "He was sent to a prison",
+      "He was sent to the prison",
+      "He was sent to prison"
+    ],
+    "correct_answer": "He was sent to prison",
+    "explanation": "\"He was sent to prison\" é uma expressão idiomática sem artigo (sentido figurado, não o prédio em si). Aqui: \"He was sent to prison\".",
+    "hints": [
+      "Tema: Artigo em expressão idiomática de instituição (sem artigo).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase (sentido literal, o prédio em si): \"He goes to ___ school to pick up his daughter.\" Qual é a forma correta?",
+    "options": [
+      "goes to a school",
+      "goes to an school",
+      "goes to the school",
+      "goes to school"
+    ],
+    "correct_answer": "goes to the school",
+    "explanation": "Com \"the\", \"school\" é o PRÉDIO em si (sentido literal), não a atividade habitual. Aqui: \"goes to the school\".",
+    "hints": [
+      "Tema: Artigo com instituição no sentido literal (com \"the\").",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase (sentido literal, o prédio em si): \"She went to ___ hospital to visit a friend.\" Qual é a forma correta?",
+    "options": [
+      "went to the hospital",
+      "went to an hospital",
+      "went to a hospital",
+      "went to hospital"
+    ],
+    "correct_answer": "went to the hospital",
+    "explanation": "Com \"the\", \"hospital\" é o PRÉDIO em si (sentido literal), não a atividade habitual. Aqui: \"went to the hospital\".",
+    "hints": [
+      "Tema: Artigo com instituição no sentido literal (com \"the\").",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase (sentido literal, o prédio em si): \"They walked to ___ church to see the building.\" Qual é a forma correta?",
+    "options": [
+      "walked to an church",
+      "walked to the church",
+      "walked to church",
+      "walked to a church"
+    ],
+    "correct_answer": "walked to the church",
+    "explanation": "Com \"the\", \"church\" é o PRÉDIO em si (sentido literal), não a atividade habitual. Aqui: \"walked to the church\".",
+    "hints": [
+      "Tema: Artigo com instituição no sentido literal (com \"the\").",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase (sentido literal, o prédio em si): \"He drove to ___ prison to visit his brother.\" Qual é a forma correta?",
+    "options": [
+      "drove to a prison",
+      "drove to an prison",
+      "drove to prison",
+      "drove to the prison"
+    ],
+    "correct_answer": "drove to the prison",
+    "explanation": "Com \"the\", \"prison\" é o PRÉDIO em si (sentido literal), não a atividade habitual. Aqui: \"drove to the prison\".",
+    "hints": [
+      "Tema: Artigo com instituição no sentido literal (com \"the\").",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"My sister wants to become ___ teacher.\" Qual é a forma correta?",
+    "options": [
+      "a teacher",
+      "an teacher",
+      "the teacher",
+      "teacher"
+    ],
+    "correct_answer": "a teacher",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a teacher\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He wants to become ___ doctor.\" Qual é a forma correta?",
+    "options": [
+      "doctor",
+      "an doctor",
+      "the doctor",
+      "a doctor"
+    ],
+    "correct_answer": "a doctor",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a doctor\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She wants to become ___ engineer.\" Qual é a forma correta?",
+    "options": [
+      "the engineer",
+      "a engineer",
+      "engineer",
+      "an engineer"
+    ],
+    "correct_answer": "an engineer",
+    "explanation": "Usamos \"an\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"an engineer\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everyone wants to become ___ artist.\" Qual é a forma correta?",
+    "options": [
+      "the artist",
+      "artist",
+      "an artist",
+      "a artist"
+    ],
+    "correct_answer": "an artist",
+    "explanation": "Usamos \"an\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"an artist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"My sister wants to become ___ lawyer.\" Qual é a forma correta?",
+    "options": [
+      "lawyer",
+      "an lawyer",
+      "the lawyer",
+      "a lawyer"
+    ],
+    "correct_answer": "a lawyer",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a lawyer\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He wants to become ___ nurse.\" Qual é a forma correta?",
+    "options": [
+      "a nurse",
+      "an nurse",
+      "the nurse",
+      "nurse"
+    ],
+    "correct_answer": "a nurse",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a nurse\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She wants to become ___ pilot.\" Qual é a forma correta?",
+    "options": [
+      "an pilot",
+      "the pilot",
+      "a pilot",
+      "pilot"
+    ],
+    "correct_answer": "a pilot",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a pilot\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Everyone wants to become ___ architect.\" Qual é a forma correta?",
+    "options": [
+      "a architect",
+      "architect",
+      "the architect",
+      "an architect"
+    ],
+    "correct_answer": "an architect",
+    "explanation": "Usamos \"an\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"an architect\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"My sister wants to become ___ dentist.\" Qual é a forma correta?",
+    "options": [
+      "an dentist",
+      "the dentist",
+      "dentist",
+      "a dentist"
+    ],
+    "correct_answer": "a dentist",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a dentist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He wants to become ___ writer.\" Qual é a forma correta?",
+    "options": [
+      "a writer",
+      "the writer",
+      "an writer",
+      "writer"
+    ],
+    "correct_answer": "a writer",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a writer\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"My sister listens ___ the teacher.\" Qual é a preposição correta?",
+    "options": [
+      "listens in the teacher",
+      "listens on the teacher",
+      "listens at the teacher",
+      "listens to the teacher"
+    ],
+    "correct_answer": "listens to the teacher",
+    "explanation": "\"To listen\" é sempre seguido de \"to\" nesse sentido — regência fixa. Aqui: \"listens to the teacher\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He looks ___ the keys.\" Qual é a preposição correta?",
+    "options": [
+      "looks in the keys",
+      "looks at the keys",
+      "looks to the keys",
+      "looks for the keys"
+    ],
+    "correct_answer": "looks for the keys",
+    "explanation": "\"To look\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"looks for the keys\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She waits ___ a reply.\" Qual é a preposição correta?",
+    "options": [
+      "waits from a reply",
+      "waits in a reply",
+      "waits for a reply",
+      "waits of a reply"
+    ],
+    "correct_answer": "waits for a reply",
+    "explanation": "\"To wait\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"waits for a reply\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"We think ___ her future.\" Qual é a preposição correta?",
+    "options": [
+      "think to her future",
+      "think about her future",
+      "think on her future",
+      "think of her future"
+    ],
+    "correct_answer": "think about her future",
+    "explanation": "\"To think\" é sempre seguido de \"about\" nesse sentido — regência fixa. Aqui: \"think about her future\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They believe ___ second chances.\" Qual é a preposição correta?",
+    "options": [
+      "believe to second chances",
+      "believe with second chances",
+      "believe in second chances",
+      "believe of second chances"
+    ],
+    "correct_answer": "believe in second chances",
+    "explanation": "\"To believe\" é sempre seguido de \"in\" nesse sentido — regência fixa. Aqui: \"believe in second chances\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The company agrees ___ your point.\" Qual é a preposição correta?",
+    "options": [
+      "agrees at your point",
+      "agrees of your point",
+      "agrees from your point",
+      "agrees with your point"
+    ],
+    "correct_answer": "agrees with your point",
+    "explanation": "\"To agree\" é sempre seguido de \"with\" nesse sentido — regência fixa. Aqui: \"agrees with your point\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Everyone apologizes ___ being late.\" Qual é a preposição correta?",
+    "options": [
+      "apologizes about being late",
+      "apologizes to being late",
+      "apologizes for being late",
+      "apologizes on being late"
+    ],
+    "correct_answer": "apologizes for being late",
+    "explanation": "\"To apologize\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"apologizes for being late\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Children care ___ the environment.\" Qual é a preposição correta?",
+    "options": [
+      "care in the environment",
+      "care at the environment",
+      "care about the environment",
+      "care against the environment"
+    ],
+    "correct_answer": "care about the environment",
+    "explanation": "\"To care\" é sempre seguido de \"about\" nesse sentido — regência fixa. Aqui: \"care about the environment\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Students deal ___ the customer.\" Qual é a preposição correta?",
+    "options": [
+      "deal with the customer",
+      "deal in the customer",
+      "deal on the customer",
+      "deal about the customer"
+    ],
+    "correct_answer": "deal with the customer",
+    "explanation": "\"To deal\" é sempre seguido de \"with\" nesse sentido — regência fixa. Aqui: \"deal with the customer\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"The team relies ___ her memory.\" Qual é a preposição correta?",
+    "options": [
+      "relies against her memory",
+      "relies for her memory",
+      "relies on her memory",
+      "relies to her memory"
+    ],
+    "correct_answer": "relies on her memory",
+    "explanation": "\"To rely\" é sempre seguido de \"on\" nesse sentido — regência fixa. Aqui: \"relies on her memory\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"My sister worries ___ money.\" Qual é a preposição correta?",
+    "options": [
+      "worries of money",
+      "worries on money",
+      "worries about money",
+      "worries at money"
+    ],
+    "correct_answer": "worries about money",
+    "explanation": "\"To worry\" é sempre seguido de \"about\" nesse sentido — regência fixa. Aqui: \"worries about money\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He complains ___ the service.\" Qual é a preposição correta?",
+    "options": [
+      "complains about the service",
+      "complains at the service",
+      "complains on the service",
+      "complains in the service"
+    ],
+    "correct_answer": "complains about the service",
+    "explanation": "\"To complain\" é sempre seguido de \"about\" nesse sentido — regência fixa. Aqui: \"complains about the service\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She participates ___ the contest.\" Qual é a preposição correta?",
+    "options": [
+      "participates on the contest",
+      "participates at the contest",
+      "participates of the contest",
+      "participates in the contest"
+    ],
+    "correct_answer": "participates in the contest",
+    "explanation": "\"To participate\" é sempre seguido de \"in\" nesse sentido — regência fixa. Aqui: \"participates in the contest\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"We approve ___ the budget.\" Qual é a preposição correta?",
+    "options": [
+      "approve for the budget",
+      "approve to the budget",
+      "approve of the budget",
+      "approve at the budget"
+    ],
+    "correct_answer": "approve of the budget",
+    "explanation": "\"To approve\" é sempre seguido de \"of\" nesse sentido — regência fixa. Aqui: \"approve of the budget\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They object ___ the new rule.\" Qual é a preposição correta?",
+    "options": [
+      "object to the new rule",
+      "object against the new rule",
+      "object in the new rule",
+      "object at the new rule"
+    ],
+    "correct_answer": "object to the new rule",
+    "explanation": "\"To object\" é sempre seguido de \"to\" nesse sentido — regência fixa. Aqui: \"object to the new rule\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The company suffers ___ a headache.\" Qual é a preposição correta?",
+    "options": [
+      "suffers on a headache",
+      "suffers against a headache",
+      "suffers from a headache",
+      "suffers with a headache"
+    ],
+    "correct_answer": "suffers from a headache",
+    "explanation": "\"To suffer\" é sempre seguido de \"from\" nesse sentido — regência fixa. Aqui: \"suffers from a headache\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Everyone arrives ___ the airport.\" Qual é a preposição correta?",
+    "options": [
+      "arrives for the airport",
+      "arrives at the airport",
+      "arrives about the airport",
+      "arrives with the airport"
+    ],
+    "correct_answer": "arrives at the airport",
+    "explanation": "\"To arrive\" é sempre seguido de \"at\" nesse sentido — regência fixa. Aqui: \"arrives at the airport\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Children focus ___ her studies.\" Qual é a preposição correta?",
+    "options": [
+      "focus with her studies",
+      "focus on her studies",
+      "focus for her studies",
+      "focus in her studies"
+    ],
+    "correct_answer": "focus on her studies",
+    "explanation": "\"To focus\" é sempre seguido de \"on\" nesse sentido — regência fixa. Aqui: \"focus on her studies\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Students depend ___ the weather.\" Qual é a preposição correta?",
+    "options": [
+      "depend to the weather",
+      "depend on the weather",
+      "depend with the weather",
+      "depend about the weather"
+    ],
+    "correct_answer": "depend on the weather",
+    "explanation": "\"To depend\" é sempre seguido de \"on\" nesse sentido — regência fixa. Aqui: \"depend on the weather\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"The team belongs ___ the committee.\" Qual é a preposição correta?",
+    "options": [
+      "belongs about the committee",
+      "belongs on the committee",
+      "belongs at the committee",
+      "belongs to the committee"
+    ],
+    "correct_answer": "belongs to the committee",
+    "explanation": "\"To belong\" é sempre seguido de \"to\" nesse sentido — regência fixa. Aqui: \"belongs to the committee\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"My sister laughs ___ the comedian.\" Qual é a preposição correta?",
+    "options": [
+      "laughs at the comedian",
+      "laughs about the comedian",
+      "laughs from the comedian",
+      "laughs against the comedian"
+    ],
+    "correct_answer": "laughs at the comedian",
+    "explanation": "\"To laugh\" é sempre seguido de \"at\" nesse sentido — regência fixa. Aqui: \"laughs at the comedian\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He succeeds ___ the exam.\" Qual é a preposição correta?",
+    "options": [
+      "succeeds of the exam",
+      "succeeds in the exam",
+      "succeeds about the exam",
+      "succeeds on the exam"
+    ],
+    "correct_answer": "succeeds in the exam",
+    "explanation": "\"To succeed\" é sempre seguido de \"in\" nesse sentido — regência fixa. Aqui: \"succeeds in the exam\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She insists ___ a refund.\" Qual é a preposição correta?",
+    "options": [
+      "insists for a refund",
+      "insists about a refund",
+      "insists on a refund",
+      "insists in a refund"
+    ],
+    "correct_answer": "insists on a refund",
+    "explanation": "\"To insist\" é sempre seguido de \"on\" nesse sentido — regência fixa. Aqui: \"insists on a refund\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"We qualify ___ the role.\" Qual é a preposição correta?",
+    "options": [
+      "qualify against the role",
+      "qualify for the role",
+      "qualify in the role",
+      "qualify at the role"
+    ],
+    "correct_answer": "qualify for the role",
+    "explanation": "\"To qualify\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"qualify for the role\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They differ ___ the plan.\" Qual é a preposição correta?",
+    "options": [
+      "differ to the plan",
+      "differ of the plan",
+      "differ about the plan",
+      "differ from the plan"
+    ],
+    "correct_answer": "differ from the plan",
+    "explanation": "\"To differ\" é sempre seguido de \"from\" nesse sentido — regência fixa. Aqui: \"differ from the plan\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The company arrives ___ the city.\" Qual é a preposição correta?",
+    "options": [
+      "arrives for the city",
+      "arrives at the city",
+      "arrives in the city",
+      "arrives about the city"
+    ],
+    "correct_answer": "arrives in the city",
+    "explanation": "\"To arrive\" é sempre seguido de \"in\" nesse sentido — regência fixa. Aqui: \"arrives in the city\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He trained to be ___ scientist.\" Qual é a forma correta?",
+    "options": [
+      "scientist",
+      "the scientist",
+      "a scientist",
+      "an scientist"
+    ],
+    "correct_answer": "a scientist",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a scientist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She trained to be ___ journalist.\" Qual é a forma correta?",
+    "options": [
+      "journalist",
+      "an journalist",
+      "the journalist",
+      "a journalist"
+    ],
+    "correct_answer": "a journalist",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a journalist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Everyone trained to be ___ firefighter.\" Qual é a forma correta?",
+    "options": [
+      "the firefighter",
+      "firefighter",
+      "a firefighter",
+      "an firefighter"
+    ],
+    "correct_answer": "a firefighter",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a firefighter\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"My sister trained to be ___ accountant.\" Qual é a forma correta?",
+    "options": [
+      "accountant",
+      "a accountant",
+      "an accountant",
+      "the accountant"
+    ],
+    "correct_answer": "an accountant",
+    "explanation": "Usamos \"an\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"an accountant\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He trained to be ___ musician.\" Qual é a forma correta?",
+    "options": [
+      "an musician",
+      "a musician",
+      "the musician",
+      "musician"
+    ],
+    "correct_answer": "a musician",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a musician\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She trained to be ___ photographer.\" Qual é a forma correta?",
+    "options": [
+      "photographer",
+      "the photographer",
+      "an photographer",
+      "a photographer"
+    ],
+    "correct_answer": "a photographer",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a photographer\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everyone trained to be ___ chef.\" Qual é a forma correta?",
+    "options": [
+      "chef",
+      "an chef",
+      "a chef",
+      "the chef"
+    ],
+    "correct_answer": "a chef",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a chef\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"My sister trained to be ___ electrician.\" Qual é a forma correta?",
+    "options": [
+      "electrician",
+      "an electrician",
+      "a electrician",
+      "the electrician"
+    ],
+    "correct_answer": "an electrician",
+    "explanation": "Usamos \"an\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"an electrician\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"He trained to be ___ veterinarian.\" Qual é a forma correta?",
+    "options": [
+      "veterinarian",
+      "an veterinarian",
+      "the veterinarian",
+      "a veterinarian"
+    ],
+    "correct_answer": "a veterinarian",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a veterinarian\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She trained to be ___ psychologist.\" Qual é a forma correta?",
+    "options": [
+      "the psychologist",
+      "psychologist",
+      "an psychologist",
+      "a psychologist"
+    ],
+    "correct_answer": "a psychologist",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a psychologist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Everyone trained to be ___ economist.\" Qual é a forma correta?",
+    "options": [
+      "the economist",
+      "economist",
+      "a economist",
+      "an economist"
+    ],
+    "correct_answer": "an economist",
+    "explanation": "Usamos \"an\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"an economist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"My sister trained to be ___ librarian.\" Qual é a forma correta?",
+    "options": [
+      "a librarian",
+      "an librarian",
+      "librarian",
+      "the librarian"
+    ],
+    "correct_answer": "a librarian",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a librarian\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He trained to be ___ translator.\" Qual é a forma correta?",
+    "options": [
+      "a translator",
+      "translator",
+      "an translator",
+      "the translator"
+    ],
+    "correct_answer": "a translator",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a translator\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She trained to be ___ biologist.\" Qual é a forma correta?",
+    "options": [
+      "an biologist",
+      "the biologist",
+      "biologist",
+      "a biologist"
+    ],
+    "correct_answer": "a biologist",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a biologist\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Everyone trained to be ___ historian.\" Qual é a forma correta?",
+    "options": [
+      "the historian",
+      "historian",
+      "a historian",
+      "an historian"
+    ],
+    "correct_answer": "a historian",
+    "explanation": "Usamos \"a\" ao descrever a PROFISSÃO de alguém de forma geral. Aqui: \"a historian\".",
+    "hints": [
+      "Tema: Artigo indefinido com profissão.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They warn ___ the risk.\" Qual é a preposição correta?",
+    "options": [
+      "warn about the risk",
+      "warn against the risk",
+      "warn at the risk",
+      "warn on the risk"
+    ],
+    "correct_answer": "warn about the risk",
+    "explanation": "\"To warn\" é sempre seguido de \"about\" nesse sentido — regência fixa. Aqui: \"warn about the risk\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The company protects ___ the cold.\" Qual é a preposição correta?",
+    "options": [
+      "protects at the cold",
+      "protects against the cold",
+      "protects of the cold",
+      "protects in the cold"
+    ],
+    "correct_answer": "protects against the cold",
+    "explanation": "\"To protect\" é sempre seguido de \"against\" nesse sentido — regência fixa. Aqui: \"protects against the cold\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everyone searches ___ answers.\" Qual é a preposição correta?",
+    "options": [
+      "searches of answers",
+      "searches in answers",
+      "searches for answers",
+      "searches against answers"
+    ],
+    "correct_answer": "searches for answers",
+    "explanation": "\"To search\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"searches for answers\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Children apply ___ the position.\" Qual é a preposição correta?",
+    "options": [
+      "apply in the position",
+      "apply at the position",
+      "apply for the position",
+      "apply on the position"
+    ],
+    "correct_answer": "apply for the position",
+    "explanation": "\"To apply\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"apply for the position\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Students strive ___ balance.\" Qual é a preposição correta?",
+    "options": [
+      "strive about balance",
+      "strive in balance",
+      "strive for balance",
+      "strive from balance"
+    ],
+    "correct_answer": "strive for balance",
+    "explanation": "\"To strive\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"strive for balance\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The team recovers ___ the flu.\" Qual é a preposição correta?",
+    "options": [
+      "recovers for the flu",
+      "recovers from the flu",
+      "recovers with the flu",
+      "recovers at the flu"
+    ],
+    "correct_answer": "recovers from the flu",
+    "explanation": "\"To recover\" é sempre seguido de \"from\" nesse sentido — regência fixa. Aqui: \"recovers from the flu\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"My sister congratulates ___ the win.\" Qual é a preposição correta?",
+    "options": [
+      "congratulates on the win",
+      "congratulates in the win",
+      "congratulates about the win",
+      "congratulates of the win"
+    ],
+    "correct_answer": "congratulates on the win",
+    "explanation": "\"To congratulate\" é sempre seguido de \"on\" nesse sentido — regência fixa. Aqui: \"congratulates on the win\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He blames ___ the delay.\" Qual é a preposição correta?",
+    "options": [
+      "blames for the delay",
+      "blames against the delay",
+      "blames of the delay",
+      "blames with the delay"
+    ],
+    "correct_answer": "blames for the delay",
+    "explanation": "\"To blame\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"blames for the delay\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She specializes ___ law.\" Qual é a preposição correta?",
+    "options": [
+      "specializes in law",
+      "specializes about law",
+      "specializes for law",
+      "specializes against law"
+    ],
+    "correct_answer": "specializes in law",
+    "explanation": "\"To specialize\" é sempre seguido de \"in\" nesse sentido — regência fixa. Aqui: \"specializes in law\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"We graduate ___ college.\" Qual é a preposição correta?",
+    "options": [
+      "graduate on college",
+      "graduate in college",
+      "graduate from college",
+      "graduate to college"
+    ],
+    "correct_answer": "graduate from college",
+    "explanation": "\"To graduate\" é sempre seguido de \"from\" nesse sentido — regência fixa. Aqui: \"graduate from college\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They subscribe ___ the newsletter.\" Qual é a preposição correta?",
+    "options": [
+      "subscribe from the newsletter",
+      "subscribe against the newsletter",
+      "subscribe to the newsletter",
+      "subscribe for the newsletter"
+    ],
+    "correct_answer": "subscribe to the newsletter",
+    "explanation": "\"To subscribe\" é sempre seguido de \"to\" nesse sentido — regência fixa. Aqui: \"subscribe to the newsletter\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The company votes ___ the proposal.\" Qual é a preposição correta?",
+    "options": [
+      "votes at the proposal",
+      "votes against the proposal",
+      "votes with the proposal",
+      "votes for the proposal"
+    ],
+    "correct_answer": "votes for the proposal",
+    "explanation": "\"To vote\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"votes for the proposal\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everyone copes ___ pressure.\" Qual é a preposição correta?",
+    "options": [
+      "copes of pressure",
+      "copes with pressure",
+      "copes on pressure",
+      "copes for pressure"
+    ],
+    "correct_answer": "copes with pressure",
+    "explanation": "\"To cope\" é sempre seguido de \"with\" nesse sentido — regência fixa. Aqui: \"copes with pressure\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Children qualify ___ the final.\" Qual é a preposição correta?",
+    "options": [
+      "qualify about the final",
+      "qualify of the final",
+      "qualify in the final",
+      "qualify for the final"
+    ],
+    "correct_answer": "qualify for the final",
+    "explanation": "\"To qualify\" é sempre seguido de \"for\" nesse sentido — regência fixa. Aqui: \"qualify for the final\".",
+    "hints": [
+      "Tema: Regência preposicional (verbo + preposição fixa).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  }
+]

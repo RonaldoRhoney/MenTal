@@ -173,6 +173,9 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_intermediario",
         "ingles_phrasal_avancado", "ingles_phrasal_basico", "ingles_phrasal_intermediario",
         "ingles_phrasal_relampago_avancado", "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario",
+        "ingles_preposicoes_avancado", "ingles_preposicoes_basico", "ingles_preposicoes_intermediario",
+        "ingles_preposicoes_relampago_avancado", "ingles_preposicoes_relampago_basico",
+        "ingles_preposicoes_relampago_intermediario",
     ]
     assert sorted(blocks["espanhol"]["territory_ids"]) == ["espanhol_avancado", "espanhol_basico", "espanhol_intermediario"]
     assert sorted(blocks["frances"]["territory_ids"]) == ["frances_avancado", "frances_basico", "frances_intermediario"]
@@ -197,6 +200,8 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_compreensao_relampago_basico", "ingles_compreensao_relampago_intermediario", "ingles_compreensao_relampago_avancado",
         "ingles_falsoscognatos_basico", "ingles_falsoscognatos_intermediario", "ingles_falsoscognatos_avancado",
         "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
+        "ingles_preposicoes_basico", "ingles_preposicoes_intermediario", "ingles_preposicoes_avancado",
+        "ingles_preposicoes_relampago_basico", "ingles_preposicoes_relampago_intermediario", "ingles_preposicoes_relampago_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
     }.issubset(set(worlds["idiomas"]["territory_ids"]))

@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She was born ___ June.\" Qual é a preposição correta?",
+    "options": [
+      "born by June",
+      "born in June",
+      "born on June",
+      "born at June"
+    ],
+    "correct_answer": "born in June",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in June\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She was born ___ December.\" Qual é a preposição correta?",
+    "options": [
+      "born by December",
+      "born at December",
+      "born in December",
+      "born on December"
+    ],
+    "correct_answer": "born in December",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in December\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She was born ___ 2020.\" Qual é a preposição correta?",
+    "options": [
+      "born by 2020",
+      "born in 2020",
+      "born on 2020",
+      "born at 2020"
+    ],
+    "correct_answer": "born in 2020",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in 2020\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She was born ___ 1999.\" Qual é a preposição correta?",
+    "options": [
+      "born by 1999",
+      "born in 1999",
+      "born at 1999",
+      "born on 1999"
+    ],
+    "correct_answer": "born in 1999",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in 1999\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She was born ___ summer.\" Qual é a preposição correta?",
+    "options": [
+      "born by summer",
+      "born on summer",
+      "born in summer",
+      "born at summer"
+    ],
+    "correct_answer": "born in summer",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in summer\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She was born ___ winter.\" Qual é a preposição correta?",
+    "options": [
+      "born at winter",
+      "born by winter",
+      "born in winter",
+      "born on winter"
+    ],
+    "correct_answer": "born in winter",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in winter\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She was born ___ spring.\" Qual é a preposição correta?",
+    "options": [
+      "born in spring",
+      "born at spring",
+      "born by spring",
+      "born on spring"
+    ],
+    "correct_answer": "born in spring",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in spring\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She was born ___ the morning.\" Qual é a preposição correta?",
+    "options": [
+      "born at the morning",
+      "born on the morning",
+      "born by the morning",
+      "born in the morning"
+    ],
+    "correct_answer": "born in the morning",
+    "explanation": "Usamos \"in\" com meses, anos e estações do ano. Aqui: \"born in the morning\".",
+    "hints": [
+      "Tema: Preposições de tempo — in (mês/ano/estação).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Let's meet ___ Monday.\" Qual é a preposição correta?",
+    "options": [
+      "meet in Monday",
+      "meet at Monday",
+      "meet on Monday",
+      "meet by Monday"
+    ],
+    "correct_answer": "meet on Monday",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on Monday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Let's meet ___ Friday.\" Qual é a preposição correta?",
+    "options": [
+      "meet by Friday",
+      "meet at Friday",
+      "meet on Friday",
+      "meet in Friday"
+    ],
+    "correct_answer": "meet on Friday",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on Friday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Let's meet ___ Saturday.\" Qual é a preposição correta?",
+    "options": [
+      "meet on Saturday",
+      "meet by Saturday",
+      "meet at Saturday",
+      "meet in Saturday"
+    ],
+    "correct_answer": "meet on Saturday",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on Saturday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Let's meet ___ my birthday.\" Qual é a preposição correta?",
+    "options": [
+      "meet in my birthday",
+      "meet at my birthday",
+      "meet by my birthday",
+      "meet on my birthday"
+    ],
+    "correct_answer": "meet on my birthday",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on my birthday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Let's meet ___ Christmas Day.\" Qual é a preposição correta?",
+    "options": [
+      "meet in Christmas Day",
+      "meet by Christmas Day",
+      "meet on Christmas Day",
+      "meet at Christmas Day"
+    ],
+    "correct_answer": "meet on Christmas Day",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on Christmas Day\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Let's meet ___ July 4th.\" Qual é a preposição correta?",
+    "options": [
+      "meet in July 4th",
+      "meet at July 4th",
+      "meet on July 4th",
+      "meet by July 4th"
+    ],
+    "correct_answer": "meet on July 4th",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on July 4th\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Let's meet ___ Sunday.\" Qual é a preposição correta?",
+    "options": [
+      "meet by Sunday",
+      "meet on Sunday",
+      "meet in Sunday",
+      "meet at Sunday"
+    ],
+    "correct_answer": "meet on Sunday",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on Sunday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Let's meet ___ the weekend.\" Qual é a preposição correta?",
+    "options": [
+      "meet in the weekend",
+      "meet on the weekend",
+      "meet by the weekend",
+      "meet at the weekend"
+    ],
+    "correct_answer": "meet on the weekend",
+    "explanation": "Usamos \"on\" com dias da semana e datas específicas. Aqui: \"meet on the weekend\".",
+    "hints": [
+      "Tema: Preposições de tempo — on (dia/data).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"The movie starts ___ seven o'clock.\" Qual é a preposição correta?",
+    "options": [
+      "starts in seven o'clock",
+      "starts at seven o'clock",
+      "starts on seven o'clock",
+      "starts by seven o'clock"
+    ],
+    "correct_answer": "starts at seven o'clock",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at seven o'clock\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The movie starts ___ noon.\" Qual é a preposição correta?",
+    "options": [
+      "starts at noon",
+      "starts by noon",
+      "starts on noon",
+      "starts in noon"
+    ],
+    "correct_answer": "starts at noon",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at noon\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The movie starts ___ midnight.\" Qual é a preposição correta?",
+    "options": [
+      "starts in midnight",
+      "starts at midnight",
+      "starts on midnight",
+      "starts by midnight"
+    ],
+    "correct_answer": "starts at midnight",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at midnight\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The movie starts ___ night.\" Qual é a preposição correta?",
+    "options": [
+      "starts in night",
+      "starts on night",
+      "starts at night",
+      "starts by night"
+    ],
+    "correct_answer": "starts at night",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at night\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The movie starts ___ sunrise.\" Qual é a preposição correta?",
+    "options": [
+      "starts on sunrise",
+      "starts by sunrise",
+      "starts in sunrise",
+      "starts at sunrise"
+    ],
+    "correct_answer": "starts at sunrise",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at sunrise\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The movie starts ___ sunset.\" Qual é a preposição correta?",
+    "options": [
+      "starts by sunset",
+      "starts at sunset",
+      "starts in sunset",
+      "starts on sunset"
+    ],
+    "correct_answer": "starts at sunset",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at sunset\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The movie starts ___ six p.m..\" Qual é a preposição correta?",
+    "options": [
+      "starts at six p.m.",
+      "starts in six p.m.",
+      "starts by six p.m.",
+      "starts on six p.m."
+    ],
+    "correct_answer": "starts at six p.m.",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at six p.m.\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The movie starts ___ lunchtime.\" Qual é a preposição correta?",
+    "options": [
+      "starts by lunchtime",
+      "starts in lunchtime",
+      "starts on lunchtime",
+      "starts at lunchtime"
+    ],
+    "correct_answer": "starts at lunchtime",
+    "explanation": "Usamos \"at\" com horários específicos e alguns momentos do dia. Aqui: \"starts at lunchtime\".",
+    "hints": [
+      "Tema: Preposições de tempo — at (hora específica).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They live ___ Brazil.\" Qual é a preposição correta?",
+    "options": [
+      "live at Brazil",
+      "live on Brazil",
+      "live by Brazil",
+      "live in Brazil"
+    ],
+    "correct_answer": "live in Brazil",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in Brazil\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They live ___ Tokyo.\" Qual é a preposição correta?",
+    "options": [
+      "live at Tokyo",
+      "live on Tokyo",
+      "live by Tokyo",
+      "live in Tokyo"
+    ],
+    "correct_answer": "live in Tokyo",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in Tokyo\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They live ___ the kitchen.\" Qual é a preposição correta?",
+    "options": [
+      "live by the kitchen",
+      "live in the kitchen",
+      "live on the kitchen",
+      "live at the kitchen"
+    ],
+    "correct_answer": "live in the kitchen",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in the kitchen\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They live ___ the car.\" Qual é a preposição correta?",
+    "options": [
+      "live at the car",
+      "live by the car",
+      "live on the car",
+      "live in the car"
+    ],
+    "correct_answer": "live in the car",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in the car\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They live ___ the box.\" Qual é a preposição correta?",
+    "options": [
+      "live on the box",
+      "live by the box",
+      "live at the box",
+      "live in the box"
+    ],
+    "correct_answer": "live in the box",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in the box\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They live ___ London.\" Qual é a preposição correta?",
+    "options": [
+      "live at London",
+      "live by London",
+      "live in London",
+      "live on London"
+    ],
+    "correct_answer": "live in London",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in London\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They live ___ the classroom.\" Qual é a preposição correta?",
+    "options": [
+      "live by the classroom",
+      "live at the classroom",
+      "live on the classroom",
+      "live in the classroom"
+    ],
+    "correct_answer": "live in the classroom",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in the classroom\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They live ___ Canada.\" Qual é a preposição correta?",
+    "options": [
+      "live on Canada",
+      "live at Canada",
+      "live by Canada",
+      "live in Canada"
+    ],
+    "correct_answer": "live in Canada",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"live in Canada\".",
+    "hints": [
+      "Tema: Preposições de lugar — in (país/cidade/espaço fechado).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Please put it ___ the table.\" Qual é a preposição correta?",
+    "options": [
+      "put it in the table",
+      "put it by the table",
+      "put it on the table",
+      "put it at the table"
+    ],
+    "correct_answer": "put it on the table",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the table\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Please put it ___ the wall.\" Qual é a preposição correta?",
+    "options": [
+      "put it by the wall",
+      "put it at the wall",
+      "put it on the wall",
+      "put it in the wall"
+    ],
+    "correct_answer": "put it on the wall",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the wall\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Please put it ___ the shelf.\" Qual é a preposição correta?",
+    "options": [
+      "put it in the shelf",
+      "put it at the shelf",
+      "put it by the shelf",
+      "put it on the shelf"
+    ],
+    "correct_answer": "put it on the shelf",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the shelf\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Please put it ___ the floor.\" Qual é a preposição correta?",
+    "options": [
+      "put it on the floor",
+      "put it in the floor",
+      "put it at the floor",
+      "put it by the floor"
+    ],
+    "correct_answer": "put it on the floor",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the floor\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Please put it ___ the roof.\" Qual é a preposição correta?",
+    "options": [
+      "put it on the roof",
+      "put it in the roof",
+      "put it at the roof",
+      "put it by the roof"
+    ],
+    "correct_answer": "put it on the roof",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the roof\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Please put it ___ the bed.\" Qual é a preposição correta?",
+    "options": [
+      "put it by the bed",
+      "put it at the bed",
+      "put it in the bed",
+      "put it on the bed"
+    ],
+    "correct_answer": "put it on the bed",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the bed\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Please put it ___ the desk.\" Qual é a preposição correta?",
+    "options": [
+      "put it on the desk",
+      "put it in the desk",
+      "put it by the desk",
+      "put it at the desk"
+    ],
+    "correct_answer": "put it on the desk",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the desk\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Please put it ___ the couch.\" Qual é a preposição correta?",
+    "options": [
+      "put it by the couch",
+      "put it on the couch",
+      "put it in the couch",
+      "put it at the couch"
+    ],
+    "correct_answer": "put it on the couch",
+    "explanation": "Usamos \"on\" para indicar que algo está sobre uma superfície. Aqui: \"put it on the couch\".",
+    "hints": [
+      "Tema: Preposições de lugar — on (superfície).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I'll wait ___ the door.\" Qual é a preposição correta?",
+    "options": [
+      "wait by the door",
+      "wait in the door",
+      "wait on the door",
+      "wait at the door"
+    ],
+    "correct_answer": "wait at the door",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at the door\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I'll wait ___ the bus stop.\" Qual é a preposição correta?",
+    "options": [
+      "wait in the bus stop",
+      "wait on the bus stop",
+      "wait by the bus stop",
+      "wait at the bus stop"
+    ],
+    "correct_answer": "wait at the bus stop",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at the bus stop\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I'll wait ___ school.\" Qual é a preposição correta?",
+    "options": [
+      "wait by school",
+      "wait on school",
+      "wait at school",
+      "wait in school"
+    ],
+    "correct_answer": "wait at school",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at school\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I'll wait ___ home.\" Qual é a preposição correta?",
+    "options": [
+      "wait in home",
+      "wait by home",
+      "wait on home",
+      "wait at home"
+    ],
+    "correct_answer": "wait at home",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at home\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I'll wait ___ work.\" Qual é a preposição correta?",
+    "options": [
+      "wait on work",
+      "wait by work",
+      "wait in work",
+      "wait at work"
+    ],
+    "correct_answer": "wait at work",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at work\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I'll wait ___ the corner.\" Qual é a preposição correta?",
+    "options": [
+      "wait by the corner",
+      "wait in the corner",
+      "wait on the corner",
+      "wait at the corner"
+    ],
+    "correct_answer": "wait at the corner",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at the corner\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I'll wait ___ the airport.\" Qual é a preposição correta?",
+    "options": [
+      "wait at the airport",
+      "wait by the airport",
+      "wait in the airport",
+      "wait on the airport"
+    ],
+    "correct_answer": "wait at the airport",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at the airport\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"I'll wait ___ the entrance.\" Qual é a preposição correta?",
+    "options": [
+      "wait on the entrance",
+      "wait in the entrance",
+      "wait at the entrance",
+      "wait by the entrance"
+    ],
+    "correct_answer": "wait at the entrance",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"wait at the entrance\".",
+    "hints": [
+      "Tema: Preposições de lugar — at (ponto específico).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"I saw ___ apple in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "apple",
+      "an apple",
+      "a apple",
+      "the apple"
+    ],
+    "correct_answer": "an apple",
+    "explanation": "Usamos \"an\" antes de \"apple\" porque o som inicial é de vogal. Aqui: \"an apple\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"I saw ___ book in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "book",
+      "a book",
+      "an book",
+      "the book"
+    ],
+    "correct_answer": "a book",
+    "explanation": "Usamos \"a\" antes de \"book\" porque o som inicial é de consoante. Aqui: \"a book\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I saw ___ umbrella in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "an umbrella",
+      "umbrella",
+      "a umbrella",
+      "the umbrella"
+    ],
+    "correct_answer": "an umbrella",
+    "explanation": "Usamos \"an\" antes de \"umbrella\" porque o som inicial é de vogal. Aqui: \"an umbrella\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I saw ___ car in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "a car",
+      "an car",
+      "the car",
+      "car"
+    ],
+    "correct_answer": "a car",
+    "explanation": "Usamos \"a\" antes de \"car\" porque o som inicial é de consoante. Aqui: \"a car\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I saw ___ orange in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "an orange",
+      "orange",
+      "a orange",
+      "the orange"
+    ],
+    "correct_answer": "an orange",
+    "explanation": "Usamos \"an\" antes de \"orange\" porque o som inicial é de vogal. Aqui: \"an orange\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I saw ___ dog in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "the dog",
+      "dog",
+      "an dog",
+      "a dog"
+    ],
+    "correct_answer": "a dog",
+    "explanation": "Usamos \"a\" antes de \"dog\" porque o som inicial é de consoante. Aqui: \"a dog\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I saw ___ owl in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "the owl",
+      "owl",
+      "an owl",
+      "a owl"
+    ],
+    "correct_answer": "an owl",
+    "explanation": "Usamos \"an\" antes de \"owl\" porque o som inicial é de vogal. Aqui: \"an owl\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I saw ___ ball in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "an ball",
+      "the ball",
+      "ball",
+      "a ball"
+    ],
+    "correct_answer": "a ball",
+    "explanation": "Usamos \"a\" antes de \"ball\" porque o som inicial é de consoante. Aqui: \"a ball\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I saw ___ egg in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "a egg",
+      "egg",
+      "the egg",
+      "an egg"
+    ],
+    "correct_answer": "an egg",
+    "explanation": "Usamos \"an\" antes de \"egg\" porque o som inicial é de vogal. Aqui: \"an egg\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"I saw ___ house in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "the house",
+      "a house",
+      "house",
+      "an house"
+    ],
+    "correct_answer": "a house",
+    "explanation": "Usamos \"a\" antes de \"house\" porque o som inicial é de consoante. Aqui: \"a house\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"I saw ___ anthill in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "anthill",
+      "a anthill",
+      "an anthill",
+      "the anthill"
+    ],
+    "correct_answer": "an anthill",
+    "explanation": "Usamos \"an\" antes de \"anthill\" porque o som inicial é de vogal. Aqui: \"an anthill\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"I saw ___ pen in the yard.\" Qual é o artigo correto?",
+    "options": [
+      "pen",
+      "an pen",
+      "the pen",
+      "a pen"
+    ],
+    "correct_answer": "a pen",
+    "explanation": "Usamos \"a\" antes de \"pen\" porque o som inicial é de consoante. Aqui: \"a pen\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Look at ___ sun.\" Qual é o artigo correto?",
+    "options": [
+      "sun",
+      "an sun",
+      "a sun",
+      "the sun"
+    ],
+    "correct_answer": "the sun",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the sun\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Look at ___ moon.\" Qual é o artigo correto?",
+    "options": [
+      "an moon",
+      "a moon",
+      "moon",
+      "the moon"
+    ],
+    "correct_answer": "the moon",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the moon\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Look at ___ internet.\" Qual é o artigo correto?",
+    "options": [
+      "the internet",
+      "an internet",
+      "internet",
+      "a internet"
+    ],
+    "correct_answer": "the internet",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the internet\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Look at ___ teacher I told you about.\" Qual é o artigo correto?",
+    "options": [
+      "an teacher",
+      "teacher",
+      "a teacher",
+      "the teacher"
+    ],
+    "correct_answer": "the teacher",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the teacher\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Look at ___ book on the table.\" Qual é o artigo correto?",
+    "options": [
+      "an book",
+      "a book",
+      "book",
+      "the book"
+    ],
+    "correct_answer": "the book",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the book\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Look at ___ president.\" Qual é o artigo correto?",
+    "options": [
+      "an president",
+      "president",
+      "the president",
+      "a president"
+    ],
+    "correct_answer": "the president",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the president\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Look at ___ ocean.\" Qual é o artigo correto?",
+    "options": [
+      "a ocean",
+      "the ocean",
+      "ocean",
+      "an ocean"
+    ],
+    "correct_answer": "the ocean",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the ocean\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Look at ___ sky.\" Qual é o artigo correto?",
+    "options": [
+      "a sky",
+      "an sky",
+      "sky",
+      "the sky"
+    ],
+    "correct_answer": "the sky",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the sky\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Look at ___ boy who called yesterday.\" Qual é o artigo correto?",
+    "options": [
+      "a boy",
+      "the boy",
+      "an boy",
+      "boy"
+    ],
+    "correct_answer": "the boy",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the boy\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Look at ___ cake you made.\" Qual é o artigo correto?",
+    "options": [
+      "the cake",
+      "cake",
+      "an cake",
+      "a cake"
+    ],
+    "correct_answer": "the cake",
+    "explanation": "Usamos \"the\" porque é algo específico, único ou já mencionado antes. Aqui: \"the cake\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"___ loyal, in general.\" Qual é a forma correta pra uma afirmação geral sobre dogs?",
+    "options": [
+      "dogs are loyal",
+      "an dogs are loyal",
+      "a dogs are loyal",
+      "the dogs are loyal"
+    ],
+    "correct_answer": "dogs are loyal",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"dogs are loyal\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"___ independent, in general.\" Qual é a forma correta pra uma afirmação geral sobre cats?",
+    "options": [
+      "an cats are independent",
+      "cats are independent",
+      "the cats are independent",
+      "a cats are independent"
+    ],
+    "correct_answer": "cats are independent",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"cats are independent\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"___ curious, in general.\" Qual é a forma correta pra uma afirmação geral sobre children?",
+    "options": [
+      "children are curious",
+      "a children are curious",
+      "an children are curious",
+      "the children are curious"
+    ],
+    "correct_answer": "children are curious",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"children are curious\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"___ patient, in general.\" Qual é a forma correta pra uma afirmação geral sobre teachers?",
+    "options": [
+      "the teachers are patient",
+      "teachers are patient",
+      "a teachers are patient",
+      "an teachers are patient"
+    ],
+    "correct_answer": "teachers are patient",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"teachers are patient\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"___ beautiful, in general.\" Qual é a forma correta pra uma afirmação geral sobre flowers?",
+    "options": [
+      "the flowers are beautiful",
+      "flowers are beautiful",
+      "a flowers are beautiful",
+      "an flowers are beautiful"
+    ],
+    "correct_answer": "flowers are beautiful",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"flowers are beautiful\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"___ expensive, in general.\" Qual é a forma correta pra uma afirmação geral sobre cars?",
+    "options": [
+      "cars are expensive",
+      "an cars are expensive",
+      "a cars are expensive",
+      "the cars are expensive"
+    ],
+    "correct_answer": "cars are expensive",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"cars are expensive\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"___ useful, in general.\" Qual é a forma correta pra uma afirmação geral sobre books?",
+    "options": [
+      "books are useful",
+      "an books are useful",
+      "the books are useful",
+      "a books are useful"
+    ],
+    "correct_answer": "books are useful",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"books are useful\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"___ busy, in general.\" Qual é a forma correta pra uma afirmação geral sobre doctors?",
+    "options": [
+      "doctors are busy",
+      "an doctors are busy",
+      "a doctors are busy",
+      "the doctors are busy"
+    ],
+    "correct_answer": "doctors are busy",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"doctors are busy\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"___ young, in general.\" Qual é a forma correta pra uma afirmação geral sobre students?",
+    "options": [
+      "students are young",
+      "a students are young",
+      "an students are young",
+      "the students are young"
+    ],
+    "correct_answer": "students are young",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"students are young\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"___ free, in general.\" Qual é a forma correta pra uma afirmação geral sobre birds?",
+    "options": [
+      "a birds are free",
+      "an birds are free",
+      "birds are free",
+      "the birds are free"
+    ],
+    "correct_answer": "birds are free",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"birds are free\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"___ tall, in general.\" Qual é a forma correta pra uma afirmação geral sobre trees?",
+    "options": [
+      "trees are tall",
+      "a trees are tall",
+      "an trees are tall",
+      "the trees are tall"
+    ],
+    "correct_answer": "trees are tall",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"trees are tall\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"___ common, in general.\" Qual é a forma correta pra uma afirmação geral sobre phones?",
+    "options": [
+      "phones are common",
+      "an phones are common",
+      "the phones are common",
+      "a phones are common"
+    ],
+    "correct_answer": "phones are common",
+    "explanation": "Pra generalizações no plural, o inglês não usa artigo nenhum. Aqui: \"phones are common\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"There is ___ elephant over there.\" Qual é o artigo correto?",
+    "options": [
+      "elephant",
+      "an elephant",
+      "the elephant",
+      "a elephant"
+    ],
+    "correct_answer": "an elephant",
+    "explanation": "Usamos \"an\" antes de \"elephant\" porque o som inicial é de vogal. Aqui: \"an elephant\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"There is ___ table over there.\" Qual é o artigo correto?",
+    "options": [
+      "an table",
+      "a table",
+      "the table",
+      "table"
+    ],
+    "correct_answer": "a table",
+    "explanation": "Usamos \"a\" antes de \"table\" porque o som inicial é de consoante. Aqui: \"a table\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"There is ___ island over there.\" Qual é o artigo correto?",
+    "options": [
+      "island",
+      "an island",
+      "a island",
+      "the island"
+    ],
+    "correct_answer": "an island",
+    "explanation": "Usamos \"an\" antes de \"island\" porque o som inicial é de vogal. Aqui: \"an island\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"There is ___ key over there.\" Qual é o artigo correto?",
+    "options": [
+      "key",
+      "the key",
+      "an key",
+      "a key"
+    ],
+    "correct_answer": "a key",
+    "explanation": "Usamos \"a\" antes de \"key\" porque o som inicial é de consoante. Aqui: \"a key\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"There is ___ hospital over there.\" Qual é o artigo correto?",
+    "options": [
+      "a hospital",
+      "an hospital",
+      "the hospital",
+      "hospital"
+    ],
+    "correct_answer": "a hospital",
+    "explanation": "Usamos \"a\" antes de \"hospital\" porque o som inicial é de consoante. Aqui: \"a hospital\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"There is ___ engineer over there.\" Qual é o artigo correto?",
+    "options": [
+      "the engineer",
+      "a engineer",
+      "an engineer",
+      "engineer"
+    ],
+    "correct_answer": "an engineer",
+    "explanation": "Usamos \"an\" antes de \"engineer\" porque o som inicial é de vogal. Aqui: \"an engineer\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"There is ___ museum over there.\" Qual é o artigo correto?",
+    "options": [
+      "a museum",
+      "museum",
+      "an museum",
+      "the museum"
+    ],
+    "correct_answer": "a museum",
+    "explanation": "Usamos \"a\" antes de \"museum\" porque o som inicial é de consoante. Aqui: \"a museum\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"There is ___ umbrella over there.\" Qual é o artigo correto?",
+    "options": [
+      "the umbrella",
+      "a umbrella",
+      "an umbrella",
+      "umbrella"
+    ],
+    "correct_answer": "an umbrella",
+    "explanation": "Usamos \"an\" antes de \"umbrella\" porque o som inicial é de vogal. Aqui: \"an umbrella\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"There is ___ banana over there.\" Qual é o artigo correto?",
+    "options": [
+      "a banana",
+      "an banana",
+      "the banana",
+      "banana"
+    ],
+    "correct_answer": "a banana",
+    "explanation": "Usamos \"a\" antes de \"banana\" porque o som inicial é de consoante. Aqui: \"a banana\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"There is ___ octopus over there.\" Qual é o artigo correto?",
+    "options": [
+      "octopus",
+      "a octopus",
+      "an octopus",
+      "the octopus"
+    ],
+    "correct_answer": "an octopus",
+    "explanation": "Usamos \"an\" antes de \"octopus\" porque o som inicial é de vogal. Aqui: \"an octopus\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"There is ___ chair over there.\" Qual é o artigo correto?",
+    "options": [
+      "a chair",
+      "chair",
+      "an chair",
+      "the chair"
+    ],
+    "correct_answer": "a chair",
+    "explanation": "Usamos \"a\" antes de \"chair\" porque o som inicial é de consoante. Aqui: \"a chair\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"There is ___ airport over there.\" Qual é o artigo correto?",
+    "options": [
+      "a airport",
+      "airport",
+      "the airport",
+      "an airport"
+    ],
+    "correct_answer": "an airport",
+    "explanation": "Usamos \"an\" antes de \"airport\" porque o som inicial é de vogal. Aqui: \"an airport\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"There is ___ statue over there.\" Qual é o artigo correto?",
+    "options": [
+      "a statue",
+      "the statue",
+      "an statue",
+      "statue"
+    ],
+    "correct_answer": "a statue",
+    "explanation": "Usamos \"a\" antes de \"statue\" porque o som inicial é de consoante. Aqui: \"a statue\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"There is ___ onion over there.\" Qual é o artigo correto?",
+    "options": [
+      "a onion",
+      "an onion",
+      "onion",
+      "the onion"
+    ],
+    "correct_answer": "an onion",
+    "explanation": "Usamos \"an\" antes de \"onion\" porque o som inicial é de vogal. Aqui: \"an onion\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"There is ___ lamp over there.\" Qual é o artigo correto?",
+    "options": [
+      "lamp",
+      "a lamp",
+      "an lamp",
+      "the lamp"
+    ],
+    "correct_answer": "a lamp",
+    "explanation": "Usamos \"a\" antes de \"lamp\" porque o som inicial é de consoante. Aqui: \"a lamp\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"There is ___ old oak tree over there.\" Qual é o artigo correto?",
+    "options": [
+      "the old oak tree",
+      "old oak tree",
+      "a old oak tree",
+      "an old oak tree"
+    ],
+    "correct_answer": "an old oak tree",
+    "explanation": "Usamos \"an\" antes de \"old oak tree\" porque o som inicial é de vogal. Aqui: \"an old oak tree\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"There is ___ garden over there.\" Qual é o artigo correto?",
+    "options": [
+      "the garden",
+      "garden",
+      "a garden",
+      "an garden"
+    ],
+    "correct_answer": "a garden",
+    "explanation": "Usamos \"a\" antes de \"garden\" porque o som inicial é de consoante. Aqui: \"a garden\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"There is ___ escalator over there.\" Qual é o artigo correto?",
+    "options": [
+      "an escalator",
+      "escalator",
+      "a escalator",
+      "the escalator"
+    ],
+    "correct_answer": "an escalator",
+    "explanation": "Usamos \"an\" antes de \"escalator\" porque o som inicial é de vogal. Aqui: \"an escalator\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  }
+]

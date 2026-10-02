@@ -494,6 +494,30 @@
   "@territoryInglesFalsosCognatosRelampagoAvancado": {
     "description": "Territory display name — English false friends/cognates, timed mode, advanced level"
   },
+  "territoryInglesPreposicoesBasico": "Preposições e Artigos: Básico",
+  "@territoryInglesPreposicoesBasico": {
+    "description": "Territory display name — English prepositions and articles, basic level"
+  },
+  "territoryInglesPreposicoesIntermediario": "Preposições e Artigos: Intermediário",
+  "@territoryInglesPreposicoesIntermediario": {
+    "description": "Territory display name — English prepositions and articles, intermediate level"
+  },
+  "territoryInglesPreposicoesAvancado": "Preposições e Artigos: Avançado",
+  "@territoryInglesPreposicoesAvancado": {
+    "description": "Territory display name — English prepositions and articles, advanced level"
+  },
+  "territoryInglesPreposicoesRelampagoBasico": "Preposições e Artigos Relâmpago: Básico",
+  "@territoryInglesPreposicoesRelampagoBasico": {
+    "description": "Territory display name — English prepositions and articles, timed mode, basic level"
+  },
+  "territoryInglesPreposicoesRelampagoIntermediario": "Preposições e Artigos Relâmpago: Intermediário",
+  "@territoryInglesPreposicoesRelampagoIntermediario": {
+    "description": "Territory display name — English prepositions and articles, timed mode, intermediate level"
+  },
+  "territoryInglesPreposicoesRelampagoAvancado": "Preposições e Artigos Relâmpago: Avançado",
+  "@territoryInglesPreposicoesRelampagoAvancado": {
+    "description": "Territory display name — English prepositions and articles, timed mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },

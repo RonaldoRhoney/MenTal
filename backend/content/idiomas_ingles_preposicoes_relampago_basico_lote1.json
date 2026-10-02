@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ January.\" Qual é a preposição correta?",
+    "options": [
+      "started at January",
+      "started by January",
+      "started in January",
+      "started on January"
+    ],
+    "correct_answer": "started in January",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in January\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ October.\" Qual é a preposição correta?",
+    "options": [
+      "started in October",
+      "started on October",
+      "started by October",
+      "started at October"
+    ],
+    "correct_answer": "started in October",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in October\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ 2015.\" Qual é a preposição correta?",
+    "options": [
+      "started on 2015",
+      "started by 2015",
+      "started at 2015",
+      "started in 2015"
+    ],
+    "correct_answer": "started in 2015",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in 2015\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ 2030.\" Qual é a preposição correta?",
+    "options": [
+      "started on 2030",
+      "started in 2030",
+      "started at 2030",
+      "started by 2030"
+    ],
+    "correct_answer": "started in 2030",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in 2030\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ autumn.\" Qual é a preposição correta?",
+    "options": [
+      "started at autumn",
+      "started in autumn",
+      "started on autumn",
+      "started by autumn"
+    ],
+    "correct_answer": "started in autumn",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in autumn\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ the evening.\" Qual é a preposição correta?",
+    "options": [
+      "started by the evening",
+      "started in the evening",
+      "started at the evening",
+      "started on the evening"
+    ],
+    "correct_answer": "started in the evening",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in the evening\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ the 1990s.\" Qual é a preposição correta?",
+    "options": [
+      "started in the 1990s",
+      "started by the 1990s",
+      "started on the 1990s",
+      "started at the 1990s"
+    ],
+    "correct_answer": "started in the 1990s",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in the 1990s\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The project started ___ May.\" Qual é a preposição correta?",
+    "options": [
+      "started on May",
+      "started in May",
+      "started at May",
+      "started by May"
+    ],
+    "correct_answer": "started in May",
+    "explanation": "Usamos \"in\" com meses, anos e estações. Aqui: \"started in May\".",
+    "hints": [
+      "Tema: Preposições de tempo — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ Tuesday.\" Qual é a preposição correta?",
+    "options": [
+      "happened on Tuesday",
+      "happened at Tuesday",
+      "happened by Tuesday",
+      "happened in Tuesday"
+    ],
+    "correct_answer": "happened on Tuesday",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on Tuesday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ Thursday.\" Qual é a preposição correta?",
+    "options": [
+      "happened in Thursday",
+      "happened at Thursday",
+      "happened by Thursday",
+      "happened on Thursday"
+    ],
+    "correct_answer": "happened on Thursday",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on Thursday\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ New Year's Day.\" Qual é a preposição correta?",
+    "options": [
+      "happened at New Year's Day",
+      "happened by New Year's Day",
+      "happened on New Year's Day",
+      "happened in New Year's Day"
+    ],
+    "correct_answer": "happened on New Year's Day",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on New Year's Day\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ my last day.\" Qual é a preposição correta?",
+    "options": [
+      "happened by my last day",
+      "happened in my last day",
+      "happened on my last day",
+      "happened at my last day"
+    ],
+    "correct_answer": "happened on my last day",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on my last day\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ Valentine's Day.\" Qual é a preposição correta?",
+    "options": [
+      "happened on Valentine's Day",
+      "happened by Valentine's Day",
+      "happened at Valentine's Day",
+      "happened in Valentine's Day"
+    ],
+    "correct_answer": "happened on Valentine's Day",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on Valentine's Day\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ October 3rd.\" Qual é a preposição correta?",
+    "options": [
+      "happened in October 3rd",
+      "happened by October 3rd",
+      "happened at October 3rd",
+      "happened on October 3rd"
+    ],
+    "correct_answer": "happened on October 3rd",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on October 3rd\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ graduation day.\" Qual é a preposição correta?",
+    "options": [
+      "happened by graduation day",
+      "happened at graduation day",
+      "happened in graduation day",
+      "happened on graduation day"
+    ],
+    "correct_answer": "happened on graduation day",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on graduation day\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"It happened ___ the first day.\" Qual é a preposição correta?",
+    "options": [
+      "happened at the first day",
+      "happened on the first day",
+      "happened by the first day",
+      "happened in the first day"
+    ],
+    "correct_answer": "happened on the first day",
+    "explanation": "Usamos \"on\" com dias e datas específicas. Aqui: \"happened on the first day\".",
+    "hints": [
+      "Tema: Preposições de tempo — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ eight o'clock.\" Qual é a preposição correta?",
+    "options": [
+      "leaves on eight o'clock",
+      "leaves at eight o'clock",
+      "leaves in eight o'clock",
+      "leaves by eight o'clock"
+    ],
+    "correct_answer": "leaves at eight o'clock",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at eight o'clock\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ dawn.\" Qual é a preposição correta?",
+    "options": [
+      "leaves on dawn",
+      "leaves by dawn",
+      "leaves at dawn",
+      "leaves in dawn"
+    ],
+    "correct_answer": "leaves at dawn",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at dawn\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ dusk.\" Qual é a preposição correta?",
+    "options": [
+      "leaves at dusk",
+      "leaves in dusk",
+      "leaves by dusk",
+      "leaves on dusk"
+    ],
+    "correct_answer": "leaves at dusk",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at dusk\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ three p.m..\" Qual é a preposição correta?",
+    "options": [
+      "leaves in three p.m.",
+      "leaves by three p.m.",
+      "leaves on three p.m.",
+      "leaves at three p.m."
+    ],
+    "correct_answer": "leaves at three p.m.",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at three p.m.\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ breakfast time.\" Qual é a preposição correta?",
+    "options": [
+      "leaves on breakfast time",
+      "leaves at breakfast time",
+      "leaves by breakfast time",
+      "leaves in breakfast time"
+    ],
+    "correct_answer": "leaves at breakfast time",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at breakfast time\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ nine sharp.\" Qual é a preposição correta?",
+    "options": [
+      "leaves in nine sharp",
+      "leaves on nine sharp",
+      "leaves by nine sharp",
+      "leaves at nine sharp"
+    ],
+    "correct_answer": "leaves at nine sharp",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at nine sharp\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ bedtime.\" Qual é a preposição correta?",
+    "options": [
+      "leaves at bedtime",
+      "leaves in bedtime",
+      "leaves on bedtime",
+      "leaves by bedtime"
+    ],
+    "correct_answer": "leaves at bedtime",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at bedtime\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The train leaves ___ half past five.\" Qual é a preposição correta?",
+    "options": [
+      "leaves on half past five",
+      "leaves by half past five",
+      "leaves at half past five",
+      "leaves in half past five"
+    ],
+    "correct_answer": "leaves at half past five",
+    "explanation": "Usamos \"at\" com horários específicos. Aqui: \"leaves at half past five\".",
+    "hints": [
+      "Tema: Preposições de tempo — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ Portugal.\" Qual é a preposição correta?",
+    "options": [
+      "stays in Portugal",
+      "stays at Portugal",
+      "stays by Portugal",
+      "stays on Portugal"
+    ],
+    "correct_answer": "stays in Portugal",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in Portugal\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ Rome.\" Qual é a preposição correta?",
+    "options": [
+      "stays at Rome",
+      "stays in Rome",
+      "stays on Rome",
+      "stays by Rome"
+    ],
+    "correct_answer": "stays in Rome",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in Rome\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ the garden.\" Qual é a preposição correta?",
+    "options": [
+      "stays on the garden",
+      "stays at the garden",
+      "stays by the garden",
+      "stays in the garden"
+    ],
+    "correct_answer": "stays in the garden",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in the garden\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ the fridge.\" Qual é a preposição correta?",
+    "options": [
+      "stays at the fridge",
+      "stays in the fridge",
+      "stays on the fridge",
+      "stays by the fridge"
+    ],
+    "correct_answer": "stays in the fridge",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in the fridge\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ Germany.\" Qual é a preposição correta?",
+    "options": [
+      "stays on Germany",
+      "stays at Germany",
+      "stays in Germany",
+      "stays by Germany"
+    ],
+    "correct_answer": "stays in Germany",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in Germany\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ the drawer.\" Qual é a preposição correta?",
+    "options": [
+      "stays by the drawer",
+      "stays in the drawer",
+      "stays at the drawer",
+      "stays on the drawer"
+    ],
+    "correct_answer": "stays in the drawer",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in the drawer\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ the bathroom.\" Qual é a preposição correta?",
+    "options": [
+      "stays by the bathroom",
+      "stays in the bathroom",
+      "stays on the bathroom",
+      "stays at the bathroom"
+    ],
+    "correct_answer": "stays in the bathroom",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in the bathroom\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She stays ___ Australia.\" Qual é a preposição correta?",
+    "options": [
+      "stays in Australia",
+      "stays at Australia",
+      "stays by Australia",
+      "stays on Australia"
+    ],
+    "correct_answer": "stays in Australia",
+    "explanation": "Usamos \"in\" com países, cidades e espaços fechados. Aqui: \"stays in Australia\".",
+    "hints": [
+      "Tema: Preposições de lugar — in.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the ceiling.\" Qual é a preposição correta?",
+    "options": [
+      "sat at the ceiling",
+      "sat by the ceiling",
+      "sat on the ceiling",
+      "sat in the ceiling"
+    ],
+    "correct_answer": "sat on the ceiling",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the ceiling\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the fence.\" Qual é a preposição correta?",
+    "options": [
+      "sat by the fence",
+      "sat at the fence",
+      "sat on the fence",
+      "sat in the fence"
+    ],
+    "correct_answer": "sat on the fence",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the fence\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the counter.\" Qual é a preposição correta?",
+    "options": [
+      "sat at the counter",
+      "sat in the counter",
+      "sat on the counter",
+      "sat by the counter"
+    ],
+    "correct_answer": "sat on the counter",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the counter\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the stairs.\" Qual é a preposição correta?",
+    "options": [
+      "sat by the stairs",
+      "sat at the stairs",
+      "sat in the stairs",
+      "sat on the stairs"
+    ],
+    "correct_answer": "sat on the stairs",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the stairs\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the balcony.\" Qual é a preposição correta?",
+    "options": [
+      "sat at the balcony",
+      "sat on the balcony",
+      "sat by the balcony",
+      "sat in the balcony"
+    ],
+    "correct_answer": "sat on the balcony",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the balcony\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the windowsill.\" Qual é a preposição correta?",
+    "options": [
+      "sat at the windowsill",
+      "sat in the windowsill",
+      "sat on the windowsill",
+      "sat by the windowsill"
+    ],
+    "correct_answer": "sat on the windowsill",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the windowsill\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the rug.\" Qual é a preposição correta?",
+    "options": [
+      "sat on the rug",
+      "sat by the rug",
+      "sat at the rug",
+      "sat in the rug"
+    ],
+    "correct_answer": "sat on the rug",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the rug\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The cat sat ___ the porch.\" Qual é a preposição correta?",
+    "options": [
+      "sat at the porch",
+      "sat in the porch",
+      "sat on the porch",
+      "sat by the porch"
+    ],
+    "correct_answer": "sat on the porch",
+    "explanation": "Usamos \"on\" pra indicar uma superfície. Aqui: \"sat on the porch\".",
+    "hints": [
+      "Tema: Preposições de lugar — on.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the gate.\" Qual é a preposição correta?",
+    "options": [
+      "stood at the gate",
+      "stood by the gate",
+      "stood in the gate",
+      "stood on the gate"
+    ],
+    "correct_answer": "stood at the gate",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the gate\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the reception.\" Qual é a preposição correta?",
+    "options": [
+      "stood in the reception",
+      "stood on the reception",
+      "stood at the reception",
+      "stood by the reception"
+    ],
+    "correct_answer": "stood at the reception",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the reception\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the counter.\" Qual é a preposição correta?",
+    "options": [
+      "stood at the counter",
+      "stood on the counter",
+      "stood in the counter",
+      "stood by the counter"
+    ],
+    "correct_answer": "stood at the counter",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the counter\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the traffic light.\" Qual é a preposição correta?",
+    "options": [
+      "stood in the traffic light",
+      "stood on the traffic light",
+      "stood at the traffic light",
+      "stood by the traffic light"
+    ],
+    "correct_answer": "stood at the traffic light",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the traffic light\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the station.\" Qual é a preposição correta?",
+    "options": [
+      "stood by the station",
+      "stood on the station",
+      "stood in the station",
+      "stood at the station"
+    ],
+    "correct_answer": "stood at the station",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the station\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the front desk.\" Qual é a preposição correta?",
+    "options": [
+      "stood at the front desk",
+      "stood in the front desk",
+      "stood on the front desk",
+      "stood by the front desk"
+    ],
+    "correct_answer": "stood at the front desk",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the front desk\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the exit.\" Qual é a preposição correta?",
+    "options": [
+      "stood by the exit",
+      "stood on the exit",
+      "stood at the exit",
+      "stood in the exit"
+    ],
+    "correct_answer": "stood at the exit",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the exit\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He stood ___ the checkout.\" Qual é a preposição correta?",
+    "options": [
+      "stood in the checkout",
+      "stood at the checkout",
+      "stood by the checkout",
+      "stood on the checkout"
+    ],
+    "correct_answer": "stood at the checkout",
+    "explanation": "Usamos \"at\" pra indicar um ponto específico. Aqui: \"stood at the checkout\".",
+    "hints": [
+      "Tema: Preposições de lugar — at.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ bicycle.\" Qual é o artigo correto?",
+    "options": [
+      "bicycle",
+      "the bicycle",
+      "an bicycle",
+      "a bicycle"
+    ],
+    "correct_answer": "a bicycle",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a bicycle\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ antique clock.\" Qual é o artigo correto?",
+    "options": [
+      "a antique clock",
+      "the antique clock",
+      "an antique clock",
+      "antique clock"
+    ],
+    "correct_answer": "an antique clock",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an antique clock\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ ball.\" Qual é o artigo correto?",
+    "options": [
+      "a ball",
+      "an ball",
+      "the ball",
+      "ball"
+    ],
+    "correct_answer": "a ball",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a ball\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ owl toy.\" Qual é o artigo correto?",
+    "options": [
+      "an owl toy",
+      "a owl toy",
+      "the owl toy",
+      "owl toy"
+    ],
+    "correct_answer": "an owl toy",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an owl toy\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ guitar.\" Qual é o artigo correto?",
+    "options": [
+      "the guitar",
+      "a guitar",
+      "guitar",
+      "an guitar"
+    ],
+    "correct_answer": "a guitar",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a guitar\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ eraser.\" Qual é o artigo correto?",
+    "options": [
+      "an eraser",
+      "eraser",
+      "a eraser",
+      "the eraser"
+    ],
+    "correct_answer": "an eraser",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an eraser\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ ticket.\" Qual é o artigo correto?",
+    "options": [
+      "ticket",
+      "a ticket",
+      "the ticket",
+      "an ticket"
+    ],
+    "correct_answer": "a ticket",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a ticket\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ old painting.\" Qual é o artigo correto?",
+    "options": [
+      "an old painting",
+      "old painting",
+      "a old painting",
+      "the old painting"
+    ],
+    "correct_answer": "an old painting",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an old painting\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ window.\" Qual é o artigo correto?",
+    "options": [
+      "a window",
+      "an window",
+      "window",
+      "the window"
+    ],
+    "correct_answer": "a window",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a window\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ easel.\" Qual é o artigo correto?",
+    "options": [
+      "an easel",
+      "easel",
+      "the easel",
+      "a easel"
+    ],
+    "correct_answer": "an easel",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an easel\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ ruler.\" Qual é o artigo correto?",
+    "options": [
+      "an ruler",
+      "a ruler",
+      "ruler",
+      "the ruler"
+    ],
+    "correct_answer": "a ruler",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a ruler\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ ornament.\" Qual é o artigo correto?",
+    "options": [
+      "the ornament",
+      "ornament",
+      "an ornament",
+      "a ornament"
+    ],
+    "correct_answer": "an ornament",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an ornament\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ uniform.\" Qual é o artigo correto?",
+    "options": [
+      "an uniform",
+      "a uniform",
+      "uniform",
+      "the uniform"
+    ],
+    "correct_answer": "a uniform",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a uniform\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ ice cream.\" Qual é o artigo correto?",
+    "options": [
+      "ice cream",
+      "a ice cream",
+      "the ice cream",
+      "an ice cream"
+    ],
+    "correct_answer": "an ice cream",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an ice cream\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He bought ___ spoon.\" Qual é o artigo correto?",
+    "options": [
+      "spoon",
+      "an spoon",
+      "a spoon",
+      "the spoon"
+    ],
+    "correct_answer": "a spoon",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a spoon\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ stars?\" Qual é o artigo correto?",
+    "options": [
+      "a stars",
+      "stars",
+      "an stars",
+      "the stars"
+    ],
+    "correct_answer": "the stars",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the stars\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ moon landing?\" Qual é o artigo correto?",
+    "options": [
+      "the moon",
+      "moon",
+      "an moon",
+      "a moon"
+    ],
+    "correct_answer": "the moon",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the moon\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ answer I gave?\" Qual é o artigo correto?",
+    "options": [
+      "answer",
+      "a answer",
+      "the answer",
+      "an answer"
+    ],
+    "correct_answer": "the answer",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the answer\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ pizza we ordered?\" Qual é o artigo correto?",
+    "options": [
+      "an pizza",
+      "the pizza",
+      "a pizza",
+      "pizza"
+    ],
+    "correct_answer": "the pizza",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the pizza\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ queen?\" Qual é o artigo correto?",
+    "options": [
+      "an queen",
+      "a queen",
+      "queen",
+      "the queen"
+    ],
+    "correct_answer": "the queen",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the queen\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ wifi password?\" Qual é o artigo correto?",
+    "options": [
+      "a wifi",
+      "wifi",
+      "the wifi",
+      "an wifi"
+    ],
+    "correct_answer": "the wifi",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the wifi\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ news?\" Qual é o artigo correto?",
+    "options": [
+      "an news",
+      "news",
+      "a news",
+      "the news"
+    ],
+    "correct_answer": "the news",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the news\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"Did you see ___ weather today?\" Qual é o artigo correto?",
+    "options": [
+      "a weather",
+      "the weather",
+      "weather",
+      "an weather"
+    ],
+    "correct_answer": "the weather",
+    "explanation": "Usamos \"the\" porque é algo específico/único/já mencionado. Aqui: \"the weather\".",
+    "hints": [
+      "Tema: Artigo definido — the.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre cats?",
+    "options": [
+      "a cats are curious",
+      "the cats are curious",
+      "cats are curious",
+      "an cats are curious"
+    ],
+    "correct_answer": "cats are curious",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"cats are curious\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre bikes?",
+    "options": [
+      "bikes are cheap",
+      "an bikes are cheap",
+      "the bikes are cheap",
+      "a bikes are cheap"
+    ],
+    "correct_answer": "bikes are cheap",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"bikes are cheap\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre nurses?",
+    "options": [
+      "a nurses are helpful",
+      "the nurses are helpful",
+      "nurses are helpful",
+      "an nurses are helpful"
+    ],
+    "correct_answer": "nurses are helpful",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"nurses are helpful\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre rivers?",
+    "options": [
+      "rivers are long",
+      "a rivers are long",
+      "an rivers are long",
+      "the rivers are long"
+    ],
+    "correct_answer": "rivers are long",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"rivers are long\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre insects?",
+    "options": [
+      "an insects are small",
+      "the insects are small",
+      "insects are small",
+      "a insects are small"
+    ],
+    "correct_answer": "insects are small",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"insects are small\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre mountains?",
+    "options": [
+      "mountains are high",
+      "the mountains are high",
+      "an mountains are high",
+      "a mountains are high"
+    ],
+    "correct_answer": "mountains are high",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"mountains are high\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre lawyers?",
+    "options": [
+      "lawyers are careful",
+      "the lawyers are careful",
+      "a lawyers are careful",
+      "an lawyers are careful"
+    ],
+    "correct_answer": "lawyers are careful",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"lawyers are careful\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"___ , people say.\" Qual é a forma correta pra uma afirmação geral sobre babies?",
+    "options": [
+      "babies are sensitive",
+      "an babies are sensitive",
+      "the babies are sensitive",
+      "a babies are sensitive"
+    ],
+    "correct_answer": "babies are sensitive",
+    "explanation": "Generalizações no plural não usam artigo. Aqui: \"babies are sensitive\".",
+    "hints": [
+      "Tema: Ausência de artigo em generalizações.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ old key.\" Qual é o artigo correto?",
+    "options": [
+      "an old key",
+      "the old key",
+      "old key",
+      "a old key"
+    ],
+    "correct_answer": "an old key",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an old key\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ necklace.\" Qual é o artigo correto?",
+    "options": [
+      "a necklace",
+      "an necklace",
+      "the necklace",
+      "necklace"
+    ],
+    "correct_answer": "a necklace",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a necklace\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ iron.\" Qual é o artigo correto?",
+    "options": [
+      "a iron",
+      "an iron",
+      "iron",
+      "the iron"
+    ],
+    "correct_answer": "an iron",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an iron\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ blanket.\" Qual é o artigo correto?",
+    "options": [
+      "an blanket",
+      "the blanket",
+      "blanket",
+      "a blanket"
+    ],
+    "correct_answer": "a blanket",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a blanket\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ envelope.\" Qual é o artigo correto?",
+    "options": [
+      "an envelope",
+      "envelope",
+      "the envelope",
+      "a envelope"
+    ],
+    "correct_answer": "an envelope",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an envelope\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ microphone.\" Qual é o artigo correto?",
+    "options": [
+      "a microphone",
+      "the microphone",
+      "an microphone",
+      "microphone"
+    ],
+    "correct_answer": "a microphone",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a microphone\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ opera.\" Qual é o artigo correto?",
+    "options": [
+      "opera",
+      "an opera",
+      "a opera",
+      "the opera"
+    ],
+    "correct_answer": "an opera",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an opera\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ wrench.\" Qual é o artigo correto?",
+    "options": [
+      "an wrench",
+      "wrench",
+      "a wrench",
+      "the wrench"
+    ],
+    "correct_answer": "a wrench",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a wrench\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ hour break.\" Qual é o artigo correto?",
+    "options": [
+      "an hour break",
+      "hour break",
+      "a hour break",
+      "the hour break"
+    ],
+    "correct_answer": "an hour break",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an hour break\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ violin.\" Qual é o artigo correto?",
+    "options": [
+      "the violin",
+      "a violin",
+      "an violin",
+      "violin"
+    ],
+    "correct_answer": "a violin",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a violin\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ app.\" Qual é o artigo correto?",
+    "options": [
+      "app",
+      "an app",
+      "a app",
+      "the app"
+    ],
+    "correct_answer": "an app",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an app\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ notebook.\" Qual é o artigo correto?",
+    "options": [
+      "a notebook",
+      "notebook",
+      "the notebook",
+      "an notebook"
+    ],
+    "correct_answer": "a notebook",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a notebook\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ elevator.\" Qual é o artigo correto?",
+    "options": [
+      "the elevator",
+      "a elevator",
+      "elevator",
+      "an elevator"
+    ],
+    "correct_answer": "an elevator",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an elevator\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ stapler.\" Qual é o artigo correto?",
+    "options": [
+      "stapler",
+      "an stapler",
+      "the stapler",
+      "a stapler"
+    ],
+    "correct_answer": "a stapler",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a stapler\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ x-ray machine.\" Qual é o artigo correto?",
+    "options": [
+      "an x-ray machine",
+      "the x-ray machine",
+      "a x-ray machine",
+      "x-ray machine"
+    ],
+    "correct_answer": "an x-ray machine",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an x-ray machine\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ yellow jacket.\" Qual é o artigo correto?",
+    "options": [
+      "a yellow jacket",
+      "the yellow jacket",
+      "an yellow jacket",
+      "yellow jacket"
+    ],
+    "correct_answer": "a yellow jacket",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a yellow jacket\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ ostrich.\" Qual é o artigo correto?",
+    "options": [
+      "an ostrich",
+      "ostrich",
+      "the ostrich",
+      "a ostrich"
+    ],
+    "correct_answer": "an ostrich",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an ostrich\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ drawer.\" Qual é o artigo correto?",
+    "options": [
+      "drawer",
+      "a drawer",
+      "the drawer",
+      "an drawer"
+    ],
+    "correct_answer": "a drawer",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a drawer\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ iguana.\" Qual é o artigo correto?",
+    "options": [
+      "a iguana",
+      "iguana",
+      "an iguana",
+      "the iguana"
+    ],
+    "correct_answer": "an iguana",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an iguana\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ sandwich.\" Qual é o artigo correto?",
+    "options": [
+      "a sandwich",
+      "the sandwich",
+      "an sandwich",
+      "sandwich"
+    ],
+    "correct_answer": "a sandwich",
+    "explanation": "Usamos \"a\" por causa do som inicial. Aqui: \"a sandwich\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found ___ umbrella stand.\" Qual é o artigo correto?",
+    "options": [
+      "a umbrella stand",
+      "umbrella stand",
+      "the umbrella stand",
+      "an umbrella stand"
+    ],
+    "correct_answer": "an umbrella stand",
+    "explanation": "Usamos \"an\" por causa do som inicial. Aqui: \"an umbrella stand\".",
+    "hints": [
+      "Tema: Artigo indefinido — a/an.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  }
+]

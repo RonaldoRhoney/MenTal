@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He spilled coffee on the laptop ___.\" Qual é a expressão correta?",
+    "options": [
+      "with accident",
+      "at accident",
+      "in accident",
+      "by accident"
+    ],
+    "correct_answer": "by accident",
+    "explanation": "\"by accident\" é uma expressão fixa em inglês. Aqui: \"by accident\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The train arrived ___ today.\" Qual é a expressão correta?",
+    "options": [
+      "on schedule",
+      "at schedule",
+      "by schedule",
+      "for schedule"
+    ],
+    "correct_answer": "on schedule",
+    "explanation": "\"on schedule\" é uma expressão fixa em inglês. Aqui: \"on schedule\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She spoke ___ the merger.\" Qual é a expressão correta?",
+    "options": [
+      "at favor of",
+      "with favor of",
+      "for favor of",
+      "in favor of"
+    ],
+    "correct_answer": "in favor of",
+    "explanation": "\"in favor of\" é uma expressão fixa em inglês. Aqui: \"in favor of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He thanked the sponsors ___ the whole team.\" Qual é a expressão correta?",
+    "options": [
+      "by behalf of",
+      "of behalf of",
+      "on behalf of",
+      "at behalf of"
+    ],
+    "correct_answer": "on behalf of",
+    "explanation": "\"on behalf of\" é uma expressão fixa em inglês. Aqui: \"on behalf of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The products are identical ___ quality.\" Qual é a expressão correta?",
+    "options": [
+      "of terms of",
+      "in terms of",
+      "with terms of",
+      "at terms of"
+    ],
+    "correct_answer": "in terms of",
+    "explanation": "\"in terms of\" é uma expressão fixa em inglês. Aqui: \"in terms of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The match continued ___ the storm.\" Qual é a expressão correta?",
+    "options": [
+      "of spite of",
+      "in spite of",
+      "at spite of",
+      "with spite of"
+    ],
+    "correct_answer": "in spite of",
+    "explanation": "\"in spite of\" é uma expressão fixa em inglês. Aqui: \"in spite of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"Small businesses are ___ closing.\" Qual é a expressão correta?",
+    "options": [
+      "with risk of",
+      "by risk of",
+      "in risk of",
+      "at risk of"
+    ],
+    "correct_answer": "at risk of",
+    "explanation": "\"at risk of\" é uma expressão fixa em inglês. Aqui: \"at risk of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The results were ___ expectations.\" Qual é a expressão correta?",
+    "options": [
+      "in line with",
+      "for line with",
+      "by line with",
+      "of line with"
+    ],
+    "correct_answer": "in line with",
+    "explanation": "\"in line with\" é uma expressão fixa em inglês. Aqui: \"in line with\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The CEO issued a statement ___ the news.\" Qual é a expressão correta?",
+    "options": [
+      "by response to",
+      "for response to",
+      "in response to",
+      "of response to"
+    ],
+    "correct_answer": "in response to",
+    "explanation": "\"in response to\" é uma expressão fixa em inglês. Aqui: \"in response to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"___ the bonus, she got a promotion.\" Qual é a expressão correta?",
+    "options": [
+      "for addition to",
+      "of addition to",
+      "in addition to",
+      "on addition to"
+    ],
+    "correct_answer": "in addition to",
+    "explanation": "\"in addition to\" é uma expressão fixa em inglês. Aqui: \"in addition to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He kept quiet ___ harmony.\" Qual é a expressão correta?",
+    "options": [
+      "at the sake of",
+      "with the sake of",
+      "of the sake of",
+      "for the sake of"
+    ],
+    "correct_answer": "for the sake of",
+    "explanation": "\"for the sake of\" é uma expressão fixa em inglês. Aqui: \"for the sake of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The elevator has been ___ since Monday.\" Qual é a expressão correta?",
+    "options": [
+      "for of order",
+      "with of order",
+      "out of order",
+      "at of order"
+    ],
+    "correct_answer": "out of order",
+    "explanation": "\"out of order\" é uma expressão fixa em inglês. Aqui: \"out of order\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The stress piled up ___ his workload.\" Qual é a expressão correta?",
+    "options": [
+      "with top of",
+      "on top of",
+      "at top of",
+      "in top of"
+    ],
+    "correct_answer": "on top of",
+    "explanation": "\"on top of\" é uma expressão fixa em inglês. Aqui: \"on top of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The village gets water ___ a pipeline.\" Qual é a expressão correta?",
+    "options": [
+      "by means of",
+      "for means of",
+      "on means of",
+      "of means of"
+    ],
+    "correct_answer": "by means of",
+    "explanation": "\"by means of\" é uma expressão fixa em inglês. Aqui: \"by means of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"I wrote ___ your last email.\" Qual é a expressão correta?",
+    "options": [
+      "in regard to",
+      "with regard to",
+      "of regard to",
+      "by regard to"
+    ],
+    "correct_answer": "with regard to",
+    "explanation": "\"with regard to\" é uma expressão fixa em inglês. Aqui: \"with regard to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"School closed ___ the heavy snow.\" Qual é a expressão correta?",
+    "options": [
+      "at account of",
+      "in account of",
+      "on account of",
+      "with account of"
+    ],
+    "correct_answer": "on account of",
+    "explanation": "\"on account of\" é uma expressão fixa em inglês. Aqui: \"on account of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He won the deal ___ his reputation.\" Qual é a expressão correta?",
+    "options": [
+      "on the expense of",
+      "of the expense of",
+      "with the expense of",
+      "at the expense of"
+    ],
+    "correct_answer": "at the expense of",
+    "explanation": "\"at the expense of\" é uma expressão fixa em inglês. Aqui: \"at the expense of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"They remained united ___ adversity.\" Qual é a expressão correta?",
+    "options": [
+      "of the face of",
+      "with the face of",
+      "by the face of",
+      "in the face of"
+    ],
+    "correct_answer": "in the face of",
+    "explanation": "\"in the face of\" é uma expressão fixa em inglês. Aqui: \"in the face of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"Her tone was calm, ___ his.\" Qual é a expressão correta?",
+    "options": [
+      "for contrast to",
+      "in contrast to",
+      "by contrast to",
+      "of contrast to"
+    ],
+    "correct_answer": "in contrast to",
+    "explanation": "\"in contrast to\" é uma expressão fixa em inglês. Aqui: \"in contrast to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"Who is ___ security tonight?\" Qual é a expressão correta?",
+    "options": [
+      "of charge of",
+      "at charge of",
+      "in charge of",
+      "with charge of"
+    ],
+    "correct_answer": "in charge of",
+    "explanation": "\"in charge of\" é uma expressão fixa em inglês. Aqui: \"in charge of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The two cars collided ___ at the intersection.\" Qual é a expressão correta?",
+    "options": [
+      "on accident",
+      "by accident",
+      "of accident",
+      "for accident"
+    ],
+    "correct_answer": "by accident",
+    "explanation": "\"by accident\" é uma expressão fixa em inglês. Aqui: \"by accident\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The project finished ___, for once.\" Qual é a expressão correta?",
+    "options": [
+      "on schedule",
+      "of schedule",
+      "in schedule",
+      "with schedule"
+    ],
+    "correct_answer": "on schedule",
+    "explanation": "\"on schedule\" é uma expressão fixa em inglês. Aqui: \"on schedule\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The board voted ___ the proposal.\" Qual é a expressão correta?",
+    "options": [
+      "for favor of",
+      "at favor of",
+      "on favor of",
+      "in favor of"
+    ],
+    "correct_answer": "in favor of",
+    "explanation": "\"in favor of\" é uma expressão fixa em inglês. Aqui: \"in favor of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The manager apologized ___ the staff.\" Qual é a expressão correta?",
+    "options": [
+      "on behalf of",
+      "of behalf of",
+      "with behalf of",
+      "for behalf of"
+    ],
+    "correct_answer": "on behalf of",
+    "explanation": "\"on behalf of\" é uma expressão fixa em inglês. Aqui: \"on behalf of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The cities are very different ___ culture.\" Qual é a expressão correta?",
+    "options": [
+      "by terms of",
+      "in terms of",
+      "with terms of",
+      "for terms of"
+    ],
+    "correct_answer": "in terms of",
+    "explanation": "\"in terms of\" é uma expressão fixa em inglês. Aqui: \"in terms of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She smiled ___ the bad news.\" Qual é a expressão correta?",
+    "options": [
+      "by spite of",
+      "in spite of",
+      "with spite of",
+      "on spite of"
+    ],
+    "correct_answer": "in spite of",
+    "explanation": "\"in spite of\" é uma expressão fixa em inglês. Aqui: \"in spite of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"Without backups, the data is ___ being lost.\" Qual é a expressão correta?",
+    "options": [
+      "at risk of",
+      "by risk of",
+      "for risk of",
+      "in risk of"
+    ],
+    "correct_answer": "at risk of",
+    "explanation": "\"at risk of\" é uma expressão fixa em inglês. Aqui: \"at risk of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"His answer was ___ the official guidelines.\" Qual é a expressão correta?",
+    "options": [
+      "by line with",
+      "of line with",
+      "in line with",
+      "with line with"
+    ],
+    "correct_answer": "in line with",
+    "explanation": "\"in line with\" é uma expressão fixa em inglês. Aqui: \"in line with\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"Prices rose ___ the shortage.\" Qual é a expressão correta?",
+    "options": [
+      "of response to",
+      "for response to",
+      "in response to",
+      "with response to"
+    ],
+    "correct_answer": "in response to",
+    "explanation": "\"in response to\" é uma expressão fixa em inglês. Aqui: \"in response to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"___ rent, utilities are extra.\" Qual é a expressão correta?",
+    "options": [
+      "in addition to",
+      "at addition to",
+      "with addition to",
+      "on addition to"
+    ],
+    "correct_answer": "in addition to",
+    "explanation": "\"in addition to\" é uma expressão fixa em inglês. Aqui: \"in addition to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"They signed the deal ___ the partnership.\" Qual é a expressão correta?",
+    "options": [
+      "for the sake of",
+      "at the sake of",
+      "on the sake of",
+      "by the sake of"
+    ],
+    "correct_answer": "for the sake of",
+    "explanation": "\"for the sake of\" é uma expressão fixa em inglês. Aqui: \"for the sake of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The printer has been ___ all week.\" Qual é a expressão correta?",
+    "options": [
+      "by of order",
+      "for of order",
+      "with of order",
+      "out of order"
+    ],
+    "correct_answer": "out of order",
+    "explanation": "\"out of order\" é uma expressão fixa em inglês. Aqui: \"out of order\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The noise added ___ his frustration.\" Qual é a expressão correta?",
+    "options": [
+      "with top of",
+      "on top of",
+      "of top of",
+      "for top of"
+    ],
+    "correct_answer": "on top of",
+    "explanation": "\"on top of\" é uma expressão fixa em inglês. Aqui: \"on top of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"They communicated ___ hand signals.\" Qual é a expressão correta?",
+    "options": [
+      "of means of",
+      "in means of",
+      "by means of",
+      "at means of"
+    ],
+    "correct_answer": "by means of",
+    "explanation": "\"by means of\" é uma expressão fixa em inglês. Aqui: \"by means of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"There's nothing new ___ that issue.\" Qual é a expressão correta?",
+    "options": [
+      "of regard to",
+      "for regard to",
+      "by regard to",
+      "with regard to"
+    ],
+    "correct_answer": "with regard to",
+    "explanation": "\"with regard to\" é uma expressão fixa em inglês. Aqui: \"with regard to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ brightest student in the school.\" Qual é a forma correta?",
+    "options": [
+      "an brightest",
+      "the brightest",
+      "brightest",
+      "a brightest"
+    ],
+    "correct_answer": "the brightest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the brightest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ most dedicated teacher in the school.\" Qual é a forma correta?",
+    "options": [
+      "the most dedicated",
+      "an most dedicated",
+      "most dedicated",
+      "a most dedicated"
+    ],
+    "correct_answer": "the most dedicated",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most dedicated\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ most organized coordinator in the school.\" Qual é a forma correta?",
+    "options": [
+      "a most organized",
+      "an most organized",
+      "most organized",
+      "the most organized"
+    ],
+    "correct_answer": "the most organized",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most organized\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ tallest player in the school.\" Qual é a forma correta?",
+    "options": [
+      "the tallest",
+      "a tallest",
+      "tallest",
+      "an tallest"
+    ],
+    "correct_answer": "the tallest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the tallest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ most popular coach in the school.\" Qual é a forma correta?",
+    "options": [
+      "the most popular",
+      "an most popular",
+      "most popular",
+      "a most popular"
+    ],
+    "correct_answer": "the most popular",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most popular\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ strictest principal in the school.\" Qual é a forma correta?",
+    "options": [
+      "strictest",
+      "the strictest",
+      "an strictest",
+      "a strictest"
+    ],
+    "correct_answer": "the strictest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the strictest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ most talented musician in the school.\" Qual é a forma correta?",
+    "options": [
+      "most talented",
+      "an most talented",
+      "the most talented",
+      "a most talented"
+    ],
+    "correct_answer": "the most talented",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most talented\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ fastest runner in the school.\" Qual é a forma correta?",
+    "options": [
+      "the fastest",
+      "an fastest",
+      "a fastest",
+      "fastest"
+    ],
+    "correct_answer": "the fastest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the fastest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ youngest manager in the school.\" Qual é a forma correta?",
+    "options": [
+      "an youngest",
+      "a youngest",
+      "youngest",
+      "the youngest"
+    ],
+    "correct_answer": "the youngest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the youngest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ most helpful tutor in the school.\" Qual é a forma correta?",
+    "options": [
+      "an most helpful",
+      "the most helpful",
+      "most helpful",
+      "a most helpful"
+    ],
+    "correct_answer": "the most helpful",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most helpful\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ most experienced counselor in the school.\" Qual é a forma correta?",
+    "options": [
+      "a most experienced",
+      "an most experienced",
+      "the most experienced",
+      "most experienced"
+    ],
+    "correct_answer": "the most experienced",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most experienced\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She is ___ loudest cheerleader in the school.\" Qual é a forma correta?",
+    "options": [
+      "loudest",
+      "the loudest",
+      "an loudest",
+      "a loudest"
+    ],
+    "correct_answer": "the loudest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the loudest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"They traveled through ___ Indian Ocean last year.\" Qual é a forma correta?",
+    "options": [
+      "the Indian Ocean",
+      "Indian Ocean",
+      "a Indian Ocean",
+      "an Indian Ocean"
+    ],
+    "correct_answer": "the Indian Ocean",
+    "explanation": "Certos nomes geográficos (oceanos, cadeias de montanhas, rios, desertos, países no plural/\"Republic\") sempre levam \"the\". Aqui: \"the Indian Ocean\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"They traveled through ___ Rockies last year.\" Qual é a forma correta?",
+    "options": [
+      "the Rockies",
+      "Rockies",
+      "an Rockies",
+      "a Rockies"
+    ],
+    "correct_answer": "the Rockies",
+    "explanation": "Certos nomes geográficos (oceanos, cadeias de montanhas, rios, desertos, países no plural/\"Republic\") sempre levam \"the\". Aqui: \"the Rockies\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"They traveled through ___ Nile River last year.\" Qual é a forma correta?",
+    "options": [
+      "a Nile River",
+      "the Nile River",
+      "Nile River",
+      "an Nile River"
+    ],
+    "correct_answer": "the Nile River",
+    "explanation": "Certos nomes geográficos (oceanos, cadeias de montanhas, rios, desertos, países no plural/\"Republic\") sempre levam \"the\". Aqui: \"the Nile River\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"They traveled through ___ Gobi Desert last year.\" Qual é a forma correta?",
+    "options": [
+      "an Gobi Desert",
+      "the Gobi Desert",
+      "a Gobi Desert",
+      "Gobi Desert"
+    ],
+    "correct_answer": "the Gobi Desert",
+    "explanation": "Certos nomes geográficos (oceanos, cadeias de montanhas, rios, desertos, países no plural/\"Republic\") sempre levam \"the\". Aqui: \"the Gobi Desert\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"They traveled through ___ Czech Republic last year.\" Qual é a forma correta?",
+    "options": [
+      "Czech Republic",
+      "the Czech Republic",
+      "a Czech Republic",
+      "an Czech Republic"
+    ],
+    "correct_answer": "the Czech Republic",
+    "explanation": "Certos nomes geográficos (oceanos, cadeias de montanhas, rios, desertos, países no plural/\"Republic\") sempre levam \"the\". Aqui: \"the Czech Republic\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"They traveled through ___ Bahamas last year.\" Qual é a forma correta?",
+    "options": [
+      "an Bahamas",
+      "the Bahamas",
+      "a Bahamas",
+      "Bahamas"
+    ],
+    "correct_answer": "the Bahamas",
+    "explanation": "Certos nomes geográficos (oceanos, cadeias de montanhas, rios, desertos, países no plural/\"Republic\") sempre levam \"the\". Aqui: \"the Bahamas\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She ___ last January.\" Qual é a forma correta?",
+    "options": [
+      "flew to the Norway",
+      "flew to Norway",
+      "flew to a Norway",
+      "flew to an Norway"
+    ],
+    "correct_answer": "flew to Norway",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"flew to Norway\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She ___ two summers ago.\" Qual é a forma correta?",
+    "options": [
+      "flew to a Vietnam",
+      "flew to the Vietnam",
+      "flew to an Vietnam",
+      "flew to Vietnam"
+    ],
+    "correct_answer": "flew to Vietnam",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"flew to Vietnam\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She ___ in March.\" Qual é a forma correta?",
+    "options": [
+      "flew to a Colombia",
+      "flew to Colombia",
+      "flew to the Colombia",
+      "flew to an Colombia"
+    ],
+    "correct_answer": "flew to Colombia",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"flew to Colombia\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She ___ last autumn.\" Qual é a forma correta?",
+    "options": [
+      "flew to the Morocco",
+      "flew to an Morocco",
+      "flew to Morocco",
+      "flew to a Morocco"
+    ],
+    "correct_answer": "flew to Morocco",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"flew to Morocco\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She ___ during the holidays.\" Qual é a forma correta?",
+    "options": [
+      "flew to Poland",
+      "flew to an Poland",
+      "flew to a Poland",
+      "flew to the Poland"
+    ],
+    "correct_answer": "flew to Poland",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"flew to Poland\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She ___ last year.\" Qual é a forma correta?",
+    "options": [
+      "flew to the Turkey",
+      "flew to an Turkey",
+      "flew to a Turkey",
+      "flew to Turkey"
+    ],
+    "correct_answer": "flew to Turkey",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"flew to Turkey\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She found the old photo ___ while cleaning.\" Qual é a expressão correta?",
+    "options": [
+      "for accident",
+      "by accident",
+      "with accident",
+      "in accident"
+    ],
+    "correct_answer": "by accident",
+    "explanation": "\"by accident\" é uma expressão fixa em inglês. Aqui: \"by accident\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The construction finished ___ this time.\" Qual é a expressão correta?",
+    "options": [
+      "on schedule",
+      "in schedule",
+      "for schedule",
+      "of schedule"
+    ],
+    "correct_answer": "on schedule",
+    "explanation": "\"on schedule\" é uma expressão fixa em inglês. Aqui: \"on schedule\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He switched sides and voted ___ the bill.\" Qual é a expressão correta?",
+    "options": [
+      "at favor of",
+      "in favor of",
+      "by favor of",
+      "with favor of"
+    ],
+    "correct_answer": "in favor of",
+    "explanation": "\"in favor of\" é uma expressão fixa em inglês. Aqui: \"in favor of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"She collected the prize ___ her brother.\" Qual é a expressão correta?",
+    "options": [
+      "for behalf of",
+      "with behalf of",
+      "on behalf of",
+      "by behalf of"
+    ],
+    "correct_answer": "on behalf of",
+    "explanation": "\"on behalf of\" é uma expressão fixa em inglês. Aqui: \"on behalf of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The two laptops differ mainly ___ battery life.\" Qual é a expressão correta?",
+    "options": [
+      "on terms of",
+      "by terms of",
+      "in terms of",
+      "for terms of"
+    ],
+    "correct_answer": "in terms of",
+    "explanation": "\"in terms of\" é uma expressão fixa em inglês. Aqui: \"in terms of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He kept working ___ the pain.\" Qual é a expressão correta?",
+    "options": [
+      "of spite of",
+      "with spite of",
+      "on spite of",
+      "in spite of"
+    ],
+    "correct_answer": "in spite of",
+    "explanation": "\"in spite of\" é uma expressão fixa em inglês. Aqui: \"in spite of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"Coastal towns are ___ flooding.\" Qual é a expressão correta?",
+    "options": [
+      "at risk of",
+      "in risk of",
+      "with risk of",
+      "on risk of"
+    ],
+    "correct_answer": "at risk of",
+    "explanation": "\"at risk of\" é uma expressão fixa em inglês. Aqui: \"at risk of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The forecast was ___ what we expected.\" Qual é a expressão correta?",
+    "options": [
+      "at line with",
+      "by line with",
+      "of line with",
+      "in line with"
+    ],
+    "correct_answer": "in line with",
+    "explanation": "\"in line with\" é uma expressão fixa em inglês. Aqui: \"in line with\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"The airline updated its policy ___ complaints.\" Qual é a expressão correta?",
+    "options": [
+      "of response to",
+      "on response to",
+      "for response to",
+      "in response to"
+    ],
+    "correct_answer": "in response to",
+    "explanation": "\"in response to\" é uma expressão fixa em inglês. Aqui: \"in response to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"___ the main course, they served dessert.\" Qual é a expressão correta?",
+    "options": [
+      "by addition to",
+      "in addition to",
+      "of addition to",
+      "with addition to"
+    ],
+    "correct_answer": "in addition to",
+    "explanation": "\"in addition to\" é uma expressão fixa em inglês. Aqui: \"in addition to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"She apologized ___ the team.\" Qual é a expressão correta?",
+    "options": [
+      "by the sake of",
+      "for the sake of",
+      "of the sake of",
+      "with the sake of"
+    ],
+    "correct_answer": "for the sake of",
+    "explanation": "\"for the sake of\" é uma expressão fixa em inglês. Aqui: \"for the sake of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The vending machine is ___ again.\" Qual é a expressão correta?",
+    "options": [
+      "on of order",
+      "out of order",
+      "for of order",
+      "by of order"
+    ],
+    "correct_answer": "out of order",
+    "explanation": "\"out of order\" é uma expressão fixa em inglês. Aqui: \"out of order\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The delay added ___ an already long trip.\" Qual é a expressão correta?",
+    "options": [
+      "with top of",
+      "on top of",
+      "for top of",
+      "of top of"
+    ],
+    "correct_answer": "on top of",
+    "explanation": "\"on top of\" é uma expressão fixa em inglês. Aqui: \"on top of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"The island is only reached ___ boat.\" Qual é a expressão correta?",
+    "options": [
+      "with means of",
+      "for means of",
+      "by means of",
+      "of means of"
+    ],
+    "correct_answer": "by means of",
+    "explanation": "\"by means of\" é uma expressão fixa em inglês. Aqui: \"by means of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He had doubts ___ the contract.\" Qual é a expressão correta?",
+    "options": [
+      "on regard to",
+      "with regard to",
+      "of regard to",
+      "at regard to"
+    ],
+    "correct_answer": "with regard to",
+    "explanation": "\"with regard to\" é uma expressão fixa em inglês. Aqui: \"with regard to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"The game was postponed ___ the storm.\" Qual é a expressão correta?",
+    "options": [
+      "at account of",
+      "on account of",
+      "in account of",
+      "for account of"
+    ],
+    "correct_answer": "on account of",
+    "explanation": "\"on account of\" é uma expressão fixa em inglês. Aqui: \"on account of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"She was named ___ the new branch.\" Qual é a expressão correta?",
+    "options": [
+      "at charge of",
+      "in charge of",
+      "for charge of",
+      "with charge of"
+    ],
+    "correct_answer": "in charge of",
+    "explanation": "\"in charge of\" é uma expressão fixa em inglês. Aqui: \"in charge of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"His calm reply stood out ___ her anger.\" Qual é a expressão correta?",
+    "options": [
+      "with contrast to",
+      "on contrast to",
+      "of contrast to",
+      "in contrast to"
+    ],
+    "correct_answer": "in contrast to",
+    "explanation": "\"in contrast to\" é uma expressão fixa em inglês. Aqui: \"in contrast to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ wealthiest investor around.\" Qual é a forma correta?",
+    "options": [
+      "wealthiest",
+      "a wealthiest",
+      "the wealthiest",
+      "an wealthiest"
+    ],
+    "correct_answer": "the wealthiest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the wealthiest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most skilled surgeon around.\" Qual é a forma correta?",
+    "options": [
+      "the most skilled",
+      "an most skilled",
+      "a most skilled",
+      "most skilled"
+    ],
+    "correct_answer": "the most skilled",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most skilled\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ strictest coach around.\" Qual é a forma correta?",
+    "options": [
+      "strictest",
+      "a strictest",
+      "an strictest",
+      "the strictest"
+    ],
+    "correct_answer": "the strictest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the strictest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most creative designer around.\" Qual é a forma correta?",
+    "options": [
+      "the most creative",
+      "most creative",
+      "an most creative",
+      "a most creative"
+    ],
+    "correct_answer": "the most creative",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most creative\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most stubborn negotiator around.\" Qual é a forma correta?",
+    "options": [
+      "the most stubborn",
+      "an most stubborn",
+      "a most stubborn",
+      "most stubborn"
+    ],
+    "correct_answer": "the most stubborn",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most stubborn\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most cautious driver around.\" Qual é a forma correta?",
+    "options": [
+      "the most cautious",
+      "most cautious",
+      "an most cautious",
+      "a most cautious"
+    ],
+    "correct_answer": "the most cautious",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most cautious\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ friendliest host around.\" Qual é a forma correta?",
+    "options": [
+      "a friendliest",
+      "the friendliest",
+      "an friendliest",
+      "friendliest"
+    ],
+    "correct_answer": "the friendliest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the friendliest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most competitive athlete around.\" Qual é a forma correta?",
+    "options": [
+      "the most competitive",
+      "most competitive",
+      "an most competitive",
+      "a most competitive"
+    ],
+    "correct_answer": "the most competitive",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most competitive\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most daring explorer around.\" Qual é a forma correta?",
+    "options": [
+      "an most daring",
+      "the most daring",
+      "most daring",
+      "a most daring"
+    ],
+    "correct_answer": "the most daring",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most daring\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ most reliable witness around.\" Qual é a forma correta?",
+    "options": [
+      "a most reliable",
+      "the most reliable",
+      "an most reliable",
+      "most reliable"
+    ],
+    "correct_answer": "the most reliable",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most reliable\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ wisest advisor around.\" Qual é a forma correta?",
+    "options": [
+      "wisest",
+      "a wisest",
+      "an wisest",
+      "the wisest"
+    ],
+    "correct_answer": "the wisest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the wisest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He is considered ___ rarest specialist around.\" Qual é a forma correta?",
+    "options": [
+      "the rarest",
+      "rarest",
+      "a rarest",
+      "an rarest"
+    ],
+    "correct_answer": "the rarest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the rarest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ last August.\" Qual é a forma correta?",
+    "options": [
+      "moved to a Argentina",
+      "moved to an Argentina",
+      "moved to the Argentina",
+      "moved to Argentina"
+    ],
+    "correct_answer": "moved to Argentina",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Argentina\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ the year before.\" Qual é a forma correta?",
+    "options": [
+      "moved to Kenya",
+      "moved to a Kenya",
+      "moved to the Kenya",
+      "moved to an Kenya"
+    ],
+    "correct_answer": "moved to Kenya",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Kenya\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ early this year.\" Qual é a forma correta?",
+    "options": [
+      "moved to Finland",
+      "moved to a Finland",
+      "moved to an Finland",
+      "moved to the Finland"
+    ],
+    "correct_answer": "moved to Finland",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Finland\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ last November.\" Qual é a forma correta?",
+    "options": [
+      "moved to Austria",
+      "moved to the Austria",
+      "moved to an Austria",
+      "moved to a Austria"
+    ],
+    "correct_answer": "moved to Austria",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Austria\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ right after college.\" Qual é a forma correta?",
+    "options": [
+      "moved to Jordan",
+      "moved to a Jordan",
+      "moved to an Jordan",
+      "moved to the Jordan"
+    ],
+    "correct_answer": "moved to Jordan",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Jordan\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ during the break.\" Qual é a forma correta?",
+    "options": [
+      "moved to Ecuador",
+      "moved to a Ecuador",
+      "moved to an Ecuador",
+      "moved to the Ecuador"
+    ],
+    "correct_answer": "moved to Ecuador",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Ecuador\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ last February.\" Qual é a forma correta?",
+    "options": [
+      "moved to an Croatia",
+      "moved to a Croatia",
+      "moved to Croatia",
+      "moved to the Croatia"
+    ],
+    "correct_answer": "moved to Croatia",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Croatia\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ a decade ago.\" Qual é a forma correta?",
+    "options": [
+      "moved to the Iceland",
+      "moved to Iceland",
+      "moved to an Iceland",
+      "moved to a Iceland"
+    ],
+    "correct_answer": "moved to Iceland",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Iceland\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ over the summer.\" Qual é a forma correta?",
+    "options": [
+      "moved to a Hungary",
+      "moved to an Hungary",
+      "moved to the Hungary",
+      "moved to Hungary"
+    ],
+    "correct_answer": "moved to Hungary",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Hungary\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ right before the pandemic.\" Qual é a forma correta?",
+    "options": [
+      "moved to the Senegal",
+      "moved to an Senegal",
+      "moved to Senegal",
+      "moved to a Senegal"
+    ],
+    "correct_answer": "moved to Senegal",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Senegal\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "[Relâmpago] Complete a frase: \"He ___ last June.\" Qual é a forma correta?",
+    "options": [
+      "moved to a Nepal",
+      "moved to the Nepal",
+      "moved to Nepal",
+      "moved to an Nepal"
+    ],
+    "correct_answer": "moved to Nepal",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"moved to Nepal\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos (Relâmpago).",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -1,0 +1,1802 @@
+[
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He left the door open ___.\" Qual é a expressão correta?",
+    "options": [
+      "for mistake",
+      "by mistake",
+      "of mistake",
+      "at mistake"
+    ],
+    "correct_answer": "by mistake",
+    "explanation": "\"by mistake\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"by mistake\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She said it ___, not by accident.\" Qual é a expressão correta?",
+    "options": [
+      "by purpose",
+      "with purpose",
+      "in purpose",
+      "on purpose"
+    ],
+    "correct_answer": "on purpose",
+    "explanation": "\"on purpose\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"on purpose\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She is ___ the whole project.\" Qual é a expressão correta?",
+    "options": [
+      "in charge of",
+      "at charge of",
+      "for charge of",
+      "on charge of"
+    ],
+    "correct_answer": "in charge of",
+    "explanation": "\"in charge of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in charge of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Most voters are ___ the new law.\" Qual é a expressão correta?",
+    "options": [
+      "on favor of",
+      "with favor of",
+      "in favor of",
+      "at favor of"
+    ],
+    "correct_answer": "in favor of",
+    "explanation": "\"in favor of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in favor of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I'm speaking ___ the entire team.\" Qual é a expressão correta?",
+    "options": [
+      "on behalf of",
+      "by behalf of",
+      "for behalf of",
+      "in behalf of"
+    ],
+    "correct_answer": "on behalf of",
+    "explanation": "\"on behalf of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"on behalf of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"The two options are similar ___ cost.\" Qual é a expressão correta?",
+    "options": [
+      "on terms of",
+      "with terms of",
+      "in terms of",
+      "for terms of"
+    ],
+    "correct_answer": "in terms of",
+    "explanation": "\"in terms of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in terms of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They went out ___ the rain.\" Qual é a expressão correta?",
+    "options": [
+      "in spite of",
+      "of spite of",
+      "by spite of",
+      "at spite of"
+    ],
+    "correct_answer": "in spite of",
+    "explanation": "\"in spite of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in spite of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The old bridge is ___ collapsing.\" Qual é a expressão correta?",
+    "options": [
+      "by risk of",
+      "at risk of",
+      "with risk of",
+      "of risk of"
+    ],
+    "correct_answer": "at risk of",
+    "explanation": "\"at risk of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"at risk of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The new rule is ___ company policy.\" Qual é a expressão correta?",
+    "options": [
+      "in line with",
+      "on line with",
+      "of line with",
+      "for line with"
+    ],
+    "correct_answer": "in line with",
+    "explanation": "\"in line with\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in line with\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She apologized ___ the complaint.\" Qual é a expressão correta?",
+    "options": [
+      "of response to",
+      "with response to",
+      "at response to",
+      "in response to"
+    ],
+    "correct_answer": "in response to",
+    "explanation": "\"in response to\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in response to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He brought snacks ___ drinks.\" Qual é a expressão correta?",
+    "options": [
+      "in addition to",
+      "at addition to",
+      "for addition to",
+      "of addition to"
+    ],
+    "correct_answer": "in addition to",
+    "explanation": "\"in addition to\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in addition to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They compromised ___ peace.\" Qual é a expressão correta?",
+    "options": [
+      "with the sake of",
+      "for the sake of",
+      "on the sake of",
+      "in the sake of"
+    ],
+    "correct_answer": "for the sake of",
+    "explanation": "\"for the sake of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"for the sake of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The fire quickly went ___.\" Qual é a expressão correta?",
+    "options": [
+      "for of control",
+      "with of control",
+      "on of control",
+      "out of control"
+    ],
+    "correct_answer": "out of control",
+    "explanation": "\"out of control\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"out of control\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The remote was ___ the fridge.\" Qual é a expressão correta?",
+    "options": [
+      "on top of",
+      "in top of",
+      "at top of",
+      "by top of"
+    ],
+    "correct_answer": "on top of",
+    "explanation": "\"on top of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"on top of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They crossed the river ___ a small boat.\" Qual é a expressão correta?",
+    "options": [
+      "at means of",
+      "with means of",
+      "in means of",
+      "by means of"
+    ],
+    "correct_answer": "by means of",
+    "explanation": "\"by means of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"by means of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I deleted the file ___.\" Qual é a expressão correta?",
+    "options": [
+      "in mistake",
+      "on mistake",
+      "by mistake",
+      "with mistake"
+    ],
+    "correct_answer": "by mistake",
+    "explanation": "\"by mistake\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"by mistake\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He broke the vase ___.\" Qual é a expressão correta?",
+    "options": [
+      "for purpose",
+      "of purpose",
+      "on purpose",
+      "in purpose"
+    ],
+    "correct_answer": "on purpose",
+    "explanation": "\"on purpose\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"on purpose\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Who is ___ the budget this year?\" Qual é a expressão correta?",
+    "options": [
+      "on charge of",
+      "of charge of",
+      "in charge of",
+      "with charge of"
+    ],
+    "correct_answer": "in charge of",
+    "explanation": "\"in charge of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in charge of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The committee voted ___ the change.\" Qual é a expressão correta?",
+    "options": [
+      "on favor of",
+      "at favor of",
+      "in favor of",
+      "for favor of"
+    ],
+    "correct_answer": "in favor of",
+    "explanation": "\"in favor of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in favor of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She accepted the award ___ the whole cast.\" Qual é a expressão correta?",
+    "options": [
+      "on behalf of",
+      "at behalf of",
+      "in behalf of",
+      "by behalf of"
+    ],
+    "correct_answer": "on behalf of",
+    "explanation": "\"on behalf of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"on behalf of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Let's compare the two cities ___ safety.\" Qual é a expressão correta?",
+    "options": [
+      "in terms of",
+      "on terms of",
+      "by terms of",
+      "of terms of"
+    ],
+    "correct_answer": "in terms of",
+    "explanation": "\"in terms of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in terms of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She passed the exam ___ being sick.\" Qual é a expressão correta?",
+    "options": [
+      "in spite of",
+      "of spite of",
+      "on spite of",
+      "for spite of"
+    ],
+    "correct_answer": "in spite of",
+    "explanation": "\"in spite of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in spite of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Without insurance, the family is ___ losing everything.\" Qual é a expressão correta?",
+    "options": [
+      "at risk of",
+      "with risk of",
+      "of risk of",
+      "on risk of"
+    ],
+    "correct_answer": "at risk of",
+    "explanation": "\"at risk of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"at risk of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"His behavior wasn't ___ the team's values.\" Qual é a expressão correta?",
+    "options": [
+      "of line with",
+      "with line with",
+      "in line with",
+      "on line with"
+    ],
+    "correct_answer": "in line with",
+    "explanation": "\"in line with\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in line with\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"The company changed its policy ___ customer feedback.\" Qual é a expressão correta?",
+    "options": [
+      "by response to",
+      "of response to",
+      "at response to",
+      "in response to"
+    ],
+    "correct_answer": "in response to",
+    "explanation": "\"in response to\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in response to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"___ his salary, he gets a bonus.\" Qual é a expressão correta?",
+    "options": [
+      "of addition to",
+      "by addition to",
+      "for addition to",
+      "in addition to"
+    ],
+    "correct_answer": "in addition to",
+    "explanation": "\"in addition to\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"in addition to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"She stayed quiet ___ the group.\" Qual é a expressão correta?",
+    "options": [
+      "of the sake of",
+      "at the sake of",
+      "in the sake of",
+      "for the sake of"
+    ],
+    "correct_answer": "for the sake of",
+    "explanation": "\"for the sake of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"for the sake of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The situation got completely ___.\" Qual é a expressão correta?",
+    "options": [
+      "for of control",
+      "on of control",
+      "out of control",
+      "by of control"
+    ],
+    "correct_answer": "out of control",
+    "explanation": "\"out of control\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"out of control\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Everything happened ___ an already difficult week.\" Qual é a expressão correta?",
+    "options": [
+      "of top of",
+      "for top of",
+      "by top of",
+      "on top of"
+    ],
+    "correct_answer": "on top of",
+    "explanation": "\"on top of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"on top of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The message was sent ___ a secure channel.\" Qual é a expressão correta?",
+    "options": [
+      "of means of",
+      "with means of",
+      "at means of",
+      "by means of"
+    ],
+    "correct_answer": "by means of",
+    "explanation": "\"by means of\" é uma expressão fixa em inglês — não dá pra deduzir a preposição certa a partir da tradução literal do português. Aqui: \"by means of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ tallest building in the city.\" Qual é a forma correta?",
+    "options": [
+      "a tallest",
+      "tallest",
+      "the tallest",
+      "an tallest"
+    ],
+    "correct_answer": "the tallest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the tallest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ most expensive car in the city.\" Qual é a forma correta?",
+    "options": [
+      "an most expensive",
+      "the most expensive",
+      "a most expensive",
+      "most expensive"
+    ],
+    "correct_answer": "the most expensive",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the most expensive\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ best player in the city.\" Qual é a forma correta?",
+    "options": [
+      "a best",
+      "best",
+      "an best",
+      "the best"
+    ],
+    "correct_answer": "the best",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the best\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ oldest tree in the city.\" Qual é a forma correta?",
+    "options": [
+      "a oldest",
+      "an oldest",
+      "oldest",
+      "the oldest"
+    ],
+    "correct_answer": "the oldest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the oldest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"This is ___ fastest runner in the city.\" Qual é a forma correta?",
+    "options": [
+      "fastest",
+      "the fastest",
+      "an fastest",
+      "a fastest"
+    ],
+    "correct_answer": "the fastest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the fastest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"This is ___ largest park in the city.\" Qual é a forma correta?",
+    "options": [
+      "largest",
+      "a largest",
+      "an largest",
+      "the largest"
+    ],
+    "correct_answer": "the largest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the largest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"This is ___ smallest apartment in the city.\" Qual é a forma correta?",
+    "options": [
+      "a smallest",
+      "the smallest",
+      "smallest",
+      "an smallest"
+    ],
+    "correct_answer": "the smallest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the smallest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"This is ___ deepest pool in the city.\" Qual é a forma correta?",
+    "options": [
+      "a deepest",
+      "an deepest",
+      "the deepest",
+      "deepest"
+    ],
+    "correct_answer": "the deepest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the deepest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"This is ___ most popular singer in the city.\" Qual é a forma correta?",
+    "options": [
+      "most popular",
+      "an most popular",
+      "a most popular",
+      "the most popular"
+    ],
+    "correct_answer": "the most popular",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the most popular\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"This is ___ busiest avenue in the city.\" Qual é a forma correta?",
+    "options": [
+      "a busiest",
+      "the busiest",
+      "busiest",
+      "an busiest"
+    ],
+    "correct_answer": "the busiest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the busiest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ liveliest neighborhood in the city.\" Qual é a forma correta?",
+    "options": [
+      "liveliest",
+      "a liveliest",
+      "an liveliest",
+      "the liveliest"
+    ],
+    "correct_answer": "the liveliest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the liveliest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ coldest winter in the city.\" Qual é a forma correta?",
+    "options": [
+      "the coldest",
+      "coldest",
+      "an coldest",
+      "a coldest"
+    ],
+    "correct_answer": "the coldest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the coldest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ richest man in the city.\" Qual é a forma correta?",
+    "options": [
+      "an richest",
+      "the richest",
+      "a richest",
+      "richest"
+    ],
+    "correct_answer": "the richest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the richest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"This is ___ most beautiful garden in the city.\" Qual é a forma correta?",
+    "options": [
+      "the most beautiful",
+      "a most beautiful",
+      "most beautiful",
+      "an most beautiful"
+    ],
+    "correct_answer": "the most beautiful",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the most beautiful\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"This is ___ quietest street in the city.\" Qual é a forma correta?",
+    "options": [
+      "a quietest",
+      "quietest",
+      "the quietest",
+      "an quietest"
+    ],
+    "correct_answer": "the quietest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês, mesmo quando o português não usaria artigo definido do mesmo jeito. Aqui: \"the quietest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They are traveling to ___ Amazon River this summer.\" Qual é a forma correta?",
+    "options": [
+      "a Amazon River",
+      "the Amazon River",
+      "Amazon River",
+      "an Amazon River"
+    ],
+    "correct_answer": "the Amazon River",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Amazon River\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They are traveling to ___ Pacific Ocean this summer.\" Qual é a forma correta?",
+    "options": [
+      "Pacific Ocean",
+      "a Pacific Ocean",
+      "the Pacific Ocean",
+      "an Pacific Ocean"
+    ],
+    "correct_answer": "the Pacific Ocean",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Pacific Ocean\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They are traveling to ___ Alps this summer.\" Qual é a forma correta?",
+    "options": [
+      "Alps",
+      "an Alps",
+      "the Alps",
+      "a Alps"
+    ],
+    "correct_answer": "the Alps",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Alps\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They are traveling to ___ Sahara Desert this summer.\" Qual é a forma correta?",
+    "options": [
+      "a Sahara Desert",
+      "Sahara Desert",
+      "an Sahara Desert",
+      "the Sahara Desert"
+    ],
+    "correct_answer": "the Sahara Desert",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Sahara Desert\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They are traveling to ___ United States this summer.\" Qual é a forma correta?",
+    "options": [
+      "United States",
+      "an United States",
+      "a United States",
+      "the United States"
+    ],
+    "correct_answer": "the United States",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the United States\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They are traveling to ___ Netherlands this summer.\" Qual é a forma correta?",
+    "options": [
+      "the Netherlands",
+      "a Netherlands",
+      "an Netherlands",
+      "Netherlands"
+    ],
+    "correct_answer": "the Netherlands",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Netherlands\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They are traveling to ___ Philippines this summer.\" Qual é a forma correta?",
+    "options": [
+      "Philippines",
+      "a Philippines",
+      "the Philippines",
+      "an Philippines"
+    ],
+    "correct_answer": "the Philippines",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Philippines\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They are traveling to ___ United Kingdom this summer.\" Qual é a forma correta?",
+    "options": [
+      "a United Kingdom",
+      "an United Kingdom",
+      "the United Kingdom",
+      "United Kingdom"
+    ],
+    "correct_answer": "the United Kingdom",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the United Kingdom\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"They are traveling to ___ Atlantic Ocean this summer.\" Qual é a forma correta?",
+    "options": [
+      "a Atlantic Ocean",
+      "Atlantic Ocean",
+      "an Atlantic Ocean",
+      "the Atlantic Ocean"
+    ],
+    "correct_answer": "the Atlantic Ocean",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Atlantic Ocean\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They are traveling to ___ Andes this summer.\" Qual é a forma correta?",
+    "options": [
+      "an Andes",
+      "a Andes",
+      "Andes",
+      "the Andes"
+    ],
+    "correct_answer": "the Andes",
+    "explanation": "Certos nomes geográficos (cadeias de montanhas, oceanos, rios, desertos, e alguns países no plural/com \"Republic\"/\"Kingdom\") sempre levam \"the\". Aqui: \"the Andes\".",
+    "hints": [
+      "Tema: Artigo definido com nomes geográficos específicos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Last year, she ___ Brazil.\" Qual é a forma correta?",
+    "options": [
+      "visited the Brazil",
+      "visited an Brazil",
+      "visited a Brazil",
+      "visited Brazil"
+    ],
+    "correct_answer": "visited Brazil",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Brazil\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Last year, she ___ France.\" Qual é a forma correta?",
+    "options": [
+      "visited a France",
+      "visited the France",
+      "visited France",
+      "visited an France"
+    ],
+    "correct_answer": "visited France",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited France\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Last year, she ___ Tokyo.\" Qual é a forma correta?",
+    "options": [
+      "visited an Tokyo",
+      "visited a Tokyo",
+      "visited the Tokyo",
+      "visited Tokyo"
+    ],
+    "correct_answer": "visited Tokyo",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Tokyo\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Last year, she ___ Canada.\" Qual é a forma correta?",
+    "options": [
+      "visited the Canada",
+      "visited an Canada",
+      "visited Canada",
+      "visited a Canada"
+    ],
+    "correct_answer": "visited Canada",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Canada\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"Last year, she ___ Portugal.\" Qual é a forma correta?",
+    "options": [
+      "visited a Portugal",
+      "visited the Portugal",
+      "visited Portugal",
+      "visited an Portugal"
+    ],
+    "correct_answer": "visited Portugal",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Portugal\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Last year, she ___ Egypt.\" Qual é a forma correta?",
+    "options": [
+      "visited an Egypt",
+      "visited a Egypt",
+      "visited Egypt",
+      "visited the Egypt"
+    ],
+    "correct_answer": "visited Egypt",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Egypt\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Last year, she ___ Peru.\" Qual é a forma correta?",
+    "options": [
+      "visited a Peru",
+      "visited an Peru",
+      "visited Peru",
+      "visited the Peru"
+    ],
+    "correct_answer": "visited Peru",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Peru\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Last year, she ___ Italy.\" Qual é a forma correta?",
+    "options": [
+      "visited an Italy",
+      "visited a Italy",
+      "visited Italy",
+      "visited the Italy"
+    ],
+    "correct_answer": "visited Italy",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Italy\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Last year, she ___ Kenya.\" Qual é a forma correta?",
+    "options": [
+      "visited the Kenya",
+      "visited an Kenya",
+      "visited a Kenya",
+      "visited Kenya"
+    ],
+    "correct_answer": "visited Kenya",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Kenya\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"Last year, she ___ Spain.\" Qual é a forma correta?",
+    "options": [
+      "visited Spain",
+      "visited an Spain",
+      "visited a Spain",
+      "visited the Spain"
+    ],
+    "correct_answer": "visited Spain",
+    "explanation": "A maioria dos nomes de países e cidades não leva artigo nenhum em inglês. Aqui: \"visited Spain\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They sent the invitation to the wrong address ___.\" Qual é a expressão correta?",
+    "options": [
+      "for mistake",
+      "by mistake",
+      "with mistake",
+      "on mistake"
+    ],
+    "correct_answer": "by mistake",
+    "explanation": "\"by mistake\" é uma expressão fixa em inglês. Aqui: \"by mistake\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"I think he missed the meeting ___.\" Qual é a expressão correta?",
+    "options": [
+      "in purpose",
+      "on purpose",
+      "of purpose",
+      "by purpose"
+    ],
+    "correct_answer": "on purpose",
+    "explanation": "\"on purpose\" é uma expressão fixa em inglês. Aqui: \"on purpose\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"She was put ___ the new office.\" Qual é a expressão correta?",
+    "options": [
+      "in charge of",
+      "at charge of",
+      "for charge of",
+      "on charge of"
+    ],
+    "correct_answer": "in charge of",
+    "explanation": "\"in charge of\" é uma expressão fixa em inglês. Aqui: \"in charge of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"He argued ___ stricter laws.\" Qual é a expressão correta?",
+    "options": [
+      "for favor of",
+      "on favor of",
+      "at favor of",
+      "in favor of"
+    ],
+    "correct_answer": "in favor of",
+    "explanation": "\"in favor of\" é uma expressão fixa em inglês. Aqui: \"in favor of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The lawyer signed the contract ___ his client.\" Qual é a expressão correta?",
+    "options": [
+      "of behalf of",
+      "on behalf of",
+      "in behalf of",
+      "for behalf of"
+    ],
+    "correct_answer": "on behalf of",
+    "explanation": "\"on behalf of\" é uma expressão fixa em inglês. Aqui: \"on behalf of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The two plans differ ___ price.\" Qual é a expressão correta?",
+    "options": [
+      "with terms of",
+      "for terms of",
+      "on terms of",
+      "in terms of"
+    ],
+    "correct_answer": "in terms of",
+    "explanation": "\"in terms of\" é uma expressão fixa em inglês. Aqui: \"in terms of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He finished the race ___ his injury.\" Qual é a expressão correta?",
+    "options": [
+      "at spite of",
+      "in spite of",
+      "with spite of",
+      "by spite of"
+    ],
+    "correct_answer": "in spite of",
+    "explanation": "\"in spite of\" é uma expressão fixa em inglês. Aqui: \"in spite of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Without rest, workers are ___ burnout.\" Qual é a expressão correta?",
+    "options": [
+      "at risk of",
+      "for risk of",
+      "with risk of",
+      "on risk of"
+    ],
+    "correct_answer": "at risk of",
+    "explanation": "\"at risk of\" é uma expressão fixa em inglês. Aqui: \"at risk of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"Her decision was ___ the doctor's advice.\" Qual é a expressão correta?",
+    "options": [
+      "at line with",
+      "in line with",
+      "on line with",
+      "with line with"
+    ],
+    "correct_answer": "in line with",
+    "explanation": "\"in line with\" é uma expressão fixa em inglês. Aqui: \"in line with\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"The store extended its hours ___ demand.\" Qual é a expressão correta?",
+    "options": [
+      "with response to",
+      "at response to",
+      "in response to",
+      "on response to"
+    ],
+    "correct_answer": "in response to",
+    "explanation": "\"in response to\" é uma expressão fixa em inglês. Aqui: \"in response to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"___ English, she speaks French.\" Qual é a expressão correta?",
+    "options": [
+      "with addition to",
+      "in addition to",
+      "at addition to",
+      "of addition to"
+    ],
+    "correct_answer": "in addition to",
+    "explanation": "\"in addition to\" é uma expressão fixa em inglês. Aqui: \"in addition to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He apologized ___ the friendship.\" Qual é a expressão correta?",
+    "options": [
+      "by the sake of",
+      "for the sake of",
+      "of the sake of",
+      "in the sake of"
+    ],
+    "correct_answer": "for the sake of",
+    "explanation": "\"for the sake of\" é uma expressão fixa em inglês. Aqui: \"for the sake of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The budget spiraled ___ last quarter.\" Qual é a expressão correta?",
+    "options": [
+      "at of control",
+      "out of control",
+      "on of control",
+      "with of control"
+    ],
+    "correct_answer": "out of control",
+    "explanation": "\"out of control\" é uma expressão fixa em inglês. Aqui: \"out of control\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"The deadline was moved up, ___ everything else.\" Qual é a expressão correta?",
+    "options": [
+      "on top of",
+      "at top of",
+      "with top of",
+      "of top of"
+    ],
+    "correct_answer": "on top of",
+    "explanation": "\"on top of\" é uma expressão fixa em inglês. Aqui: \"on top of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They solved the dispute ___ negotiation.\" Qual é a expressão correta?",
+    "options": [
+      "at means of",
+      "with means of",
+      "by means of",
+      "on means of"
+    ],
+    "correct_answer": "by means of",
+    "explanation": "\"by means of\" é uma expressão fixa em inglês. Aqui: \"by means of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"I have a question ___ the new policy.\" Qual é a expressão correta?",
+    "options": [
+      "in regard to",
+      "with regard to",
+      "of regard to",
+      "by regard to"
+    ],
+    "correct_answer": "with regard to",
+    "explanation": "\"with regard to\" é uma expressão fixa em inglês. Aqui: \"with regard to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"The flight was delayed ___ bad weather.\" Qual é a expressão correta?",
+    "options": [
+      "of account of",
+      "on account of",
+      "at account of",
+      "in account of"
+    ],
+    "correct_answer": "on account of",
+    "explanation": "\"on account of\" é uma expressão fixa em inglês. Aqui: \"on account of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He finished the project ___ his health.\" Qual é a expressão correta?",
+    "options": [
+      "at the expense of",
+      "by the expense of",
+      "in the expense of",
+      "on the expense of"
+    ],
+    "correct_answer": "at the expense of",
+    "explanation": "\"at the expense of\" é uma expressão fixa em inglês. Aqui: \"at the expense of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"She stayed calm ___ criticism.\" Qual é a expressão correta?",
+    "options": [
+      "with the face of",
+      "in the face of",
+      "on the face of",
+      "by the face of"
+    ],
+    "correct_answer": "in the face of",
+    "explanation": "\"in the face of\" é uma expressão fixa em inglês. Aqui: \"in the face of\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"His results were different ___ last year's.\" Qual é a expressão correta?",
+    "options": [
+      "in contrast to",
+      "for contrast to",
+      "by contrast to",
+      "of contrast to"
+    ],
+    "correct_answer": "in contrast to",
+    "explanation": "\"in contrast to\" é uma expressão fixa em inglês. Aqui: \"in contrast to\".",
+    "hints": [
+      "Tema: Expressões fixas com preposição.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He is ___ most talented actor I know.\" Qual é a forma correta?",
+    "options": [
+      "most talented",
+      "an most talented",
+      "a most talented",
+      "the most talented"
+    ],
+    "correct_answer": "the most talented",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most talented\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"He is ___ hardest worker I know.\" Qual é a forma correta?",
+    "options": [
+      "a hardest",
+      "hardest",
+      "an hardest",
+      "the hardest"
+    ],
+    "correct_answer": "the hardest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the hardest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"He is ___ newest employee I know.\" Qual é a forma correta?",
+    "options": [
+      "a newest",
+      "an newest",
+      "newest",
+      "the newest"
+    ],
+    "correct_answer": "the newest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the newest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"He is ___ most reliable friend I know.\" Qual é a forma correta?",
+    "options": [
+      "an most reliable",
+      "a most reliable",
+      "the most reliable",
+      "most reliable"
+    ],
+    "correct_answer": "the most reliable",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most reliable\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"He is ___ most generous neighbor I know.\" Qual é a forma correta?",
+    "options": [
+      "a most generous",
+      "most generous",
+      "an most generous",
+      "the most generous"
+    ],
+    "correct_answer": "the most generous",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most generous\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He is ___ most dedicated volunteer I know.\" Qual é a forma correta?",
+    "options": [
+      "most dedicated",
+      "the most dedicated",
+      "an most dedicated",
+      "a most dedicated"
+    ],
+    "correct_answer": "the most dedicated",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most dedicated\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He is ___ quietest roommate I know.\" Qual é a forma correta?",
+    "options": [
+      "quietest",
+      "the quietest",
+      "a quietest",
+      "an quietest"
+    ],
+    "correct_answer": "the quietest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the quietest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He is ___ most experienced pilot I know.\" Qual é a forma correta?",
+    "options": [
+      "an most experienced",
+      "the most experienced",
+      "a most experienced",
+      "most experienced"
+    ],
+    "correct_answer": "the most experienced",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the most experienced\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete a frase: \"He is ___ oldest colleague I know.\" Qual é a forma correta?",
+    "options": [
+      "oldest",
+      "a oldest",
+      "the oldest",
+      "an oldest"
+    ],
+    "correct_answer": "the oldest",
+    "explanation": "Superlativos sempre levam \"the\" em inglês. Aqui: \"the oldest\".",
+    "hints": [
+      "Tema: Artigo definido com superlativo.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They ___ last winter.\" Qual é a forma correta?",
+    "options": [
+      "traveled to a Germany",
+      "traveled to the Germany",
+      "traveled to Germany",
+      "traveled to an Germany"
+    ],
+    "correct_answer": "traveled to Germany",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"traveled to Germany\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They ___ last spring.\" Qual é a forma correta?",
+    "options": [
+      "traveled to the Mexico",
+      "traveled to Mexico",
+      "traveled to an Mexico",
+      "traveled to a Mexico"
+    ],
+    "correct_answer": "traveled to Mexico",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"traveled to Mexico\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete a frase: \"They ___ last summer.\" Qual é a forma correta?",
+    "options": [
+      "traveled to the Thailand",
+      "traveled to a Thailand",
+      "traveled to Thailand",
+      "traveled to an Thailand"
+    ],
+    "correct_answer": "traveled to Thailand",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"traveled to Thailand\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They ___ last fall.\" Qual é a forma correta?",
+    "options": [
+      "traveled to a India",
+      "traveled to India",
+      "traveled to an India",
+      "traveled to the India"
+    ],
+    "correct_answer": "traveled to India",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"traveled to India\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They ___ two years ago.\" Qual é a forma correta?",
+    "options": [
+      "traveled to an Chile",
+      "traveled to a Chile",
+      "traveled to the Chile",
+      "traveled to Chile"
+    ],
+    "correct_answer": "traveled to Chile",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"traveled to Chile\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_preposicoes_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete a frase: \"They ___ in April.\" Qual é a forma correta?",
+    "options": [
+      "traveled to a Greece",
+      "traveled to Greece",
+      "traveled to an Greece",
+      "traveled to the Greece"
+    ],
+    "correct_answer": "traveled to Greece",
+    "explanation": "A maioria dos nomes de países não leva artigo nenhum em inglês. Aqui: \"traveled to Greece\".",
+    "hints": [
+      "Tema: Ausência de artigo com a maioria dos nomes geográficos.",
+      "Preste atenção na preposição/artigo — releia a frase toda."
+    ],
+    "age_reviewed": true
+  }
+]
