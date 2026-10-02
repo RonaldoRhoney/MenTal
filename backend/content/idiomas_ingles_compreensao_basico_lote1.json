@@ -1,0 +1,477 @@
+[
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "What time does Sarah wake up?",
+    "options": [
+      "She wakes up at seven",
+      "She wakes up at eight",
+      "She wakes up at six",
+      "She wakes up at nine"
+    ],
+    "correct_answer": "She wakes up at seven",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Every morning, Sarah wakes up at seven o'clock. She brushes her teeth and eats breakfast with her family. After breakfast, she walks to school with her brother. School starts at eight o'clock, and Sarah loves her math class the most.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "Who does Sarah eat breakfast with?",
+    "options": [
+      "With her family",
+      "With her friends",
+      "With her teacher",
+      "With her neighbors"
+    ],
+    "correct_answer": "With her family",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Every morning, Sarah wakes up at seven o'clock. She brushes her teeth and eats breakfast with her family. After breakfast, she walks to school with her brother. School starts at eight o'clock, and Sarah loves her math class the most.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "How does Sarah get to school?",
+    "options": [
+      "She walks to school",
+      "She takes the bus",
+      "She rides a bike",
+      "Her mother drives her"
+    ],
+    "correct_answer": "She walks to school",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Every morning, Sarah wakes up at seven o'clock. She brushes her teeth and eats breakfast with her family. After breakfast, she walks to school with her brother. School starts at eight o'clock, and Sarah loves her math class the most.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "Who walks with Sarah to school?",
+    "options": [
+      "Her brother walks with her",
+      "Her sister walks with her",
+      "Her father walks with her",
+      "Her best friend walks with her"
+    ],
+    "correct_answer": "Her brother walks with her",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Every morning, Sarah wakes up at seven o'clock. She brushes her teeth and eats breakfast with her family. After breakfast, she walks to school with her brother. School starts at eight o'clock, and Sarah loves her math class the most.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "Which class does Sarah love the most?",
+    "options": [
+      "She loves math class",
+      "She loves science class",
+      "She loves art class",
+      "She loves English class"
+    ],
+    "correct_answer": "She loves math class",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Every morning, Sarah wakes up at seven o'clock. She brushes her teeth and eats breakfast with her family. After breakfast, she walks to school with her brother. School starts at eight o'clock, and Sarah loves her math class the most.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "When does Tom go to the market?",
+    "options": [
+      "He goes on Saturdays",
+      "He goes on Sundays",
+      "He goes on Mondays",
+      "He goes every day"
+    ],
+    "correct_answer": "He goes on Saturdays",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "On Saturdays, Tom goes to the market with his mother. They buy fresh fruit, vegetables, and bread. Tom likes to choose the apples himself. After shopping, they usually stop at a small café for a cup of hot chocolate.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "Who does Tom go to the market with?",
+    "options": [
+      "He goes with his mother",
+      "He goes with his father",
+      "He goes with his grandmother",
+      "He goes with his teacher"
+    ],
+    "correct_answer": "He goes with his mother",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "On Saturdays, Tom goes to the market with his mother. They buy fresh fruit, vegetables, and bread. Tom likes to choose the apples himself. After shopping, they usually stop at a small café for a cup of hot chocolate.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "What does Tom like to choose himself?",
+    "options": [
+      "He chooses the apples",
+      "He chooses the bread",
+      "He chooses the vegetables",
+      "He chooses the bags"
+    ],
+    "correct_answer": "He chooses the apples",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "On Saturdays, Tom goes to the market with his mother. They buy fresh fruit, vegetables, and bread. Tom likes to choose the apples himself. After shopping, they usually stop at a small café for a cup of hot chocolate.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "Where do they stop after shopping?",
+    "options": [
+      "They stop at a small café",
+      "They stop at a restaurant",
+      "They stop at a bakery",
+      "They stop at a park"
+    ],
+    "correct_answer": "They stop at a small café",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "On Saturdays, Tom goes to the market with his mother. They buy fresh fruit, vegetables, and bread. Tom likes to choose the apples himself. After shopping, they usually stop at a small café for a cup of hot chocolate.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 1,
+    "prompt": "What do they drink at the café?",
+    "options": [
+      "They drink hot chocolate",
+      "They drink coffee",
+      "They drink tea",
+      "They drink juice"
+    ],
+    "correct_answer": "They drink hot chocolate",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "On Saturdays, Tom goes to the market with his mother. They buy fresh fruit, vegetables, and bread. Tom likes to choose the apples himself. After shopping, they usually stop at a small café for a cup of hot chocolate.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "Who is Mike going to visit?",
+    "options": [
+      "He is visiting his grandparents",
+      "He is visiting his cousins",
+      "He is visiting his friends",
+      "He is visiting his teacher"
+    ],
+    "correct_answer": "He is visiting his grandparents",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna: Hi, Mike! What are your plans for this weekend?\nMike: I'm going to visit my grandparents in the countryside.\nAnna: That sounds nice! Are you going by car or by bus?\nMike: We're going by car. It's about two hours from here.\nAnna: Have a great trip! Say hello to your grandparents for me.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "Where do Mike's grandparents live?",
+    "options": [
+      "They live in the countryside",
+      "They live in the city",
+      "They live at the beach",
+      "They live in another country"
+    ],
+    "correct_answer": "They live in the countryside",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna: Hi, Mike! What are your plans for this weekend?\nMike: I'm going to visit my grandparents in the countryside.\nAnna: That sounds nice! Are you going by car or by bus?\nMike: We're going by car. It's about two hours from here.\nAnna: Have a great trip! Say hello to your grandparents for me.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "How is Mike traveling there?",
+    "options": [
+      "He is traveling by car",
+      "He is traveling by bus",
+      "He is traveling by train",
+      "He is traveling by plane"
+    ],
+    "correct_answer": "He is traveling by car",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna: Hi, Mike! What are your plans for this weekend?\nMike: I'm going to visit my grandparents in the countryside.\nAnna: That sounds nice! Are you going by car or by bus?\nMike: We're going by car. It's about two hours from here.\nAnna: Have a great trip! Say hello to your grandparents for me.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "How long is the trip?",
+    "options": [
+      "It takes about two hours",
+      "It takes about one hour",
+      "It takes about four hours",
+      "It takes about thirty minutes"
+    ],
+    "correct_answer": "It takes about two hours",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna: Hi, Mike! What are your plans for this weekend?\nMike: I'm going to visit my grandparents in the countryside.\nAnna: That sounds nice! Are you going by car or by bus?\nMike: We're going by car. It's about two hours from here.\nAnna: Have a great trip! Say hello to your grandparents for me.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "What does Anna ask Mike to do?",
+    "options": [
+      "Say hello to his grandparents",
+      "Bring her a gift",
+      "Call her later",
+      "Send her photos"
+    ],
+    "correct_answer": "Say hello to his grandparents",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna: Hi, Mike! What are your plans for this weekend?\nMike: I'm going to visit my grandparents in the countryside.\nAnna: That sounds nice! Are you going by car or by bus?\nMike: We're going by car. It's about two hours from here.\nAnna: Have a great trip! Say hello to your grandparents for me.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "What was the weather like on Monday?",
+    "options": [
+      "It was raining hard",
+      "It was sunny",
+      "It was snowing",
+      "It was windy"
+    ],
+    "correct_answer": "It was raining hard",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "It was raining hard on Monday morning. Lucy did not want to walk to school in the rain, so her father drove her instead. At school, the teacher canceled outdoor games because of the weather. Instead, the students played board games inside the classroom.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "Who drove Lucy to school?",
+    "options": [
+      "Her father drove her",
+      "Her mother drove her",
+      "Her brother drove her",
+      "Her neighbor drove her"
+    ],
+    "correct_answer": "Her father drove her",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "It was raining hard on Monday morning. Lucy did not want to walk to school in the rain, so her father drove her instead. At school, the teacher canceled outdoor games because of the weather. Instead, the students played board games inside the classroom.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "Why did the teacher cancel outdoor games?",
+    "options": [
+      "Because of the weather",
+      "Because of a holiday",
+      "Because it was too late",
+      "Because the students were tired"
+    ],
+    "correct_answer": "Because of the weather",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "It was raining hard on Monday morning. Lucy did not want to walk to school in the rain, so her father drove her instead. At school, the teacher canceled outdoor games because of the weather. Instead, the students played board games inside the classroom.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "What did the students play instead?",
+    "options": [
+      "They played board games",
+      "They played video games",
+      "They played soccer",
+      "They played music"
+    ],
+    "correct_answer": "They played board games",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "It was raining hard on Monday morning. Lucy did not want to walk to school in the rain, so her father drove her instead. At school, the teacher canceled outdoor games because of the weather. Instead, the students played board games inside the classroom.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 2,
+    "prompt": "Where did the students play?",
+    "options": [
+      "They played inside the classroom",
+      "They played in the gym",
+      "They played in the garden",
+      "They played at home"
+    ],
+    "correct_answer": "They played inside the classroom",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "It was raining hard on Monday morning. Lucy did not want to walk to school in the rain, so her father drove her instead. At school, the teacher canceled outdoor games because of the weather. Instead, the students played board games inside the classroom.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 3,
+    "prompt": "Where did Ben's family adopt the dog from?",
+    "options": [
+      "They adopted him from a shelter",
+      "They adopted him from a pet store",
+      "They got him from a friend",
+      "They found him on the street"
+    ],
+    "correct_answer": "They adopted him from a shelter",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Last week, Ben's family adopted a small dog from a shelter. They named him Buddy. Buddy is very playful and loves to run in the backyard. Every evening, Ben takes Buddy for a short walk around the neighborhood before dinner.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 3,
+    "prompt": "What is the dog's name?",
+    "options": [
+      "His name is Buddy",
+      "His name is Max",
+      "His name is Rex",
+      "His name is Charlie"
+    ],
+    "correct_answer": "His name is Buddy",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Last week, Ben's family adopted a small dog from a shelter. They named him Buddy. Buddy is very playful and loves to run in the backyard. Every evening, Ben takes Buddy for a short walk around the neighborhood before dinner.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 3,
+    "prompt": "What does Buddy love to do?",
+    "options": [
+      "He loves to run in the backyard",
+      "He loves to sleep all day",
+      "He loves to chase cats",
+      "He loves to swim in the pool"
+    ],
+    "correct_answer": "He loves to run in the backyard",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Last week, Ben's family adopted a small dog from a shelter. They named him Buddy. Buddy is very playful and loves to run in the backyard. Every evening, Ben takes Buddy for a short walk around the neighborhood before dinner.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 3,
+    "prompt": "Who takes Buddy for a walk?",
+    "options": [
+      "Ben takes him for a walk",
+      "Ben's mother takes him",
+      "Ben's sister takes him",
+      "Ben's father takes him"
+    ],
+    "correct_answer": "Ben takes him for a walk",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Last week, Ben's family adopted a small dog from a shelter. They named him Buddy. Buddy is very playful and loves to run in the backyard. Every evening, Ben takes Buddy for a short walk around the neighborhood before dinner.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_basico",
+    "difficulty_level": 3,
+    "prompt": "When does Ben walk Buddy?",
+    "options": [
+      "Every evening before dinner",
+      "Every morning before school",
+      "Only on weekends",
+      "Right after school"
+    ],
+    "correct_answer": "Every evening before dinner",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Last week, Ben's family adopted a small dog from a shelter. They named him Buddy. Buddy is very playful and loves to run in the backyard. Every evening, Ben takes Buddy for a short walk around the neighborhood before dinner.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  }
+]

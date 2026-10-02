@@ -1,0 +1,477 @@
+[
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What is notable about Elena's background?",
+    "options": [
+      "She had no formal training in business",
+      "She studied business at university",
+      "She inherited the company",
+      "She worked for a large corporation first"
+    ],
+    "correct_answer": "She had no formal training in business",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite having no formal training in business, Elena managed to build a thriving online store from scratch within just two years. She attributes much of her success to relentless research and a willingness to learn from her failures rather than being discouraged by them. Investors have since taken notice, and she recently secured funding to expand internationally.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "How long did it take her to build the store?",
+    "options": [
+      "It took her two years",
+      "It took her five years",
+      "It took her six months",
+      "It took her ten years"
+    ],
+    "correct_answer": "It took her two years",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite having no formal training in business, Elena managed to build a thriving online store from scratch within just two years. She attributes much of her success to relentless research and a willingness to learn from her failures rather than being discouraged by them. Investors have since taken notice, and she recently secured funding to expand internationally.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does she attribute her success to?",
+    "options": [
+      "Relentless research and learning from failures",
+      "Pure luck",
+      "Family connections",
+      "A large initial investment"
+    ],
+    "correct_answer": "Relentless research and learning from failures",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite having no formal training in business, Elena managed to build a thriving online store from scratch within just two years. She attributes much of her success to relentless research and a willingness to learn from her failures rather than being discouraged by them. Investors have since taken notice, and she recently secured funding to expand internationally.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"from scratch\" mean here?",
+    "options": [
+      "It means starting from nothing",
+      "It means starting from a template",
+      "It means starting from a loan",
+      "It means starting from an inheritance"
+    ],
+    "correct_answer": "It means starting from nothing",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite having no formal training in business, Elena managed to build a thriving online store from scratch within just two years. She attributes much of her success to relentless research and a willingness to learn from her failures rather than being discouraged by them. Investors have since taken notice, and she recently secured funding to expand internationally.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What can we infer about Elena's attitude toward failure?",
+    "options": [
+      "She sees it as a learning opportunity",
+      "She avoids it at all costs",
+      "She blames others for it",
+      "She ignores it completely"
+    ],
+    "correct_answer": "She sees it as a learning opportunity",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Despite having no formal training in business, Elena managed to build a thriving online store from scratch within just two years. She attributes much of her success to relentless research and a willingness to learn from her failures rather than being discouraged by them. Investors have since taken notice, and she recently secured funding to expand internationally.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What has the committee been unable to do?",
+    "options": [
+      "Reach a consensus",
+      "Meet at all",
+      "Find a meeting room",
+      "Contact clients"
+    ],
+    "correct_answer": "Reach a consensus",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The committee has been going back and forth on the new policy for weeks, unable to reach a consensus. Some members argue that the change is long overdue, while others fear it could backfire and alienate long-standing clients. A final vote is expected by the end of the month.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"going back and forth\" suggest?",
+    "options": [
+      "It suggests debating without deciding",
+      "It suggests traveling frequently",
+      "It suggests working efficiently",
+      "It suggests ignoring the issue"
+    ],
+    "correct_answer": "It suggests debating without deciding",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The committee has been going back and forth on the new policy for weeks, unable to reach a consensus. Some members argue that the change is long overdue, while others fear it could backfire and alienate long-standing clients. A final vote is expected by the end of the month.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What do some members fear?",
+    "options": [
+      "That the change could backfire",
+      "That the meeting will be canceled",
+      "That clients will be happy",
+      "That the vote will be unanimous"
+    ],
+    "correct_answer": "That the change could backfire",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The committee has been going back and forth on the new policy for weeks, unable to reach a consensus. Some members argue that the change is long overdue, while others fear it could backfire and alienate long-standing clients. A final vote is expected by the end of the month.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "When is the final vote expected?",
+    "options": [
+      "By the end of the month",
+      "Tomorrow morning",
+      "Sometime next year",
+      "It was already held"
+    ],
+    "correct_answer": "By the end of the month",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The committee has been going back and forth on the new policy for weeks, unable to reach a consensus. Some members argue that the change is long overdue, while others fear it could backfire and alienate long-standing clients. A final vote is expected by the end of the month.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 1,
+    "prompt": "What can we infer about the policy change?",
+    "options": [
+      "It is controversial within the committee",
+      "Everyone agrees with it",
+      "It has already failed",
+      "It is unrelated to clients"
+    ],
+    "correct_answer": "It is controversial within the committee",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The committee has been going back and forth on the new policy for weeks, unable to reach a consensus. Some members argue that the change is long overdue, while others fear it could backfire and alienate long-standing clients. A final vote is expected by the end of the month.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What is said about the new manager?",
+    "options": [
+      "He is strict and direct",
+      "He is shy and quiet",
+      "He avoids conflict",
+      "He rarely speaks"
+    ],
+    "correct_answer": "He is strict and direct",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Laura: I heard the new manager is really strict.\nPeter: Yeah, he doesn't beat around the bush. He tells you exactly what he thinks.\nLaura: That could be good or bad, depending on the situation.\nPeter: True, but at least you always know where you stand with him.\nLaura: I guess I'd rather have that than someone who sugarcoats everything.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does \"beat around the bush\" mean?",
+    "options": [
+      "It means to avoid saying something directly",
+      "It means to talk about nature",
+      "It means to waste time outdoors",
+      "It means to speak too quickly"
+    ],
+    "correct_answer": "It means to avoid saying something directly",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Laura: I heard the new manager is really strict.\nPeter: Yeah, he doesn't beat around the bush. He tells you exactly what he thinks.\nLaura: That could be good or bad, depending on the situation.\nPeter: True, but at least you always know where you stand with him.\nLaura: I guess I'd rather have that than someone who sugarcoats everything.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does \"sugarcoats\" mean in this context?",
+    "options": [
+      "It means to make something unpleasant sound nicer",
+      "It means to add sugar to food",
+      "It means to lie constantly",
+      "It means to refuse to speak"
+    ],
+    "correct_answer": "It means to make something unpleasant sound nicer",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Laura: I heard the new manager is really strict.\nPeter: Yeah, he doesn't beat around the bush. He tells you exactly what he thinks.\nLaura: That could be good or bad, depending on the situation.\nPeter: True, but at least you always know where you stand with him.\nLaura: I guess I'd rather have that than someone who sugarcoats everything.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What advantage of the manager's style does Peter mention?",
+    "options": [
+      "You always know where you stand",
+      "He never gives feedback",
+      "He is easy to ignore",
+      "He avoids all conflict"
+    ],
+    "correct_answer": "You always know where you stand",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Laura: I heard the new manager is really strict.\nPeter: Yeah, he doesn't beat around the bush. He tells you exactly what he thinks.\nLaura: That could be good or bad, depending on the situation.\nPeter: True, but at least you always know where you stand with him.\nLaura: I guess I'd rather have that than someone who sugarcoats everything.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does Laura seem to prefer?",
+    "options": [
+      "Direct honesty over false kindness",
+      "Someone who avoids conflict",
+      "A manager who ignores problems",
+      "Someone who flatters people"
+    ],
+    "correct_answer": "Direct honesty over false kindness",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Laura: I heard the new manager is really strict.\nPeter: Yeah, he doesn't beat around the bush. He tells you exactly what he thinks.\nLaura: That could be good or bad, depending on the situation.\nPeter: True, but at least you always know where you stand with him.\nLaura: I guess I'd rather have that than someone who sugarcoats everything.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "How did the scandal become public?",
+    "options": [
+      "A former employee leaked documents",
+      "The CEO confessed publicly",
+      "A journalist guessed it",
+      "It was announced officially"
+    ],
+    "correct_answer": "A former employee leaked documents",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The scandal came to light after a former employee leaked internal documents to the press. Although the company initially denied any wrongdoing, mounting evidence eventually forced its executives to issue a public apology. Analysts believe the incident will have lasting effects on the brand's reputation.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does the company's initial denial suggest?",
+    "options": [
+      "It was reluctant to admit fault",
+      "It was fully cooperative from the start",
+      "It welcomed the leaked documents",
+      "It had nothing to hide"
+    ],
+    "correct_answer": "It was reluctant to admit fault",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The scandal came to light after a former employee leaked internal documents to the press. Although the company initially denied any wrongdoing, mounting evidence eventually forced its executives to issue a public apology. Analysts believe the incident will have lasting effects on the brand's reputation.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does \"came to light\" mean?",
+    "options": [
+      "It means became known publicly",
+      "It means became illegal",
+      "It means was resolved",
+      "It means was funded"
+    ],
+    "correct_answer": "It means became known publicly",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The scandal came to light after a former employee leaked internal documents to the press. Although the company initially denied any wrongdoing, mounting evidence eventually forced its executives to issue a public apology. Analysts believe the incident will have lasting effects on the brand's reputation.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What eventually happened?",
+    "options": [
+      "Executives issued a public apology",
+      "The company closed down",
+      "Nothing changed at all",
+      "The employee was rehired"
+    ],
+    "correct_answer": "Executives issued a public apology",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The scandal came to light after a former employee leaked internal documents to the press. Although the company initially denied any wrongdoing, mounting evidence eventually forced its executives to issue a public apology. Analysts believe the incident will have lasting effects on the brand's reputation.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 2,
+    "prompt": "What do analysts predict?",
+    "options": [
+      "Lasting damage to the brand's reputation",
+      "A quick recovery",
+      "No effect at all",
+      "Increased sales"
+    ],
+    "correct_answer": "Lasting damage to the brand's reputation",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The scandal came to light after a former employee leaked internal documents to the press. Although the company initially denied any wrongdoing, mounting evidence eventually forced its executives to issue a public apology. Analysts believe the incident will have lasting effects on the brand's reputation.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 3,
+    "prompt": "What did the team do instead of dwelling on the setback?",
+    "options": [
+      "They prepared more rigorously",
+      "They gave up entirely",
+      "They blamed the coach",
+      "They quit the competition"
+    ],
+    "correct_answer": "They prepared more rigorously",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The team had lost the regional final by a narrow margin, and morale was low afterward. Rather than dwelling on the setback, the team channeled their disappointment into preparing more rigorously for the next competition. Their coach reminded them that even the most accomplished athletes face defeat before achieving lasting success.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 3,
+    "prompt": "What does \"dwelling on\" mean?",
+    "options": [
+      "It means focusing on for too long",
+      "It means forgetting completely",
+      "It means celebrating",
+      "It means ignoring"
+    ],
+    "correct_answer": "It means focusing on for too long",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The team had lost the regional final by a narrow margin, and morale was low afterward. Rather than dwelling on the setback, the team channeled their disappointment into preparing more rigorously for the next competition. Their coach reminded them that even the most accomplished athletes face defeat before achieving lasting success.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 3,
+    "prompt": "What did the coach remind them?",
+    "options": [
+      "Even accomplished athletes face defeat",
+      "Losing means giving up",
+      "They should quit now",
+      "Success comes without effort"
+    ],
+    "correct_answer": "Even accomplished athletes face defeat",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The team had lost the regional final by a narrow margin, and morale was low afterward. Rather than dwelling on the setback, the team channeled their disappointment into preparing more rigorously for the next competition. Their coach reminded them that even the most accomplished athletes face defeat before achieving lasting success.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 3,
+    "prompt": "How did the team lose the regional final?",
+    "options": [
+      "By a narrow margin",
+      "By a huge margin",
+      "They did not lose it",
+      "The match was canceled"
+    ],
+    "correct_answer": "By a narrow margin",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The team had lost the regional final by a narrow margin, and morale was low afterward. Rather than dwelling on the setback, the team channeled their disappointment into preparing more rigorously for the next competition. Their coach reminded them that even the most accomplished athletes face defeat before achieving lasting success.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_avancado",
+    "difficulty_level": 3,
+    "prompt": "What is the main message of this passage?",
+    "options": [
+      "Setbacks can motivate future success",
+      "Losing is always permanent",
+      "Coaches are not helpful",
+      "Competition is unnecessary"
+    ],
+    "correct_answer": "Setbacks can motivate future success",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The team had lost the regional final by a narrow margin, and morale was low afterward. Rather than dwelling on the setback, the team channeled their disappointment into preparing more rigorously for the next competition. Their coach reminded them that even the most accomplished athletes face defeat before achieving lasting success.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  }
+]

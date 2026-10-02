@@ -446,6 +446,30 @@
   "@territoryInglesContracoesRelampagoAvancado": {
     "description": "Territory display name — English informal contractions, timed mode, advanced level"
   },
+  "territoryInglesCompreensaoBasico": "Compreensão de Texto: Básico",
+  "@territoryInglesCompreensaoBasico": {
+    "description": "Territory display name — English reading comprehension, basic level"
+  },
+  "territoryInglesCompreensaoIntermediario": "Compreensão de Texto: Intermediário",
+  "@territoryInglesCompreensaoIntermediario": {
+    "description": "Territory display name — English reading comprehension, intermediate level"
+  },
+  "territoryInglesCompreensaoAvancado": "Compreensão de Texto: Avançado",
+  "@territoryInglesCompreensaoAvancado": {
+    "description": "Territory display name — English reading comprehension, advanced level"
+  },
+  "territoryInglesCompreensaoRelampagoBasico": "Compreensão de Texto Relâmpago: Básico",
+  "@territoryInglesCompreensaoRelampagoBasico": {
+    "description": "Territory display name — English reading comprehension, short-text mode, basic level"
+  },
+  "territoryInglesCompreensaoRelampagoIntermediario": "Compreensão de Texto Relâmpago: Intermediário",
+  "@territoryInglesCompreensaoRelampagoIntermediario": {
+    "description": "Territory display name — English reading comprehension, short-text mode, intermediate level"
+  },
+  "territoryInglesCompreensaoRelampagoAvancado": "Compreensão de Texto Relâmpago: Avançado",
+  "@territoryInglesCompreensaoRelampagoAvancado": {
+    "description": "Territory display name — English reading comprehension, short-text mode, advanced level"
+  },
   "@territoryFrancesAvancado": {
     "description": "Territory display name"
   },

@@ -292,6 +292,11 @@ IDIOMA_TERRITORY_IDS = {
     "ingles_compostas_relampago_basico", "ingles_compostas_relampago_intermediario", "ingles_compostas_relampago_avancado",
     "ingles_contracoes_basico", "ingles_contracoes_intermediario", "ingles_contracoes_avancado",
     "ingles_contracoes_relampago_basico", "ingles_contracoes_relampago_intermediario", "ingles_contracoes_relampago_avancado",
+    # Compreensão de Texto (MUNDO_IDIOMAS_INGLES_COMPREENSAO_TEXTO_V1.md, 30/09/2026) — os
+    # textos e perguntas também servem de referência pro Mental Lingo construir respostas
+    # mais longas/contextualizadas (§6 do doc).
+    "ingles_compreensao_basico", "ingles_compreensao_intermediario", "ingles_compreensao_avancado",
+    "ingles_compreensao_relampago_basico", "ingles_compreensao_relampago_intermediario", "ingles_compreensao_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -344,6 +349,15 @@ NEVER_TIMED_TERRITORY_IDS = {
     # texto + perguntas", mesmo motivo.
     "espaco_universo", "espaco_planetas", "espaco_estrelas",
     "espaco_exploracao", "espaco_brasil",
+    # Compreensão de Texto de Inglês (MUNDO_IDIOMAS_INGLES_COMPREENSAO_TEXTO_V1.md,
+    # 30/09/2026): mesmo formato "cápsula de texto + perguntas", mesmo motivo — inclusive
+    # o próprio território "relâmpago" aqui (decisão de Claude Code, sem pedido explícito
+    # de timer no documento): ler um texto contra o relógio contraria o propósito de
+    # compreensão de leitura, igual às demais frentes de cápsula de texto. "Relâmpago"
+    # nesta frente significa só "texto mais curto, menos perguntas", nunca cronometrado.
+    "ingles_compreensao_basico", "ingles_compreensao_intermediario", "ingles_compreensao_avancado",
+    "ingles_compreensao_relampago_basico", "ingles_compreensao_relampago_intermediario",
+    "ingles_compreensao_relampago_avancado",
 }
 # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
 # a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a

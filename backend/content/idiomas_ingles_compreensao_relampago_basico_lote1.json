@@ -1,0 +1,477 @@
+[
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What color is Maria's bike?",
+    "options": [
+      "It is a red bike",
+      "It is a blue bike",
+      "It is a green bike",
+      "It is a black bike"
+    ],
+    "correct_answer": "It is a red bike",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria has a red bike. She rides it to the park every afternoon.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Where does Maria ride her bike?",
+    "options": [
+      "She rides it to the park",
+      "She rides it to school",
+      "She rides it to the store",
+      "She rides it to a friend's house"
+    ],
+    "correct_answer": "She rides it to the park",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria has a red bike. She rides it to the park every afternoon.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "When does Maria ride her bike?",
+    "options": [
+      "She rides every afternoon",
+      "She rides every morning",
+      "She rides only on weekends",
+      "She rides at night"
+    ],
+    "correct_answer": "She rides every afternoon",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria has a red bike. She rides it to the park every afternoon.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What does Maria have?",
+    "options": [
+      "She has a bike",
+      "She has a car",
+      "She has a scooter",
+      "She has a skateboard"
+    ],
+    "correct_answer": "She has a bike",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria has a red bike. She rides it to the park every afternoon.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What food does Jack like?",
+    "options": [
+      "He likes pizza",
+      "He likes pasta",
+      "He likes salad",
+      "He likes soup"
+    ],
+    "correct_answer": "He likes pizza",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Jack likes pizza. He eats it every Friday night with his family.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "When does Jack eat pizza?",
+    "options": [
+      "He eats it every Friday night",
+      "He eats it every Sunday",
+      "He eats it every day",
+      "He eats it once a month"
+    ],
+    "correct_answer": "He eats it every Friday night",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Jack likes pizza. He eats it every Friday night with his family.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Who does Jack eat pizza with?",
+    "options": [
+      "He eats it with his family",
+      "He eats it with his friends",
+      "He eats it with classmates",
+      "He eats it alone"
+    ],
+    "correct_answer": "He eats it with his family",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Jack likes pizza. He eats it every Friday night with his family.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What night does Jack eat pizza?",
+    "options": [
+      "He eats it on Friday night",
+      "He eats it on Saturday",
+      "He eats it on Monday",
+      "He eats it on Sunday"
+    ],
+    "correct_answer": "He eats it on Friday night",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Jack likes pizza. He eats it every Friday night with his family.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "How is the weather today?",
+    "options": [
+      "It is sunny today",
+      "It is rainy today",
+      "It is snowing today",
+      "It is cloudy today"
+    ],
+    "correct_answer": "It is sunny today",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The sun is shining today. Kids are playing outside in the park.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Where are the kids playing?",
+    "options": [
+      "They are playing in the park",
+      "They are playing at home",
+      "They are playing at school",
+      "They are playing at the beach"
+    ],
+    "correct_answer": "They are playing in the park",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The sun is shining today. Kids are playing outside in the park.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "What are the kids doing?",
+    "options": [
+      "They are playing outside",
+      "They are studying",
+      "They are sleeping",
+      "They are eating"
+    ],
+    "correct_answer": "They are playing outside",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The sun is shining today. Kids are playing outside in the park.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "When is this happening?",
+    "options": [
+      "This is happening today",
+      "This happened yesterday",
+      "This will happen tomorrow",
+      "This happened last week"
+    ],
+    "correct_answer": "This is happening today",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The sun is shining today. Kids are playing outside in the park.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Where is Emma's cat sleeping?",
+    "options": [
+      "It is sleeping on the sofa",
+      "It is sleeping on the bed",
+      "It is sleeping on the floor",
+      "It is sleeping outside"
+    ],
+    "correct_answer": "It is sleeping on the sofa",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Emma's cat is sleeping on the sofa. It sleeps most of the day.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "What animal is this text about?",
+    "options": [
+      "It is about a cat",
+      "It is about a dog",
+      "It is about a bird",
+      "It is about a rabbit"
+    ],
+    "correct_answer": "It is about a cat",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Emma's cat is sleeping on the sofa. It sleeps most of the day.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "How much does the cat sleep?",
+    "options": [
+      "It sleeps most of the day",
+      "It sleeps a little",
+      "It never sleeps",
+      "It sleeps only at night"
+    ],
+    "correct_answer": "It sleeps most of the day",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Emma's cat is sleeping on the sofa. It sleeps most of the day.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Whose cat is it?",
+    "options": [
+      "It is Emma's cat",
+      "It is John's cat",
+      "It is Anna's cat",
+      "It is Tom's cat"
+    ],
+    "correct_answer": "It is Emma's cat",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Emma's cat is sleeping on the sofa. It sleeps most of the day.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "What does Paul drink every morning?",
+    "options": [
+      "He drinks orange juice",
+      "He drinks milk",
+      "He drinks coffee",
+      "He drinks water"
+    ],
+    "correct_answer": "He drinks orange juice",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Paul drinks orange juice every morning. He says it gives him energy.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "When does Paul drink juice?",
+    "options": [
+      "He drinks it every morning",
+      "He drinks it every night",
+      "He drinks it at lunch",
+      "He drinks it on weekends"
+    ],
+    "correct_answer": "He drinks it every morning",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Paul drinks orange juice every morning. He says it gives him energy.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "What does the juice give him?",
+    "options": [
+      "It gives him energy",
+      "It makes him sleepy",
+      "It gives him a headache",
+      "It does nothing"
+    ],
+    "correct_answer": "It gives him energy",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Paul drinks orange juice every morning. He says it gives him energy.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "What kind of juice is it?",
+    "options": [
+      "It is orange juice",
+      "It is apple juice",
+      "It is grape juice",
+      "It is lemon juice"
+    ],
+    "correct_answer": "It is orange juice",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Paul drinks orange juice every morning. He says it gives him energy.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What time does the library close?",
+    "options": [
+      "It closes at six o'clock",
+      "It closes at five o'clock",
+      "It closes at seven o'clock",
+      "It closes at eight o'clock"
+    ],
+    "correct_answer": "It closes at six o'clock",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The library closes at six o'clock. Students must return their books before then.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What must students do before it closes?",
+    "options": [
+      "They must return their books",
+      "They must buy new books",
+      "They must clean the library",
+      "They must pay a fee"
+    ],
+    "correct_answer": "They must return their books",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The library closes at six o'clock. Students must return their books before then.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Who must return books?",
+    "options": [
+      "Students must return them",
+      "Teachers must return them",
+      "Parents must return them",
+      "Visitors must return them"
+    ],
+    "correct_answer": "Students must return them",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The library closes at six o'clock. Students must return their books before then.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What place is this text about?",
+    "options": [
+      "It is about a library",
+      "It is about a school",
+      "It is about a store",
+      "It is about a park"
+    ],
+    "correct_answer": "It is about a library",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The library closes at six o'clock. Students must return their books before then.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "What does Lily love to do?",
+    "options": [
+      "She loves to sing",
+      "She loves to dance",
+      "She loves to paint",
+      "She loves to read"
+    ],
+    "correct_answer": "She loves to sing",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Lily loves to sing. She sings in the school choir every Wednesday.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  }
+]

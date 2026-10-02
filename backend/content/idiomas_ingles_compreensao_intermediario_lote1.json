@@ -1,0 +1,477 @@
+[
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How long had David been working at the company?",
+    "options": [
+      "He had worked there for five years",
+      "He had worked there for two years",
+      "He had worked there for ten years",
+      "He had worked there for one year"
+    ],
+    "correct_answer": "He had worked there for five years",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "David has been working at the same company for five years. Last month, he finally decided to look for a new job because he wanted more opportunities to grow. He updated his resume and started applying to different companies. After two weeks, he got a call back from a company he really admired.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Why did David decide to look for a new job?",
+    "options": [
+      "He wanted more opportunities to grow",
+      "He was fired from his job",
+      "His salary was too low",
+      "He moved to another city"
+    ],
+    "correct_answer": "He wanted more opportunities to grow",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "David has been working at the same company for five years. Last month, he finally decided to look for a new job because he wanted more opportunities to grow. He updated his resume and started applying to different companies. After two weeks, he got a call back from a company he really admired.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What does \"look for\" mean in this text?",
+    "options": [
+      "It means to search for",
+      "It means to look at",
+      "It means to look after",
+      "It means to look up"
+    ],
+    "correct_answer": "It means to search for",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "David has been working at the same company for five years. Last month, he finally decided to look for a new job because he wanted more opportunities to grow. He updated his resume and started applying to different companies. After two weeks, he got a call back from a company he really admired.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What did David do first?",
+    "options": [
+      "He updated his resume",
+      "He quit his job immediately",
+      "He called the company first",
+      "He took a long vacation"
+    ],
+    "correct_answer": "He updated his resume",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "David has been working at the same company for five years. Last month, he finally decided to look for a new job because he wanted more opportunities to grow. He updated his resume and started applying to different companies. After two weeks, he got a call back from a company he really admired.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How did David probably feel when he got the call back?",
+    "options": [
+      "He probably felt excited",
+      "He probably felt annoyed",
+      "He probably felt confused",
+      "He probably felt indifferent"
+    ],
+    "correct_answer": "He probably felt excited",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "David has been working at the same company for five years. Last month, he finally decided to look for a new job because he wanted more opportunities to grow. He updated his resume and started applying to different companies. After two weeks, he got a call back from a company he really admired.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What was Maria nervous about?",
+    "options": [
+      "She was nervous about her English exam",
+      "She was nervous about a job interview",
+      "She was nervous about a trip",
+      "She was nervous about a presentation"
+    ],
+    "correct_answer": "She was nervous about her English exam",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria was nervous about her English exam, so she decided to study every night for two weeks. She reviewed her notes, practiced speaking with a friend, and watched videos in English. On the day of the exam, she felt more confident than she expected.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How long did she study for?",
+    "options": [
+      "She studied for two weeks",
+      "She studied for one week",
+      "She studied for one month",
+      "She studied for three days"
+    ],
+    "correct_answer": "She studied for two weeks",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria was nervous about her English exam, so she decided to study every night for two weeks. She reviewed her notes, practiced speaking with a friend, and watched videos in English. On the day of the exam, she felt more confident than she expected.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What did she do besides reviewing notes?",
+    "options": [
+      "She practiced speaking with a friend",
+      "She hired a private tutor",
+      "She took an online course",
+      "She traveled abroad"
+    ],
+    "correct_answer": "She practiced speaking with a friend",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria was nervous about her English exam, so she decided to study every night for two weeks. She reviewed her notes, practiced speaking with a friend, and watched videos in English. On the day of the exam, she felt more confident than she expected.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How did Maria probably feel before she started studying?",
+    "options": [
+      "She was probably worried",
+      "She was probably confident",
+      "She was probably bored",
+      "She was probably angry"
+    ],
+    "correct_answer": "She was probably worried",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Maria was nervous about her English exam, so she decided to study every night for two weeks. She reviewed her notes, practiced speaking with a friend, and watched videos in English. On the day of the exam, she felt more confident than she expected.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How did she feel on the day of the exam?",
+    "options": [
+      "She felt more confident than expected",
+      "She felt terrified",
+      "She felt completely unprepared",
+      "She felt indifferent"
+    ],
+    "correct_answer": "She felt more confident than expected",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Maria was nervous about her English exam, so she decided to study every night for two weeks. She reviewed her notes, practiced speaking with a friend, and watched videos in English. On the day of the exam, she felt more confident than she expected.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What is Rachel trying to do?",
+    "options": [
+      "She is trying to fix a problem in her code",
+      "She is trying to write an essay",
+      "She is trying to learn a new language",
+      "She is trying to plan a trip"
+    ],
+    "correct_answer": "She is trying to fix a problem in her code",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Rachel: I can't figure out how to fix this problem in my code.\nTom: Don't give up yet! Let's look at it together.\nRachel: Okay. I've been stuck on it for an hour.\nTom: Sometimes a second pair of eyes helps a lot.\nRachel: You're right. Thanks for helping me out.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What does Tom tell Rachel not to do?",
+    "options": [
+      "He tells her not to give up",
+      "He tells her not to ask for help",
+      "He tells her not to take a break",
+      "He tells her not to call someone"
+    ],
+    "correct_answer": "He tells her not to give up",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Rachel: I can't figure out how to fix this problem in my code.\nTom: Don't give up yet! Let's look at it together.\nRachel: Okay. I've been stuck on it for an hour.\nTom: Sometimes a second pair of eyes helps a lot.\nRachel: You're right. Thanks for helping me out.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What does \"figure out\" mean in this text?",
+    "options": [
+      "It means to understand",
+      "It means to forget",
+      "It means to ignore",
+      "It means to break"
+    ],
+    "correct_answer": "It means to understand",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Rachel: I can't figure out how to fix this problem in my code.\nTom: Don't give up yet! Let's look at it together.\nRachel: Okay. I've been stuck on it for an hour.\nTom: Sometimes a second pair of eyes helps a lot.\nRachel: You're right. Thanks for helping me out.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "How long has Rachel been stuck on the problem?",
+    "options": [
+      "She has been stuck for an hour",
+      "She has been stuck for ten minutes",
+      "She has been stuck for a whole day",
+      "She has been stuck for a week"
+    ],
+    "correct_answer": "She has been stuck for an hour",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Rachel: I can't figure out how to fix this problem in my code.\nTom: Don't give up yet! Let's look at it together.\nRachel: Okay. I've been stuck on it for an hour.\nTom: Sometimes a second pair of eyes helps a lot.\nRachel: You're right. Thanks for helping me out.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What can we infer about Tom's attitude?",
+    "options": [
+      "He seems supportive",
+      "He seems impatient",
+      "He seems uninterested",
+      "He seems angry"
+    ],
+    "correct_answer": "He seems supportive",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Rachel: I can't figure out how to fix this problem in my code.\nTom: Don't give up yet! Let's look at it together.\nRachel: Okay. I've been stuck on it for an hour.\nTom: Sometimes a second pair of eyes helps a lot.\nRachel: You're right. Thanks for helping me out.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Where was the new park built?",
+    "options": [
+      "It was built near the river",
+      "It was built in the city center",
+      "It was built near the school",
+      "It was built next to a mall"
+    ],
+    "correct_answer": "It was built near the river",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The city built a new park near the river last year. It has a large playground, walking trails, and a small lake where people can rent boats. On weekends, many families bring their children to enjoy the fresh air and the beautiful scenery.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "When was the park built?",
+    "options": [
+      "It was built last year",
+      "It was built this year",
+      "It was built two years ago",
+      "It was built last month"
+    ],
+    "correct_answer": "It was built last year",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The city built a new park near the river last year. It has a large playground, walking trails, and a small lake where people can rent boats. On weekends, many families bring their children to enjoy the fresh air and the beautiful scenery.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What can people do on the lake?",
+    "options": [
+      "They can rent boats",
+      "They can swim in it",
+      "They can fish in it",
+      "They cannot do anything"
+    ],
+    "correct_answer": "They can rent boats",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The city built a new park near the river last year. It has a large playground, walking trails, and a small lake where people can rent boats. On weekends, many families bring their children to enjoy the fresh air and the beautiful scenery.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Who usually visits the park on weekends?",
+    "options": [
+      "Many families visit it",
+      "Only tourists visit it",
+      "Only students visit it",
+      "Mostly elderly people visit it"
+    ],
+    "correct_answer": "Many families visit it",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The city built a new park near the river last year. It has a large playground, walking trails, and a small lake where people can rent boats. On weekends, many families bring their children to enjoy the fresh air and the beautiful scenery.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What does the variety of features suggest about the park?",
+    "options": [
+      "It was designed for many different activities",
+      "It was built only for sports teams",
+      "It is mainly for tourists",
+      "It has no space for children"
+    ],
+    "correct_answer": "It was designed for many different activities",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The city built a new park near the river last year. It has a large playground, walking trails, and a small lake where people can rent boats. On weekends, many families bring their children to enjoy the fresh air and the beautiful scenery.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Why did Sophie find it hard to make friends at first?",
+    "options": [
+      "She had just moved to a new city",
+      "She was shy by nature",
+      "She did not speak the language",
+      "She was too busy with work"
+    ],
+    "correct_answer": "She had just moved to a new city",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "After moving to a new city, Sophie found it hard to make friends at first. She decided to join a local sports club to meet new people. Within a few months, she had made several close friends who shared her interest in volleyball.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "What did Sophie decide to do?",
+    "options": [
+      "She decided to join a sports club",
+      "She decided to take online classes",
+      "She decided to travel more",
+      "She decided to get a new job"
+    ],
+    "correct_answer": "She decided to join a sports club",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "After moving to a new city, Sophie found it hard to make friends at first. She decided to join a local sports club to meet new people. Within a few months, she had made several close friends who shared her interest in volleyball.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "What sport does the text mention?",
+    "options": [
+      "The text mentions volleyball",
+      "The text mentions soccer",
+      "The text mentions basketball",
+      "The text mentions tennis"
+    ],
+    "correct_answer": "The text mentions volleyball",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "After moving to a new city, Sophie found it hard to make friends at first. She decided to join a local sports club to meet new people. Within a few months, she had made several close friends who shared her interest in volleyball.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "How long did it take her to make friends?",
+    "options": [
+      "It took her a few months",
+      "It took her a few days",
+      "It took her a whole year",
+      "It took her a few weeks"
+    ],
+    "correct_answer": "It took her a few months",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "After moving to a new city, Sophie found it hard to make friends at first. She decided to join a local sports club to meet new people. Within a few months, she had made several close friends who shared her interest in volleyball.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_intermediario",
+    "difficulty_level": 3,
+    "prompt": "What can we infer about joining clubs?",
+    "options": [
+      "It can help people make friends",
+      "It is usually a waste of time",
+      "It only works for athletes",
+      "It is very expensive"
+    ],
+    "correct_answer": "It can help people make friends",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "After moving to a new city, Sophie found it hard to make friends at first. She decided to join a local sports club to meet new people. Within a few months, she had made several close friends who shared her interest in volleyball.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -736,6 +736,42 @@ abstract class AppLocalizations {
   /// **'Contrações Informais Relâmpago: Avançado'**
   String get territoryInglesContracoesRelampagoAvancado;
 
+  /// Territory display name — English reading comprehension, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Compreensão de Texto: Básico'**
+  String get territoryInglesCompreensaoBasico;
+
+  /// Territory display name — English reading comprehension, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Compreensão de Texto: Intermediário'**
+  String get territoryInglesCompreensaoIntermediario;
+
+  /// Territory display name — English reading comprehension, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Compreensão de Texto: Avançado'**
+  String get territoryInglesCompreensaoAvancado;
+
+  /// Territory display name — English reading comprehension, short-text mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Compreensão de Texto Relâmpago: Básico'**
+  String get territoryInglesCompreensaoRelampagoBasico;
+
+  /// Territory display name — English reading comprehension, short-text mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Compreensão de Texto Relâmpago: Intermediário'**
+  String get territoryInglesCompreensaoRelampagoIntermediario;
+
+  /// Territory display name — English reading comprehension, short-text mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Compreensão de Texto Relâmpago: Avançado'**
+  String get territoryInglesCompreensaoRelampagoAvancado;
+
   /// Territory display name
   ///
   /// In pt, this message translates to:

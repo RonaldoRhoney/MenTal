@@ -1,0 +1,477 @@
+[
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What happened to the negotiations?",
+    "options": [
+      "They fell through",
+      "They succeeded completely",
+      "They were postponed",
+      "They never started"
+    ],
+    "correct_answer": "They fell through",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The negotiations fell through at the last minute, leaving both sides frustrated.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"fell through\" mean?",
+    "options": [
+      "It means failed to happen",
+      "It means were extended",
+      "It means were recorded",
+      "It means were praised"
+    ],
+    "correct_answer": "It means failed to happen",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The negotiations fell through at the last minute, leaving both sides frustrated.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "How did both sides feel?",
+    "options": [
+      "They felt frustrated",
+      "They felt relieved",
+      "They felt indifferent",
+      "They felt proud"
+    ],
+    "correct_answer": "They felt frustrated",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The negotiations fell through at the last minute, leaving both sides frustrated.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"at the last minute\" suggest about the negotiations?",
+    "options": [
+      "They seemed close to succeeding before failing",
+      "They failed right at the start",
+      "They took many years to fail",
+      "They were never taken seriously"
+    ],
+    "correct_answer": "They seemed close to succeeding before failing",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The negotiations fell through at the last minute, leaving both sides frustrated.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What happened to her?",
+    "options": [
+      "She faced a setback",
+      "She got a promotion",
+      "She had a celebration",
+      "She took a vacation"
+    ],
+    "correct_answer": "She faced a setback",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite the setback, she remained undeterred and pressed on with her research.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"undeterred\" mean?",
+    "options": [
+      "It means not discouraged",
+      "It means very discouraged",
+      "It means confused",
+      "It means angry"
+    ],
+    "correct_answer": "It means not discouraged",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite the setback, she remained undeterred and pressed on with her research.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What did she do?",
+    "options": [
+      "She pressed on with her research",
+      "She gave up completely",
+      "She changed careers",
+      "She took a long break"
+    ],
+    "correct_answer": "She pressed on with her research",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Despite the setback, she remained undeterred and pressed on with her research.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does this suggest about her character?",
+    "options": [
+      "She is persistent",
+      "She is easily discouraged",
+      "She is careless",
+      "She is indecisive"
+    ],
+    "correct_answer": "She is persistent",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Despite the setback, she remained undeterred and pressed on with her research.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "How did the rumor spread?",
+    "options": [
+      "It spread like wildfire",
+      "It spread very slowly",
+      "It stayed among friends",
+      "It did not spread at all"
+    ],
+    "correct_answer": "It spread like wildfire",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The rumor spread like wildfire before anyone could confirm it was false.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does \"spread like wildfire\" mean?",
+    "options": [
+      "It means spread extremely fast",
+      "It means spread slowly",
+      "It means stayed contained",
+      "It means was ignored"
+    ],
+    "correct_answer": "It means spread extremely fast",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The rumor spread like wildfire before anyone could confirm it was false.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What happened before anyone confirmed it?",
+    "options": [
+      "It had already spread",
+      "It was proven true",
+      "It was forgotten",
+      "Nothing happened"
+    ],
+    "correct_answer": "It had already spread",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The rumor spread like wildfire before anyone could confirm it was false.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does this passage suggest about rumors?",
+    "options": [
+      "They can spread before being verified",
+      "They are always true",
+      "They never spread fast",
+      "They are harmless"
+    ],
+    "correct_answer": "They can spread before being verified",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The rumor spread like wildfire before anyone could confirm it was false.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What did he do?",
+    "options": [
+      "He read between the lines",
+      "He ignored the offer",
+      "He accepted immediately",
+      "He rejected it without thinking"
+    ],
+    "correct_answer": "He read between the lines",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "He read between the lines and realized the offer was not as generous as it seemed.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does \"read between the lines\" mean?",
+    "options": [
+      "It means to understand a hidden meaning",
+      "It means to read very quickly",
+      "It means to read out loud",
+      "It means to misunderstand completely"
+    ],
+    "correct_answer": "It means to understand a hidden meaning",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "He read between the lines and realized the offer was not as generous as it seemed.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What did he realize?",
+    "options": [
+      "The offer was not as generous as it seemed",
+      "The offer was perfect",
+      "The offer was illegal",
+      "The offer had no conditions"
+    ],
+    "correct_answer": "The offer was not as generous as it seemed",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "He read between the lines and realized the offer was not as generous as it seemed.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "What does this suggest about him?",
+    "options": [
+      "He is perceptive",
+      "He is naive",
+      "He is careless",
+      "He is dishonest"
+    ],
+    "correct_answer": "He is perceptive",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "He read between the lines and realized the offer was not as generous as it seemed.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "What happened to the profits?",
+    "options": [
+      "They took a hit",
+      "They doubled",
+      "They stayed the same",
+      "They disappeared"
+    ],
+    "correct_answer": "They took a hit",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The company's profits took a hit after the product recall, but analysts expect a rebound next quarter.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Why did profits fall?",
+    "options": [
+      "Because of a product recall",
+      "Because of new taxes",
+      "Because of a strike",
+      "Because of bad weather"
+    ],
+    "correct_answer": "Because of a product recall",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The company's profits took a hit after the product recall, but analysts expect a rebound next quarter.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "What does \"took a hit\" mean?",
+    "options": [
+      "It means decreased",
+      "It means increased",
+      "It means stayed stable",
+      "It means were audited"
+    ],
+    "correct_answer": "It means decreased",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The company's profits took a hit after the product recall, but analysts expect a rebound next quarter.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "What does the analysts' expectation suggest about the recall's impact?",
+    "options": [
+      "The impact is likely temporary, not permanent",
+      "The company will never recover",
+      "The recall had no real impact",
+      "The company is closing down"
+    ],
+    "correct_answer": "The impact is likely temporary, not permanent",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The company's profits took a hit after the product recall, but analysts expect a rebound next quarter.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What is she good at?",
+    "options": [
+      "Spotting talent early",
+      "Playing music",
+      "Cooking meals",
+      "Public speaking"
+    ],
+    "correct_answer": "Spotting talent early",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "She has always had a knack for spotting talent before anyone else does.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"a knack for\" mean?",
+    "options": [
+      "It means a natural skill",
+      "It means a dislike",
+      "It means a fear",
+      "It means a habit of avoiding"
+    ],
+    "correct_answer": "It means a natural skill",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "She has always had a knack for spotting talent before anyone else does.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "When does she notice talent?",
+    "options": [
+      "Before anyone else does",
+      "After everyone else",
+      "She never notices it",
+      "Only in experts"
+    ],
+    "correct_answer": "Before anyone else does",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "She has always had a knack for spotting talent before anyone else does.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does this suggest about her career?",
+    "options": [
+      "She may work well in talent scouting",
+      "She avoids working with people",
+      "She dislikes music",
+      "She is unqualified"
+    ],
+    "correct_answer": "She may work well in talent scouting",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "She has always had a knack for spotting talent before anyone else does.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "What does \"didn't mince words\" mean?",
+    "options": [
+      "It means he was direct and honest",
+      "It means he was very polite",
+      "It means he refused to speak",
+      "It means he spoke too quietly"
+    ],
+    "correct_answer": "It means he was direct and honest",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "He didn't mince words when giving feedback.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  }
+]

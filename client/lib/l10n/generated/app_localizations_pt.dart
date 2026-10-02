@@ -369,6 +369,29 @@ class AppLocalizationsPt extends AppLocalizations {
       'Contrações Informais Relâmpago: Avançado';
 
   @override
+  String get territoryInglesCompreensaoBasico => 'Compreensão de Texto: Básico';
+
+  @override
+  String get territoryInglesCompreensaoIntermediario =>
+      'Compreensão de Texto: Intermediário';
+
+  @override
+  String get territoryInglesCompreensaoAvancado =>
+      'Compreensão de Texto: Avançado';
+
+  @override
+  String get territoryInglesCompreensaoRelampagoBasico =>
+      'Compreensão de Texto Relâmpago: Básico';
+
+  @override
+  String get territoryInglesCompreensaoRelampagoIntermediario =>
+      'Compreensão de Texto Relâmpago: Intermediário';
+
+  @override
+  String get territoryInglesCompreensaoRelampagoAvancado =>
+      'Compreensão de Texto Relâmpago: Avançado';
+
+  @override
   String get territoryBolsa => 'Bolsa e Investimentos';
 
   @override

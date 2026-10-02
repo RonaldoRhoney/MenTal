@@ -1,0 +1,477 @@
+[
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What did Kevin give up on?",
+    "options": [
+      "He gave up on fixing his computer",
+      "He gave up on buying a phone",
+      "He gave up on learning to code",
+      "He gave up on playing games"
+    ],
+    "correct_answer": "He gave up on fixing his computer",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Kevin finally gave up trying to fix his old computer. He decided to buy a new one instead.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What did he decide to do instead?",
+    "options": [
+      "He decided to buy a new one",
+      "He decided to borrow one",
+      "He decided to repair it later",
+      "He decided to ask a friend"
+    ],
+    "correct_answer": "He decided to buy a new one",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Kevin finally gave up trying to fix his old computer. He decided to buy a new one instead.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What does \"give up\" mean here?",
+    "options": [
+      "It means to stop trying",
+      "It means to start trying",
+      "It means to succeed",
+      "It means to sell something"
+    ],
+    "correct_answer": "It means to stop trying",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Kevin finally gave up trying to fix his old computer. He decided to buy a new one instead.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How did Kevin probably feel about the old computer?",
+    "options": [
+      "He probably felt frustrated",
+      "He probably felt excited",
+      "He probably felt proud",
+      "He probably felt curious"
+    ],
+    "correct_answer": "He probably felt frustrated",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Kevin finally gave up trying to fix his old computer. He decided to buy a new one instead.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What happened to the meeting?",
+    "options": [
+      "It was put off",
+      "It was canceled forever",
+      "It started early",
+      "It went very well"
+    ],
+    "correct_answer": "It was put off",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The meeting was put off until next week because two managers were sick.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Why was it postponed?",
+    "options": [
+      "Two managers were sick",
+      "No one showed up",
+      "The room was busy",
+      "It was raining"
+    ],
+    "correct_answer": "Two managers were sick",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The meeting was put off until next week because two managers were sick.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What does \"put off\" mean?",
+    "options": [
+      "It means to postpone",
+      "It means to cancel",
+      "It means to start",
+      "It means to finish"
+    ],
+    "correct_answer": "It means to postpone",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The meeting was put off until next week because two managers were sick.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What does this suggest about the two managers?",
+    "options": [
+      "They were both unavailable to attend",
+      "They canceled the meeting on purpose",
+      "They forgot about the meeting",
+      "They were on vacation"
+    ],
+    "correct_answer": "They were both unavailable to attend",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The meeting was put off until next week because two managers were sick.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Where did Anna meet her friend?",
+    "options": [
+      "She met her at the supermarket",
+      "She met her at work",
+      "She met her at school",
+      "She met her at a party"
+    ],
+    "correct_answer": "She met her at the supermarket",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna ran into an old friend at the supermarket. They talked for almost an hour.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What does \"ran into\" mean?",
+    "options": [
+      "It means to meet by chance",
+      "It means to avoid someone",
+      "It means to call someone",
+      "It means to write to someone"
+    ],
+    "correct_answer": "It means to meet by chance",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna ran into an old friend at the supermarket. They talked for almost an hour.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "How long did they talk?",
+    "options": [
+      "They talked for almost an hour",
+      "They talked for ten minutes",
+      "They talked all day",
+      "They talked for a few seconds"
+    ],
+    "correct_answer": "They talked for almost an hour",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Anna ran into an old friend at the supermarket. They talked for almost an hour.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "How did Anna probably feel about meeting her friend?",
+    "options": [
+      "She probably felt happy",
+      "She probably felt annoyed",
+      "She probably felt scared",
+      "She probably felt bored"
+    ],
+    "correct_answer": "She probably felt happy",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Anna ran into an old friend at the supermarket. They talked for almost an hour.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What is the company doing?",
+    "options": [
+      "It is looking into the complaints",
+      "It is ignoring the complaints",
+      "It is celebrating",
+      "It is closing down"
+    ],
+    "correct_answer": "It is looking into the complaints",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The company is looking into the complaints before making a decision.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What does \"looking into\" mean?",
+    "options": [
+      "It means investigating",
+      "It means watching",
+      "It means buying",
+      "It means selling"
+    ],
+    "correct_answer": "It means investigating",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The company is looking into the complaints before making a decision.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What happens after that?",
+    "options": [
+      "They will make a decision",
+      "The company will close",
+      "Nothing will happen",
+      "They will apologize immediately"
+    ],
+    "correct_answer": "They will make a decision",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The company is looking into the complaints before making a decision.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "What can we infer about the company?",
+    "options": [
+      "It wants to be careful before deciding",
+      "It does not care about complaints",
+      "It already decided",
+      "It is closing"
+    ],
+    "correct_answer": "It wants to be careful before deciding",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The company is looking into the complaints before making a decision.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "What did Tim have to do?",
+    "options": [
+      "He had to fill out a form",
+      "He had to take a test",
+      "He had to buy a suit",
+      "He had to write a letter"
+    ],
+    "correct_answer": "He had to fill out a form",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Tim had to fill out a long form before starting his new job.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "When did he have to do this?",
+    "options": [
+      "Before starting his new job",
+      "After his first day",
+      "During his lunch break",
+      "On the weekend"
+    ],
+    "correct_answer": "Before starting his new job",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Tim had to fill out a long form before starting his new job.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "What does \"fill out\" mean?",
+    "options": [
+      "It means to complete",
+      "It means to throw away",
+      "It means to read",
+      "It means to sign only"
+    ],
+    "correct_answer": "It means to complete",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Tim had to fill out a long form before starting his new job.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "What does a long form before a new job suggest?",
+    "options": [
+      "The company has a detailed hiring process",
+      "The job requires no paperwork",
+      "Tim is not really starting a job",
+      "The company dislikes new employees"
+    ],
+    "correct_answer": "The company has a detailed hiring process",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "Tim had to fill out a long form before starting his new job.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What did the teacher do?",
+    "options": [
+      "She pointed out a mistake",
+      "She gave Carla a prize",
+      "She ignored the essay",
+      "She lost the essay"
+    ],
+    "correct_answer": "She pointed out a mistake",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The teacher pointed out a mistake in Carla's essay, so she rewrote the last paragraph.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What did Carla do next?",
+    "options": [
+      "She rewrote the last paragraph",
+      "She cried and left",
+      "She quit school",
+      "She argued with the teacher"
+    ],
+    "correct_answer": "She rewrote the last paragraph",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The teacher pointed out a mistake in Carla's essay, so she rewrote the last paragraph.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What does \"pointed out\" mean?",
+    "options": [
+      "It means indicated",
+      "It means hid",
+      "It means erased",
+      "It means praised"
+    ],
+    "correct_answer": "It means indicated",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "The teacher pointed out a mistake in Carla's essay, so she rewrote the last paragraph.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "How did Carla likely react to the feedback?",
+    "options": [
+      "She used it to improve her work",
+      "She ignored it completely",
+      "She got angry and quit",
+      "She blamed the teacher"
+    ],
+    "correct_answer": "She used it to improve her work",
+    "explanation": "Esta é uma pergunta de inferência: a resposta não está escrita literalmente no texto — é deduzida a partir do que ele sugere.",
+    "reading_passage": "The teacher pointed out a mistake in Carla's essay, so she rewrote the last paragraph.",
+    "hints": [
+      "Esta pergunta pede uma dedução, não uma cópia literal do texto.",
+      "Pense no que o texto sugere, não em uma frase exata."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_compreensao_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "What does \"turned down\" mean?",
+    "options": [
+      "It means rejected",
+      "It means accepted",
+      "It means forgot",
+      "It means delayed"
+    ],
+    "correct_answer": "It means rejected",
+    "explanation": "Releia o texto com atenção — a resposta está escrita nele.",
+    "reading_passage": "Diana turned down the job offer because the salary was too low.",
+    "hints": [
+      "Releia o texto com atenção.",
+      "A resposta está escrita no próprio texto."
+    ],
+    "age_reviewed": true
+  }
+]
