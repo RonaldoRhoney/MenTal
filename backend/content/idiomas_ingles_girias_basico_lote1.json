@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 1,
+    "prompt": "Mensagem de chat: \"omw, be there in 5 lol\" — o que significa \"omw\"?",
+    "options": [
+      "on my way",
+      "oh my word",
+      "out my window",
+      "once more, wait"
+    ],
+    "correct_answer": "on my way",
+    "explanation": "\"on my way\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 1,
+    "prompt": "Mensagem de chat: \"idk what to wear tonight\" — o que significa \"idk\"?",
+    "options": [
+      "I don't know",
+      "I don't care",
+      "I'm doing kinda ok",
+      "I don't know kidding"
+    ],
+    "correct_answer": "I don't know",
+    "explanation": "\"I don't know\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 1,
+    "prompt": "Mensagem de chat: \"tbh I didn't like the movie\" — o que significa \"tbh\"?",
+    "options": [
+      "to be honest",
+      "try being happy",
+      "totally boring, honestly",
+      "to be heard"
+    ],
+    "correct_answer": "to be honest",
+    "explanation": "\"to be honest\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 1,
+    "prompt": "Mensagem de chat: \"omg you won't believe this\" — o que significa \"omg\"?",
+    "options": [
+      "oh my god",
+      "on my game",
+      "oh my gosh only",
+      "over my guard"
+    ],
+    "correct_answer": "oh my god",
+    "explanation": "\"oh my god\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 1,
+    "prompt": "Mensagem de chat: \"brb, someone's at the door\" — o que significa \"brb\"?",
+    "options": [
+      "be right back",
+      "bring real bread",
+      "barely running by",
+      "big red button"
+    ],
+    "correct_answer": "be right back",
+    "explanation": "\"be right back\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 2,
+    "prompt": "Mensagem de chat: \"send it asap please\" — o que significa \"asap\"?",
+    "options": [
+      "as soon as possible",
+      "as safe as possible",
+      "always send a photo",
+      "ask someone a problem"
+    ],
+    "correct_answer": "as soon as possible",
+    "explanation": "\"as soon as possible\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 2,
+    "prompt": "Mensagem de chat: \"fyi, the meeting moved to 3pm\" — o que significa \"fyi\"?",
+    "options": [
+      "for your information",
+      "find your item",
+      "free your ideas",
+      "fix your interview"
+    ],
+    "correct_answer": "for your information",
+    "explanation": "\"for your information\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 2,
+    "prompt": "Mensagem de chat: \"lol that was so funny\" — o que significa \"lol\"?",
+    "options": [
+      "laughing out loud",
+      "lots of love",
+      "like, obviously late",
+      "long or late"
+    ],
+    "correct_answer": "laughing out loud",
+    "explanation": "\"laughing out loud\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 2,
+    "prompt": "Mensagem de chat: \"np, see you tomorrow\" — o que significa \"np\"?",
+    "options": [
+      "no problem",
+      "not possible",
+      "new plan",
+      "nice photo"
+    ],
+    "correct_answer": "no problem",
+    "explanation": "\"no problem\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 2,
+    "prompt": "Mensagem de chat: \"ttyl, gotta run!\" — o que significa \"ttyl\"?",
+    "options": [
+      "talk to you later",
+      "trying to yell loud",
+      "text you later tonight",
+      "time to leave"
+    ],
+    "correct_answer": "talk to you later",
+    "explanation": "\"talk to you later\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 3,
+    "prompt": "Mensagem de chat: \"imo this plan won't work\" — o que significa \"imo\"?",
+    "options": [
+      "in my opinion",
+      "is my own",
+      "I'm moving on",
+      "it means okay"
+    ],
+    "correct_answer": "in my opinion",
+    "explanation": "\"in my opinion\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 3,
+    "prompt": "Mensagem de chat: \"btw, I love your new haircut\" — o que significa \"btw\"?",
+    "options": [
+      "by the way",
+      "better than whatever",
+      "bring the water",
+      "back to work"
+    ],
+    "correct_answer": "by the way",
+    "explanation": "\"by the way\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 3,
+    "prompt": "Mensagem de chat: \"rn I'm super busy\" — o que significa \"rn\"?",
+    "options": [
+      "right now",
+      "really nice",
+      "rarely never",
+      "read now"
+    ],
+    "correct_answer": "right now",
+    "explanation": "\"right now\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 3,
+    "prompt": "Mensagem de chat: \"idc what people think\" — o que significa \"idc\"?",
+    "options": [
+      "I don't care",
+      "I don't complain",
+      "I decided correctly",
+      "I'm doing cool"
+    ],
+    "correct_answer": "I don't care",
+    "explanation": "\"I don't care\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_girias_basico",
+    "difficulty_level": 3,
+    "prompt": "Mensagem de chat: \"gtg, talk later!\" — o que significa \"gtg\"?",
+    "options": [
+      "got to go",
+      "great to go",
+      "give the gift",
+      "going to gym"
+    ],
+    "correct_answer": "got to go",
+    "explanation": "\"got to go\" é o significado correto. Gíria de internet/chat — sempre confira o contexto da mensagem, não só a palavra isolada.",
+    "hints": [
+      "Releia a mensagem de chat inteira, não só a gíria isolada.",
+      "Desconfie da alternativa que parece uma tradução literal, palavra por palavra — gírias quase nunca funcionam assim."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -311,6 +311,11 @@ IDIOMA_TERRITORY_IDS = {
     # formados numa conversa (erro estrutural recorrente de falantes de português).
     "ingles_discursoindireto_basico", "ingles_discursoindireto_intermediario", "ingles_discursoindireto_avancado",
     "ingles_discursoindireto_relampago_basico", "ingles_discursoindireto_relampago_intermediario", "ingles_discursoindireto_relampago_avancado",
+    # Gírias e Inglês Informal de Internet (MUNDO_IDIOMAS_INGLES_GIRIAS_INTERNET_V1.md,
+    # 03/10/2026) — o Mental Lingo deve reconhecer e explicar gírias quando o jogador as
+    # usar ou perguntar sobre elas numa conversa.
+    "ingles_girias_basico", "ingles_girias_intermediario", "ingles_girias_avancado",
+    "ingles_girias_relampago_basico", "ingles_girias_relampago_intermediario", "ingles_girias_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -347,6 +352,10 @@ ALWAYS_TIMED_TERRITORIES = {
     # VOZ_PASSIVA_V1.md, 03/10/2026): mesmo padrão — território próprio, sempre
     # cronometrado, conteúdo distinto (formato MCQ normal, não é cápsula de texto).
     "ingles_discursoindireto_relampago_basico", "ingles_discursoindireto_relampago_intermediario", "ingles_discursoindireto_relampago_avancado",
+    # Gírias e Inglês Informal de Internet Relâmpago (MUNDO_IDIOMAS_INGLES_GIRIAS_INTERNET_
+    # V1.md, 03/10/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo
+    # distinto (formato MCQ normal, não é cápsula de texto).
+    "ingles_girias_relampago_basico", "ingles_girias_relampago_intermediario", "ingles_girias_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_
