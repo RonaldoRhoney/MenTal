@@ -11,6 +11,7 @@ import '../services/mental_lingo_service.dart';
 import '../services/tts_service.dart';
 import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
+import '../widgets/mental_character.dart';
 
 /// MENTAL LINGO — assistente de voz do Mundo dos Idiomas
 /// (MUNDO/Mundo_dos_Idiomas/Mental_Lingo/MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md,
@@ -73,7 +74,13 @@ class MentalLingoBanner extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(12, 12, 10, 12),
                     child: Row(
                       children: [
-                        const _GlowingMic(size: 52),
+                        // MENTAL_PERSONAGEM_MASCOTE_V1.md §3.2: o
+                        // personagem é a cara visual do MENTAL LINGO,
+                        // substituindo o ícone genérico de microfone.
+                        const MentalCharacter(
+                          expression: MentalCharacterExpression.felizNeutro,
+                          size: 52,
+                        ),
                         const SizedBox(width: 10),
                         Expanded(
                           child: Column(
@@ -196,89 +203,11 @@ class MentalLingoBanner extends StatelessWidget {
   }
 }
 
-/// Microfone em anéis luminosos com marcas de mira e mini-onda embaixo
-/// (assinatura visual do print de referência).
-class _GlowingMic extends StatelessWidget {
-  const _GlowingMic({required this.size});
-
-  final double size;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: size,
-      height: size,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Container(
-            width: size,
-            height: size,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: RadialGradient(colors: [
-                kAgentBlue.withValues(alpha: 0.35),
-                Colors.transparent
-              ]),
-              boxShadow: [
-                BoxShadow(
-                    color: kAgentCyan.withValues(alpha: 0.35), blurRadius: 16)
-              ],
-            ),
-          ),
-          Container(
-            width: size * 0.82,
-            height: size * 0.82,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: kAgentNavy,
-              border: Border.all(color: kAgentCyan, width: 2),
-            ),
-          ),
-          CustomPaint(size: Size(size, size), painter: const _TicksPainter()),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 8),
-            child: Icon(Icons.mic_rounded, color: Colors.white, size: 28),
-          ),
-          Positioned(
-            bottom: size * 0.2,
-            child: const SizedBox(
-                width: 22,
-                height: 8,
-                child: CustomPaint(
-                    painter:
-                        _WavePainter(barCount: 7, opacity: 1, cyan: true))),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _TicksPainter extends CustomPainter {
-  const _TicksPainter();
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = kAgentCyan.withValues(alpha: 0.8)
-      ..strokeWidth = 1.6
-      ..strokeCap = StrokeCap.round;
-    final c = size.center(Offset.zero);
-    final r = size.width / 2;
-    for (final d in [
-      const Offset(0, -1),
-      const Offset(0, 1),
-      const Offset(-1, 0),
-      const Offset(1, 0)
-    ]) {
-      canvas.drawLine(c + d * (r - 1), c + d * (r - 6), paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
+// _GlowingMic e _TicksPainter (ícone de microfone genérico em anéis
+// luminosos) foram removidos em 03/10/2026 — substituídos pelo
+// personagem Mental no banner do LINGO (MENTAL_PERSONAGEM_MASCOTE_V1.md
+// §3.2, decisão explícita de Rhoney). Histórico do desenho antigo
+// continua no git caso precise de referência.
 
 /// Barras de onda sonora simétricas (alturas fixas, sem animação — o
 /// print é estático; animar aqui custaria rebuild contínuo na lista).
@@ -843,6 +772,25 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
     }
   }
 
+  // MENTAL_PERSONAGEM_MASCOTE_V1.md §3.2/§6.3: o personagem é a cara
+  // visual do MENTAL LINGO em cada um dos 5 estados já especificados em
+  // MENTAL_LINGO_ASSISTENTE_VOZ_V1.1.md (Pronto/Ouvindo/Processando/
+  // Respondendo/Falha) — mapeado pras 8 expressões aprovadas (§4).
+  MentalCharacterExpression _characterExpression() {
+    switch (_state) {
+      case _LingoState.ready:
+        return MentalCharacterExpression.felizNeutro;
+      case _LingoState.listening:
+        return MentalCharacterExpression.acenando;
+      case _LingoState.processing:
+        return MentalCharacterExpression.pensando;
+      case _LingoState.answering:
+        return MentalCharacterExpression.okPositivo;
+      case _LingoState.error:
+        return MentalCharacterExpression.negativoSuave;
+    }
+  }
+
   // Modo de acessibilidade (toque único): tocar começa, tocar de novo
   // encerra e envia — sem exigir pressão contínua no botão.
   VoidCallback? _tapModeAction() {
@@ -915,12 +863,15 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
                   .withValues(alpha: active ? 1 : 0.4),
               width: active ? 4 : 2),
         ),
-        child: _state == _LingoState.processing
-            ? const Padding(
-                padding: EdgeInsets.all(28),
-                child: CircularProgressIndicator(
-                    color: Colors.white, strokeWidth: 3))
-            : Icon(_micIcon(), color: Colors.white, size: 40),
+        child: _state == _LingoState.listening
+            ? Icon(_micIcon(), color: Colors.white, size: 40)
+            : Padding(
+                padding: const EdgeInsets.all(8),
+                child: MentalCharacter(
+                  expression: _characterExpression(),
+                  size: _kMicButtonSize - 16,
+                ),
+              ),
       ),
     );
   }

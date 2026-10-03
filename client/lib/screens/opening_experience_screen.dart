@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../l10n/generated/app_localizations.dart';
 import '../theme/app_theme.dart';
+import '../widgets/mental_character.dart';
 
 /// PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026, aprovado) —
 /// substitui os DOIS splashes sequenciais anteriores (SplashScreen +
@@ -124,10 +125,19 @@ class _OpeningContent extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(
-          width: 132,
-          height: 132,
-          child: CustomPaint(painter: _MentalMarkPainter(progress: iconProgress)),
+        Opacity(
+          opacity: iconProgress,
+          child: Transform.scale(
+            scale: 0.7 + 0.3 * Curves.easeOutBack.transform(iconProgress),
+            // MENTAL_PERSONAGEM_MASCOTE_V1.md §3.1: o personagem substitui
+            // o "M com sinapse" antigo aqui — "acenando" (boas-vindas) é a
+            // expressão certa pro primeiro instante de abertura do app,
+            // mesma tabela de expressões do documento (§4).
+            child: const MentalCharacter(
+              expression: MentalCharacterExpression.acenando,
+              size: 132,
+            ),
+          ),
         ),
         const SizedBox(height: 22),
         Opacity(
@@ -151,93 +161,8 @@ class _OpeningContent extends StatelessWidget {
   }
 }
 
-/// Desenha o "M" de MENTAL como uma cadeia de 5 nós (sinapses) ligados
-/// por 4 hastes, na silhueta da letra — mesmo conceito visual já
-/// validado no WelcomeSplashScreen anterior (achado real de 2026-08-26:
-/// "deve desenhar um M completo, com as sinapses cognitivas"), mas
-/// agora:
-/// (a) cores lidas de AppColors.gold/teal (reage a claro/escuro, Seção
-///     0.2/17 do documento — antes eram Color(...) fixos, duplicando
-///     o token em vez de reaproveitá-lo);
-/// (b) timeline comprimida pra caber nos ~1000ms de orçamento desta
-///     etapa (era uma animação de 4800ms sozinha).
-///
-/// Nota de limitação (Seção 26.11): o ícone real do launcher
-/// (`ic_launcher_foreground.png`) é uma silhueta de cabeça com um
-/// gráfico em zigue-zague + chevron, visualmente diferente deste "M"
-/// literal — os dois hoje representam a marca de formas diferentes.
-/// Convergir pixel-a-pixel pro desenho do launcher exigiria redesenhar
-/// aquele ícone (fora do escopo deste redesign, que é só a experiência
-/// de abertura) — registrado aqui como recomendação de acompanhamento,
-/// não resolvido nesta entrega.
-class _MentalMarkPainter extends CustomPainter {
-  _MentalMarkPainter({required this.progress});
-
-  final double progress;
-
-  double _stage(double start, double end) {
-    if (progress <= start) return 0;
-    if (progress >= end) return 1;
-    return (progress - start) / (end - start);
-  }
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final scale = size.width / 100;
-    Offset p(double x, double y) => Offset(x * scale, y * scale);
-
-    final gold = AppColors.gold;
-    final teal = AppColors.teal;
-
-    // Vértices do M, na ordem em que a letra é "escrita": base
-    // esquerda → topo esquerdo → vale central → topo direito → base
-    // direita.
-    final nodes = [p(28, 70), p(28, 30), p(50, 52), p(72, 30), p(72, 70)];
-    final segmentColors = [gold, teal, teal, gold];
-    final nodeColors = [gold, teal, gold, teal, gold];
-
-    final firstNodeScale = Curves.elasticOut.transform(_stage(0.0, 0.12).clamp(0.0, 1.0));
-    if (firstNodeScale <= 0) return;
-    canvas.drawCircle(nodes[0], 4.5 * scale * firstNodeScale, Paint()..color = nodeColors[0]);
-
-    const segmentSpan = 0.16;
-    const segmentGap = 0.03;
-    for (var i = 0; i < 4; i++) {
-      final start = 0.10 + i * (segmentSpan + segmentGap);
-      final end = start + segmentSpan;
-      final t = Curves.easeInOut.transform(_stage(start, end));
-      if (t <= 0) continue;
-      final segEnd = Offset.lerp(nodes[i], nodes[i + 1], t)!;
-      canvas.drawLine(
-        nodes[i],
-        segEnd,
-        Paint()
-          ..color = segmentColors[i]
-          ..strokeWidth = 2.6 * scale
-          ..strokeCap = StrokeCap.round,
-      );
-      final nodeT = Curves.easeOutBack.transform(_stage(end - 0.04, end + 0.03).clamp(0.0, 1.0));
-      if (nodeT > 0) {
-        canvas.drawCircle(nodes[i + 1], 4.5 * scale * nodeT, Paint()..color = nodeColors[i + 1]);
-      }
-    }
-
-    // Halo suave respirando por trás do nó central (o vale do M) — o
-    // pulso de "ativação final" (Estado 6), bem sutil, nunca competindo
-    // com a leitura da letra.
-    final haloT = _stage(0.78, 1.0);
-    if (haloT > 0) {
-      canvas.drawCircle(
-        nodes[2],
-        9 * scale * haloT,
-        Paint()
-          ..color = gold.withValues(alpha: 0.25 * haloT)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 1.2 * scale,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _MentalMarkPainter oldDelegate) => oldDelegate.progress != progress;
-}
+// _MentalMarkPainter ("M com sinapse" desenhado a mão, stroke-by-stroke)
+// foi removido em 03/10/2026 — substituído pelo personagem Mental no
+// splash (MENTAL_PERSONAGEM_MASCOTE_V1.md §3.1, decisão explícita de
+// Rhoney). Histórico do desenho antigo continua no git caso precise de
+// referência.
