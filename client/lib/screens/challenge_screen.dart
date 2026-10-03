@@ -1619,7 +1619,10 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     child: Builder(builder: (context) {
                       final character = MentalCharacter(
                         expression: characterExpression,
-                        size: bigMoment ? 110 : 84,
+                        // Achado real testando no aparelho (03/10/2026,
+                        // pedido de Rhoney: "muito pequeno") — 84/110
+                        // ficava perdido no espaço vertical disponível.
+                        size: bigMoment ? 180 : 140,
                       );
                       // Pulso só no acerto — mesmo princípio de "Erro:
                       // nenhuma celebração" já aplicado ao texto acima,
