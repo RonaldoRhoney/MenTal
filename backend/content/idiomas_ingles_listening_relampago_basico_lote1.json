@@ -1,0 +1,287 @@
+[
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "O que fazer no cruzamento?",
+    "options": [
+      "turn left",
+      "turn right",
+      "go straight",
+      "stop"
+    ],
+    "correct_answer": "turn left",
+    "explanation": "No áudio, a pessoa diz: \"Turn left at the corner.\" — por isso a resposta certa é \"turn left\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Turn left at the corner."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "O que ela gosta?",
+    "options": [
+      "tea",
+      "coffee",
+      "juice",
+      "water"
+    ],
+    "correct_answer": "tea",
+    "explanation": "No áudio, a pessoa diz: \"She likes tea, not coffee.\" — por isso a resposta certa é \"tea\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She likes tea, not coffee."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "A que horas a loja fecha?",
+    "options": [
+      "at six",
+      "at five",
+      "at seven",
+      "at eight"
+    ],
+    "correct_answer": "at six",
+    "explanation": "No áudio, a pessoa diz: \"The store closes at six.\" — por isso a resposta certa é \"at six\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The store closes at six."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Em que andar ele mora?",
+    "options": [
+      "the third floor",
+      "the first floor",
+      "the second floor",
+      "the fourth floor"
+    ],
+    "correct_answer": "the third floor",
+    "explanation": "No áudio, a pessoa diz: \"He lives on the third floor.\" — por isso a resposta certa é \"the third floor\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He lives on the third floor."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "O que a pessoa precisa?",
+    "options": [
+      "a pen",
+      "a pencil",
+      "a notebook",
+      "an eraser"
+    ],
+    "correct_answer": "a pen",
+    "explanation": "No áudio, a pessoa diz: \"I need a pen, please.\" — por isso a resposta certa é \"a pen\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I need a pen, please."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "O que acabou?",
+    "options": [
+      "sugar",
+      "salt",
+      "flour",
+      "milk"
+    ],
+    "correct_answer": "sugar",
+    "explanation": "No áudio, a pessoa diz: \"We're out of sugar.\" — por isso a resposta certa é \"sugar\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "We're out of sugar."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "O que não se deve esquecer?",
+    "options": [
+      "the passport",
+      "the ticket",
+      "the wallet",
+      "the phone"
+    ],
+    "correct_answer": "the passport",
+    "explanation": "No áudio, a pessoa diz: \"Don't forget your passport.\" — por isso a resposta certa é \"the passport\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Don't forget your passport."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Onde estão as chaves?",
+    "options": [
+      "on the table",
+      "in the drawer",
+      "on the chair",
+      "in the bag"
+    ],
+    "correct_answer": "on the table",
+    "explanation": "No áudio, a pessoa diz: \"The keys are on the table.\" — por isso a resposta certa é \"on the table\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The keys are on the table."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "O que está pronto?",
+    "options": [
+      "lunch",
+      "dinner",
+      "breakfast",
+      "dessert"
+    ],
+    "correct_answer": "lunch",
+    "explanation": "No áudio, a pessoa diz: \"Lunch is ready, come eat.\" — por isso a resposta certa é \"lunch\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Lunch is ready, come eat."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "O que está acontecendo com o ônibus?",
+    "options": [
+      "it's running late",
+      "it's on time",
+      "it's cancelled",
+      "it's full"
+    ],
+    "correct_answer": "it's running late",
+    "explanation": "No áudio, a pessoa diz: \"The bus is running late today.\" — por isso a resposta certa é \"it's running late\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The bus is running late today."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "O que a pessoa está procurando?",
+    "options": [
+      "her glasses",
+      "her shoes",
+      "her keys",
+      "her phone"
+    ],
+    "correct_answer": "her glasses",
+    "explanation": "No áudio, a pessoa diz: \"I can't find my glasses anywhere.\" — por isso a resposta certa é \"her glasses\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I can't find my glasses anywhere."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Para onde ele foi?",
+    "options": [
+      "the airport",
+      "the station",
+      "the office",
+      "the gym"
+    ],
+    "correct_answer": "the airport",
+    "explanation": "No áudio, a pessoa diz: \"He already left for the airport.\" — por isso a resposta certa é \"the airport\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He already left for the airport."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Para quando a reunião foi movida?",
+    "options": [
+      "Friday",
+      "Monday",
+      "Thursday",
+      "Wednesday"
+    ],
+    "correct_answer": "Friday",
+    "explanation": "No áudio, a pessoa diz: \"The meeting got moved to Friday.\" — por isso a resposta certa é \"Friday\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The meeting got moved to Friday."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "O que ela acabou de fazer?",
+    "options": [
+      "come back from vacation",
+      "leave for vacation",
+      "plan a trip",
+      "cancel a trip"
+    ],
+    "correct_answer": "come back from vacation",
+    "explanation": "No áudio, a pessoa diz: \"She just got back from vacation.\" — por isso a resposta certa é \"come back from vacation\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She just got back from vacation."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "O que está faltando na impressora?",
+    "options": [
+      "paper",
+      "ink",
+      "power",
+      "a cable"
+    ],
+    "correct_answer": "paper",
+    "explanation": "No áudio, a pessoa diz: \"The printer is out of paper again.\" — por isso a resposta certa é \"paper\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The printer is out of paper again."
+  }
+]

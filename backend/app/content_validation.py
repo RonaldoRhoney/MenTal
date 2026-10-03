@@ -116,6 +116,21 @@ def validate_content(items: list[dict], known_territory_ids: set[str], existing_
         if audio_url is not None and not (isinstance(audio_url, str) and audio_url.startswith("https://")):
             errors.append(f"{prefix}: audio_url, quando presente, precisa ser uma URL https válida")
 
+        # MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md (03/10/2026). audio_script
+        # OBRIGATÓRIO nos territórios de Listening Ativo (sem script não há o que
+        # sintetizar em áudio — mesma disciplina de audio_url em ouvido_afiado) e nunca
+        # igual ao `prompt` visível (senão o texto ouvido vazaria como texto lido,
+        # invalidando o teste de compreensão auditiva). Opcional/None em todo o resto do
+        # app, mesmo padrão de prompt_image/clues.
+        audio_script = item.get("audio_script")
+        if territory_id.startswith("ingles_listening"):
+            if not audio_script or not audio_script.strip():
+                errors.append(f"{prefix}: território de Listening Ativo precisa do campo 'audio_script'")
+            elif audio_script.strip() == item["prompt"].strip():
+                errors.append(f"{prefix}: audio_script não pode ser igual ao prompt — o texto ouvido nunca pode vazar como texto visível")
+        if audio_script is not None and not (isinstance(audio_script, str) and audio_script.strip()):
+            errors.append(f"{prefix}: audio_script, quando presente, precisa ser uma string não vazia")
+
         # MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3 / MUNDO_IDIOMAS_BIBLIOTECA_
         # VISUAL_V1.md — mesma disciplina tudo-ou-nada de audio_url acima:
         # vocab_media_url só existe com type/source_name/source_url

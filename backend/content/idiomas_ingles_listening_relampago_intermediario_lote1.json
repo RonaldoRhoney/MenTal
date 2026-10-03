@@ -1,0 +1,287 @@
+[
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "O que podemos entender?",
+    "options": [
+      "he's late",
+      "he's early",
+      "he's on time",
+      "he's not coming"
+    ],
+    "correct_answer": "he's late",
+    "explanation": "No áudio, a pessoa diz: \"He's running a bit behind schedule today.\" — por isso a resposta certa é \"he's late\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He's running a bit behind schedule today."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "O que eles fizeram?",
+    "options": [
+      "moved to a smaller place",
+      "bought a bigger house",
+      "sold their furniture",
+      "renovated their house"
+    ],
+    "correct_answer": "moved to a smaller place",
+    "explanation": "No áudio, a pessoa diz: \"They just moved into a smaller place.\" — por isso a resposta certa é \"moved to a smaller place\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "They just moved into a smaller place."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Por que ela trocou de emprego?",
+    "options": [
+      "to earn more money",
+      "to work less",
+      "to move cities",
+      "to study more"
+    ],
+    "correct_answer": "to earn more money",
+    "explanation": "No áudio, a pessoa diz: \"She switched jobs to earn more money.\" — por isso a resposta certa é \"to earn more money\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She switched jobs to earn more money."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu durante a prova?",
+    "options": [
+      "they ran out of time",
+      "they finished early",
+      "the test was cancelled",
+      "they failed the test"
+    ],
+    "correct_answer": "they ran out of time",
+    "explanation": "No áudio, a pessoa diz: \"We ran out of time during the test.\" — por isso a resposta certa é \"they ran out of time\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "We ran out of time during the test."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Para que ele está economizando?",
+    "options": [
+      "a new car",
+      "a new house",
+      "a trip",
+      "a new phone"
+    ],
+    "correct_answer": "a new car",
+    "explanation": "No áudio, a pessoa diz: \"He's saving up for a new car.\" — por isso a resposta certa é \"a new car\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He's saving up for a new car."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que aconteceu com o prazo?",
+    "options": [
+      "it was pushed back",
+      "it stayed the same",
+      "it was moved earlier",
+      "it was cancelled"
+    ],
+    "correct_answer": "it was pushed back",
+    "explanation": "No áudio, a pessoa diz: \"The deadline got pushed back a week.\" — por isso a resposta certa é \"it was pushed back\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The deadline got pushed back a week."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que 'putting off' significa?",
+    "options": [
+      "delaying something",
+      "finishing something",
+      "forgetting something",
+      "enjoying something"
+    ],
+    "correct_answer": "delaying something",
+    "explanation": "No áudio, a pessoa diz: \"She's been putting off that phone call all day.\" — por isso a resposta certa é \"delaying something\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She's been putting off that phone call all day."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que ele acabou fazendo?",
+    "options": [
+      "bought the ticket",
+      "refused to buy it",
+      "sold his ticket",
+      "lost the ticket"
+    ],
+    "correct_answer": "bought the ticket",
+    "explanation": "No áudio, a pessoa diz: \"He finally gave in and bought the ticket.\" — por isso a resposta certa é \"bought the ticket\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He finally gave in and bought the ticket."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que aconteceu com a viagem?",
+    "options": [
+      "it was cancelled",
+      "it was postponed one day",
+      "it happened anyway",
+      "it was shortened"
+    ],
+    "correct_answer": "it was cancelled",
+    "explanation": "No áudio, a pessoa diz: \"They called off the trip because of the storm.\" — por isso a resposta certa é \"it was cancelled\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "They called off the trip because of the storm."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que a pessoa está tentando fazer?",
+    "options": [
+      "eat less sugar",
+      "eat more sugar",
+      "stop eating completely",
+      "avoid salt"
+    ],
+    "correct_answer": "eat less sugar",
+    "explanation": "No áudio, a pessoa diz: \"I'm trying to cut back on sugar.\" — por isso a resposta certa é \"eat less sugar\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I'm trying to cut back on sugar."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que isso sugere sobre ele?",
+    "options": [
+      "he's delaying on purpose",
+      "he's working very fast",
+      "he's excited about it",
+      "he already finished"
+    ],
+    "correct_answer": "he's delaying on purpose",
+    "explanation": "No áudio, a pessoa diz: \"He's clearly dragging his feet on this project.\" — por isso a resposta certa é \"he's delaying on purpose\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He's clearly dragging his feet on this project."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Como ela reagiu ao comentário?",
+    "options": [
+      "she ignored it",
+      "she got very upset",
+      "she agreed with it",
+      "she wrote it down"
+    ],
+    "correct_answer": "she ignored it",
+    "explanation": "No áudio, a pessoa diz: \"She brushed off the comment like it didn't matter.\" — por isso a resposta certa é \"she ignored it\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She brushed off the comment like it didn't matter."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Como eles estão em relação à oferta?",
+    "options": [
+      "undecided",
+      "fully committed",
+      "totally against it",
+      "already accepted"
+    ],
+    "correct_answer": "undecided",
+    "explanation": "No áudio, a pessoa diz: \"They're still on the fence about the offer.\" — por isso a resposta certa é \"undecided\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "They're still on the fence about the offer."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que ele conseguiu fazer?",
+    "options": [
+      "avoid the ticket by talking",
+      "pay the ticket immediately",
+      "lose his license",
+      "get a bigger fine"
+    ],
+    "correct_answer": "avoid the ticket by talking",
+    "explanation": "No áudio, a pessoa diz: \"He talked his way out of the ticket.\" — por isso a resposta certa é \"avoid the ticket by talking\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He talked his way out of the ticket."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que podemos concluir sobre a desculpa?",
+    "options": [
+      "it's not convincing",
+      "it's completely true",
+      "it was accepted",
+      "it was never given"
+    ],
+    "correct_answer": "it's not convincing",
+    "explanation": "No áudio, a pessoa diz: \"That excuse really doesn't hold up.\" — por isso a resposta certa é \"it's not convincing\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "That excuse really doesn't hold up."
+  }
+]

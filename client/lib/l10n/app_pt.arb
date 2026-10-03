@@ -633,6 +633,22 @@
   "@vocabMediaWatchSignButton": {
     "description": "MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — button that opens the sign-language reference video (vocab_media_type == 'video')"
   },
+  "listeningAudioPlayButton": "Ouvir",
+  "@listeningAudioPlayButton": {
+    "description": "MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md — button that plays the TTS audio_script for Listening Ativo territories"
+  },
+  "listeningAudioReplayButton": "Ouvir de novo",
+  "@listeningAudioReplayButton": {
+    "description": "Same button after the audio_script has already played once"
+  },
+  "listeningAudioErrorMessage": "Não foi possível reproduzir o áudio. Tente de novo.",
+  "@listeningAudioErrorMessage": {
+    "description": "Shown when the Listening Ativo TTS playback fails"
+  },
+  "listeningAudioHintLabel": "Ouça o áudio antes de responder. Você pode repetir quantas vezes quiser.",
+  "@listeningAudioHintLabel": {
+    "description": "Caption shown under the listening play button, explaining the format to the player"
+  },
   "wordConstellationScreenTitle": "Constelação de Palavras",
   "@wordConstellationScreenTitle": {
     "description": "MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — app bar title of the complementary word-constellation screen"

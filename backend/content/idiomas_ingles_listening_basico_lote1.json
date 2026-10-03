@@ -1,0 +1,287 @@
+[
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 1,
+    "prompt": "O que a pessoa pediu?",
+    "options": [
+      "open the window",
+      "close the door",
+      "turn on the light",
+      "open the door"
+    ],
+    "correct_answer": "open the window",
+    "explanation": "No áudio, a pessoa diz: \"Can you open the window, please?\" — por isso a resposta certa é \"open the window\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Can you open the window, please?"
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 1,
+    "prompt": "O que a pessoa pediu para beber?",
+    "options": [
+      "a cup of coffee",
+      "a cup of tea",
+      "a glass of water",
+      "a cup of juice"
+    ],
+    "correct_answer": "a cup of coffee",
+    "explanation": "No áudio, a pessoa diz: \"I'd like a cup of coffee, please.\" — por isso a resposta certa é \"a cup of coffee\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I'd like a cup of coffee, please."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 1,
+    "prompt": "De onde a pessoa é?",
+    "options": [
+      "from Brazil",
+      "from Portugal",
+      "from Spain",
+      "from Argentina"
+    ],
+    "correct_answer": "from Brazil",
+    "explanation": "No áudio, a pessoa diz: \"My name is Laura and I'm from Brazil.\" — por isso a resposta certa é \"from Brazil\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "My name is Laura and I'm from Brazil."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 1,
+    "prompt": "A que horas a reunião começa?",
+    "options": [
+      "at nine o'clock",
+      "at seven o'clock",
+      "at ten o'clock",
+      "at eight o'clock"
+    ],
+    "correct_answer": "at nine o'clock",
+    "explanation": "No áudio, a pessoa diz: \"The meeting starts at nine o'clock.\" — por isso a resposta certa é \"at nine o'clock\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The meeting starts at nine o'clock."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 1,
+    "prompt": "Que roupa ela está usando?",
+    "options": [
+      "a blue jacket",
+      "a red jacket",
+      "a blue dress",
+      "a green jacket"
+    ],
+    "correct_answer": "a blue jacket",
+    "explanation": "No áudio, a pessoa diz: \"She is wearing a blue jacket today.\" — por isso a resposta certa é \"a blue jacket\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She is wearing a blue jacket today."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 2,
+    "prompt": "O que precisa ser comprado?",
+    "options": [
+      "milk, eggs, and bread",
+      "milk, cheese, and bread",
+      "eggs, cheese, and juice",
+      "bread, butter, and milk"
+    ],
+    "correct_answer": "milk, eggs, and bread",
+    "explanation": "No áudio, a pessoa diz: \"We need to buy milk, eggs, and bread before the store closes.\" — por isso a resposta certa é \"milk, eggs, and bread\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "We need to buy milk, eggs, and bread before the store closes."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 2,
+    "prompt": "De qual plataforma o trem sai?",
+    "options": [
+      "platform four",
+      "platform two",
+      "platform six",
+      "platform one"
+    ],
+    "correct_answer": "platform four",
+    "explanation": "No áudio, a pessoa diz: \"The train to London leaves from platform four in ten minutes.\" — por isso a resposta certa é \"platform four\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The train to London leaves from platform four in ten minutes."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 2,
+    "prompt": "O que aconteceu hoje?",
+    "options": [
+      "she overslept",
+      "she woke up early",
+      "she missed the train",
+      "she was sick"
+    ],
+    "correct_answer": "she overslept",
+    "explanation": "No áudio, a pessoa diz: \"I usually wake up early, but today I overslept.\" — por isso a resposta certa é \"she overslept\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I usually wake up early, but today I overslept."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 2,
+    "prompt": "O que a pessoa está pedindo?",
+    "options": [
+      "to turn down the music",
+      "to turn off the TV",
+      "to turn up the music",
+      "to close the window"
+    ],
+    "correct_answer": "to turn down the music",
+    "explanation": "No áudio, a pessoa diz: \"Could you please turn down the music? I'm trying to study.\" — por isso a resposta certa é \"to turn down the music\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Could you please turn down the music? I'm trying to study."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 2,
+    "prompt": "O que ele esqueceu em casa?",
+    "options": [
+      "his umbrella",
+      "his jacket",
+      "his wallet",
+      "his keys"
+    ],
+    "correct_answer": "his umbrella",
+    "explanation": "No áudio, a pessoa diz: \"He forgot his umbrella at home and it started to rain.\" — por isso a resposta certa é \"his umbrella\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He forgot his umbrella at home and it started to rain."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 3,
+    "prompt": "O que podemos inferir?",
+    "options": [
+      "she is not hungry",
+      "she wants to eat now",
+      "she forgot to eat",
+      "she is cooking lunch"
+    ],
+    "correct_answer": "she is not hungry",
+    "explanation": "No áudio, a pessoa diz: \"I already had lunch, but thanks for asking.\" — por isso a resposta certa é \"she is not hungry\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I already had lunch, but thanks for asking."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 3,
+    "prompt": "O que a pessoa sugere?",
+    "options": [
+      "cancel the picnic",
+      "go to the picnic anyway",
+      "bring an umbrella",
+      "wait for the rain"
+    ],
+    "correct_answer": "cancel the picnic",
+    "explanation": "No áudio, a pessoa diz: \"If it keeps raining like this, we should cancel the picnic.\" — por isso a resposta certa é \"cancel the picnic\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "If it keeps raining like this, we should cancel the picnic."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 3,
+    "prompt": "O que podemos concluir sobre a academia hoje?",
+    "options": [
+      "he won't go to the gym",
+      "he will go to the gym",
+      "he is going for a run",
+      "he feels great tonight"
+    ],
+    "correct_answer": "he won't go to the gym",
+    "explanation": "No áudio, a pessoa diz: \"He said he was too tired to go to the gym tonight.\" — por isso a resposta certa é \"he won't go to the gym\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He said he was too tired to go to the gym tonight."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 3,
+    "prompt": "Como ela se sente ao falar inglês?",
+    "options": [
+      "she feels nervous",
+      "she feels confident",
+      "she feels bored",
+      "she feels proud"
+    ],
+    "correct_answer": "she feels nervous",
+    "explanation": "No áudio, a pessoa diz: \"She's been studying English for two years, but she still feels nervous speaking it.\" — por isso a resposta certa é \"she feels nervous\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She's been studying English for two years, but she still feels nervous speaking it."
+  },
+  {
+    "territory_id": "ingles_listening_basico",
+    "difficulty_level": 3,
+    "prompt": "O que aconteceu com o voo?",
+    "options": [
+      "it was delayed",
+      "it left early",
+      "it was cancelled",
+      "it left on time"
+    ],
+    "correct_answer": "it was delayed",
+    "explanation": "No áudio, a pessoa diz: \"We arrived at the airport just in time, but our flight was delayed anyway.\" — por isso a resposta certa é \"it was delayed\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "We arrived at the airport just in time, but our flight was delayed anyway."
+  }
+]

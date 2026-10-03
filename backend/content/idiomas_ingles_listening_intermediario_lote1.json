@@ -1,0 +1,287 @@
+[
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 1,
+    "prompt": "O que aconteceu no final?",
+    "options": [
+      "they found a table",
+      "they left the restaurant",
+      "they waited outside",
+      "they went to another restaurant"
+    ],
+    "correct_answer": "they found a table",
+    "explanation": "No áudio, a pessoa diz: \"Although the restaurant was fully booked, they managed to find us a table near the window.\" — por isso a resposta certa é \"they found a table\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Although the restaurant was fully booked, they managed to find us a table near the window."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Quando o relatório precisa ficar pronto?",
+    "options": [
+      "by Friday",
+      "by Monday",
+      "by Thursday",
+      "by next week"
+    ],
+    "correct_answer": "by Friday",
+    "explanation": "No áudio, a pessoa diz: \"The report needs to be finished by Friday, even though half the team is on vacation.\" — por isso a resposta certa é \"by Friday\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The report needs to be finished by Friday, even though half the team is on vacation."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Por que ela se mudou?",
+    "options": [
+      "to be closer to her office",
+      "to be closer to her family",
+      "to pay less rent",
+      "to live with a friend"
+    ],
+    "correct_answer": "to be closer to her office",
+    "explanation": "No áudio, a pessoa diz: \"She moved to a new apartment last month, closer to her office downtown.\" — por isso a resposta certa é \"to be closer to her office\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She moved to a new apartment last month, closer to her office downtown."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 1,
+    "prompt": "O que o médico recomendou?",
+    "options": [
+      "more exercise and less screen time",
+      "more sleep and less stress",
+      "more water and less sugar",
+      "more rest and less exercise"
+    ],
+    "correct_answer": "more exercise and less screen time",
+    "explanation": "No áudio, a pessoa diz: \"The doctor recommended more exercise and less time in front of screens.\" — por isso a resposta certa é \"more exercise and less screen time\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The doctor recommended more exercise and less time in front of screens."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 1,
+    "prompt": "O que eles decidiram fazer?",
+    "options": [
+      "buy the house near the beach",
+      "rent a house downtown",
+      "wait for a cheaper house",
+      "sell their old house"
+    ],
+    "correct_answer": "buy the house near the beach",
+    "explanation": "No áudio, a pessoa diz: \"Even though it was expensive, they decided to buy the house near the beach.\" — por isso a resposta certa é \"buy the house near the beach\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Even though it was expensive, they decided to buy the house near the beach."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que podemos concluir?",
+    "options": [
+      "they arrived late",
+      "they arrived early",
+      "the movie was cancelled",
+      "they missed the theater"
+    ],
+    "correct_answer": "they arrived late",
+    "explanation": "No áudio, a pessoa diz: \"By the time we got to the theater, the movie had already started.\" — por isso a resposta certa é \"they arrived late\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "By the time we got to the theater, the movie had already started."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Por que ele trabalha de casa?",
+    "options": [
+      "the office was closed",
+      "he prefers working alone",
+      "he lives far from downtown",
+      "he was asked to stay home"
+    ],
+    "correct_answer": "the office was closed",
+    "explanation": "No áudio, a pessoa diz: \"He's been working from home since the company closed its downtown office.\" — por isso a resposta certa é \"the office was closed\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He's been working from home since the company closed its downtown office."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que aconteceu durante o pouso?",
+    "options": [
+      "passengers felt sick",
+      "the flight was smooth",
+      "the plane was delayed",
+      "passengers were asleep"
+    ],
+    "correct_answer": "passengers felt sick",
+    "explanation": "No áudio, a pessoa diz: \"The flight was so turbulent that several passengers felt sick during the landing.\" — por isso a resposta certa é \"passengers felt sick\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The flight was so turbulent that several passengers felt sick during the landing."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que a pessoa prefere fazer?",
+    "options": [
+      "walk to work",
+      "drive to work",
+      "take the bus",
+      "work from home"
+    ],
+    "correct_answer": "walk to work",
+    "explanation": "No áudio, a pessoa diz: \"I'd rather walk to work than deal with traffic every morning.\" — por isso a resposta certa é \"walk to work\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "I'd rather walk to work than deal with traffic every morning."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 2,
+    "prompt": "O que surpreendeu as pessoas?",
+    "options": [
+      "the layoffs after record profits",
+      "the record profits alone",
+      "a new product launch",
+      "a change in management"
+    ],
+    "correct_answer": "the layoffs after record profits",
+    "explanation": "No áudio, a pessoa diz: \"The company announced layoffs right after reporting record profits, which surprised everyone.\" — por isso a resposta certa é \"the layoffs after record profits\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The company announced layoffs right after reporting record profits, which surprised everyone."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Como as outras pessoas se sentiram?",
+    "options": [
+      "annoyed",
+      "amused",
+      "relieved",
+      "excited"
+    ],
+    "correct_answer": "annoyed",
+    "explanation": "No áudio, a pessoa diz: \"He kept checking his phone during dinner, which annoyed everyone at the table.\" — por isso a resposta certa é \"annoyed\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He kept checking his phone during dinner, which annoyed everyone at the table."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que podemos inferir sobre ela?",
+    "options": [
+      "she pushed past her limits",
+      "she trained for years",
+      "she gave up halfway",
+      "she ran it easily"
+    ],
+    "correct_answer": "she pushed past her limits",
+    "explanation": "No áudio, a pessoa diz: \"She finally finished the marathon, even though she had never run more than five kilometers before.\" — por isso a resposta certa é \"she pushed past her limits\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "She finally finished the marathon, even though she had never run more than five kilometers before."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que mudou?",
+    "options": [
+      "the restaurant lost popularity",
+      "the restaurant got more popular",
+      "the restaurant closed",
+      "the restaurant expanded"
+    ],
+    "correct_answer": "the restaurant lost popularity",
+    "explanation": "No áudio, a pessoa diz: \"The restaurant used to be packed every weekend, but now it's often empty.\" — por isso a resposta certa é \"the restaurant lost popularity\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "The restaurant used to be packed every weekend, but now it's often empty."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que ele prometeu?",
+    "options": [
+      "it wouldn't happen again",
+      "he would quit the job",
+      "he would arrive earlier tomorrow",
+      "he would explain later"
+    ],
+    "correct_answer": "it wouldn't happen again",
+    "explanation": "No áudio, a pessoa diz: \"He apologized for being late again, promising it wouldn't happen next time.\" — por isso a resposta certa é \"it wouldn't happen again\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "He apologized for being late again, promising it wouldn't happen next time."
+  },
+  {
+    "territory_id": "ingles_listening_intermediario",
+    "difficulty_level": 3,
+    "prompt": "O que podemos concluir sobre o filme?",
+    "options": [
+      "it was commercially successful",
+      "it was a critical success",
+      "it was banned",
+      "it was never released"
+    ],
+    "correct_answer": "it was commercially successful",
+    "explanation": "No áudio, a pessoa diz: \"Despite the bad reviews, the movie made a lot of money at the box office.\" — por isso a resposta certa é \"it was commercially successful\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção nos detalhes específicos mencionados (lugares, horários, nomes, números)."
+    ],
+    "age_reviewed": true,
+    "audio_script": "Despite the bad reviews, the movie made a lot of money at the box office."
+  }
+]

@@ -370,6 +370,13 @@ class Challenge(Base):
     audio_url: Mapped[str | None] = mapped_column(String, nullable=True)
     audio_source_name: Mapped[str | None] = mapped_column(String, nullable=True)
     audio_source_url: Mapped[str | None] = mapped_column(String, nullable=True)
+    # MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md (03/10/2026): texto lido via TTS
+    # (flutter_edge_tts, já em produção), SEPARADO de `prompt` — `prompt` é a pergunta de
+    # compreensão (sempre visível), `audio_script` é a frase/diálogo ouvido, nunca
+    # mostrado como texto (senão deixaria de ser teste de escuta, não de leitura). Áudio só
+    # toca sob toque explícito, nunca automático (decisão confirmada por Rhoney, §8 do
+    # doc). None em todo o resto do app.
+    audio_script: Mapped[str | None] = mapped_column(Text, nullable=True)
     # MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3 (unificado com a spec anterior
     # MUNDO_IDIOMAS_BIBLIOTECA_VISUAL_V1.md, conforme pedido no próprio
     # documento) — reforço visual (foto/GIF) pra idiomas falados, e o

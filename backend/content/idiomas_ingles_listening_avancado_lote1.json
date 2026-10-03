@@ -1,0 +1,287 @@
+[
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 1,
+    "prompt": "B vai à festa?",
+    "options": [
+      "no, because of work",
+      "yes, definitely",
+      "no, because she's sick",
+      "yes, but late"
+    ],
+    "correct_answer": "no, because of work",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Are you coming to the party tonight? B: I wish I could, but I have to work late.\" — por isso a resposta certa é \"no, because of work\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Are you coming to the party tonight? B: I wish I could, but I have to work late."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 1,
+    "prompt": "O que falta pra terminar o relatório?",
+    "options": [
+      "double-check the numbers",
+      "write the introduction",
+      "send it to the manager",
+      "print it out"
+    ],
+    "correct_answer": "double-check the numbers",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Have you finished the report yet? B: Almost, I just need to double-check the numbers.\" — por isso a resposta certa é \"double-check the numbers\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Have you finished the report yet? B: Almost, I just need to double-check the numbers."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 1,
+    "prompt": "O que B pediu pra A fazer?",
+    "options": [
+      "text the flight number",
+      "call when landed",
+      "book a taxi",
+      "wait at the gate"
+    ],
+    "correct_answer": "text the flight number",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Can you pick me up at the airport? B: Sure, just text me your flight number.\" — por isso a resposta certa é \"text the flight number\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Can you pick me up at the airport? B: Sure, just text me your flight number."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 1,
+    "prompt": "Por que B não ligou de volta?",
+    "options": [
+      "the phone died",
+      "she was busy",
+      "she forgot",
+      "she lost the number"
+    ],
+    "correct_answer": "the phone died",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Why didn't you call me back? B: Sorry, my phone died and I couldn't charge it.\" — por isso a resposta certa é \"the phone died\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Why didn't you call me back? B: Sorry, my phone died and I couldn't charge it."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 1,
+    "prompt": "Quantas xícaras B já tomou?",
+    "options": [
+      "three",
+      "two",
+      "one",
+      "four"
+    ],
+    "correct_answer": "three",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Do you want some more coffee? B: No thanks, I'm already on my third cup.\" — por isso a resposta certa é \"three\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Do you want some more coffee? B: No thanks, I'm already on my third cup."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que 'wrap my head around it' significa aqui?",
+    "options": [
+      "trying to understand/process it",
+      "trying to forget about it",
+      "trying to celebrate it",
+      "trying to avoid it"
+    ],
+    "correct_answer": "trying to understand/process it",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: I heard you got a new job! B: Yeah, I start next Monday, I'm still trying to wrap my head around it.\" — por isso a resposta certa é \"trying to understand/process it\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: I heard you got a new job! B: Yeah, I start next Monday, I'm still trying to wrap my head around it."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que 'bring up' significa aqui?",
+    "options": [
+      "to mention a topic",
+      "to lift something",
+      "to raise a child",
+      "to cancel a meeting"
+    ],
+    "correct_answer": "to mention a topic",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Should I bring up the budget issue in the meeting? B: Yeah, better bring it up now than later.\" — por isso a resposta certa é \"to mention a topic\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Should I bring up the budget issue in the meeting? B: Yeah, better bring it up now than later."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que A está pedindo?",
+    "options": [
+      "to take care of the dog",
+      "to walk the dog once",
+      "to buy dog food",
+      "to train the dog"
+    ],
+    "correct_answer": "to take care of the dog",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Can you look after my dog this weekend? B: Of course, I'd love to.\" — por isso a resposta certa é \"to take care of the dog\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Can you look after my dog this weekend? B: Of course, I'd love to."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que 'coming down with something' significa?",
+    "options": [
+      "starting to get sick",
+      "arriving somewhere",
+      "finding something",
+      "giving up on something"
+    ],
+    "correct_answer": "starting to get sick",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: I think I'm coming down with something. B: You should go home and rest then.\" — por isso a resposta certa é \"starting to get sick\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: I think I'm coming down with something. B: You should go home and rest then."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que 'sleep on it' significa?",
+    "options": [
+      "think about it overnight before deciding",
+      "go to sleep immediately",
+      "forget about the plan",
+      "ask someone else to decide"
+    ],
+    "correct_answer": "think about it overnight before deciding",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: We need to figure out a new plan. B: Let's sleep on it and decide tomorrow.\" — por isso a resposta certa é \"think about it overnight before deciding\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: We need to figure out a new plan. B: Let's sleep on it and decide tomorrow."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como foi a entrevista, segundo B?",
+    "options": [
+      "it went badly",
+      "it went very well",
+      "it was postponed",
+      "it hasn't happened yet"
+    ],
+    "correct_answer": "it went badly",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: How was the interview? B: Honestly, I think I blew it.\" — por isso a resposta certa é \"it went badly\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: How was the interview? B: Honestly, I think I blew it."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como B está se sentindo?",
+    "options": [
+      "slowly getting over being upset",
+      "still very angry",
+      "completely fine already",
+      "confused about what happened"
+    ],
+    "correct_answer": "slowly getting over being upset",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Are you still mad about yesterday? B: Let's just say I'm getting there.\" — por isso a resposta certa é \"slowly getting over being upset\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Are you still mad about yesterday? B: Let's just say I'm getting there."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que podemos concluir sobre a estratégia?",
+    "options": [
+      "early signs are not promising",
+      "it was a clear success",
+      "it failed completely",
+      "no results exist yet"
+    ],
+    "correct_answer": "early signs are not promising",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Did the new strategy work? B: It's too early to tell, but it's not looking great so far.\" — por isso a resposta certa é \"early signs are not promising\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Did the new strategy work? B: It's too early to tell, but it's not looking great so far."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que podemos inferir sobre ele?",
+    "options": [
+      "something is upsetting him",
+      "he is just tired",
+      "he is in a great mood",
+      "he has nothing to say"
+    ],
+    "correct_answer": "something is upsetting him",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Why is he so quiet today? B: I think something's bothering him, but he won't talk about it.\" — por isso a resposta certa é \"something is upsetting him\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Why is he so quiet today? B: I think something's bothering him, but he won't talk about it."
+  },
+  {
+    "territory_id": "ingles_listening_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que 'let us down' sugere sobre o fornecedor?",
+    "options": [
+      "they disappointed them before",
+      "they always deliver on time",
+      "they are a brand new supplier",
+      "they offered a discount"
+    ],
+    "correct_answer": "they disappointed them before",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Can we trust this supplier? B: Let's just say they've let us down before.\" — por isso a resposta certa é \"they disappointed them before\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Can we trust this supplier? B: Let's just say they've let us down before."
+  }
+]

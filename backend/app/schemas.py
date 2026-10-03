@@ -155,6 +155,9 @@ class ChallengeOut(BaseModel):
     audio_url: str | None = None
     audio_source_name: str | None = None
     audio_source_url: str | None = None
+    # MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md (03/10/2026). Texto lido via TTS, nunca
+    # renderizado como texto visível no client. None em todo o resto do app.
+    audio_script: str | None = None
     # MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3 — reforço visual (idiomas
     # falados) / conteúdo do sinal (Libras), tudo-ou-nada como audio_url
     # acima. None na grande maioria dos desafios até a curadoria chegar

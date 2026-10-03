@@ -1012,6 +1012,30 @@ abstract class AppLocalizations {
   /// **'Ver o sinal'**
   String get vocabMediaWatchSignButton;
 
+  /// MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md — button that plays the TTS audio_script for Listening Ativo territories
+  ///
+  /// In pt, this message translates to:
+  /// **'Ouvir'**
+  String get listeningAudioPlayButton;
+
+  /// Same button after the audio_script has already played once
+  ///
+  /// In pt, this message translates to:
+  /// **'Ouvir de novo'**
+  String get listeningAudioReplayButton;
+
+  /// Shown when the Listening Ativo TTS playback fails
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível reproduzir o áudio. Tente de novo.'**
+  String get listeningAudioErrorMessage;
+
+  /// Caption shown under the listening play button, explaining the format to the player
+  ///
+  /// In pt, this message translates to:
+  /// **'Ouça o áudio antes de responder. Você pode repetir quantas vezes quiser.'**
+  String get listeningAudioHintLabel;
+
   /// MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md — app bar title of the complementary word-constellation screen
   ///
   /// In pt, this message translates to:

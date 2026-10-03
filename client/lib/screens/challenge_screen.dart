@@ -176,6 +176,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _audioLoadFailed = false;
   bool _audioHasPlayedOnce = false;
 
+  // MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md (03/10/2026) — mesmo
+  // espírito de _audioPlaying/_audioHasPlayedOnce acima, mas pro áudio
+  // sintetizado via TTS (audio_script, nunca mostrado como texto),
+  // separado do áudio pré-gravado de Ouvido Afiado (audio_url). Falha
+  // nunca trava a tela, mesmo princípio de "som é reforço, nunca
+  // bloqueio".
+  bool _listeningAudioPlaying = false;
+  bool _listeningAudioFailed = false;
+  bool _listeningAudioHasPlayedOnce = false;
+
   // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2 — velocidade escolhida pelo
   // jogador (normal/rápido/acelerado), visível junto ao botão de áudio,
   // nunca escondida em configurações. Vale pra qualquer palavra tocada
@@ -339,6 +349,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _audioPlaying = false;
       _audioLoadFailed = false;
       _audioHasPlayedOnce = false;
+      _listeningAudioPlaying = false;
+      _listeningAudioFailed = false;
+      _listeningAudioHasPlayedOnce = false;
       _relampagoRetriedThisChallenge = false;
     });
     unawaited(_audioPlayer.stop());
@@ -580,6 +593,28 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     }
   }
 
+  /// MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md §8 (decisão confirmada por
+  /// Rhoney, 03/10/2026) — áudio só toca sob toque explícito, nunca
+  /// automático, mesmo padrão de _speakOption abaixo. `text` aqui é
+  /// SEMPRE audio_script, nunca o `prompt` visível (senão o texto ouvido
+  /// vazaria como texto lido, invalidando o teste de compreensão
+  /// auditiva).
+  Future<void> _playListeningAudioScript(String text, String voice) async {
+    if (_listeningAudioPlaying) return;
+    setState(() {
+      _listeningAudioPlaying = true;
+      _listeningAudioFailed = false;
+    });
+    final ok = await TtsService.instance.speak(text, voice: voice, speed: _ttsSpeed);
+    if (mounted) {
+      setState(() {
+        _listeningAudioPlaying = false;
+        _listeningAudioFailed = !ok;
+        if (ok) _listeningAudioHasPlayedOnce = true;
+      });
+    }
+  }
+
   /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2 — sempre sob demanda (nunca
   /// automático), nunca trava a tela numa falha (mesmo espírito de
   /// _playChallengeAudio acima). `voice` vem de idioma_voices.dart —
@@ -608,6 +643,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     if (voice == null) return;
     final prompt = challenge['prompt'] as String?;
     if (prompt != null) TtsService.instance.preload(prompt, voice: voice, speed: _ttsSpeed);
+    final audioScript = challenge['audio_script'] as String?;
+    if (audioScript != null) TtsService.instance.preload(audioScript, voice: voice, speed: _ttsSpeed);
     final options = (challenge['options'] as List?)?.cast<String>();
     if (options != null) {
       for (final option in options) {
@@ -1045,6 +1082,45 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     );
   }
 
+  /// MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md §4 — botão único de
+  /// tocar/ouvir de novo pro audio_script (TTS, sob toque explícito,
+  /// decisão §8 confirmada por Rhoney 03/10/2026). O texto do
+  /// audio_script NUNCA é renderizado aqui — só a pergunta de
+  /// compreensão (`prompt`, já renderizada normalmente mais abaixo) e as
+  /// alternativas (sempre texto) ficam visíveis, mesmo espírito de
+  /// _buildAudioPlayerSection (Ouvido Afiado) acima, mas com síntese via
+  /// TTS em vez de URL pré-gravada.
+  Widget _buildListeningAudioSection(String audioScript, String voice) {
+    final l10n = AppLocalizations.of(context)!;
+    return Column(
+      children: [
+        FilledButton.icon(
+          onPressed: _listeningAudioPlaying
+              ? null
+              : () => _playListeningAudioScript(audioScript, voice),
+          icon: Icon(_listeningAudioHasPlayedOnce
+              ? Icons.replay
+              : Icons.volume_up),
+          label: Text(_listeningAudioHasPlayedOnce
+              ? l10n.listeningAudioReplayButton
+              : l10n.listeningAudioPlayButton),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          l10n.listeningAudioHintLabel,
+          textAlign: TextAlign.center,
+          style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+        ),
+        if (_listeningAudioFailed) ...[
+          const SizedBox(height: 8),
+          Text(l10n.listeningAudioErrorMessage,
+              style: TextStyle(color: AppColors.error)),
+        ],
+        const SizedBox(height: 24),
+      ],
+    );
+  }
+
   /// MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §3/§4 — reforço visual (foto/GIF
   /// nos idiomas falados) ou o próprio conteúdo do sinal (vídeo/GIF em
   /// Libras). 'image'/'gif' renderizam inline (o reforço complementa o
@@ -1140,6 +1216,12 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 if (challenge['audio_url'] != null)
                   _buildAudioPlayerSection(challenge['audio_url'] as String,
                       challenge['audio_source_name'] as String?),
+                if (challenge['audio_script'] != null &&
+                    voiceForTerritory(widget.territoryId) != null)
+                  _buildListeningAudioSection(
+                    challenge['audio_script'] as String,
+                    voiceForTerritory(widget.territoryId)!,
+                  ),
                 if (challenge['vocab_media_url'] != null)
                   _buildVocabMediaSection(
                     mediaUrl: challenge['vocab_media_url'] as String,

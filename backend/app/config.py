@@ -375,6 +375,13 @@ NEVER_TIMED_TERRITORY_IDS = {
     "ingles_compreensao_basico", "ingles_compreensao_intermediario", "ingles_compreensao_avancado",
     "ingles_compreensao_relampago_basico", "ingles_compreensao_relampago_intermediario",
     "ingles_compreensao_relampago_avancado",
+    # Listening Ativo de Inglês (MUNDO_IDIOMAS_INGLES_LISTENING_ATIVO_V1.md, 03/10/2026):
+    # mesmo motivo de Compreensão de Texto acima — ouvir contra o relógio contraria o
+    # propósito do exercício, o usuário precisa do tempo real de reprodução do áudio.
+    # "Relâmpago" aqui significa áudio mais curto/menos perguntas, nunca timer.
+    "ingles_listening_basico", "ingles_listening_intermediario", "ingles_listening_avancado",
+    "ingles_listening_relampago_basico", "ingles_listening_relampago_intermediario",
+    "ingles_listening_relampago_avancado",
 }
 # V3.5 (V3.5_CURIOSIDADE_RELAMPAGO.md, aprovado) — o próprio doc descreve
 # a charada "no formato Relâmpago (timer curto, ~10 segundos)" como a

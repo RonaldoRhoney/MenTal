@@ -1,0 +1,287 @@
+[
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Como B responde ao pedido de A?",
+    "options": [
+      "willingly",
+      "reluctantly",
+      "angrily",
+      "nervously"
+    ],
+    "correct_answer": "willingly",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Got a minute? B: For you, always.\" — por isso a resposta certa é \"willingly\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Got a minute? B: For you, always."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Como foi, segundo B?",
+    "options": [
+      "not great, but not terrible",
+      "excellent",
+      "a total disaster",
+      "perfect"
+    ],
+    "correct_answer": "not great, but not terrible",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Did it go well? B: Could've been worse.\" — por isso a resposta certa é \"not great, but not terrible\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Did it go well? B: Could've been worse."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "O que B está dizendo?",
+    "options": [
+      "that he's following right away",
+      "that he'll stay here",
+      "that he's already there",
+      "that he's not coming"
+    ],
+    "correct_answer": "that he's following right away",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: You coming? B: Right behind you.\" — por isso a resposta certa é \"that he's following right away\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: You coming? B: Right behind you."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Há novidades?",
+    "options": [
+      "no, not yet",
+      "yes, big news",
+      "yes, bad news",
+      "he didn't answer"
+    ],
+    "correct_answer": "no, not yet",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: Any news? B: Nothing yet.\" — por isso a resposta certa é \"no, not yet\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: Any news? B: Nothing yet."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Como B está se sentindo agora?",
+    "options": [
+      "not okay yet, but hopeful",
+      "perfectly fine",
+      "in great danger",
+      "very angry"
+    ],
+    "correct_answer": "not okay yet, but hopeful",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: You okay? B: I will be.\" — por isso a resposta certa é \"not okay yet, but hopeful\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: You okay? B: I will be."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que 'typical' sugere sobre o comportamento dele?",
+    "options": [
+      "it's expected/usual for him",
+      "it's surprising",
+      "it's the first time",
+      "it's admirable"
+    ],
+    "correct_answer": "it's expected/usual for him",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: He didn't even apologize. B: Typical.\" — por isso a resposta certa é \"it's expected/usual for him\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: He didn't even apologize. B: Typical."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Como foi o resultado da prova?",
+    "options": [
+      "she did very well",
+      "she barely passed",
+      "she failed",
+      "she didn't take it"
+    ],
+    "correct_answer": "she did very well",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: She aced the exam. B: Of course she did.\" — por isso a resposta certa é \"she did very well\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: She aced the exam. B: Of course she did."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Como ambos estão se sentindo?",
+    "options": [
+      "very busy",
+      "very relaxed",
+      "very bored",
+      "very tired"
+    ],
+    "correct_answer": "very busy",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: I'm swamped today. B: Same here.\" — por isso a resposta certa é \"very busy\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: I'm swamped today. B: Same here."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "O que 'bailed on us' significa?",
+    "options": [
+      "cancelled on them",
+      "helped them",
+      "joined them late",
+      "surprised them"
+    ],
+    "correct_answer": "cancelled on them",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: He bailed on us again. B: Shocking.\" — por isso a resposta certa é \"cancelled on them\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: He bailed on us again. B: Shocking."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Como A descreve a chance de dar certo?",
+    "options": [
+      "unlikely to succeed",
+      "guaranteed to succeed",
+      "already failed",
+      "impossible to know"
+    ],
+    "correct_answer": "unlikely to succeed",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: This is a long shot. B: Worth a try though.\" — por isso a resposta certa é \"unlikely to succeed\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: This is a long shot. B: Worth a try though."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que 'been off' sugere?",
+    "options": [
+      "acting differently than usual",
+      "doing great work",
+      "on vacation",
+      "very happy"
+    ],
+    "correct_answer": "acting differently than usual",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: He's been off lately. B: I noticed too.\" — por isso a resposta certa é \"acting differently than usual\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: He's been off lately. B: I noticed too."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que 'reading between the lines' significa?",
+    "options": [
+      "understanding the hidden meaning",
+      "reading very slowly",
+      "misunderstanding completely",
+      "reading out loud"
+    ],
+    "correct_answer": "understanding the hidden meaning",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: She's reading between the lines. B: Smart move.\" — por isso a resposta certa é \"understanding the hidden meaning\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: She's reading between the lines. B: Smart move."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Como A descreve o que aconteceu?",
+    "options": [
+      "unexpected",
+      "planned in advance",
+      "obvious for weeks",
+      "a relief"
+    ],
+    "correct_answer": "unexpected",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: That came out of nowhere. B: Tell me about it.\" — por isso a resposta certa é \"unexpected\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: That came out of nowhere. B: Tell me about it."
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que 'walking on eggshells' sugere?",
+    "options": [
+      "being very careful not to upset her",
+      "being very relaxed with her",
+      "ignoring her completely",
+      "arguing with her"
+    ],
+    "correct_answer": "being very careful not to upset her",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: He's walking on eggshells around her. B: Can you blame him?\" — por isso a resposta certa é \"being very careful not to upset her\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: He's walking on eggshells around her. B: Can you blame him?"
+  },
+  {
+    "territory_id": "ingles_listening_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "O que 'water under the bridge' significa?",
+    "options": [
+      "something in the past that's no longer an issue",
+      "a current big problem",
+      "something they still need to resolve",
+      "a new conflict"
+    ],
+    "correct_answer": "something in the past that's no longer an issue",
+    "explanation": "No diálogo ouvido, a resposta está em: \"A: It's water under the bridge now. B: Glad to hear that.\" — por isso a resposta certa é \"something in the past that's no longer an issue\".",
+    "hints": [
+      "Toque no áudio e ouça com atenção — você pode reouvir quantas vezes precisar antes de responder.",
+      "Preste atenção em quem diz o quê na conversa — a resposta está na fala de uma das duas pessoas."
+    ],
+    "age_reviewed": true,
+    "audio_script": "A: It's water under the bridge now. B: Glad to hear that."
+  }
+]

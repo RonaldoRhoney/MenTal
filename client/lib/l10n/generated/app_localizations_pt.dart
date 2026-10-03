@@ -524,6 +524,20 @@ class AppLocalizationsPt extends AppLocalizations {
   String get vocabMediaWatchSignButton => 'Ver o sinal';
 
   @override
+  String get listeningAudioPlayButton => 'Ouvir';
+
+  @override
+  String get listeningAudioReplayButton => 'Ouvir de novo';
+
+  @override
+  String get listeningAudioErrorMessage =>
+      'Não foi possível reproduzir o áudio. Tente de novo.';
+
+  @override
+  String get listeningAudioHintLabel =>
+      'Ouça o áudio antes de responder. Você pode repetir quantas vezes quiser.';
+
+  @override
   String get wordConstellationScreenTitle => 'Constelação de Palavras';
 
   @override
