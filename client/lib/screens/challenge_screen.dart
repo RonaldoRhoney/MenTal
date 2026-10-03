@@ -18,6 +18,7 @@ import 'word_constellation_screen.dart';
 import '../widgets/celebration_overlay.dart';
 import '../widgets/coins_rise_overlay.dart';
 import '../widgets/institutional_video_player.dart';
+import '../widgets/mental_character.dart';
 import '../widgets/pulse_in.dart';
 import '../widgets/share_achievement_button.dart';
 
@@ -1287,10 +1288,31 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 ..._hintsShown.map(
                   (hint) => Padding(
                     padding: const EdgeInsets.only(bottom: 8),
-                    child: Text(
-                      l10n.hintPrefix(hint),
-                      style: TextStyle(
-                          fontStyle: FontStyle.italic, color: AppColors.muted),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // MENTAL_PERSONAGEM_MASCOTE_V1.md §4: "apontando"
+                        // é a expressão certa pra chamar atenção pra uma
+                        // dica — o personagem literalmente entrega a
+                        // orientação, pequeno o bastante pra não competir
+                        // com o texto.
+                        const Padding(
+                          padding: EdgeInsets.only(top: 2),
+                          child: MentalCharacter(
+                            expression: MentalCharacterExpression.apontando,
+                            size: 28,
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            l10n.hintPrefix(hint),
+                            style: TextStyle(
+                                fontStyle: FontStyle.italic,
+                                color: AppColors.muted),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -1566,6 +1588,24 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           ),
     );
 
+    // MENTAL_PERSONAGEM_MASCOTE_V1.md §3.3/§4: o personagem reage ao
+    // resultado — "comemorando" nos marcos grandes (território/mundo/
+    // nível), "ok/positivo" no acerto comum, "negativo suave" no erro
+    // (nunca agressivo, mesmo princípio de MICROINTERACTIONS.md §3), e o
+    // tom neutro do tempo esgotado fica sem personagem reagindo (não é
+    // nem acerto nem erro de verdade).
+    final bigMoment = levelUp ||
+        territoryJustConquered ||
+        worldJustCompleted ||
+        newlyAwardedBadges.isNotEmpty;
+    final characterExpression = timedOut
+        ? null
+        : (isCorrect
+            ? (bigMoment
+                ? MentalCharacterExpression.comemorando
+                : MentalCharacterExpression.okPositivo)
+            : MentalCharacterExpression.negativoSuave);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -1574,6 +1614,21 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                if (characterExpression != null) ...[
+                  Center(
+                    child: Builder(builder: (context) {
+                      final character = MentalCharacter(
+                        expression: characterExpression,
+                        size: bigMoment ? 110 : 84,
+                      );
+                      // Pulso só no acerto — mesmo princípio de "Erro:
+                      // nenhuma celebração" já aplicado ao texto acima,
+                      // agora também pro personagem.
+                      return isCorrect ? PulseIn(child: character) : character;
+                    }),
+                  ),
+                  const SizedBox(height: 8),
+                ],
                 // Pulso sutil só no acerto (MICROINTERACTIONS.md §3, "Erro:
                 // nenhuma celebração" — texto de erro fica estático).
                 isCorrect ? PulseIn(child: feedbackText) : feedbackText,
