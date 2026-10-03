@@ -308,13 +308,47 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     }
   }
 
+  // Achado real testando no aparelho (03/10/2026, pedido de Rhoney: "a
+  // tela home simplesmente pula na sua apresentação") — cada estágio do
+  // fluxo (splash/tutorial/login/age gate/onboarding/home) era um
+  // `return` condicional direto no build(), trocando a árvore de widgets
+  // inteira sem nenhuma animação (diferente das telas abertas via
+  // Navigator.push, que já ganham a transição padrão do Flutter). Esta
+  // chave espelha exatamente as condições de _buildBody abaixo, só pra
+  // o AnimatedSwitcher de build() saber quando um estágio novo começou.
+  String _currentStageKey() {
+    if (!_splashDone) return 'splash';
+    if (_tutorialSeen == null) return 'tutorial-loading';
+    if (!_tutorialSeen!) return 'tutorial';
+    if (_passwordRecoveryPending) return 'password-recovery';
+    if (_client == null) return 'login';
+    if (_ageCheckError != null) return 'age-check-error';
+    if (_ageConfirmed == null) return 'age-loading';
+    if (!_ageConfirmed!) return 'age-gate';
+    if (_onboardingCompleted == null) return 'onboarding-loading';
+    if (!_onboardingCompleted!) return 'onboarding';
+    return 'home';
+  }
+
   @override
   Widget build(BuildContext context) {
-    // PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026): uma única
-    // experiência de abertura, uma única vez por processo (cold start),
-    // antes de qualquer decisão de Login/Age Gate/Home — substitui os
-    // dois splashes sequenciais anteriores (SplashScreen +
-    // WelcomeSplashScreen, removido do fluxo pós-onboarding abaixo).
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 420),
+      switchInCurve: Curves.easeOut,
+      switchOutCurve: Curves.easeIn,
+      child: KeyedSubtree(
+        key: ValueKey(_currentStageKey()),
+        child: _buildBody(context),
+      ),
+    );
+  }
+
+  // PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026): uma única
+  // experiência de abertura, uma única vez por processo (cold start),
+  // antes de qualquer decisão de Login/Age Gate/Home — substitui os
+  // dois splashes sequenciais anteriores (SplashScreen +
+  // WelcomeSplashScreen, removido do fluxo pós-onboarding abaixo).
+  Widget _buildBody(BuildContext context) {
     if (!_splashDone) {
       return OpeningExperienceScreen(onDone: () => setState(() => _splashDone = true));
     }

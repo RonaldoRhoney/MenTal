@@ -20,12 +20,14 @@ void main() {
     await tester.pumpWidget(const MentalApp());
     await tester.pump();
 
-    // PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026):
-    // OpeningExperienceScreen roda primeiro (2400ms) — avança o tempo
-    // pra passar da sequência antes de checar a tela de login. Margem
-    // de 100ms além da duração exata pra não cair bem na borda do
-    // AnimationController.
-    await tester.pump(const Duration(milliseconds: 2500));
+    // PROMPT_CLAUDE_CODE_SPLASH_REDESIGN_V2.md (12/09/2026), duração
+    // esticada em 03/10/2026 (pedido de Rhoney: "o Splash ficou muito
+    // rápido") de 2400ms pra 3600ms — avança o tempo pra passar da
+    // sequência antes de checar a tela de login. Margem além da duração
+    // exata cobre tanto a borda do AnimationController quanto o
+    // crossfade de 420ms do AnimatedSwitcher que troca de estágio em
+    // main.dart (splash → tutorial).
+    await tester.pump(const Duration(milliseconds: 4100));
     await tester.pump();
 
     // Tutorial "Como usar o MENTAL" (29/08/2026) aparece uma vez, logo
@@ -36,7 +38,12 @@ void main() {
     await tester.pump(const Duration(milliseconds: 100));
     expect(find.text('Pular'), findsOneWidget);
     await tester.tap(find.text('Pular'));
-    await tester.pump();
+    // pumpAndSettle, não só pump(): o AnimatedSwitcher de main.dart
+    // (03/10/2026) crossfade entre tutorial→login por 420ms, mantendo os
+    // dois montados ao mesmo tempo nesse meio — um pump() só pegava o
+    // quadro no meio da transição, com "MENTAL" duplicado (um de cada
+    // tela, as duas aparecem com esse wordmark).
+    await tester.pumpAndSettle();
 
     // MENTAL (BRAND.md §1: nome nunca aparece sozinho, sem o slogan por
     // perto, em nenhum primeiro contato) e o formulário de e-mail/senha.

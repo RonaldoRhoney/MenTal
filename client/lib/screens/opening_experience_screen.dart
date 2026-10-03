@@ -33,7 +33,12 @@ class OpeningExperienceScreen extends StatefulWidget {
 
 class _OpeningExperienceScreenState extends State<OpeningExperienceScreen>
     with SingleTickerProviderStateMixin {
-  static const _fullDuration = Duration(milliseconds: 2400);
+  // Achado real testando no aparelho (03/10/2026, pedido de Rhoney: "o
+  // Splash ficou muito rápido") — 2400ms (já no teto da faixa-alvo
+  // original de 1,2-2,5s) lia como rápido demais depois do personagem
+  // substituir o "M" desenhado à mão; mesmas proporções de estágio
+  // (ícone/wordmark/slogan), só esticadas.
+  static const _fullDuration = Duration(milliseconds: 3600);
   static const _reducedMotionDuration = Duration(milliseconds: 350);
 
   late final AnimationController _controller;
