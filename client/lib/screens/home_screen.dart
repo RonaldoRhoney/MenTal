@@ -10,9 +10,11 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/app_version_service.dart';
 import '../services/feed_activity_service.dart';
 import '../services/movement_service.dart';
+import '../services/world_celebration_service.dart';
 import '../territories.dart';
 import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
+import '../widgets/celebration_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
 import '../widgets/update_available_dialog.dart';
@@ -597,6 +599,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 blockNameByTerritory,
                 onReturned: onReturned,
               ),
+              // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §7 — lê
+              // _progress AO VIVO (não o `item.completed` capturado no
+              // momento em que o carrossel foi montado), pra detectar a
+              // conquista do Mundo assim que acontece, enquanto o
+              // jogador ainda está na tela dele.
+              isCompletedNow: () =>
+                  (_progress?['worlds'] as List?)
+                      ?.cast<Map<String, dynamic>>()
+                      .firstWhere(
+                        (w) => w['world_id'] == item.worldId,
+                        orElse: () => const {'completed': false},
+                      )['completed'] as bool? ??
+                  false,
             ),
           ),
         );
@@ -1686,6 +1701,7 @@ class _WorldDetailScreen extends StatefulWidget {
     required this.client,
     required this.refreshProgress,
     required this.buildChildren,
+    required this.isCompletedNow,
   });
 
   final String title;
@@ -1699,6 +1715,14 @@ class _WorldDetailScreen extends StatefulWidget {
   final ApiClient client;
   final Future<void> Function() refreshProgress;
   final List<Widget> Function(VoidCallback onReturned) buildChildren;
+  // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §7 — `completed` acima é só
+  // o retrato do momento em que a tela abriu (widget final, nunca
+  // reconstrói sozinho); esta função lê o progresso AO VIVO do pai
+  // (HomeScreenState._progress) cada vez que é chamada, usada só pra
+  // detectar a TRANSIÇÃO false→true depois de voltar de um Desafio —
+  // nunca pra decidir o ícone do AppBar (esse continua usando o retrato
+  // inicial, igual antes).
+  final bool Function() isCompletedNow;
 
   @override
   State<_WorldDetailScreen> createState() => _WorldDetailScreenState();
@@ -1706,11 +1730,21 @@ class _WorldDetailScreen extends StatefulWidget {
 
 class _WorldDetailScreenState extends State<_WorldDetailScreen> {
   Map<String, dynamic>? _worldCoachCard;
+  late final CelebrationController _celebration;
+  late bool _alreadyCompletedWhenOpened;
 
   @override
   void initState() {
     super.initState();
+    _celebration = CelebrationController();
+    _alreadyCompletedWhenOpened = widget.completed;
     _loadWorldCoach();
+  }
+
+  @override
+  void dispose() {
+    _celebration.dispose();
+    super.dispose();
   }
 
   Future<void> _loadWorldCoach() async {
@@ -1725,10 +1759,35 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
     }
   }
 
+  // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §7 — celebração de Mundo
+  // conquistado DENTRO da própria tela do Mundo, no momento em que
+  // acontece de verdade (transição false→true), não só como modal vindo
+  // do resultado do Desafio. Mesmo dado (`is_world_completed`, via
+  // GET /progress) que já atualiza o planeta no Mapa de Trajetória —
+  // nunca um cálculo paralelo que pode divergir.
+  Future<void> _maybeCelebrateWorldCompletion() async {
+    final worldId = widget.worldId;
+    if (worldId == null || _alreadyCompletedWhenOpened) return;
+    if (!widget.isCompletedNow()) return;
+    _alreadyCompletedWhenOpened = true; // nunca repete dentro desta visita
+    if (await WorldCelebrationService.hasCelebrated(worldId)) return;
+    await WorldCelebrationService.markCelebrated(worldId);
+    if (!mounted) return;
+    if (!MediaQuery.of(context).disableAnimations) _celebration.celebrate();
+    final l10n = AppLocalizations.of(context)!;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(l10n.worldConquestInContextMessage(widget.title)),
+        duration: const Duration(seconds: 4),
+      ),
+    );
+  }
+
   Future<void> _handleReturned() async {
     await widget.refreshProgress();
     if (mounted) setState(() {});
     _loadWorldCoach();
+    await _maybeCelebrateWorldCompletion();
   }
 
   Widget _buildWorldCoachCard(AppLocalizations l10n) {
@@ -1741,33 +1800,39 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Flexible(
-                child: Text(widget.title, overflow: TextOverflow.ellipsis)),
-            if (widget.completed) ...[
-              const SizedBox(width: 8),
-              Icon(Icons.check_circle, color: AppColors.gold, size: 20),
+    // CelebrationOverlay (§7) envolve a tela inteira — mesmo widget já
+    // usado no resultado do Desafio pra conquista de nível/território/
+    // badge (MICROINTERACTIONS.md §3, "mesma família visual").
+    return CelebrationOverlay(
+      controller: _celebration,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Flexible(
+                  child: Text(widget.title, overflow: TextOverflow.ellipsis)),
+              if (widget.completed) ...[
+                const SizedBox(width: 8),
+                Icon(Icons.check_circle, color: AppColors.gold, size: 20),
+              ],
             ],
-          ],
+          ),
         ),
-      ),
-      body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.all(16),
-          children: [
-            // MENTAL LINGO (aprovado 23/09/2026): só no Mundo dos Idiomas —
-            // é o Mundo que ganha agente de voz PRÓPRIO em vez do card
-            // genérico do My_Mental_AI (_buildWorldCoachCard já pula
-            // 'idiomas' sozinho, ver _loadWorldCoach).
-            if (widget.worldId == 'idiomas')
-              MentalLingoBanner(client: widget.client),
-            _buildWorldCoachCard(l10n),
-            ...widget.buildChildren(_handleReturned),
-          ],
+        body: SafeArea(
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              // MENTAL LINGO (aprovado 23/09/2026): só no Mundo dos Idiomas —
+              // é o Mundo que ganha agente de voz PRÓPRIO em vez do card
+              // genérico do My_Mental_AI (_buildWorldCoachCard já pula
+              // 'idiomas' sozinho, ver _loadWorldCoach).
+              if (widget.worldId == 'idiomas')
+                MentalLingoBanner(client: widget.client),
+              _buildWorldCoachCard(l10n),
+              ...widget.buildChildren(_handleReturned),
+            ],
+          ),
         ),
       ),
     );
@@ -1857,6 +1922,7 @@ class _TerritoryGroupState extends State<_TerritoryGroup> {
                             l10n: widget.l10n,
                             client: widget.client,
                             onReturned: widget.onReturned,
+                            territoryProgressOf: widget.territoryProgressOf,
                           ),
                         ),
                   ],
@@ -1986,6 +2052,75 @@ class _SectionHeader extends StatelessWidget {
   }
 }
 
+// MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §3/§6 — mesma lógica de
+// detecção de família sequencial do backend (services.py
+// _sequential_family_and_level), reimplementada aqui só pra decidir o
+// que mostrar na trilha (§6); a autoridade de acesso de verdade continua
+// 100% no backend (campo `visible`/`unlocked`), isto aqui é só exibição.
+const _kSequentialLevelSuffixes = [('_basico', 1), ('_intermediario', 2), ('_avancado', 3)];
+
+({String family, int level})? _sequentialFamilyAndLevel(String territoryId) {
+  for (final (suffix, level) in _kSequentialLevelSuffixes) {
+    if (territoryId.endsWith(suffix)) {
+      var prefix = territoryId.substring(0, territoryId.length - suffix.length);
+      if (prefix.endsWith('_relampago')) {
+        prefix = prefix.substring(0, prefix.length - '_relampago'.length);
+      }
+      return (family: prefix, level: level);
+    }
+  }
+  return null;
+}
+
+/// Trilha compacta de 3 marcadores (Básico/Intermediário/Avançado) pra
+/// uma família sequencial — conquistado (preenchido), atual (destacado),
+/// ainda não alcançado (ponto neutro). Reaproveita o mesmo dado já
+/// consumido pelos cards (`conquered`/`visible`), nenhum estado novo.
+class _FamilyTrail extends StatelessWidget {
+  const _FamilyTrail({required this.family, required this.territoryProgressOf});
+
+  final String family;
+  final Map<String, dynamic>? Function(String) territoryProgressOf;
+
+  @override
+  Widget build(BuildContext context) {
+    final suffixes = ['_basico', '_intermediario', '_avancado'];
+    var foundCurrent = false;
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        for (var i = 0; i < suffixes.length; i++) ...[
+          if (i > 0)
+            Container(
+              width: 10,
+              height: 1.5,
+              color: AppColors.muted.withValues(alpha: 0.4),
+            ),
+          Builder(builder: (context) {
+            final progress = territoryProgressOf('$family${suffixes[i]}');
+            final conquered = progress?['conquered'] as bool? ?? false;
+            final visible = progress?['visible'] as bool? ?? true;
+            final isCurrent = !conquered && visible && !foundCurrent;
+            if (isCurrent) foundCurrent = true;
+            final color = conquered
+                ? AppColors.gold
+                : (isCurrent ? AppColors.teal : AppColors.muted.withValues(alpha: 0.4));
+            return Container(
+              width: 8,
+              height: 8,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: conquered || isCurrent ? color : Colors.transparent,
+                border: Border.all(color: color, width: 1.5),
+              ),
+            );
+          }),
+        ],
+      ],
+    );
+  }
+}
+
 class _TerritoryCard extends StatelessWidget {
   const _TerritoryCard({
     required this.territoryId,
@@ -1994,6 +2129,7 @@ class _TerritoryCard extends StatelessWidget {
     required this.l10n,
     required this.client,
     required this.onReturned,
+    required this.territoryProgressOf,
   });
 
   final String territoryId;
@@ -2002,6 +2138,11 @@ class _TerritoryCard extends StatelessWidget {
   final AppLocalizations l10n;
   final ApiClient client;
   final VoidCallback onReturned;
+  // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §6 — a trilha de uma família
+  // precisa do status dos OUTROS níveis (não só do próprio território
+  // deste card), por isso recebe a função de busca inteira, não só o
+  // `progress` já resolvido de `territoryId`.
+  final Map<String, dynamic>? Function(String) territoryProgressOf;
 
   @override
   Widget build(BuildContext context) {
@@ -2120,6 +2261,16 @@ class _TerritoryCard extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §6 — trilha
+              // compacta de Básico/Intermediário/Avançado, só quando o
+              // território faz parte de uma família sequencial.
+              if (_sequentialFamilyAndLevel(territoryId) != null) ...[
+                _FamilyTrail(
+                  family: _sequentialFamilyAndLevel(territoryId)!.family,
+                  territoryProgressOf: territoryProgressOf,
+                ),
+                const SizedBox(height: 6),
+              ],
               // Pedido de Rhoney (29/08/2026): nunca quebrar NO MEIO DE
               // UMA PALAVRA. Revisado em 30/09/2026 (pedido de Rhoney,
               // achado real no celular: nomes longos como "Contrações

@@ -205,6 +205,71 @@ class _FakeApiClientWithMysteryBlock extends ApiClient {
       };
 }
 
+/// MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §4/§6 — família sequencial
+/// com Intermediário/Avançado ainda não alcançados (visible=false) e um
+/// com Básico já conquistado, revelando Intermediário.
+class _FakeApiClientWithSequentialFamily extends ApiClient {
+  _FakeApiClientWithSequentialFamily({this.basicoConquered = false})
+      : super(baseUrl: 'http://fake', accessToken: 'fake-token');
+
+  final bool basicoConquered;
+
+  @override
+  Future<Map<String, dynamic>> progress() async => {
+        'xp_total': 0,
+        'xp_per_level': 100,
+        'level': 1,
+        'streak': {'current_streak': 0, 'freeze_available': true},
+        'territories': [
+          {
+            'territory_id': 'ingles_phrasal_basico',
+            'xp_in_territory': basicoConquered ? 200 : 0,
+            'unlocked': true,
+            'conquered': basicoConquered,
+            'conquest_threshold': 200,
+            'visible': true,
+          },
+          {
+            'territory_id': 'ingles_phrasal_intermediario',
+            'xp_in_territory': 0,
+            'unlocked': basicoConquered,
+            'conquered': false,
+            'conquest_threshold': 200,
+            'visible': basicoConquered,
+          },
+          {
+            'territory_id': 'ingles_phrasal_avancado',
+            'xp_in_territory': 0,
+            'unlocked': false,
+            'conquered': false,
+            'conquest_threshold': 200,
+            'visible': false,
+          },
+        ],
+        'worlds': [
+          {
+            'world_id': 'idiomas',
+            'name': 'Mundo dos Idiomas',
+            'territory_ids': [
+              'ingles_phrasal_basico',
+              'ingles_phrasal_intermediario',
+              'ingles_phrasal_avancado',
+            ],
+            'completed': false,
+          },
+        ],
+        'blocks': [],
+      };
+
+  @override
+  Future<Map<String, dynamic>> movementStatus() async => {
+        'movement_enabled': false,
+        'daily_goal_steps': null,
+        'current_cycle': null,
+        'pending_report_cycle': null,
+      };
+}
+
 void main() {
   // Reforço de gamificação na Home (pedido de Rhoney, 29/08/2026): o
   // _ProgressCard cresceu (avatar 64px + anel + chips de XP/streak),
@@ -560,5 +625,37 @@ void main() {
     final badge = _badgeWithIcon(tester, Icons.sports_martial_arts_outlined);
     expect(badge.isLabelVisible, isTrue);
     expect((badge.label as Text).data, '2');
+  });
+
+  testWidgets(
+      'MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §4: nível ainda não alcançado nem aparece na lista',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(
+        tester, homeApp(_FakeApiClientWithSequentialFamily()));
+
+    await tester.tap(find.text('Idiomas'));
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('Phrasal Verbs: Básico'), findsOneWidget);
+    expect(find.textContaining('Phrasal Verbs: Intermediário'), findsNothing);
+    expect(find.textContaining('Phrasal Verbs: Avançado'), findsNothing);
+  });
+
+  testWidgets(
+      'MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §4: conquistar Básico revela Intermediário, Avançado continua escondido',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await pumpTall(
+        tester,
+        homeApp(
+            _FakeApiClientWithSequentialFamily(basicoConquered: true)));
+
+    await tester.tap(find.text('Idiomas'));
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('Phrasal Verbs: Básico'), findsOneWidget);
+    expect(find.textContaining('Phrasal Verbs: Intermediário'), findsOneWidget);
+    expect(find.textContaining('Phrasal Verbs: Avançado'), findsNothing);
   });
 }

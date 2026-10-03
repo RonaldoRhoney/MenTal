@@ -1864,6 +1864,12 @@ abstract class AppLocalizations {
   /// **'{world} completo! +{xp} XP de bônus'**
   String worldCompletedCelebrationMessage(String world, int xp);
 
+  /// MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §7 — celebração de Mundo conquistado mostrada dentro da própria tela do Mundo (sem repetir o XP de bônus, já pago e mostrado no momento em que o último desafio foi respondido)
+  ///
+  /// In pt, this message translates to:
+  /// **'{world} conquistado! 🎉'**
+  String worldConquestInContextMessage(String world);
+
   /// Badge just unlocked celebration message
   ///
   /// In pt, this message translates to:

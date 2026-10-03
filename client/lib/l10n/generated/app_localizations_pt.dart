@@ -1046,6 +1046,11 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String worldConquestInContextMessage(String world) {
+    return '$world conquistado! 🎉';
+  }
+
+  @override
   String badgeUnlockedCelebrationMessage(String badgeName) {
     return 'Nova conquista: $badgeName!';
   }

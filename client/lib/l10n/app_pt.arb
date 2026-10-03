@@ -1359,6 +1359,15 @@
       }
     }
   },
+  "worldConquestInContextMessage": "{world} conquistado! 🎉",
+  "@worldConquestInContextMessage": {
+    "description": "MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §7 — celebração de Mundo conquistado mostrada dentro da própria tela do Mundo (sem repetir o XP de bônus, já pago e mostrado no momento em que o último desafio foi respondido)",
+    "placeholders": {
+      "world": {
+        "type": "String"
+      }
+    }
+  },
   "badgeUnlockedCelebrationMessage": "Nova conquista: {badgeName}!",
   "@badgeUnlockedCelebrationMessage": {
     "description": "Badge just unlocked celebration message",
