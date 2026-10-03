@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api/api_client.dart';
 import '../l10n/generated/app_localizations.dart';
@@ -81,6 +82,43 @@ class _HomeScreenState extends State<HomeScreen> {
       if (mounted) setState(() => _economy = economy);
     } on ApiException {
       // banner simplesmente não aparece
+    }
+  }
+
+  // Achado real testando no aparelho (03/10/2026, pedido de Rhoney): o
+  // banner de reparo de sequência não tinha jeito de fechar — ficava fixo
+  // na Home toda vez que ela carregava, deixando a tela "muito carregada".
+  // Dispensa é só local (SharedPreferences, mesmo padrão de
+  // onboarding_tutorial_service.dart) e por OFERTA específica (chave =
+  // prazo + sequência a restaurar) — uma quebra de sequência NOVA no
+  // futuro tem chave diferente e volta a aparecer normalmente; só a
+  // mesma oferta já vista não aparece de novo.
+  static const _kDismissedRepairPrefsKey = 'home_dismissed_repair_offer_v1';
+  String? _dismissedRepairKey;
+
+  String _repairKeyFor(Map<String, dynamic> repair) =>
+      '${repair['expires_on']}_${repair['streak_to_restore']}';
+
+  Future<void> _loadDismissedRepairKey() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final key = prefs.getString(_kDismissedRepairPrefsKey);
+      if (mounted) setState(() => _dismissedRepairKey = key);
+    } catch (_) {
+      // Falha de leitura nunca deve travar nem esconder o banner —
+      // simplesmente continua aparecendo até conseguir dispensar de novo.
+    }
+  }
+
+  Future<void> _dismissRepairBanner(Map<String, dynamic> repair) async {
+    final key = _repairKeyFor(repair);
+    if (mounted) setState(() => _dismissedRepairKey = key);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_kDismissedRepairPrefsKey, key);
+    } catch (_) {
+      // Dispensa só nesta sessão se a escrita falhar — melhor do que
+      // travar a interação de fechar o banner.
     }
   }
 
@@ -281,6 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _loadProfileHeader();
     _loadMentalCoinsBalance();
     _loadEconomy();
+    _loadDismissedRepairKey();
     _loadFeedBadge();
     _loadBattlesBadge();
     _loadNotificationBadge();
@@ -451,6 +490,9 @@ class _HomeScreenState extends State<HomeScreen> {
     if (e == null) return const SizedBox.shrink();
     final repair = e['repair'] as Map<String, dynamic>?;
     if (repair == null) return const SizedBox.shrink();
+    if (_repairKeyFor(repair) == _dismissedRepairKey) {
+      return const SizedBox.shrink();
+    }
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Column(
@@ -488,6 +530,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(l10n.homeStreakRepairBannerAction,
                       style: TextStyle(
                           color: AppColors.gold, fontWeight: FontWeight.w700)),
+                  IconButton(
+                    key: const Key('home_repair_banner_dismiss'),
+                    icon: const Icon(Icons.close, size: 18),
+                    color: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.color
+                        ?.withValues(alpha: 0.6),
+                    padding: EdgeInsets.zero,
+                    constraints: const BoxConstraints(),
+                    visualDensity: VisualDensity.compact,
+                    tooltip: l10n.homeStreakRepairBannerDismiss,
+                    onPressed: () => _dismissRepairBanner(repair),
+                  ),
                 ],
               ),
             ),

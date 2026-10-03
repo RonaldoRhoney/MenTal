@@ -4132,6 +4132,12 @@ abstract class AppLocalizations {
   /// **'Ver'**
   String get homeStreakRepairBannerAction;
 
+  /// Tooltip do botão de fechar o banner de reparo de sequência
+  ///
+  /// In pt, this message translates to:
+  /// **'Fechar aviso'**
+  String get homeStreakRepairBannerDismiss;
+
   /// Home chip while boost active
   ///
   /// In pt, this message translates to:

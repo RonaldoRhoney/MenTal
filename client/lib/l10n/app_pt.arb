@@ -3247,6 +3247,10 @@
   "@homeStreakRepairBannerAction": {
     "description": "Home banner action"
   },
+  "homeStreakRepairBannerDismiss": "Fechar aviso",
+  "@homeStreakRepairBannerDismiss": {
+    "description": "Tooltip do botão de fechar o banner de reparo de sequência"
+  },
   "homeBoostChip": "Boost +{percent}% até {time}",
   "@homeBoostChip": {
     "description": "Home chip while boost active",

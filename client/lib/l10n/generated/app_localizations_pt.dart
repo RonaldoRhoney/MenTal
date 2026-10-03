@@ -2396,6 +2396,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get homeStreakRepairBannerAction => 'Ver';
 
   @override
+  String get homeStreakRepairBannerDismiss => 'Fechar aviso';
+
+  @override
   String homeBoostChip(int percent, String time) {
     return 'Boost +$percent% até $time';
   }
