@@ -78,17 +78,26 @@ Animação de verdade (não apenas imagem estática) é um salto de complexidade
 
 ## 8. Status de implementação (03/10/2026)
 
-**Arte conceitual aprovada por Rhoney; ferramenta de animação escolhida; integração ainda não iniciada.**
+**Arte produzida e aprovada; personagem integrado nos principais pontos de uso do app (§6.3), como imagem estática com crossfade — não com rig animado no Rive (decisão de escopo abaixo). Testado no aparelho real pelo próprio Rhoney, com 2 rodadas de ajuste.**
 
-**§6.2 (investigação de ferramenta de animação) — concluída.** Recomendação: **Rive**, não Lottie — o personagem precisa reagir a múltiplos estados vindos do app (feliz, apontando, positivo, negativo, pensando, comemorando, acenando, dormindo), e Rive foi feito pra exatamente isso (state machines nativas, arquivo 10-15x menor que Lottie equivalente, 120 FPS), enquanto Lottie é melhor pra animação pré-renderizada linear sem alternância de estado. Pacote Flutter (`rive`, pub.dev) é open-source, sem custo de runtime. Canva continua sendo usado pra arte estática de cada expressão; o Rive entra depois, pra montar o personagem com estado interativo a partir dessas artes.
+**§6.2 (investigação de ferramenta de animação) — concluída, mas a execução foi reescopada.** A recomendação original (Rive, por causa das state machines nativas pra alternância de estado) continua tecnicamente correta, mas **o rig em si (importar a arte no editor do Rive, animar bones/meshes, montar a state machine) é trabalho manual num editor visual — não dá pra fazer por código/CLI nesta sessão.** Decisão de escopo de Rhoney (03/10/2026): integrar agora como **imagem estática por expressão com crossfade suave** (`MentalCharacter`, `client/lib/widgets/mental_character.dart`, `AnimatedSwitcher` entre as 8 PNGs), e deixar o rig de verdade no Rive pra quando esse trabalho manual acontecer — a troca de abordagem depois é só trocar a implementação interna do widget, a API (`MentalCharacterExpression`) já fica pronta pra isso.
 
-**§6.1 (produção de arte) — as 8 expressões da §4 produzidas e aprovadas**, geradas via Canva, estilo robô com "miolo" de cérebro/sinapse (glossy 3D), paleta final definida com Rhoney em iteração direta: corpo em lavanda clara, visor/detalhes em azul-marinho escuro, pés e detalhes em roxo, com pequenos acabamentos nas cores da marca (dourado `#E2BE6E` e teal `#3FA796`, tirados direto de `app_theme.dart`) no brilho do cérebro e nas bordas do corpo. Links das 8 expressões aprovadas: ver mensagem da sessão de 03/10/2026 (a incluir nos assets finais do projeto quando a produção para Rive começar).
+**§6.1 (produção de arte) — as 8 expressões da §4 produzidas, aprovadas e com fundo transparente.** Geradas via Canva (`generate-image` + `remove-background`), estilo robô com "miolo" de cérebro/sinapse (glossy 3D), paleta final definida com Rhoney em iteração direta: corpo em lavanda clara, visor/detalhes em azul-marinho escuro, pés e detalhes em roxo, com pequenos acabamentos nas cores da marca (dourado `#E2BE6E` e teal `#3FA796`, tirados direto de `app_theme.dart`) no brilho do cérebro e nas bordas do corpo. Assets em `client/assets/character/*.png` (800×800, upscale de thumbnail 200×200 — ver nota de qualidade abaixo).
 
-**Pendente, não iniciado nesta rodada:**
-- Rigging das 8 expressões em um único personagem Rive com state machine (§6.2 cobre só a escolha da ferramenta, não a execução do rig).
-- §6.3: substituição do splash atual, substituição do ícone do MENTAL LINGO (5 estados: Pronto/Ouvindo/Processando/Respondendo/Falha), integração em dicas/orientações/celebrações ao longo do app.
-- §5.1: lógica de variação visual por marco de gamificação (streak 7/15/30/100, Mundo completo, nível) — depende da integração básica (§6.3) estar pronta primeiro.
+**§6.3 (integração nos pontos de uso) — concluída nos pontos principais:**
+- **Splash**: personagem (acenando) substitui o antigo `_MentalMarkPainter` ("M com sinapse" desenhado stroke-by-stroke, removido). Duração do splash esticada de 2400ms pra 3600ms e curva de entrada trocada (easeInOut em vez de easeOutCubic + easeOutBack) depois do achado real de Rhoney testando ("ficou muito rápido"/"deve ir surgindo suavemente").
+- **Transição entre estágios do app** (splash→tutorial→login→age gate→onboarding→Home): achado real de Rhoney testando ("a Home simplesmente pula") — cada estágio era um `return` condicional direto em `main.dart`, sem nenhuma animação. Corrigido com um `AnimatedSwitcher` (crossfade de 420ms) envolvendo todo o corpo de `build()`, chaveado por `_currentStageKey()` — cobre todas as trocas de estágio de uma vez, não só splash→Home.
+- **MENTAL LINGO**: personagem substitui `_GlowingMic` (ícone genérico, removido) no banner da Home, e reage aos 5 estados da conversa (Pronto/Ouvindo/Processando/Respondendo/Falha → felizNeutro/acenando/pensando/okPositivo/negativoSuave).
+- **Resultado do Desafio**: personagem mostra `okPositivo` no acerto comum, `negativoSuave` no erro (sem pulso, mesmo princípio de "Erro: nenhuma celebração"), e `comemorando` (maior, com pulso) em marcos grandes (nível/território/mundo/badge). Tamanho ajustado de 84/110px pra 140/180px depois do achado real de Rhoney ("muito pequeno").
+- **Dicas**: personagem `apontando`, pequeno, ao lado de cada dica mostrada.
+
+**Pendente, não iniciado:**
+- Rig de verdade no Rive (trabalho manual no editor deles — ver nota de reescopo acima).
+- §5.1: lógica de variação visual por marco de gamificação (streak 7/15/30/100, Mundo completo, nível) — ainda não implementada.
+- Integração em pontos de orientação adicionais não cobertos acima (outras telas fora do núcleo Desafio/LINGO/splash).
 - Nenhum elemento de Fase 2 (§5.2) foi tocado, como determinado.
+
+**Nota de qualidade de imagem**: os 8 PNGs são upscale (Lanczos) de thumbnails 200×200 retornados pela API de geração — não a resolução nativa. Ficam bons em tamanho de ícone/banner; podem ficar levemente suaves em usos muito grandes. Se isso incomodar, a correção é baixar manualmente versões em resolução nativa mais alta pelos links do Canva e substituir os arquivos em `client/assets/character/`.
 
 ## 7. Critério de aceite
 
