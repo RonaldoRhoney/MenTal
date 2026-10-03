@@ -42,6 +42,7 @@ def get_progress(user_id: str = Depends(require_age_confirmed_user_id), db: Sess
                 unlocked=services.is_territory_unlocked(db, user_id, territory),
                 conquered=bool(progress and progress.conquered_at),
                 conquest_threshold=config.CONQUEST_XP_THRESHOLD,
+                visible=services.is_territory_sequentially_reachable(db, user_id, territory),
                 # Pedido de Rhoney (07/09/2026): nome real tem prioridade
                 # sobre o apelido gerado, mesmo padrão de Ranking/Amigos.
                 detentor_nickname=(detentor.real_name or detentor.nickname) if detentor else None,

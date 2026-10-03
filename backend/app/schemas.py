@@ -435,6 +435,13 @@ class ProgressTerritoryOut(BaseModel):
     unlocked: bool
     conquered: bool
     conquest_threshold: int
+    # MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §4 — independente de
+    # `unlocked` (que também cobre assinatura/amostra grátis e continua
+    # mostrando o card, só bloqueando o jogo). `visible=False` só quando
+    # o território é nível 2/3 de uma família sequencial e o nível
+    # anterior ainda não foi conquistado — o client NEM MOSTRA o card
+    # nesse caso, em vez de mostrar bloqueado.
+    visible: bool = True
     # V2 item 13 — Disputa territorial. Sempre relativo a você + seus
     # amigos confirmados (nunca global) — null quando ninguém no grupo
     # tem XP nesse território ainda.

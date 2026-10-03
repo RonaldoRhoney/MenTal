@@ -833,8 +833,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         builder: (_) => CoachScreen(
                                             client: widget.client))),
                                 child: Container(
-                                  padding: const EdgeInsets.fromLTRB(
-                                      6, 6, 14, 6),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(6, 6, 14, 6),
                                   decoration: agentNeonDecoration(radius: 24),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -1734,7 +1734,8 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
   Widget _buildWorldCoachCard(AppLocalizations l10n) {
     final card = _worldCoachCard;
     if (card == null) return const SizedBox.shrink();
-    return MyMentalAiWorldCard(card: card, client: widget.client, onReturned: _loadWorldCoach);
+    return MyMentalAiWorldCard(
+        card: card, client: widget.client, onReturned: _loadWorldCoach);
   }
 
   @override
@@ -1762,7 +1763,8 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
             // é o Mundo que ganha agente de voz PRÓPRIO em vez do card
             // genérico do My_Mental_AI (_buildWorldCoachCard já pula
             // 'idiomas' sozinho, ver _loadWorldCoach).
-            if (widget.worldId == 'idiomas') MentalLingoBanner(client: widget.client),
+            if (widget.worldId == 'idiomas')
+              MentalLingoBanner(client: widget.client),
             _buildWorldCoachCard(l10n),
             ...widget.buildChildren(_handleReturned),
           ],
@@ -1820,7 +1822,8 @@ class _TerritoryGroupState extends State<_TerritoryGroup> {
               key: Key('section_header_$blockId'),
               borderRadius: BorderRadius.circular(10),
               onTap: () => setState(() => _expanded = !_expanded),
-              child: _SectionHeader(blockId: blockId!, name: blockName, expanded: _expanded),
+              child: _SectionHeader(
+                  blockId: blockId!, name: blockName, expanded: _expanded),
             ),
             const SizedBox(height: 12),
           ],
@@ -1835,18 +1838,27 @@ class _TerritoryGroupState extends State<_TerritoryGroup> {
                   spacing: spacing,
                   runSpacing: spacing,
                   children: [
+                    // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §4: nível
+                    // ainda não alcançado numa família sequencial nem
+                    // aparece aqui — `visible` já vem calculado pelo
+                    // backend (GET /progress), independente de
+                    // `unlocked` (que continua só sobre assinatura e
+                    // não esconde o card).
                     for (final territoryId in widget.territoryIds)
-                      SizedBox(
-                        width: cardWidth,
-                        child: _TerritoryCard(
-                          territoryId: territoryId,
-                          label: territoryLabel(widget.l10n, territoryId),
-                          progress: widget.territoryProgressOf(territoryId),
-                          l10n: widget.l10n,
-                          client: widget.client,
-                          onReturned: widget.onReturned,
+                      if (widget.territoryProgressOf(territoryId)?['visible']
+                              as bool? ??
+                          true)
+                        SizedBox(
+                          width: cardWidth,
+                          child: _TerritoryCard(
+                            territoryId: territoryId,
+                            label: territoryLabel(widget.l10n, territoryId),
+                            progress: widget.territoryProgressOf(territoryId),
+                            l10n: widget.l10n,
+                            client: widget.client,
+                            onReturned: widget.onReturned,
+                          ),
                         ),
-                      ),
                   ],
                 );
               },
@@ -1914,7 +1926,8 @@ const Map<String, IconData> _kSectionIcons = {
 /// gradiente — mesmo cuidado de acabamento já pedido pro Caça-palavras
 /// e pro ícone do Mapa de Trajetória.
 class _SectionHeader extends StatelessWidget {
-  const _SectionHeader({required this.blockId, required this.name, this.expanded});
+  const _SectionHeader(
+      {required this.blockId, required this.name, this.expanded});
 
   final String blockId;
   final String name;
@@ -1964,7 +1977,8 @@ class _SectionHeader extends StatelessWidget {
           AnimatedRotation(
             turns: expanded! ? 0 : -0.25,
             duration: const Duration(milliseconds: 200),
-            child: Icon(Icons.expand_more_rounded, color: AppColors.gold, size: 22),
+            child: Icon(Icons.expand_more_rounded,
+                color: AppColors.gold, size: 22),
           ),
         ],
       ],

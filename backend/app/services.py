@@ -328,7 +328,70 @@ def register_daily_usage(db: Session, user_id: str, today: date) -> None:
     db.commit()
 
 
+# MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §3 — desbloqueio sequencial por
+# "família" de território, detectado só pelo padrão de nomenclatura do
+# territory_id (nunca world_id/block_id hardcoded), pra valer
+# automaticamente em qualquer Mundo futuro que adote essa mesma estrutura
+# de níveis, sem precisar tocar neste código de novo.
+_SEQUENTIAL_LEVEL_SUFFIXES: tuple[tuple[str, int], ...] = (
+    ("_basico", 1),
+    ("_intermediario", 2),
+    ("_avancado", 3),
+)
+_SEQUENTIAL_PREREQUISITE_SUFFIX = {2: "_basico", 3: "_intermediario"}
+
+
+def _sequential_family_and_level(territory_id: str) -> tuple[str, int] | None:
+    """Ex.: 'ingles_phrasal_basico' -> ('ingles_phrasal', 1);
+    'ingles_phrasal_relampago_basico' -> ('ingles_phrasal', 1) — o infixo
+    '_relampago' não conta como família própria, Relâmpago de um nível
+    desbloqueia junto do normal do mesmo nível (§3). Território sem
+    nenhum desses 3 sufixos não é sequencial — retorna None."""
+    for suffix, level in _SEQUENTIAL_LEVEL_SUFFIXES:
+        if territory_id.endswith(suffix):
+            prefix = territory_id[: -len(suffix)]
+            family = prefix[: -len("_relampago")] if prefix.endswith("_relampago") else prefix
+            return family, level
+    return None
+
+
+def is_territory_sequentially_reachable(db: Session, user_id: str, territory: models.Territory) -> bool:
+    """True quando o território não faz parte de nenhuma família
+    sequencial, é o nível 1 de uma família (sempre alcançável), ou o
+    usuário já tem qualquer tentativa registrada nele (grandfather —
+    progresso real de antes desta regra existir nunca é retroativamente
+    trancado, §3). False só quando é nível 2/3 de uma família e o nível
+    NORMAL anterior (nunca o Relâmpago) ainda não foi conquistado."""
+    parsed = _sequential_family_and_level(territory.id)
+    if parsed is None:
+        return True
+    family, level = parsed
+    if level == 1:
+        return True
+
+    already_attempted = db.execute(
+        select(func.count(models.Attempt.attempt_id))
+        .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+        .where(models.Attempt.user_id == user_id)
+        .where(models.Challenge.territory_id == territory.id)
+    ).scalar_one()
+    if already_attempted > 0:
+        return True
+
+    prerequisite_id = f"{family}{_SEQUENTIAL_PREREQUISITE_SUFFIX[level]}"
+    prerequisite_progress = db.get(models.UserTerritoryProgress, (user_id, prerequisite_id))
+    return bool(prerequisite_progress and prerequisite_progress.conquered_at)
+
+
 def is_territory_unlocked(db: Session, user_id: str, territory: models.Territory) -> bool:
+    # Checagem de sequência (acima) vale SEMPRE, inclusive com
+    # MONETIZATION_ENABLED=false (lançamento gratuito atual) — é uma
+    # trava de ritmo pedagógico, não de monetização, então fica ANTES do
+    # retorno antecipado abaixo (achado real revisando este código:
+    # colocar depois faria o gate nunca valer em produção hoje).
+    if not is_territory_sequentially_reachable(db, user_id, territory):
+        return False
+
     # MONETIZATION_UPDATE_FREE_LAUNCH.md §2: ponto único de verificação da
     # flag de lançamento gratuito — nenhuma outra função do backend decide
     # acesso a território. Ativar cobrança no futuro é só mudar a env var

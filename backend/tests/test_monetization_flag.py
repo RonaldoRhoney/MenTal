@@ -52,4 +52,15 @@ def test_progress_reports_all_territories_unlocked_when_disabled(client, monkeyp
 
     progress = client.get("/progress", headers=headers).json()
     for territory in progress["territories"]:
+        # MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md (03/10/2026): gate de
+        # sequência (Básico→Intermediário→Avançado) vale independente de
+        # MONETIZATION_ENABLED — é trava de ritmo pedagógico, não de
+        # assinatura (achado real revisando services.is_territory_
+        # unlocked: a checagem fica ANTES do retorno antecipado da flag
+        # de monetização, de propósito). Só os níveis 2/3 de uma família
+        # sequencial, ainda não alcançados por este usuário novo, ficam
+        # unlocked=false aqui — a asserção original testava só a parte
+        # de assinatura, então agora é condicional a não ser um desses.
+        if territory["visible"] is False:
+            continue
         assert territory["unlocked"] is True, f"{territory['territory_id']} deveria aparecer unlocked=true"
