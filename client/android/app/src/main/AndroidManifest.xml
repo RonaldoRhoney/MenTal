@@ -50,6 +50,15 @@
          acima. Sem upload/gravação de áudio bruto: o reconhecimento
          acontece no aparelho, o backend só recebe o TEXTO já transcrito. -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Achado real no envio da versão 9 ao Play Console (03/10/2026):
+         sem este <uses-feature> explícito, o Android infere microfone
+         como OBRIGATÓRIO só por causa da permissão RECORD_AUDIO acima,
+         excluindo da loja qualquer aparelho sem microfone — reduziu em
+         20 a lista de dispositivos compatíveis (TVs principalmente, que
+         raramente têm microfone, além de alguns tablets/telefones).
+         O MENTAL LINGO já é 100% opcional (nunca bloqueia o resto do
+         app); mesmo padrão já usado acima para android.hardware.camera. -->
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
     <application
         android:label="MENTAL"
         android:name="${applicationName}"
