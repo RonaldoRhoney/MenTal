@@ -306,6 +306,11 @@ IDIOMA_TERRITORY_IDS = {
     # cometer um numa conversa (erro mais frequente de falantes de português).
     "ingles_preposicoes_basico", "ingles_preposicoes_intermediario", "ingles_preposicoes_avancado",
     "ingles_preposicoes_relampago_basico", "ingles_preposicoes_relampago_intermediario", "ingles_preposicoes_relampago_avancado",
+    # Discurso Indireto e Voz Passiva (MUNDO_IDIOMAS_INGLES_DISCURSO_INDIRETO_VOZ_PASSIVA_
+    # V1.md, 03/10/2026) — o Mental Lingo deve corrigir discurso indireto/voz passiva mal
+    # formados numa conversa (erro estrutural recorrente de falantes de português).
+    "ingles_discursoindireto_basico", "ingles_discursoindireto_intermediario", "ingles_discursoindireto_avancado",
+    "ingles_discursoindireto_relampago_basico", "ingles_discursoindireto_relampago_intermediario", "ingles_discursoindireto_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -338,6 +343,10 @@ ALWAYS_TIMED_TERRITORIES = {
     # Preposições e Artigos Relâmpago (MUNDO_IDIOMAS_INGLES_PREPOSICOES_ARTIGOS_V1.md,
     # 30/09/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo distinto.
     "ingles_preposicoes_relampago_basico", "ingles_preposicoes_relampago_intermediario", "ingles_preposicoes_relampago_avancado",
+    # Discurso Indireto e Voz Passiva Relâmpago (MUNDO_IDIOMAS_INGLES_DISCURSO_INDIRETO_
+    # VOZ_PASSIVA_V1.md, 03/10/2026): mesmo padrão — território próprio, sempre
+    # cronometrado, conteúdo distinto (formato MCQ normal, não é cápsula de texto).
+    "ingles_discursoindireto_relampago_basico", "ingles_discursoindireto_relampago_intermediario", "ingles_discursoindireto_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

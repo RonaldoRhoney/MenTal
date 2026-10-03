@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"They will finish the project tomorrow.\"",
+    "options": [
+      "The project will be finished tomorrow",
+      "The project is finished tomorrow",
+      "The project was finished tomorrow",
+      "The project will finish tomorrow"
+    ],
+    "correct_answer": "The project will be finished tomorrow",
+    "explanation": "A transformação correta é \"The project will be finished tomorrow\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"They have completed the report.\"",
+    "options": [
+      "The report has been completed",
+      "The report was completed",
+      "The report is completed",
+      "The report had completed"
+    ],
+    "correct_answer": "The report has been completed",
+    "explanation": "A transformação correta é \"The report has been completed\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"You must submit the form by Friday.\"",
+    "options": [
+      "The form must be submitted by Friday",
+      "The form must submit by Friday",
+      "The form is submitted by Friday",
+      "The form was submitted by Friday"
+    ],
+    "correct_answer": "The form must be submitted by Friday",
+    "explanation": "A transformação correta é \"The form must be submitted by Friday\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"They are building a new bridge.\"",
+    "options": [
+      "A new bridge is being built",
+      "A new bridge was being built",
+      "A new bridge is built",
+      "A new bridge has been built"
+    ],
+    "correct_answer": "A new bridge is being built",
+    "explanation": "A transformação correta é \"A new bridge is being built\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"She had already sent the email.\"",
+    "options": [
+      "The email had already been sent",
+      "The email was already sent",
+      "The email has already been sent",
+      "The email already sent"
+    ],
+    "correct_answer": "The email had already been sent",
+    "explanation": "A transformação correta é \"The email had already been sent\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto: She asked, \"Are you coming?\"",
+    "options": [
+      "She asked if I was coming",
+      "She asked if I am coming",
+      "She asked am I coming",
+      "She asked if I will come"
+    ],
+    "correct_answer": "She asked if I was coming",
+    "explanation": "A transformação correta é \"She asked if I was coming\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto: He asked, \"Where do you live?\"",
+    "options": [
+      "He asked where I lived",
+      "He asked where I live",
+      "He asked where do I live",
+      "He asked where did I live"
+    ],
+    "correct_answer": "He asked where I lived",
+    "explanation": "A transformação correta é \"He asked where I lived\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto: The teacher said, \"Close the door.\"",
+    "options": [
+      "The teacher told us to close the door",
+      "The teacher said close the door",
+      "The teacher told us closing the door",
+      "The teacher said to closed the door"
+    ],
+    "correct_answer": "The teacher told us to close the door",
+    "explanation": "A transformação correta é \"The teacher told us to close the door\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto: She said, \"Don't be late.\"",
+    "options": [
+      "She told us not to be late",
+      "She said don't be late",
+      "She told us to not being late",
+      "She said to not be late"
+    ],
+    "correct_answer": "She told us not to be late",
+    "explanation": "A transformação correta é \"She told us not to be late\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto: He asked, \"Did you finish the homework?\"",
+    "options": [
+      "He asked if I had finished the homework",
+      "He asked if I finished the homework",
+      "He asked did I finish the homework",
+      "He asked if I have finished the homework"
+    ],
+    "correct_answer": "He asked if I had finished the homework",
+    "explanation": "A transformação correta é \"He asked if I had finished the homework\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Passe para a voz passiva: \"The committee should review the proposal.\"",
+    "options": [
+      "The proposal should be reviewed",
+      "The proposal should review",
+      "The proposal is reviewed",
+      "The proposal was reviewed"
+    ],
+    "correct_answer": "The proposal should be reviewed",
+    "explanation": "A transformação correta é \"The proposal should be reviewed\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Converta para o discurso indireto: She asked, \"Can you help me?\"",
+    "options": [
+      "She asked if I could help her",
+      "She asked if I can help her",
+      "She asked could I help her",
+      "She asked if I will help her"
+    ],
+    "correct_answer": "She asked if I could help her",
+    "explanation": "A transformação correta é \"She asked if I could help her\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Passe para a voz passiva: \"They were painting the fence when it started to rain.\"",
+    "options": [
+      "The fence was being painted when it started to rain",
+      "The fence is being painted when it started to rain",
+      "The fence was painted when it started to rain",
+      "The fence had been painted when it started to rain"
+    ],
+    "correct_answer": "The fence was being painted when it started to rain",
+    "explanation": "A transformação correta é \"The fence was being painted when it started to rain\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Converta para o discurso indireto: He told me, \"Wait here.\"",
+    "options": [
+      "He told me to wait there",
+      "He told me wait here",
+      "He said to wait here",
+      "He told me waiting there"
+    ],
+    "correct_answer": "He told me to wait there",
+    "explanation": "A transformação correta é \"He told me to wait there\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Passe para a voz passiva: \"The manager will have signed the contract by then.\"",
+    "options": [
+      "The contract will have been signed by then",
+      "The contract will be signed by then",
+      "The contract has been signed by then",
+      "The contract was signed by then"
+    ],
+    "correct_answer": "The contract will have been signed by then",
+    "explanation": "A transformação correta é \"The contract will have been signed by then\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  }
+]

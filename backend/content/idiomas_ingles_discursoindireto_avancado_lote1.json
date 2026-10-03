@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"People say she is the best candidate.\"",
+    "options": [
+      "She is said to be the best candidate",
+      "She is said to being the best candidate",
+      "It is said she being the best candidate",
+      "She said to be the best candidate"
+    ],
+    "correct_answer": "She is said to be the best candidate",
+    "explanation": "A transformação correta é \"She is said to be the best candidate\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 1,
+    "prompt": "Converta para o discurso indireto: She said, \"I will see you tomorrow.\"",
+    "options": [
+      "She said she would see me the next day",
+      "She said she will see me tomorrow",
+      "She said she would see me tomorrow",
+      "She said she saw me the next day"
+    ],
+    "correct_answer": "She said she would see me the next day",
+    "explanation": "A transformação correta é \"She said she would see me the next day\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 1,
+    "prompt": "Converta para o discurso indireto: He said, \"I was here yesterday.\"",
+    "options": [
+      "He said he had been there the day before",
+      "He said he was here yesterday",
+      "He said he had been here yesterday",
+      "He said he was there the day before"
+    ],
+    "correct_answer": "He said he had been there the day before",
+    "explanation": "A transformação correta é \"He said he had been there the day before\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 1,
+    "prompt": "Passe para a voz passiva: \"They reported that he had stolen the money.\"",
+    "options": [
+      "He was reported to have stolen the money",
+      "He is reported to have stolen the money",
+      "He was reported stealing the money",
+      "He reported to have stolen the money"
+    ],
+    "correct_answer": "He was reported to have stolen the money",
+    "explanation": "A transformação correta é \"He was reported to have stolen the money\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 1,
+    "prompt": "Converta para o discurso indireto: She said, \"I'll meet you here tomorrow.\"",
+    "options": [
+      "She said she would meet me there the next day",
+      "She said she would meet me here tomorrow",
+      "She said she will meet me there the next day",
+      "She said she met me there the next day"
+    ],
+    "correct_answer": "She said she would meet me there the next day",
+    "explanation": "A transformação correta é \"She said she would meet me there the next day\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto, usando 'suggested': She said, \"Let's leave early.\"",
+    "options": [
+      "She suggested leaving early",
+      "She suggested to leave early",
+      "She suggested we leaving early",
+      "She said suggested leave early"
+    ],
+    "correct_answer": "She suggested leaving early",
+    "explanation": "A transformação correta é \"She suggested leaving early\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto, usando 'denied': He said, \"I didn't take the money.\"",
+    "options": [
+      "He denied taking the money",
+      "He denied to take the money",
+      "He denied he take the money",
+      "He denied took the money"
+    ],
+    "correct_answer": "He denied taking the money",
+    "explanation": "A transformação correta é \"He denied taking the money\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto, usando 'admitted': She said, \"I made a mistake.\"",
+    "options": [
+      "She admitted making a mistake",
+      "She admitted to make a mistake",
+      "She admitted she make a mistake",
+      "She admitted make a mistake"
+    ],
+    "correct_answer": "She admitted making a mistake",
+    "explanation": "A transformação correta é \"She admitted making a mistake\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 2,
+    "prompt": "Converta para o discurso indireto, usando 'warned': He said, \"Don't touch that wire.\"",
+    "options": [
+      "He warned us not to touch that wire",
+      "He warned us don't touch that wire",
+      "He warned us to not touching that wire",
+      "He warned not touch that wire"
+    ],
+    "correct_answer": "He warned us not to touch that wire",
+    "explanation": "A transformação correta é \"He warned us not to touch that wire\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 2,
+    "prompt": "Passe para a voz passiva: \"They believe the company will expand next year.\"",
+    "options": [
+      "The company is believed to expand next year",
+      "The company believed to expand next year",
+      "It is believed the company expanding next year",
+      "The company is believing to expand next year"
+    ],
+    "correct_answer": "The company is believed to expand next year",
+    "explanation": "A transformação correta é \"The company is believed to expand next year\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 3,
+    "prompt": "Converta para o discurso indireto: She said, \"I saw him here last night.\"",
+    "options": [
+      "She said she had seen him there the night before",
+      "She said she saw him here last night",
+      "She said she had seen him here last night",
+      "She said she has seen him there the night before"
+    ],
+    "correct_answer": "She said she had seen him there the night before",
+    "explanation": "A transformação correta é \"She said she had seen him there the night before\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 3,
+    "prompt": "Passe para a voz passiva: \"People believe the painting was stolen decades ago.\"",
+    "options": [
+      "The painting is believed to have been stolen decades ago",
+      "The painting believed to be stolen decades ago",
+      "The painting is believed stolen decades ago",
+      "The painting was believed to steal decades ago"
+    ],
+    "correct_answer": "The painting is believed to have been stolen decades ago",
+    "explanation": "A transformação correta é \"The painting is believed to have been stolen decades ago\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 3,
+    "prompt": "Converta para o discurso indireto: He said, \"I'll be there next week.\"",
+    "options": [
+      "He said he would be there the following week",
+      "He said he will be there next week",
+      "He said he would be there next week",
+      "He said he was there the following week"
+    ],
+    "correct_answer": "He said he would be there the following week",
+    "explanation": "A transformação correta é \"He said he would be there the following week\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 3,
+    "prompt": "Passe para a voz passiva: \"They say the bridge was designed by a famous architect.\"",
+    "options": [
+      "The bridge is said to have been designed by a famous architect",
+      "The bridge said to be designed by a famous architect",
+      "The bridge is said to design by a famous architect",
+      "The bridge was said design by a famous architect"
+    ],
+    "correct_answer": "The bridge is said to have been designed by a famous architect",
+    "explanation": "A transformação correta é \"The bridge is said to have been designed by a famous architect\". Lembre-se: na voz passiva, o objeto da frase ativa vira sujeito, e o verbo principal vai para o particípio (verbo \"to be\" + particípio passado).",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique o tempo verbal do \"to be\" (is/was/has been/will be) de acordo com o tempo da frase original."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_discursoindireto_avancado",
+    "difficulty_level": 3,
+    "prompt": "Converta para o discurso indireto, usando 'promised': She said, \"I'll call you tonight.\"",
+    "options": [
+      "She promised to call me that night",
+      "She promised she call me tonight",
+      "She promised calling me tonight",
+      "She promised to called me that night"
+    ],
+    "correct_answer": "She promised to call me that night",
+    "explanation": "A transformação correta é \"She promised to call me that night\". No discurso indireto, os tempos verbais e pronomes mudam em relação à fala original (regra de concordância de tempo/\"backshift\").",
+    "hints": [
+      "Releia a frase original com atenção antes de escolher.",
+      "Verifique se o tempo verbal recuou corretamente (presente vira passado, \"will\" vira \"would\", etc.)."
+    ],
+    "age_reviewed": true
+  }
+]
