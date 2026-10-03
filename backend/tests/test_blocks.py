@@ -151,6 +151,9 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
     blocks = {b["block_id"]: b for b in body["blocks"]}
 
     assert sorted(blocks["ingles"]["territory_ids"]) == [
+        "ingles_amebre_avancado", "ingles_amebre_basico", "ingles_amebre_intermediario",
+        "ingles_amebre_relampago_avancado", "ingles_amebre_relampago_basico",
+        "ingles_amebre_relampago_intermediario",
         "ingles_avancado", "ingles_basico",
         "ingles_compostas_avancado", "ingles_compostas_basico", "ingles_compostas_intermediario",
         "ingles_compostas_relampago_avancado", "ingles_compostas_relampago_basico",

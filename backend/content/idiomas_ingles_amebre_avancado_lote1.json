@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"He was taken to hospital.\" Qual é a forma americana (com artigo)?",
+    "options": [
+      "He was taken to the hospital",
+      "He was taken to hospital too",
+      "He was taken at the hospital",
+      "He was taken for the hospital"
+    ],
+    "correct_answer": "He was taken to the hospital",
+    "explanation": "\"He was taken to the hospital\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"I'll see you in the future.\" Qual é a forma britânica mais tradicional e formal?",
+    "options": [
+      "in future",
+      "at future",
+      "on future",
+      "by future"
+    ],
+    "correct_answer": "in future",
+    "explanation": "\"in future\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"The team are playing well today.\" Qual é a forma americana (concordância verbal)?",
+    "options": [
+      "The team is playing well today",
+      "The team be playing well today",
+      "The team were playing well today",
+      "The team's playing well today, aren't they"
+    ],
+    "correct_answer": "The team is playing well today",
+    "explanation": "\"The team is playing well today\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"I just finished the report.\" Qual é a forma britânica mais tradicional, com present perfect?",
+    "options": [
+      "I have just finished the report",
+      "I did just finish the report",
+      "I just did finish the report",
+      "I had just finish the report"
+    ],
+    "correct_answer": "I have just finished the report",
+    "explanation": "\"I have just finished the report\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"I haven't seen him for ages.\" Qual é uma forma americana comum e equivalente?",
+    "options": [
+      "I haven't seen him in ages",
+      "I haven't seen him by ages",
+      "I haven't seen him on ages",
+      "I haven't seen him at ages"
+    ],
+    "correct_answer": "I haven't seen him in ages",
+    "explanation": "\"I haven't seen him in ages\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 2,
+    "prompt": "\"Gotten\" é o particípio passado de \"get\" nos EUA. Qual é a forma britânica tradicional equivalente?",
+    "options": [
+      "the word got",
+      "the word getted",
+      "the word gat",
+      "the word gotted"
+    ],
+    "correct_answer": "the word got",
+    "explanation": "\"got\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 2,
+    "prompt": "Frase britânica: \"I shall call you tomorrow.\" No inglês americano, qual palavra substitui \"shall\" com mais naturalidade?",
+    "options": [
+      "the word will",
+      "the word must",
+      "the word should only",
+      "the word may"
+    ],
+    "correct_answer": "the word will",
+    "explanation": "\"will\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 2,
+    "prompt": "No inglês americano, a letra \"Z\" é pronunciada \"zee\". Como é pronunciada no inglês britânico?",
+    "options": [
+      "the word zed",
+      "the word zee too",
+      "the word zet",
+      "the word zeh"
+    ],
+    "correct_answer": "the word zed",
+    "explanation": "\"zed\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 2,
+    "prompt": "Frase britânica: \"Maths is my favourite subject.\" Qual é a forma americana de \"maths\"?",
+    "options": [
+      "the word math",
+      "the word mathe",
+      "the word mathematic",
+      "the word maths too"
+    ],
+    "correct_answer": "the word math",
+    "explanation": "\"math\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"I'll meet you Thursday.\" Qual é a forma britânica mais tradicional, com preposição?",
+    "options": [
+      "I'll meet you on Thursday",
+      "I'll meet you at Thursday",
+      "I'll meet you in Thursday",
+      "I'll meet you by Thursday"
+    ],
+    "correct_answer": "I'll meet you on Thursday",
+    "explanation": "\"I'll meet you on Thursday\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"He's in hospital recovering.\" Isso está correto no inglês britânico. Qual é a forma correta no inglês americano?",
+    "options": [
+      "He's in the hospital recovering",
+      "He's in hospital too recovering",
+      "He's at hospital recovering",
+      "He's by hospital recovering"
+    ],
+    "correct_answer": "He's in the hospital recovering",
+    "explanation": "\"He's in the hospital recovering\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 3,
+    "prompt": "Frase americana: \"Do you want to go?\" No inglês britânico informal, qual pergunta curta é equivalente e muito comum?",
+    "options": [
+      "Fancy going?",
+      "Want going?",
+      "Do fancy go?",
+      "Go fancy?"
+    ],
+    "correct_answer": "Fancy going?",
+    "explanation": "\"Fancy going?\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"I'm knackered after work.\" Qual é o equivalente americano mais comum de \"knackered\"?",
+    "options": [
+      "the word exhausted",
+      "the word confused",
+      "the word worried",
+      "the word annoyed"
+    ],
+    "correct_answer": "the word exhausted",
+    "explanation": "\"exhausted\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 3,
+    "prompt": "Frase americana: \"He's a real jerk.\" Qual é um equivalente informal britânico comum de \"jerk\"?",
+    "options": [
+      "a git",
+      "a mate",
+      "a chap",
+      "a bloke"
+    ],
+    "correct_answer": "a git",
+    "explanation": "\"a git\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_avancado",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"I'm going to have a row with him.\" O que \"row\" significa aqui (não é \"remar\")?",
+    "options": [
+      "an argument",
+      "a long walk",
+      "a nap",
+      "a meal"
+    ],
+    "correct_answer": "an argument",
+    "explanation": "\"an argument\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  }
+]

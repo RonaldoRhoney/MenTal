@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"I'll see you on the weekend.\" Qual é a forma britânica mais comum?",
+    "options": [
+      "at the weekend",
+      "in the weekend",
+      "by the weekend",
+      "for the weekend"
+    ],
+    "correct_answer": "at the weekend",
+    "explanation": "\"at the weekend\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"I'll write to you soon.\" Qual é a forma americana mais comum de \"write to someone\"?",
+    "options": [
+      "write someone",
+      "write for someone",
+      "write at someone",
+      "write by someone"
+    ],
+    "correct_answer": "write someone",
+    "explanation": "\"write someone\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"This is different to what I expected.\" Qual é a forma americana mais comum de \"different to\"?",
+    "options": [
+      "different from",
+      "different than only",
+      "different of",
+      "different with"
+    ],
+    "correct_answer": "different from",
+    "explanation": "\"different from\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"Can I get a coffee, please?\" Qual é a forma britânica mais tradicional de pedir algo educadamente?",
+    "options": [
+      "Can I have a coffee, please?",
+      "Can I take a coffee, please?",
+      "Can I do a coffee, please?",
+      "Can I bring a coffee, please?"
+    ],
+    "correct_answer": "Can I have a coffee, please?",
+    "explanation": "\"Can I have a coffee, please?\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"I'm off to university in September.\" Qual é a forma americana comum de \"university\" no dia a dia?",
+    "options": [
+      "the word college",
+      "the word academy",
+      "the word institute",
+      "the word campus"
+    ],
+    "correct_answer": "the word college",
+    "explanation": "\"college\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"Let's meet Monday through Friday.\" Qual é a forma britânica equivalente de \"through\" nesse sentido?",
+    "options": [
+      "Monday to Friday",
+      "Monday until Friday",
+      "Monday across Friday",
+      "Monday over Friday"
+    ],
+    "correct_answer": "Monday to Friday",
+    "explanation": "\"Monday to Friday\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Frase britânica: \"I'm going to the cinema tonight.\" Qual é a forma americana de \"cinema\"?",
+    "options": [
+      "the word movies",
+      "the word theater only",
+      "the word films hall",
+      "the word screening room"
+    ],
+    "correct_answer": "the word movies",
+    "explanation": "\"movies\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"She majored in biology.\" Qual é a expressão britânica equivalente mais comum?",
+    "options": [
+      "she studied biology",
+      "she majored at biology",
+      "she graded in biology",
+      "she majored on biology"
+    ],
+    "correct_answer": "she studied biology",
+    "explanation": "\"she studied biology\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Frase britânica: \"Have you got a pen?\" Qual é a forma americana mais comum da mesma pergunta?",
+    "options": [
+      "Do you have a pen?",
+      "Have you a pen?",
+      "Got you a pen?",
+      "Do you got a pen?"
+    ],
+    "correct_answer": "Do you have a pen?",
+    "explanation": "\"Do you have a pen?\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"I was mad at him.\" Qual é a forma britânica mais comum de \"mad\" nesse sentido?",
+    "options": [
+      "the word angry",
+      "the word crazy",
+      "the word insane",
+      "the word wild"
+    ],
+    "correct_answer": "the word angry",
+    "explanation": "\"angry\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"Shall we meet at half past five?\" Qual é a forma americana comum de dizer a mesma hora?",
+    "options": [
+      "five thirty",
+      "half five",
+      "five and a half",
+      "thirty-five"
+    ],
+    "correct_answer": "five thirty",
+    "explanation": "\"five thirty\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Frase americana: \"I'll call you on the phone.\" Qual é a forma britânica tradicional de \"on the phone\"?",
+    "options": [
+      "on the telephone",
+      "by the phone",
+      "at the phone",
+      "through the phone"
+    ],
+    "correct_answer": "on the telephone",
+    "explanation": "\"on the telephone\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"It's quite good, actually.\" No inglês britânico, \"quite good\" costuma sugerir o quê?",
+    "options": [
+      "moderately good, not extremely",
+      "extremely good, the best",
+      "very bad",
+      "average, neither good nor bad"
+    ],
+    "correct_answer": "moderately good, not extremely",
+    "explanation": "\"moderately good, not extremely\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Frase americana: \"I live on Main Street.\" Qual é a forma britânica comum de endereço?",
+    "options": [
+      "I live in Main Street",
+      "I live at Main Street",
+      "I live by Main Street",
+      "I live near Main Street"
+    ],
+    "correct_answer": "I live in Main Street",
+    "explanation": "\"I live in Main Street\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"I'll ring you later.\" Qual é a forma americana mais comum de \"ring someone\"?",
+    "options": [
+      "call you",
+      "phone up you",
+      "telephone at you",
+      "buzz you"
+    ],
+    "correct_answer": "call you",
+    "explanation": "\"call you\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  }
+]

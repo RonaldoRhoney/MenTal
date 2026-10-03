@@ -316,6 +316,11 @@ IDIOMA_TERRITORY_IDS = {
     # usar ou perguntar sobre elas numa conversa.
     "ingles_girias_basico", "ingles_girias_intermediario", "ingles_girias_avancado",
     "ingles_girias_relampago_basico", "ingles_girias_relampago_intermediario", "ingles_girias_relampago_avancado",
+    # Variação Regional AmE/BrE (MUNDO_IDIOMAS_INGLES_VARIACAO_AME_BRE_V1.md, 03/10/2026) —
+    # o Mental Lingo deve reconhecer que ambas as variantes estão corretas quando o jogador
+    # usar uma ou outra, nunca corrigir uma como erro (§6 do doc).
+    "ingles_amebre_basico", "ingles_amebre_intermediario", "ingles_amebre_avancado",
+    "ingles_amebre_relampago_basico", "ingles_amebre_relampago_intermediario", "ingles_amebre_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -356,6 +361,10 @@ ALWAYS_TIMED_TERRITORIES = {
     # V1.md, 03/10/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo
     # distinto (formato MCQ normal, não é cápsula de texto).
     "ingles_girias_relampago_basico", "ingles_girias_relampago_intermediario", "ingles_girias_relampago_avancado",
+    # Variação Regional AmE/BrE Relâmpago (MUNDO_IDIOMAS_INGLES_VARIACAO_AME_BRE_V1.md,
+    # 03/10/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo
+    # distinto (formato MCQ normal, não é cápsula de texto).
+    "ingles_amebre_relampago_basico", "ingles_amebre_relampago_intermediario", "ingles_amebre_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"I love the color of your car.\" Qual é a forma britânica da palavra \"color\"?",
+    "options": [
+      "the word colour",
+      "the word colur",
+      "the word coloor",
+      "the word colr"
+    ],
+    "correct_answer": "the word colour",
+    "explanation": "\"colour\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"I live in a small flat downtown.\" Qual é a forma americana de \"flat\"?",
+    "options": [
+      "the word apartment",
+      "the word house",
+      "the word room",
+      "the word studio"
+    ],
+    "correct_answer": "the word apartment",
+    "explanation": "\"apartment\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"Take the elevator to the fifth floor.\" Qual é a forma britânica de \"elevator\"?",
+    "options": [
+      "the word lift",
+      "the word escalator",
+      "the word stairs",
+      "the word hoist"
+    ],
+    "correct_answer": "the word lift",
+    "explanation": "\"lift\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 1,
+    "prompt": "Frase britânica: \"The lorry delivered the furniture.\" Qual é a forma americana de \"lorry\"?",
+    "options": [
+      "the word truck",
+      "the word car",
+      "the word van",
+      "the word trailer"
+    ],
+    "correct_answer": "the word truck",
+    "explanation": "\"truck\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 1,
+    "prompt": "Frase americana: \"Can I have a cookie, please?\" Qual é a forma britânica de \"cookie\"?",
+    "options": [
+      "the word biscuit",
+      "the word cracker",
+      "the word scone",
+      "the word muffin"
+    ],
+    "correct_answer": "the word biscuit",
+    "explanation": "\"biscuit\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"He plays soccer every weekend.\" Qual é a forma britânica de \"soccer\"?",
+    "options": [
+      "the word football",
+      "the word rugby",
+      "the word cricket",
+      "the word handball"
+    ],
+    "correct_answer": "the word football",
+    "explanation": "\"football\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 2,
+    "prompt": "Frase britânica: \"Put the rubbish in the bin.\" Qual é a forma americana de \"rubbish\"?",
+    "options": [
+      "the word trash",
+      "the word dust",
+      "the word waste bag",
+      "the word litterbox"
+    ],
+    "correct_answer": "the word trash",
+    "explanation": "\"trash\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"She's on vacation this week.\" Qual é a forma britânica de \"vacation\"?",
+    "options": [
+      "the word holiday",
+      "the word break",
+      "the word leave",
+      "the word recess"
+    ],
+    "correct_answer": "the word holiday",
+    "explanation": "\"holiday\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 2,
+    "prompt": "Frase britânica: \"Fill up the petrol tank.\" Qual é a forma americana de \"petrol\"?",
+    "options": [
+      "the word gas",
+      "the word fuel oil",
+      "the word diesel",
+      "the word oil"
+    ],
+    "correct_answer": "the word gas",
+    "explanation": "\"gas\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 2,
+    "prompt": "Frase americana: \"Check the trunk of the car.\" Qual é a forma britânica de \"trunk\" (do carro)?",
+    "options": [
+      "the word boot",
+      "the word hood",
+      "the word bonnet",
+      "the word back"
+    ],
+    "correct_answer": "the word boot",
+    "explanation": "\"boot\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"Open the bonnet to check the engine.\" Qual é a forma americana de \"bonnet\" (do carro)?",
+    "options": [
+      "the word hood",
+      "the word trunk",
+      "the word roof",
+      "the word engine cover"
+    ],
+    "correct_answer": "the word hood",
+    "explanation": "\"hood\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 3,
+    "prompt": "Frase americana: \"Throw the trash in the garbage can.\" Qual é a forma britânica de \"garbage can\"?",
+    "options": [
+      "the word bin",
+      "the word skip",
+      "the word hamper",
+      "the word container"
+    ],
+    "correct_answer": "the word bin",
+    "explanation": "\"bin\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"He's queuing outside the shop.\" Qual é a forma americana de \"queuing\"?",
+    "options": [
+      "standing in line",
+      "waiting around",
+      "lining out",
+      "stacking up"
+    ],
+    "correct_answer": "standing in line",
+    "explanation": "\"standing in line\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 3,
+    "prompt": "Frase americana: \"I need to buy diapers for the baby.\" Qual é a forma britânica de \"diapers\"?",
+    "options": [
+      "the word nappies",
+      "the word napkins",
+      "the word pampers",
+      "the word wraps"
+    ],
+    "correct_answer": "the word nappies",
+    "explanation": "\"nappies\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_amebre_basico",
+    "difficulty_level": 3,
+    "prompt": "Frase britânica: \"She's wearing trainers to the gym.\" Qual é a forma americana de \"trainers\"?",
+    "options": [
+      "the word sneakers",
+      "the word slippers",
+      "the word boots",
+      "the word sandals"
+    ],
+    "correct_answer": "the word sneakers",
+    "explanation": "\"sneakers\" é a variante correta nesse contexto. Lembre-se: nenhuma das duas formas (americana/britânica) está \"errada\" — são regionalismos igualmente válidos.",
+    "hints": [
+      "Releia a frase original com atenção — ela já indica se é a variante americana ou britânica.",
+      "Pense em qual país/contexto normalmente usa essa palavra ou estrutura."
+    ],
+    "age_reviewed": true
+  }
+]
