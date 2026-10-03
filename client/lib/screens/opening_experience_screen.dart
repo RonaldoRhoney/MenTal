@@ -101,7 +101,12 @@ class _OpeningExperienceScreenState extends State<OpeningExperienceScreen>
             // oficial (Seção 0.1 — nunca a frase alternativa) entram
             // encadeados, cada um só depois que o anterior já tem
             // espaço próprio, nunca todos se sobrepondo de uma vez.
-            final iconT = Curves.easeOutCubic.transform(_stage(t, 0.0, 0.55));
+            // Achado real testando no aparelho (03/10/2026, pedido de
+            // Rhoney: "deve ir surgindo suavemente"): easeOutCubic acelera
+            // forte logo no início e desacelera depois, lendo como um
+            // "pulo" súbito — easeInOut sobe e desce de forma gradual em
+            // toda a entrada, sem esse salto inicial.
+            final iconT = Curves.easeInOut.transform(_stage(t, 0.0, 0.55));
             final wordmarkT = Curves.easeOut.transform(_stage(t, 0.60, 0.78));
             final sloganT = Curves.easeOut.transform(_stage(t, 0.82, 0.96));
             return _OpeningContent(iconProgress: iconT, wordmarkT: wordmarkT, sloganT: sloganT);
@@ -128,7 +133,10 @@ class _OpeningContent extends StatelessWidget {
         Opacity(
           opacity: iconProgress,
           child: Transform.scale(
-            scale: 0.7 + 0.3 * Curves.easeOutBack.transform(iconProgress),
+            // Sem "easeOutBack" (dava um leve "estouro" antes de assentar,
+            // lido como pulo) — escala quase imperceptível, só reforça a
+            // sensação de aproximação suave junto com o fade.
+            scale: 0.92 + 0.08 * iconProgress,
             // MENTAL_PERSONAGEM_MASCOTE_V1.md §3.1: o personagem substitui
             // o "M com sinapse" antigo aqui — "acenando" (boas-vindas) é a
             // expressão certa pro primeiro instante de abertura do app,
