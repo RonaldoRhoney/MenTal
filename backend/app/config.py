@@ -511,6 +511,13 @@ RATE_LIMIT_SEARCH = (20, 60.0)
 RATE_LIMIT_USER_SEARCH = (20, 60.0)
 RATE_LIMIT_PUBLIC_PROFILE_VIEW = (30, 60.0)
 RATE_LIMIT_HINT = (30, 60.0)
+# MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md — achado ALTO da auditoria de
+# segurança (02/10/2026): os dois endpoints novos não tinham rate limit
+# nenhum, agravando o achado CRÍTICO do farm de XP (cada chamada a
+# /review/next gravava um Attempt novo). Mesma janela generosa de
+# RATE_LIMIT_SEARCH/RATE_LIMIT_HINT.
+RATE_LIMIT_SPACED_REVIEW_NEXT = (20, 60.0)
+RATE_LIMIT_SPACED_REVIEW_COUNT = (20, 60.0)
 RATE_LIMIT_BATTLE_CREATE = (10, 60.0)
 RATE_LIMIT_BATTLE_MY_CHALLENGE = (20, 60.0)
 RATE_LIMIT_MOVEMENT_COLLECT = (30, 60.0)

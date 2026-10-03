@@ -237,6 +237,106 @@ def search_challenges(
     )
 
 
+@router.get("/challenges/review/count", response_model=schemas.SpacedRepetitionCountResponse)
+def spaced_repetition_due_count(
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """
+    MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md §3 — contagem pra badge/indicador
+    na Home, sem servir nenhum desafio (não cria Attempt, não consome limite
+    diário).
+    """
+    services.enforce_rate_limit(
+        "challenges_review_count", user_id, max_calls=config.RATE_LIMIT_SPACED_REVIEW_COUNT[0], window_seconds=config.RATE_LIMIT_SPACED_REVIEW_COUNT[1]
+    )
+    return schemas.SpacedRepetitionCountResponse(due_count=services.count_due_spaced_repetition_items(db, user_id))
+
+
+@router.get("/challenges/review/next", response_model=schemas.SpacedRepetitionReviewResponse)
+def spaced_repetition_next(
+    user_id: str = Depends(require_age_confirmed_user_id),
+    db: Session = Depends(get_db),
+):
+    """
+    MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md §3 — serve o item vencido mais
+    atrasado deste usuário, mesma autoridade de GET /challenges/next
+    (attempt_id já nasce aqui, served_at gravado pelo servidor). has_due=
+    False (nenhum item vencido agora) é o estado normal, não um erro —
+    diferente de GET /challenges/next, que 404 quando o território não tem
+    conteúdo nenhum.
+
+    Território bloqueado (exige assinatura) é tratado como "sem item vencido
+    agora" pro usuário sem acesso — nunca revela nem serve conteúdo pago a
+    quem perdeu o acesso (ex.: assinatura expirada) depois de ter respondido
+    aquele desafio enquanto assinante. services.get_due_spaced_repetition_item
+    só PULA esses itens (nunca apaga) e checa o território ATUAL do desafio,
+    não o desnormalizado no item (achados MÉDIO da auditoria de segurança,
+    02/10/2026).
+
+    Achado CRÍTICO da mesma auditoria: chamar este endpoint em loop sem
+    responder nada servia um Attempt NOVO por chamada pro MESMO item —
+    farm de XP via o bônus de lote. Corrigido em duas camadas: reaproveita
+    o attempt_id pendente se já existir (nunca cria um segundo pro mesmo
+    item), e o novo attempt nasce com is_spaced_review=True, que
+    rewards.on_batch_completed agora exclui do bônus de lote.
+    """
+    services.enforce_rate_limit(
+        "challenges_review_next", user_id, max_calls=config.RATE_LIMIT_SPACED_REVIEW_NEXT[0], window_seconds=config.RATE_LIMIT_SPACED_REVIEW_NEXT[1]
+    )
+    services.get_or_create_profile(db, user_id)
+
+    due = services.get_due_spaced_repetition_item(db, user_id)
+    due_count = services.count_due_spaced_repetition_items(db, user_id)
+    if due is None:
+        return schemas.SpacedRepetitionReviewResponse(has_due=False, challenge=None, due_count=due_count)
+    _item, challenge = due
+
+    today = utcnow().date()
+    allowed, _consumed = services.check_daily_limit(db, user_id, today)
+    if not allowed:
+        raise HTTPException(
+            status_code=429,
+            detail={"error": {"code": "DAILY_LIMIT_REACHED", "message": "Daily free challenge limit reached", "resets_at": str(today.isoformat())}},
+        )
+
+    hints_available = len(
+        db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
+    )
+    options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
+
+    pending = services.get_pending_spaced_review_attempt(db, user_id, challenge.id)
+    attempt_id = pending.attempt_id if pending is not None else models.new_uuid()
+    if pending is None:
+        services.create_served_attempt(db, attempt_id, user_id, challenge.id, timed=False, was_last_of_batch=True, is_spaced_review=True)
+
+    return schemas.SpacedRepetitionReviewResponse(
+        has_due=True,
+        due_count=due_count,
+        challenge=schemas.ChallengeOut(
+            challenge_id=challenge.id,
+            attempt_id=attempt_id,
+            territory_id=challenge.territory_id,
+            difficulty_level=challenge.difficulty_level,
+            prompt=challenge.prompt,
+            options=options,
+            hints_available=hints_available,
+            time_limit_seconds=None,
+            prompt_image=challenge.prompt_image,
+            clues=challenge.clues,
+            audio_url=challenge.audio_url,
+            audio_source_name=challenge.audio_source_name,
+            audio_source_url=challenge.audio_source_url,
+            vocab_media_url=challenge.vocab_media_url,
+            vocab_media_type=challenge.vocab_media_type,
+            vocab_media_source_name=challenge.vocab_media_source_name,
+            vocab_media_source_url=challenge.vocab_media_source_url,
+            reading_passage=challenge.reading_passage,
+            is_new=services.is_challenge_new(challenge),
+        ),
+    )
+
+
 @router.get("/challenges/{challenge_id}/reattempt", response_model=schemas.ChallengeOut)
 def reattempt_challenge(
     challenge_id: str,
@@ -526,6 +626,17 @@ def submit_answer(
     attempt.timed_out = body.timed_out
     attempt.speed_bonus_xp = speed_bonus_xp
     db.commit()
+
+    # MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md — todo attempt REAL (nunca
+    # cai aqui quando attempt.is_review, que já retornou antes) alimenta
+    # a força de memória deste usuário+desafio, agnóstico a
+    # Mundo/território. is_search inclusive (achar de novo por busca
+    # também é um encontro real com o item). rewards.safely (achado ALTO
+    # da auditoria de segurança, 02/10/2026): resposta de desafio nunca
+    # pode quebrar por causa disso — cobre deploy antes da migration 116
+    # rodar em produção e qualquer outro erro inesperado aqui, mesmo
+    # raciocínio já usado pros ganchos de recompensa abaixo.
+    rewards.safely(services.update_spaced_repetition, db, user_id, challenge, is_correct, attempt.hints_used)
 
     # for_update=True (auditoria de segurança pré-lançamento mundial,
     # 17/09/2026, achado A3): trava a linha até o fim da transação —

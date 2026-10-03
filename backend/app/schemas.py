@@ -189,6 +189,24 @@ class ChallengeSearchResponse(BaseModel):
     challenge: ChallengeOut | None = None
 
 
+class SpacedRepetitionReviewResponse(BaseModel):
+    """
+    MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md §3 — GET /challenges/review/next.
+    has_due=True traz o item mais atrasado já servido (mesma autoridade de
+    GET /challenges/next, attempt_id já criado), pronto pro client abrir
+    direto em ChallengeScreen. has_due=False significa "nada vencido agora"
+    — não é erro, é o estado normal de quem não tem revisão pendente.
+    """
+
+    has_due: bool
+    challenge: ChallengeOut | None = None
+    due_count: int
+
+
+class SpacedRepetitionCountResponse(BaseModel):
+    due_count: int
+
+
 class WordConstellationRoundOut(BaseModel):
     """MUNDO_IDIOMAS_CONSTELACAO_PALAVRAS_V1.md §4 — `kind` decide qual
     campo vem preenchido: "pieces" usa `tiles` (reconstrução por

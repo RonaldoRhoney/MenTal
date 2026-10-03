@@ -130,8 +130,15 @@ def on_streak_extended(db: Session, profile: models.Profile, current_streak: int
 def on_batch_completed(db: Session, profile: models.Profile, attempt: models.Attempt, challenge: models.Challenge) -> None:
     """+3 XP ao terminar o lote de perguntas (o "Desafio inteiro"); +5 XP
     extra se TODAS as respostas do lote foram certas e sem dica. Só
-    respostas normais (revisão nunca chega aqui) e uma vez por attempt."""
-    if not attempt.was_last_of_batch or attempt.is_search:
+    respostas normais (revisão nunca chega aqui) e uma vez por attempt.
+
+    Achado CRÍTICO da auditoria de segurança (02/10/2026,
+    MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md): is_spaced_review excluído
+    pelo mesmo motivo de is_search — GET /challenges/review/next serve o
+    mesmo item vencido com was_last_of_batch=True (não existe "próximo"
+    numa revisão de item único), e sem esta exclusão cada chamada ao
+    endpoint pagava +3 XP de novo pelo mesmo item, farm ilimitado."""
+    if not attempt.was_last_of_batch or attempt.is_search or attempt.is_spaced_review:
         return
     if not try_claim(db, profile.user_id, f"batch:{attempt.attempt_id}"):
         return
@@ -148,6 +155,7 @@ def on_batch_completed(db: Session, profile: models.Profile, attempt: models.Att
             models.Attempt.timed == attempt.timed,
             models.Attempt.is_review.is_(False),
             models.Attempt.is_search.is_(False),
+            models.Attempt.is_spaced_review.is_(False),
             models.Attempt.is_correct.isnot(None),
         )
     )
@@ -161,6 +169,7 @@ def on_batch_completed(db: Session, profile: models.Profile, attempt: models.Att
             models.Attempt.timed == attempt.timed,
             models.Attempt.is_review.is_(False),
             models.Attempt.is_search.is_(False),
+            models.Attempt.is_spaced_review.is_(False),
             models.Attempt.was_last_of_batch.is_(True),
             models.Attempt.attempt_id != attempt.attempt_id,
             models.Attempt.created_at < attempt.created_at,

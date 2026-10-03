@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timedelta
 
 from sqlalchemy import delete, func, or_, select, update
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from . import config, mentalcoins, models, notification_copy, push, rewards, scoring, supabase_admin
@@ -924,6 +925,7 @@ def create_served_attempt(
     was_last_of_batch: bool = False,
     is_review: bool = False,
     is_search: bool = False,
+    is_spaced_review: bool = False,
 ) -> models.Attempt:
     """
     Cria a linha de Attempt no momento em que o desafio é de fato
@@ -939,6 +941,11 @@ def create_served_attempt(
     is_review (REGRA_REVISAO_ERROS_FIM_RODADA.md): True só quando
     servido via GET /challenges/{id}/reattempt — submit_answer pula
     XP/streak/badge/progresso pra tentativas marcadas assim.
+    is_spaced_review (MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md, achado
+    CRÍTICO da auditoria 02/10/2026): True só quando servido via
+    GET /challenges/review/next — exclui o attempt do bônus de lote
+    (rewards.on_batch_completed), mesmo tratamento de is_search, pra não
+    virar farm de XP servindo o mesmo item vencido repetidas vezes.
     """
     attempt = models.Attempt(
         attempt_id=attempt_id,
@@ -950,11 +957,160 @@ def create_served_attempt(
         was_last_of_batch=was_last_of_batch,
         is_review=is_review,
         is_search=is_search,
+        is_spaced_review=is_spaced_review,
     )
     db.add(attempt)
     db.commit()
     db.refresh(attempt)
     return attempt
+
+
+# MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md — schedule fixo crescente
+# (Leitner-like), não o SM-2 completo do Anki com fator de facilidade por
+# item. §4 do doc pede pra avaliar a complexidade adequada ao estágio
+# atual do MENTAL; este schedule já cobre o critério de aceite
+# (intervalo cresce a cada acerto consecutivo, reseta curto em erro/dica)
+# sem o custo de calibrar um ease factor por item por usuário. Índice
+# por `repetitions` (0 = nunca visto antes / acabou de errar).
+SPACED_REPETITION_SCHEDULE_DAYS = [1, 3, 7, 14, 30, 60]
+
+
+def update_spaced_repetition(db: Session, user_id: str, challenge: "models.Challenge", is_correct: bool, hints_used: int) -> None:
+    """
+    Chamado em todo attempt REAL (não REGRA_REVISAO_ERROS_FIM_RODADA.md,
+    que é reforço imediato dentro da mesma rodada, não o mecanismo de
+    longo prazo deste documento) — primeiro encontro com um desafio já
+    nasce um registro de força de memória, agnóstico a Mundo/território
+    (challenge_id é a chave; territory_id é só desnormalizado).
+
+    Erro OU uso de dica (hesitação) reseta pra repetitions=0, intervalo
+    mais curto do schedule — mesmo item errado continua elegível pra
+    reaparecer em breve. Acerto sem dica avança repetitions e usa o
+    próximo intervalo do schedule, crescendo progressivamente; satura no
+    último valor do schedule em vez de crescer sem limite.
+
+    Chamado dentro de rewards.safely em submit_answer (achado ALTO da
+    auditoria de segurança 02/10/2026) — nunca deve quebrar a resposta
+    de um desafio, mesmo se a migration 116 ainda não rodou em produção.
+    db.begin_nested()/IntegrityError (mesmo padrão de rewards.try_claim)
+    cobre a corrida real de duas respostas concorrentes do mesmo
+    usuário pro mesmo desafio (dois GET /challenges/review/next
+    consecutivos sem responder nenhum, depois ambos respondidos quase
+    juntos) tentando o INSERT inicial ao mesmo tempo.
+    """
+    item = db.get(models.SpacedRepetitionItem, (user_id, challenge.id))
+    now = utcnow()
+    if item is None:
+        item = models.SpacedRepetitionItem(
+            user_id=user_id,
+            challenge_id=challenge.id,
+            territory_id=challenge.territory_id,
+            repetitions=0,
+            created_at=now,
+        )
+        try:
+            with db.begin_nested():
+                db.add(item)
+                db.flush()
+        except IntegrityError:
+            db.rollback()
+            item = db.get(models.SpacedRepetitionItem, (user_id, challenge.id))
+
+    if is_correct and hints_used == 0:
+        item.repetitions += 1
+    else:
+        item.repetitions = 0
+
+    # repetitions=1 (primeiro acerto) usa o PRIMEIRO intervalo do
+    # schedule (1 dia), não o segundo — índice é repetitions-1, nunca
+    # repetitions direto (achado real escrevendo o teste: sem o -1, o
+    # primeiro acerto já pulava pra 3 dias).
+    index = min(item.repetitions - 1, len(SPACED_REPETITION_SCHEDULE_DAYS) - 1) if item.repetitions > 0 else 0
+    item.interval_days = SPACED_REPETITION_SCHEDULE_DAYS[index]
+    item.last_reviewed_at = now
+    item.next_due_at = now + timedelta(days=item.interval_days)
+    db.commit()
+
+
+def get_due_spaced_repetition_item(db: Session, user_id: str) -> "tuple[models.SpacedRepetitionItem, models.Challenge] | None":
+    """
+    O item mais atrasado (next_due_at mais antigo) ainda vencido e
+    SERVÍVEL para este usuário — GET /challenges/review/next serve um
+    item por vez, mesmo padrão de "um desafio por chamada" já usado em
+    GET /challenges/next e GET /challenges/search.
+
+    Achados MÉDIO da auditoria de segurança (02/10/2026): (1) território
+    bloqueado é checado pelo território ATUAL do desafio
+    (challenge.territory_id), nunca pelo territory_id desnormalizado no
+    item — a curadoria pode mover um desafio de território depois do
+    item já existir, e confiar no valor gravado serviria conteúdo pago a
+    quem não tem acesso; (2) item bloqueado/desafio removido é só
+    PULADO, nunca apagado — apagar destruía de vez o histórico de força
+    de memória de um assinante cuja assinatura expirou e depois renovou.
+    Limite de 50 candidatos examinados por chamada: defesa razoável
+    contra uma fila enorme 100% bloqueada virar scan ilimitado.
+    """
+    candidates = (
+        db.execute(
+            select(models.SpacedRepetitionItem)
+            .where(models.SpacedRepetitionItem.user_id == user_id)
+            .where(models.SpacedRepetitionItem.next_due_at <= utcnow())
+            .order_by(models.SpacedRepetitionItem.next_due_at.asc())
+            .limit(50)
+        )
+        .scalars()
+        .all()
+    )
+    for item in candidates:
+        challenge = db.get(models.Challenge, item.challenge_id)
+        if challenge is None:
+            continue
+        territory = db.get(models.Territory, challenge.territory_id)
+        if territory is None:
+            continue
+        if is_territory_unlocked(db, user_id, territory):
+            return item, challenge
+    return None
+
+
+def count_due_spaced_repetition_items(db: Session, user_id: str) -> int:
+    return (
+        db.execute(
+            select(func.count())
+            .select_from(models.SpacedRepetitionItem)
+            .where(models.SpacedRepetitionItem.user_id == user_id)
+            .where(models.SpacedRepetitionItem.next_due_at <= utcnow())
+        )
+        .scalar_one()
+    )
+
+
+def get_pending_spaced_review_attempt(db: Session, user_id: str, challenge_id: str) -> "models.Attempt | None":
+    """
+    Achado CRÍTICO da auditoria de segurança (02/10/2026): sem isto,
+    toda chamada a GET /challenges/review/next criava um Attempt NOVO
+    pro MESMO item vencido (next_due_at só muda quando o jogador
+    responde) — farm de XP chamando o endpoint em loop. Reaproveita o
+    attempt_id pendente (ainda não respondido) deste usuário pra este
+    desafio em vez de servir de novo; responder o mesmo attempt_id duas
+    vezes já cai no caminho idempotente de submit_answer, que nunca
+    paga XP de novo.
+    """
+    return (
+        db.execute(
+            select(models.Attempt)
+            .where(
+                models.Attempt.user_id == user_id,
+                models.Attempt.challenge_id == challenge_id,
+                models.Attempt.is_spaced_review.is_(True),
+                models.Attempt.is_correct.is_(None),
+            )
+            .order_by(models.Attempt.served_at.desc())
+            .limit(1)
+        )
+        .scalars()
+        .first()
+    )
 
 
 def pick_next_challenge_from_batch(

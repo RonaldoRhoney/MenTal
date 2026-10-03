@@ -297,6 +297,38 @@ class UserTerritoryProgress(Base):
     conquered_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
 
 
+class SpacedRepetitionItem(Base):
+    """
+    MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md — força de memória por
+    usuário+desafio, agnóstica a Mundo/território (chave é challenge_id,
+    nunca hardcoded pra Inglês/Idiomas). territory_id é só desnormalizado
+    pra filtrar/relatar sem join, nunca a fonte de verdade da chave.
+
+    Algoritmo deliberadamente simplificado (Leitner-like, não o SM-2
+    completo do Anki com fator de facilidade por item) — doc §4 pede pra
+    avaliar a complexidade adequada ao estágio atual do MENTAL; um
+    schedule fixo crescente já cobre o critério de aceite (intervalo
+    cresce a cada acerto consecutivo, encurta em erro/dica) sem o custo
+    de manter/calibrar um ease factor por item por usuário.
+
+    next_due_at é o que GET /challenges/review/next filtra (<=agora) —
+    índice composto (user_id, next_due_at) é o que torna essa consulta
+    barata em escala, mesmo com todo o histórico de desafios do app
+    alimentando esta tabela.
+    """
+
+    __tablename__ = "spaced_repetition_items"
+
+    user_id: Mapped[str] = mapped_column(UUIDType, primary_key=True)
+    challenge_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("challenges.id", ondelete="CASCADE"), primary_key=True)
+    territory_id: Mapped[str] = mapped_column(String)
+    repetitions: Mapped[int] = mapped_column(Integer, default=0)
+    interval_days: Mapped[int] = mapped_column(Integer, default=1)
+    last_reviewed_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    next_due_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class Challenge(Base):
     __tablename__ = "challenges"
 
@@ -693,6 +725,16 @@ class Attempt(Base):
     # achada por busca pagaria o bônus de lote (+3 XP) da Regra Oficial.
     # Gravado pelo servidor; o bônus de lote ignora estes attempts.
     is_search: Mapped[bool] = mapped_column(Boolean, default=False)
+    # MUNDO_IDIOMAS_REPETICAO_ESPACADA_V1.md — achado CRÍTICO da
+    # auditoria de segurança (02/10/2026): GET /challenges/review/next
+    # servia was_last_of_batch=True sem nenhuma marca própria, e cada
+    # chamada criava um Attempt NOVO pro mesmo item vencido — o bônus de
+    # lote (+3 XP) de rewards.on_batch_completed é pago por attempt_id,
+    # então farm de XP ilimitado (chamar /review/next em loop e responder
+    # cada attempt_id novo). Gravado pelo servidor (mesmo raciocínio de
+    # is_review/is_search acima); on_batch_completed agora exclui estes
+    # attempts do bônus de lote, mesmo tratamento de is_search.
+    is_spaced_review: Mapped[bool] = mapped_column(Boolean, default=False)
 
 
 class ChallengeBatchProgress(Base):
