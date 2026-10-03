@@ -1,6 +1,6 @@
 # Política de Privacidade — MENTAL
 
-**Última atualização:** 20 de setembro de 2026
+**Última atualização:** 2 de outubro de 2026
 
 Esta Política de Privacidade descreve como o aplicativo **MENTAL**, desenvolvido por **RhoneyInc**, coleta, usa e protege as informações dos usuários.
 
@@ -42,6 +42,8 @@ O MENTAL é desenvolvido e mantido por **RhoneyInc**, estúdio de produtos digit
 - **Passos por dia** — o total de cada dia (ciclo de 24 horas, horário de Brasília) e a evolução ao longo do dia, enviados quando você ativa o Movimento.
 - **Amizades, bloqueios e denúncias** — sua lista de amigos, os usuários que você bloqueou e as denúncias que enviou (visíveis apenas à moderação).
 - **Sugestões** — termos pesquisados sem resultado (sugestão de conteúdo) e opiniões sobre níveis de dificuldade.
+- **Repetição espaçada** — para cada desafio que você responde, guardamos um registro técnico (acertos/erros consecutivos e a data da próxima revisão) usado para decidir quando aquele conteúdo deve reaparecer para reforçar seu aprendizado. É um dado de uso do jogo, no mesmo espírito do item "Registro de uso" acima.
+- **MENTAL LINGO (assistente de voz)** — se você usar o MENTAL LINGO (o assistente de voz do Mundo dos Idiomas), coletamos o áudio da sua pergunta (processado pelo reconhecimento de voz do seu aparelho Android, que pode funcionar localmente ou, dependendo do aparelho, usar o serviço de reconhecimento de voz padrão do sistema Android) e o texto já transcrito da sua pergunta. **O MENTAL LINGO não usa inteligência artificial generativa**: ele nunca gera texto novo nem envia sua pergunta a nenhum serviço de IA de terceiros — a resposta é sempre um texto já existente e revisado do nosso próprio banco de conteúdo educacional, localizado por busca direta. Perguntas que o MENTAL LINGO não consegue responder são guardadas de forma agregada (o texto da pergunta e quantas vezes ela já apareceu), sem vínculo com sua conta, para orientar a curadoria de conteúdo futuro.
 - **Respostas no mural de feedback** — o mural é aberto: qualquer usuário comenta e responde. Comentários e respostas são **públicos** e mostram seu nome real; você pode apagar as suas respostas.
 - **Comentários de feedback** — mensagens que o usuário opta por enviar na tela de Feedback do app são **públicas**, visíveis a todos os usuários junto com o nome real de quem enviou (ou o apelido, se o nome real ainda não tiver sido preenchido), e outros usuários podem reagir a elas (curtir/amei).
 
@@ -106,6 +108,7 @@ Utilizamos os seguintes serviços de terceiros para operar o aplicativo, cada um
 - **Render** — hospedagem do servidor da aplicação, que processa as requisições do app.
 - **Facebook Login** — autenticação opcional, apenas quando o usuário escolhe esse método de login.
 - **GitHub Pages** — hospeda esta página de política, sem receber dados do app.
+- **Reconhecimento de voz do sistema Android** — usado só quando você usa o MENTAL LINGO (assistente de voz). O áudio é processado pelo próprio sistema operacional do seu aparelho; dependendo do modelo/configuração do aparelho, esse processamento pode ser feito localmente ou pelo serviço de reconhecimento de voz padrão do Android. Não enviamos esse áudio a nenhum outro serviço — nenhuma IA generativa de terceiros é usada pelo MENTAL LINGO (ver seção 2.3).
 
 Nenhum desses serviços recebe dados além do estritamente necessário para sua função, e nenhum é utilizado para publicidade direcionada.
 
@@ -116,7 +119,7 @@ Nenhum desses serviços recebe dados além do estritamente necessário para sua 
 - Os dados do usuário são mantidos enquanto a conta estiver ativa. As notificações da Central são apagadas após 30 dias.
 - **Excluir pelo app (imediato):** Ajustes › "Excluir minha conta". A exclusão é definitiva.
 - **Excluir por e-mail:** envie para **rhoneyinc@gmail.com**, a partir do endereço cadastrado no app, com o assunto "Exclusão de conta MENTAL".
-- A exclusão remove permanentemente: e-mail de acesso, apelido, nome real, foto de perfil, localização (país/estado/cidade), gênero, faixa etária, progresso/XP, badges, amigos, bloqueios, denúncias enviadas, histórico de tentativas, registros de recompensas e de login diário, MentalCoins, passos e ciclos de Movimento, notificações, eventos do Feed, relações de Seguir/Fã, token de notificação, convites e as suas respostas no mural de feedback. **Exceção:** comentários de feedback, opiniões sobre níveis e sugestões de conteúdo enviados pelo usuário não são apagados — são **anonimizados** (desvinculados da sua identidade) e permanecem sem nenhuma associação com você, preservando seu valor como registro de melhoria do app.
+- A exclusão remove permanentemente: e-mail de acesso, apelido, nome real, foto de perfil, localização (país/estado/cidade), gênero, faixa etária, progresso/XP, badges, amigos, bloqueios, denúncias enviadas, histórico de tentativas, registros de recompensas e de login diário, MentalCoins, passos e ciclos de Movimento, notificações, eventos do Feed, relações de Seguir/Fã, token de notificação, convites, seus registros de repetição espaçada e as suas respostas no mural de feedback. **Exceção:** comentários de feedback, opiniões sobre níveis, sugestões de conteúdo e perguntas não respondidas pelo MENTAL LINGO enviados pelo usuário não são apagados — são **anonimizados** (desvinculados da sua identidade) e permanecem sem nenhuma associação com você, preservando seu valor como registro de melhoria do app.
 
 ---
 
