@@ -15,7 +15,7 @@ from pathlib import Path
 
 from app.seed import CHALLENGES
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 CONTENT_PATH = Path(__file__).resolve().parent.parent / "content" / "linguagem_interpretacao_textos.json"
 
@@ -50,6 +50,8 @@ def test_answering_a_text_interpretation_challenge_correctly_works_like_any_norm
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("palavras", "enigmas"):
+        conquer_territory(user, prerequisite)
 
     challenge = None
     for _ in range(80):

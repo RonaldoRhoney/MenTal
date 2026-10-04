@@ -2,7 +2,7 @@ import uuid
 
 from app import config
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def test_full_core_loop_correct_answer(client):
@@ -83,6 +83,7 @@ def test_paid_territory_allows_free_sample_then_locks(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "numeros")
 
     for _ in range(2):
         resp = client.get("/challenges/next", params={"territory_id": "logica"}, headers=headers)

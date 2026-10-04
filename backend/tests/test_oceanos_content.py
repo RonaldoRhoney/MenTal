@@ -12,7 +12,7 @@ import uuid
 from app.config import NEVER_TIMED_TERRITORY_IDS
 from app.seed import CHALLENGES, TERRITORIES
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 OCEANOS_TERRITORY_IDS = {
     "oceano_mundo", "oceano_vida_marinha", "oceano_profundezas",
@@ -57,6 +57,8 @@ def test_oceanos_challenge_is_never_timed_even_when_relampago_mode_is_requested(
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("oceano_mundo", "oceano_vida_marinha"):
+        conquer_territory(user, prerequisite)
 
     resp = client.get("/challenges/next", params={"territory_id": "oceano_profundezas", "mode": "relampago"}, headers=headers)
     assert resp.status_code == 200
@@ -67,6 +69,8 @@ def test_answering_a_oceanos_challenge_correctly_works_like_any_normal_challenge
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("oceano_mundo", "oceano_vida_marinha", "oceano_profundezas", "oceano_clima"):
+        conquer_territory(user, prerequisite)
 
     challenge = client.get("/challenges/next", params={"territory_id": "oceano_brasil"}, headers=headers).json()
     correct = next(

@@ -355,27 +355,83 @@ def _sequential_family_and_level(territory_id: str) -> tuple[str, int] | None:
     return None
 
 
+def _has_any_attempt(db: Session, user_id: str, territory_id: str) -> bool:
+    already_attempted = db.execute(
+        select(func.count(models.Attempt.attempt_id))
+        .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
+        .where(models.Attempt.user_id == user_id)
+        .where(models.Challenge.territory_id == territory_id)
+    ).scalar_one()
+    return already_attempted > 0
+
+
+# MENTAL_ESPECIFICACAO_FLUXO_PROGRESSAO_MAPA_RANKING_FEEDBACK_V1.1.md §4
+# (pedido de Rhoney, 04/10/2026: "que ao entrar em um mundo (todos), o
+# desafio comece do mais básico e vá subindo em progressão... dentro de
+# cada mundo deve obrigatoriamente seguir a progressão") — generaliza a
+# trava sequencial pra TODO Mundo, não só famílias de Idiomas com sufixo
+# _basico/_intermediario/_avancado (função acima, intocada, continua
+# valendo primeiro onde já existe nome de nível explícito — ela decide
+# SEQUÊNCIAS INDEPENDENTES por família mesmo dentro de um bloco com
+# várias famílias, ex. Phrasal Verbs e Preposições do bloco "ingles" não
+# se travam uma à outra). Pra todo o resto, a sequência é a própria
+# ordem de exibição já curada (display_order) dentro do mesmo
+# agrupamento visual que o usuário já vê na tela — (world_id, block_id),
+# mesma chave que o client usa pra desenhar as seções (home_screen.dart:
+# territórios sem bloco ficam soltos juntos na tela do Mundo; territórios
+# com block_id formam sua própria seção). Grupo de 1 território nunca
+# trava (nada a esperar).
+def _generic_sequence_siblings(db: Session, territory: models.Territory) -> list[str]:
+    stmt = select(models.Territory.id).where(models.Territory.world_id == territory.world_id)
+    if territory.block_id is None:
+        stmt = stmt.where(models.Territory.block_id.is_(None))
+    else:
+        stmt = stmt.where(models.Territory.block_id == territory.block_id)
+    stmt = stmt.order_by(models.Territory.display_order)
+    return list(db.execute(stmt).scalars().all())
+
+
+def _is_generically_sequentially_reachable(db: Session, user_id: str, territory: models.Territory) -> bool:
+    if territory.world_id is None:
+        return True
+    siblings = _generic_sequence_siblings(db, territory)
+    if len(siblings) <= 1:
+        return True
+    position = siblings.index(territory.id)
+    if position == 0:
+        return True
+    if _has_any_attempt(db, user_id, territory.id):
+        return True
+    previous_id = siblings[position - 1]
+    previous_progress = db.get(models.UserTerritoryProgress, (user_id, previous_id))
+    return bool(previous_progress and previous_progress.conquered_at)
+
+
 def is_territory_sequentially_reachable(db: Session, user_id: str, territory: models.Territory) -> bool:
     """True quando o território não faz parte de nenhuma família
     sequencial, é o nível 1 de uma família (sempre alcançável), ou o
     usuário já tem qualquer tentativa registrada nele (grandfather —
     progresso real de antes desta regra existir nunca é retroativamente
     trancado, §3). False só quando é nível 2/3 de uma família e o nível
-    NORMAL anterior (nunca o Relâmpago) ainda não foi conquistado."""
+    NORMAL anterior (nunca o Relâmpago) ainda não foi conquistado.
+
+    Admin sempre alcança tudo (pedido explícito de Rhoney, 04/10/2026:
+    "eu como adm posso ver tudos, mas o usuário comum não") — mesmo
+    campo `role` já usado por require_admin, aqui só leitura, nunca
+    concede privilégio de escrita nenhum.
+    """
+    profile = db.get(models.Profile, user_id)
+    if profile is not None and profile.role == "admin":
+        return True
+
     parsed = _sequential_family_and_level(territory.id)
     if parsed is None:
-        return True
+        return _is_generically_sequentially_reachable(db, user_id, territory)
     family, level = parsed
     if level == 1:
         return True
 
-    already_attempted = db.execute(
-        select(func.count(models.Attempt.attempt_id))
-        .join(models.Challenge, models.Attempt.challenge_id == models.Challenge.id)
-        .where(models.Attempt.user_id == user_id)
-        .where(models.Challenge.territory_id == territory.id)
-    ).scalar_one()
-    if already_attempted > 0:
+    if _has_any_attempt(db, user_id, territory.id):
         return True
 
     prerequisite_id = f"{family}{_SEQUENTIAL_PREREQUISITE_SUFFIX[level]}"

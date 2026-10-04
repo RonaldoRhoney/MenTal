@@ -9,7 +9,7 @@ import uuid
 
 import app.services as services_module
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def test_textos_territory_appears_in_progress(client):
@@ -29,6 +29,8 @@ def test_textos_free_sample_then_lock(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("palavras", "enigmas"):
+        conquer_territory(user, prerequisite)
 
     for _ in range(2):
         resp = client.get("/challenges/next", params={"territory_id": "textos"}, headers=headers)
@@ -53,6 +55,8 @@ def test_textos_full_answer_and_hint_flow(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("palavras", "enigmas"):
+        conquer_territory(user, prerequisite)
 
     challenge = client.get("/challenges/next", params={"territory_id": "textos"}, headers=headers).json()
     # Confirma que o desafio de fato carrega um parágrafo-base (bem mais

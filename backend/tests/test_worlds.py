@@ -210,9 +210,18 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client, mon
     _mark_conquered(user, PALAVRAS_RARAS_TERRITORIES)
 
     # Mundo da Linguagem tem 4 territórios desde a V4 (palavras/textos/
-    # enigmas/redacao, V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1) —
-    # conquista os 3 primeiros, deixando "enigmas" por último de propósito.
+    # enigmas/redacao, V4/V3_ENCERRAMENTO_PENDENCIAS_PARA_V4.md §2.1).
+    # Ordem de conquista agora precisa respeitar a sequência genérica por
+    # display_order (MENTAL_ESPECIFICACAO_FLUXO_PROGRESSAO_MAPA_RANKING_
+    # FEEDBACK_V1.1.md §4, generalizada em 04/10/2026): palavras(1) ->
+    # enigmas(5) -> textos(6) -> redacao(34) — conquista os 3 primeiros
+    # NESSA ordem, deixando "redacao" (já o último por display_order) por
+    # último de propósito.
     _conquer_territory(client, headers, "palavras")
+    progress = client.get("/progress", headers=headers).json()
+    assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
+
+    _conquer_territory(client, headers, "enigmas")
     progress = client.get("/progress", headers=headers).json()
     assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
 
@@ -220,23 +229,19 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client, mon
     progress = client.get("/progress", headers=headers).json()
     assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
 
-    _conquer_territory(client, headers, "redacao")
-    progress = client.get("/progress", headers=headers).json()
-    assert next(w for w in progress["worlds"] if w["world_id"] == "linguagem")["completed"] is False
-
     xp_before_completion = client.get("/progress", headers=headers).json()["xp_total"]
 
-    # Última resposta correta em "enigmas" fecha os 4 territórios do
+    # Última resposta correta em "redacao" fecha os 4 territórios do
     # Mundo da Linguagem — world_just_completed deve disparar EXATAMENTE
     # nessa resposta, nunca antes.
     world_completed_events = []
     completing_result = None
     for _ in range(40):
         progress = client.get("/progress", headers=headers).json()
-        enigmas = next(t for t in progress["territories"] if t["territory_id"] == "enigmas")
-        if enigmas["conquered"]:
+        redacao = next(t for t in progress["territories"] if t["territory_id"] == "redacao")
+        if redacao["conquered"]:
             break
-        result = _answer_correctly(client, headers, "enigmas")
+        result = _answer_correctly(client, headers, "redacao")
         world_completed_events.append(result["world_just_completed"])
         if result["world_just_completed"]:
             assert result["completed_world_name"] == "Mundo da Linguagem"
@@ -257,7 +262,7 @@ def test_world_just_completed_fires_once_at_the_exact_last_territory(client, mon
     # O outro mundo não foi tocado — continua incompleto, sem interferência.
     assert next(w for w in progress["worlds"] if w["world_id"] == "mente_logica")["completed"] is False
 
-    # Continuar respondendo em "enigmas" (já conquistado) nunca dispara o
+    # Continuar respondendo em "redacao" (já conquistado) nunca dispara o
     # sinal de novo — mundo já fechado, não é evento novo.
-    result = _answer_correctly(client, headers, "enigmas")
+    result = _answer_correctly(client, headers, "redacao")
     assert result["world_just_completed"] is False

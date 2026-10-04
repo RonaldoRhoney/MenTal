@@ -9,13 +9,22 @@ app. Território normal de MCQ em tudo o mais.
 
 import uuid
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
+
+# descoberta (block=None): invencoes/veiculos/astronomia/detetive_mental
+# vêm antes de ouvido_afiado na sequência agora genérica (MENTAL_
+# ESPECIFICACAO_FLUXO_PROGRESSAO_MAPA_RANKING_FEEDBACK_V1.1.md §4,
+# generalizada pra todo Mundo em 04/10/2026) — nada a ver com a
+# modalidade sensorial testada aqui, só precisa destravar pra testar.
+_OUVIDO_AFIADO_PREREQUISITES = ("invencoes", "veiculos", "astronomia", "detetive_mental")
 
 
 def test_next_challenge_includes_audio_fields_for_ouvido_afiado(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in _OUVIDO_AFIADO_PREREQUISITES:
+        conquer_territory(user, prerequisite)
 
     resp = client.get("/challenges/next", params={"territory_id": "ouvido_afiado"}, headers=headers)
     body = resp.json()
@@ -46,6 +55,8 @@ def test_ouvido_afiado_relampago_mode_still_includes_audio(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in _OUVIDO_AFIADO_PREREQUISITES:
+        conquer_territory(user, prerequisite)
 
     resp = client.get(
         "/challenges/next", params={"territory_id": "ouvido_afiado", "mode": "relampago"}, headers=headers
@@ -61,6 +72,8 @@ def test_ouvido_afiado_answer_flow_works_like_any_other_mcq_territory(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in _OUVIDO_AFIADO_PREREQUISITES:
+        conquer_territory(user, prerequisite)
 
     from app.seed import CHALLENGES
 

@@ -12,7 +12,7 @@ import uuid
 from app.config import NEVER_TIMED_TERRITORY_IDS
 from app.seed import CHALLENGES, TERRITORIES
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 VALORES_TERRITORY_IDS = {"bolsa", "criptomoedas", "cenario_global", "financas_dia_a_dia"}
 
@@ -59,6 +59,7 @@ def test_valores_challenge_is_never_timed_even_when_relampago_mode_is_requested(
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "bolsa")
 
     resp = client.get("/challenges/next", params={"territory_id": "criptomoedas", "mode": "relampago"}, headers=headers)
     assert resp.status_code == 200
@@ -69,6 +70,8 @@ def test_answering_a_valores_challenge_correctly_works_like_any_normal_challenge
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("bolsa", "criptomoedas", "cenario_global"):
+        conquer_territory(user, prerequisite)
 
     challenge = client.get("/challenges/next", params={"territory_id": "financas_dia_a_dia"}, headers=headers).json()
     correct = next(

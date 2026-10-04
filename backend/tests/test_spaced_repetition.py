@@ -17,7 +17,7 @@ from app import config, models
 from app.db import SessionLocal
 from app.timeutil import utcnow
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def _answer(client, headers, challenge, submitted_answer):
@@ -293,6 +293,7 @@ def test_blocked_territory_item_is_skipped_but_never_deleted(client, monkeypatch
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "numeros")
 
     # 'logica' tem free_sample_count=2 no seed — as 2 respostas abaixo
     # consomem a amostra inteira, travando o território imediatamente.

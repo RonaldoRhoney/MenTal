@@ -12,7 +12,7 @@ import uuid
 
 import app.services as services_module
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def test_visual_territory_appears_in_progress(client):
@@ -30,6 +30,7 @@ def test_visual_free_sample_then_lock(client, monkeypatch):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "conhecimento")
 
     for _ in range(2):
         resp = client.get("/challenges/next", params={"territory_id": "visual"}, headers=headers)
@@ -54,6 +55,7 @@ def test_visual_options_follow_expected_format(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "conhecimento")
 
     challenge = client.get("/challenges/next", params={"territory_id": "visual"}, headers=headers).json()
     options = challenge["options"]
@@ -73,6 +75,7 @@ def test_visual_full_answer_and_hint_flow(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "conhecimento")
 
     challenge = client.get("/challenges/next", params={"territory_id": "visual"}, headers=headers).json()
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"] and sorted(c["options"]) == sorted(challenge["options"]))

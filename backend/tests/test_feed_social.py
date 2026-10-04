@@ -266,7 +266,10 @@ def test_world_completed_creates_a_feed_event(client, monkeypatch):
     from .test_worlds import PALAVRAS_RARAS_TERRITORIES, _mark_conquered
 
     _mark_conquered(user, PALAVRAS_RARAS_TERRITORIES)
-    for territory_id in ("palavras", "textos", "enigmas", "redacao"):
+    # Ordem precisa respeitar a sequência genérica por display_order
+    # (MENTAL_ESPECIFICACAO_FLUXO_PROGRESSAO_MAPA_RANKING_FEEDBACK_V1.1.md
+    # §4, generalizada em 04/10/2026): palavras -> enigmas -> textos -> redacao.
+    for territory_id in ("palavras", "enigmas", "textos", "redacao"):
         _conquer_territory(client, headers, territory_id)
 
     events = _feed_events_for(user, "world_completed")

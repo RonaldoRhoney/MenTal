@@ -10,7 +10,7 @@ from app import config, models
 from app.db import SessionLocal
 from app.timeutil import utcnow
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def _serve_and_backdate(client, headers, user_id: str, territory_id: str) -> str:
@@ -45,6 +45,8 @@ def test_next_learning_pause_404_when_territory_has_none(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("tecnologia_fundamentos", "tecnologia_programacao"):
+        conquer_territory(user, prerequisite)
 
     resp = client.get("/learning-pauses/next", params={"territory_id": "tecnologia_seguranca"}, headers=headers)
     assert resp.status_code == 404

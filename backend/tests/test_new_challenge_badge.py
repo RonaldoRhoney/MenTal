@@ -17,7 +17,7 @@ from app.seed import CHALLENGES
 from app.services import is_challenge_new
 from app.timeutil import utcnow
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def _get_challenge_row(prompt: str) -> models.Challenge:
@@ -73,6 +73,7 @@ def test_challenges_next_reports_is_new_false_for_old_content_without_created_at
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "numeros")
 
     # Achado real escrevendo este teste: a 1ª palavra do prompt (padrão
     # usado em test_content_search.py) não é garantidamente única — vários

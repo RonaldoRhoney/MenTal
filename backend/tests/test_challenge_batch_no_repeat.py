@@ -11,7 +11,7 @@ from app import models, services
 from app.db import SessionLocal
 from app.seed import CHALLENGES
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def test_batch_never_repeats_until_exhausted_then_reshuffles_without_boundary_repeat():
@@ -70,6 +70,7 @@ def test_answer_response_reports_batch_exhausted(client):
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "conhecimento")
 
     with SessionLocal() as db:
         batch_size = (

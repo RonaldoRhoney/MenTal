@@ -14,7 +14,7 @@ import uuid
 
 import app.services as services_module
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 
 def test_monetization_disabled_by_default(client):
@@ -27,6 +27,11 @@ def test_all_territories_unlocked_when_monetization_disabled(client, monkeypatch
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    # 'logica' é a 2ª etapa da sequência do bloco "matematica" (depois de
+    # 'numeros') — conquista direta no banco pra não misturar a trava de
+    # progressão sequencial (ortogonal a monetização) com o que este
+    # teste realmente cobre.
+    conquer_territory(user, "numeros")
 
     # 'logica' e 'conhecimento' exigem assinatura no seed (requires_subscription=True),
     # mas com a flag desligada nenhum usuário deve ser bloqueado, mesmo

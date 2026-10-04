@@ -20,13 +20,20 @@ import uuid
 
 import pytest
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 TERRITORIES = ["palavras", "numeros", "logica", "conhecimento"]
 
 
-def _get_challenge_and_answer(client, headers, territory_id):
+def _get_challenge_and_answer(client, headers, territory_id, user_id):
     from app.seed import CHALLENGES
+
+    # 'logica' é a 2ª etapa do bloco "matematica" (depois de 'numeros') —
+    # conquista direta no banco pra não misturar a trava de progressão
+    # sequencial (ortogonal ao que este arquivo cobre: normalização de
+    # resposta) com o território parametrizado.
+    if territory_id == "logica":
+        conquer_territory(user_id, "numeros")
 
     challenge = client.get("/challenges/next", params={"territory_id": territory_id}, headers=headers).json()
     correct = next(c["correct_answer"] for c in CHALLENGES if c["prompt"] == challenge["prompt"])
@@ -39,7 +46,7 @@ def test_correct_answer_recognized_on_first_attempt_without_any_hint(client, ter
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    challenge, correct = _get_challenge_and_answer(client, headers, territory_id)
+    challenge, correct = _get_challenge_and_answer(client, headers, territory_id, user)
 
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
@@ -58,7 +65,7 @@ def test_answer_comparison_is_case_insensitive(client, territory_id):
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    challenge, correct = _get_challenge_and_answer(client, headers, territory_id)
+    challenge, correct = _get_challenge_and_answer(client, headers, territory_id, user)
 
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",
@@ -67,7 +74,7 @@ def test_answer_comparison_is_case_insensitive(client, territory_id):
     ).json()
     assert result["is_correct"] is True, f"minúsculo não reconhecido em {territory_id}"
 
-    challenge2, correct2 = _get_challenge_and_answer(client, headers, territory_id)
+    challenge2, correct2 = _get_challenge_and_answer(client, headers, territory_id, user)
     result2 = client.post(
         f"/challenges/{challenge2['challenge_id']}/answer",
         json={"attempt_id": challenge2["attempt_id"], "submitted_answer": correct2.upper()},
@@ -82,7 +89,7 @@ def test_answer_comparison_trims_whitespace(client, territory_id):
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
 
-    challenge, correct = _get_challenge_and_answer(client, headers, territory_id)
+    challenge, correct = _get_challenge_and_answer(client, headers, territory_id, user)
 
     result = client.post(
         f"/challenges/{challenge['challenge_id']}/answer",

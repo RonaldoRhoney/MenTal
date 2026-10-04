@@ -13,7 +13,7 @@ import uuid
 from app.config import NEVER_TIMED_TERRITORY_IDS
 from app.seed import CHALLENGES, TERRITORIES
 
-from .conftest import auth_header
+from .conftest import auth_header, conquer_territory
 
 GASTRONOMIA_TERRITORY_IDS = {
     "gastro_mundo", "gastro_brasil", "gastro_norte_nordeste",
@@ -58,6 +58,8 @@ def test_gastronomia_challenge_is_never_timed_even_when_relampago_mode_is_reques
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    for prerequisite in ("gastro_mundo", "gastro_brasil", "gastro_norte_nordeste", "gastro_centrooeste_sudeste"):
+        conquer_territory(user, prerequisite)
 
     resp = client.get("/challenges/next", params={"territory_id": "gastro_sul_fusao", "mode": "relampago"}, headers=headers)
     assert resp.status_code == 200
@@ -68,6 +70,7 @@ def test_answering_a_gastronomia_challenge_correctly_works_like_any_normal_chall
     user = str(uuid.uuid4())
     headers = auth_header(user)
     client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+    conquer_territory(user, "gastro_mundo")
 
     challenge = client.get("/challenges/next", params={"territory_id": "gastro_brasil"}, headers=headers).json()
     correct = next(
