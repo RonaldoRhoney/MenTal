@@ -1,6 +1,6 @@
 # MENTAL — Inglês: Listening Ativo (compreensão auditiva)
 
-**Status:** EM IMPLEMENTAÇÃO (03/10/2026) — aprovado por Rhoney, decisão de escopo §8 confirmada (áudio só sob toque, nunca automático). Mecanismo completo já implementado e testado (migration 117, `Challenge.audio_script`, botão dedicado no client, backend 606/606 e client 263/263 passando, commit `aa097b0`) — conteúdo ainda só no lote1 (90 de até 600 unidades previstas em §2), aguardando revisão de Rhoney antes dos próximos lotes. Mover para `MUNDO/Mundo_dos_Idiomas/` só quando o volume de conteúdo estiver completo.
+**Status:** EM IMPLEMENTAÇÃO (03/10/2026) — aprovado por Rhoney, decisão de escopo §8 confirmada (áudio só sob toque, nunca automático). Mecanismo completo já implementado e testado (migration 117, `Challenge.audio_script`, botão dedicado no client, backend 606/606 e client 263/263 passando, commit `aa097b0`) — conteúdo ainda só no lote1 (90 de até 600 unidades previstas em §2), aguardando revisão de Rhoney antes dos próximos lotes. Movido pra MUNDO/Mundo_dos_Idiomas/ (03/10/2026) — mecanismo implementado e testado já é suficiente, não é preciso esperar o volume total de conteúdo.
 
 ---
 

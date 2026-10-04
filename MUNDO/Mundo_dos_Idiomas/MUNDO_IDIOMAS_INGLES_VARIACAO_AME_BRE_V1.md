@@ -1,6 +1,6 @@
 # MENTAL — Inglês: Variação Regional (American English vs. British English)
 
-**Status:** EM IMPLEMENTAÇÃO (03/10/2026) — aprovado por Rhoney, decisão de escopo §2 resolvida: **Opção A** (território dedicado). Mecanismo completo já implementado e testado (migration 120, formato MCQ padrão sem mudança de client, backend 606/606 passando, commit `aa4203b`) — conteúdo ainda só no lote1 (90 de até 150 unidades previstas em §3), aguardando revisão de Rhoney antes dos próximos lotes. Mover para `MUNDO/Mundo_dos_Idiomas/` só quando o volume de conteúdo estiver completo. Com esta frente, as 4 prioridades da análise de lacunas de Inglês (02/10/2026) estão todas com mecanismo implementado.
+**Status:** EM IMPLEMENTAÇÃO (03/10/2026) — aprovado por Rhoney, decisão de escopo §2 resolvida: **Opção A** (território dedicado). Mecanismo completo já implementado e testado (migration 120, formato MCQ padrão sem mudança de client, backend 606/606 passando, commit `aa4203b`) — conteúdo ainda só no lote1 (90 de até 150 unidades previstas em §3), aguardando revisão de Rhoney antes dos próximos lotes. Movido pra MUNDO/Mundo_dos_Idiomas/ (03/10/2026) — mecanismo implementado e testado já é suficiente, não é preciso esperar o volume total de conteúdo. Com esta frente, as 4 prioridades da análise de lacunas de Inglês (02/10/2026) estão todas com mecanismo implementado.
 
 ---
 

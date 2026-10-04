@@ -1,6 +1,6 @@
 # MENTAL — Inglês: Gírias e Inglês Informal de Internet
 
-**Status:** EM IMPLEMENTAÇÃO (03/10/2026) — aprovado por Rhoney. Mecanismo completo já implementado e testado (migration 119 já rodada em produção, formato MCQ padrão sem mudança de client, backend 606/606 passando, commit `aeb5476`) — conteúdo ainda só no lote1 (90 de até 180 unidades previstas em §2), aguardando revisão de Rhoney antes dos próximos lotes. Mover para `MUNDO/Mundo_dos_Idiomas/` só quando o volume de conteúdo estiver completo.
+**Status:** EM IMPLEMENTAÇÃO (03/10/2026) — aprovado por Rhoney. Mecanismo completo já implementado e testado (migration 119 já rodada em produção, formato MCQ padrão sem mudança de client, backend 606/606 passando, commit `aeb5476`) — conteúdo ainda só no lote1 (90 de até 180 unidades previstas em §2), aguardando revisão de Rhoney antes dos próximos lotes. Movido pra MUNDO/Mundo_dos_Idiomas/ (03/10/2026) — mecanismo implementado e testado já é suficiente, não é preciso esperar o volume total de conteúdo.
 
 ---
 
