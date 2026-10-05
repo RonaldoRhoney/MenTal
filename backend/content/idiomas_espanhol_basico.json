@@ -56,7 +56,7 @@
   {
     "territory_id": "espanhol_basico",
     "difficulty_level": 1,
-    "prompt": "Como se escreve 'grande' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que indica tamanho elevado' em espanhol?",
     "options": [
       "Grande",
       "Grandee",
@@ -320,7 +320,7 @@
   {
     "territory_id": "espanhol_basico",
     "difficulty_level": 1,
-    "prompt": "Como se escreve 'camisa' em espanhol?",
+    "prompt": "Como se escreve 'a peça de roupa usada na parte de cima do corpo, geralmente com botões' em espanhol?",
     "options": [
       "Camisa",
       "Camissa",
@@ -690,7 +690,7 @@
   {
     "territory_id": "espanhol_basico",
     "difficulty_level": 1,
-    "prompt": "Como se escreve 'rápido' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que indica velocidade elevada' em espanhol?",
     "options": [
       "Rápido",
       "Rapido",
@@ -778,7 +778,7 @@
   {
     "territory_id": "espanhol_basico",
     "difficulty_level": 1,
-    "prompt": "Como se escreve 'triste' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que descreve quem está com o humor abatido, melancólico' em espanhol?",
     "options": [
       "Triste",
       "Tristi",
@@ -796,7 +796,7 @@
   {
     "territory_id": "espanhol_basico",
     "difficulty_level": 1,
-    "prompt": "Como se escreve 'porque' em espanhol?",
+    "prompt": "Como se escreve 'a conjunção usada para explicar uma causa ou motivo' em espanhol?",
     "options": [
       "Porque",
       "Por que",
@@ -884,7 +884,7 @@
   {
     "territory_id": "espanhol_basico",
     "difficulty_level": 1,
-    "prompt": "Como se escreve 'por favor' em espanhol?",
+    "prompt": "Como se escreve 'a expressão usada para pedir algo educadamente' em espanhol?",
     "options": [
       "Por favor",
       "Por fabor",

@@ -20,7 +20,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'ocupado(a)' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que indica que alguém está sem tempo livre' em espanhol?",
     "options": [
       "Ocupado",
       "Ocupadoo",
@@ -38,7 +38,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'terminar' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa concluir ou finalizar algo' em espanhol?",
     "options": [
       "Terminar",
       "Terminarr",
@@ -56,7 +56,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'antes de' em espanhol?",
+    "prompt": "Como se escreve 'a expressão que indica que algo acontece anteriormente a outra coisa' em espanhol?",
     "options": [
       "Antes de",
       "Antes que",
@@ -196,7 +196,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'médico(a)' em espanhol?",
+    "prompt": "Como se escreve 'o substantivo que indica o profissional formado em medicina' em espanhol?",
     "options": [
       "Médico",
       "Medico",
@@ -250,7 +250,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'descansar' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa repousar ou relaxar' em espanhol?",
     "options": [
       "Descansar",
       "Discansar",
@@ -302,7 +302,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'barato(a)' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que indica preço baixo' em espanhol?",
     "options": [
       "Barato",
       "Baratoo",
@@ -320,7 +320,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'devolver' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa entregar de volta algo emprestado ou comprado' em espanhol?",
     "options": [
       "Devolver",
       "Debolver",
@@ -408,7 +408,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'cancelar' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa desfazer algo que estava planejado' em espanhol?",
     "options": [
       "Cancelar",
       "Cancellar",
@@ -426,7 +426,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'a menos que' em espanhol?",
+    "prompt": "Como se escreve 'a expressão condicional que indica uma condição necessária, no sentido de só se' em espanhol?",
     "options": [
       "A menos que",
       "A menos de que",
@@ -584,7 +584,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'difícil' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que indica que algo exige esforço para ser feito ou entendido' em espanhol?",
     "options": [
       "Difícil",
       "Dificil",
@@ -602,7 +602,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'entender' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa compreender algo' em espanhol?",
     "options": [
       "Entender",
       "Intender",
@@ -620,7 +620,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'explicar' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa tornar algo compreensível para outra pessoa' em espanhol?",
     "options": [
       "Explicar",
       "Esplicar",
@@ -850,7 +850,7 @@
   {
     "territory_id": "espanhol_intermediario",
     "difficulty_level": 2,
-    "prompt": "Como se escreve 'antes de' novamente para fixar em espanhol?",
+    "prompt": "Como se escreve 'a expressão que indica um momento anterior a outro, de forma a se planejar com folga' em espanhol?",
     "options": [
       "Antes de",
       "Antes que",

@@ -2,7 +2,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'negociar' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa fazer um acordo comercial sobre preço ou condições' em espanhol?",
     "options": [
       "Negociar",
       "Negosiar",
@@ -38,7 +38,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'a menos que' novamente para fixar em espanhol?",
+    "prompt": "Como se escreve 'a expressão condicional que introduz uma exceção, equivalente a exceto se' em espanhol?",
     "options": [
       "A menos que",
       "A menos de que",
@@ -74,7 +74,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'antes de' (prazo) em espanhol?",
+    "prompt": "Como se escreve 'a expressão que indica que algo deve acontecer anteriormente a um prazo' em espanhol?",
     "options": [
       "Antes de",
       "Hasta",
@@ -144,7 +144,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'diferente' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que indica que algo não é igual a outra coisa' em espanhol?",
     "options": [
       "Diferente",
       "Diferrente",
@@ -586,7 +586,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'confirmar' em espanhol?",
+    "prompt": "Como se escreve 'o verbo que significa validar ou reafirmar algo como certo' em espanhol?",
     "options": [
       "Confirmar",
       "Confirnar",
@@ -674,7 +674,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'ofendido(a)' em espanhol?",
+    "prompt": "Como se escreve 'o adjetivo que descreve alguém que se sentiu magoado por um comentário ou atitude' em espanhol?",
     "options": [
       "Ofendido",
       "Ofendidoo",
@@ -744,7 +744,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'a menos que' novamente para fixar (condicional) em espanhol?",
+    "prompt": "Como se escreve 'a expressão condicional de ressalva, no sentido de exceto se' em espanhol?",
     "options": [
       "A menos que",
       "A menos de que",
@@ -992,7 +992,7 @@
   {
     "territory_id": "espanhol_avancado",
     "difficulty_level": 3,
-    "prompt": "Como se escreve 'permanece' em espanhol?",
+    "prompt": "Como se escreve 'a forma verbal que indica que algo continua no mesmo estado' em espanhol?",
     "options": [
       "Permanece",
       "Permaneçe",

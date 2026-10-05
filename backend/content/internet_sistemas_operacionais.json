@@ -3252,7 +3252,7 @@
     "correct_answer": "Linus Torvalds",
     "explanation": "Isso mesmo! Linus Torvalds criou o Linux.",
     "hints": [
-      "Pense no tema: 'Linux e Linus Torvalds'.",
+      "Pense no estudante finlandês que criou o sistema em 1991 como projeto pessoal.",
       "Começa com 'L'."
     ],
     "age_reviewed": true
@@ -4826,7 +4826,7 @@
   {
     "territory_id": "internet_sistemas_operacionais",
     "difficulty_level": 1,
-    "prompt": "O Android é um sistema de código aberto ou fechado?",
+    "prompt": "Qual é a natureza do código-fonte do sistema operacional Android?",
     "options": [
       "Código aberto",
       "Totalmente fechado e proprietário",

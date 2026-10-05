@@ -372,7 +372,7 @@
     "correct_answer": "Larry Page e Sergey Brin",
     "explanation": "Exato! O Google foi fundado por Larry Page e Sergey Brin.",
     "hints": [
-      "Pense no tema: 'Google, Larry Page e Sergey Brin'.",
+      "Pense nos dois fundadores, ambos ex-alunos de doutorado em Stanford.",
       "Começa com 'L'."
     ],
     "age_reviewed": true
@@ -552,7 +552,7 @@
     "correct_answer": "Larry Page",
     "explanation": "Isso mesmo! Larry Page foi o primeiro CEO oficial do Google.",
     "hints": [
-      "Pense no tema: 'Google, Larry Page e Sergey Brin'.",
+      "Pense em quem ocupou o cargo antes de Eric Schmidt assumir como CEO em 2001.",
       "Começa com 'L'."
     ],
     "age_reviewed": true
@@ -588,7 +588,7 @@
     "correct_answer": "Sergey Brin",
     "explanation": "Exato! Sergey Brin nasceu em Moscou, na então União Soviética.",
     "hints": [
-      "Pense no tema: 'Google, Larry Page e Sergey Brin'.",
+      "Pense em qual dos dois fundadores nasceu fora dos Estados Unidos e emigrou ainda criança.",
       "Começa com 'S'."
     ],
     "age_reviewed": true
@@ -3252,7 +3252,7 @@
     "correct_answer": "Mark Zuckerberg",
     "explanation": "Isso mesmo! Mark Zuckerberg fundou o Facebook.",
     "hints": [
-      "Pense no tema: 'Facebook e Mark Zuckerberg'.",
+      "Pense no estudante de Harvard que criou a rede em seu dormitório universitário, em 2004.",
       "Começa com 'M'."
     ],
     "age_reviewed": true

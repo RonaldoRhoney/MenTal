@@ -20,7 +20,7 @@
   {
     "territory_id": "linguagem_concordancia_nominal",
     "difficulty_level": 1,
-    "prompt": "Complete: O menino ___ chegou cedo. (cansado)",
+    "prompt": "Complete: O menino ___ chegou cedo.",
     "options": [
       "cansado",
       "cansada",
@@ -524,7 +524,7 @@
   {
     "territory_id": "linguagem_concordancia_nominal",
     "difficulty_level": 2,
-    "prompt": "Complete: Ela é ___ inteligente. (bastante)",
+    "prompt": "Complete: Ela é ___ inteligente.",
     "options": [
       "bastante",
       "bastantes",
@@ -668,7 +668,7 @@
   {
     "territory_id": "linguagem_concordancia_nominal",
     "difficulty_level": 2,
-    "prompt": "Complete: É ___ entrada de estranhos. (proibido)",
+    "prompt": "Complete: É ___ entrada de estranhos.",
     "options": [
       "proibido",
       "proibida",
@@ -794,7 +794,7 @@
   {
     "territory_id": "linguagem_concordancia_nominal",
     "difficulty_level": 3,
-    "prompt": "Complete: Comprei duas camisas ___. (azul-marinho)",
+    "prompt": "Complete: Comprei duas camisas ___.",
     "options": [
       "azul-marinho",
       "azuis-marinhos",

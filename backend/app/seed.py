@@ -2975,7 +2975,7 @@ CHALLENGES = [
     },
     {
         "territory_id": "enem_humanas", "difficulty_level": 1,
-        "prompt": "Qual é o nome do processo histórico que oficializou a independência do Brasil em relação a Portugal, em 1822?",
+        "prompt": "O que Dom Pedro I proclamou às margens do rio Ipiranga, em 7 de setembro de 1822, rompendo o vínculo colonial com Portugal?",
         "options": ["Independência do Brasil", "Proclamação da República", "Abolição da escravatura", "Revolução Farroupilha"],
         "correct_answer": "Independência do Brasil",
         "explanation": "Em 7 de setembro de 1822, Dom Pedro I proclamou a Independência do Brasil, encerrando o vínculo colonial com Portugal.",
@@ -3823,7 +3823,7 @@ CHALLENGES = [
     },
     {
         "territory_id": "tecnologia_fundamentos", "difficulty_level": 1,
-        "prompt": "Qual é o nome do arquivo digital que armazena fotos, vídeos ou documentos, organizados dentro do sistema do computador?",
+        "prompt": "Como se chama a unidade de dados digitais (como uma foto, vídeo ou documento) salva e organizada dentro do sistema de um computador?",
         "options": ["Arquivo", "Servidor", "Navegador", "Rede"],
         "correct_answer": "Arquivo",
         "explanation": "Arquivo é o nome genérico dado a qualquer unidade de dados digitais salva no computador, como fotos, documentos ou vídeos.",

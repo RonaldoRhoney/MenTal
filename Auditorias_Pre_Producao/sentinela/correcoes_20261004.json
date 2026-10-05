@@ -1,0 +1,438 @@
+[
+  {
+    "territory_id": "enem_humanas",
+    "tipo": "prompt",
+    "prompt_original": "Qual é o nome do processo histórico que oficializou a independência do Brasil em relação a Portugal, em 1822?",
+    "antigo": "Qual é o nome do processo histórico que oficializou a independência do Brasil em relação a Portugal, em 1822?",
+    "novo": "O que Dom Pedro I proclamou às margens do rio Ipiranga, em 7 de setembro de 1822, rompendo o vínculo colonial com Portugal?"
+  },
+  {
+    "territory_id": "tecnologia_fundamentos",
+    "tipo": "prompt",
+    "prompt_original": "Qual é o nome do arquivo digital que armazena fotos, vídeos ou documentos, organizados dentro do sistema do computador?",
+    "antigo": "Qual é o nome do arquivo digital que armazena fotos, vídeos ou documentos, organizados dentro do sistema do computador?",
+    "novo": "Como se chama a unidade de dados digitais (como uma foto, vídeo ou documento) salva e organizada dentro do sistema de um computador?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'negociar' em espanhol?",
+    "antigo": "Como se escreve 'negociar' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa fazer um acordo comercial sobre preço ou condições' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'a menos que' novamente para fixar em espanhol?",
+    "antigo": "Como se escreve 'a menos que' novamente para fixar em espanhol?",
+    "novo": "Como se escreve 'a expressão condicional que introduz uma exceção, equivalente a exceto se' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'antes de' (prazo) em espanhol?",
+    "antigo": "Como se escreve 'antes de' (prazo) em espanhol?",
+    "novo": "Como se escreve 'a expressão que indica que algo deve acontecer anteriormente a um prazo' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'diferente' em espanhol?",
+    "antigo": "Como se escreve 'diferente' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que indica que algo não é igual a outra coisa' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'confirmar' em espanhol?",
+    "antigo": "Como se escreve 'confirmar' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa validar ou reafirmar algo como certo' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'ofendido(a)' em espanhol?",
+    "antigo": "Como se escreve 'ofendido(a)' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que descreve alguém que se sentiu magoado por um comentário ou atitude' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'a menos que' novamente para fixar (condicional) em espanhol?",
+    "antigo": "Como se escreve 'a menos que' novamente para fixar (condicional) em espanhol?",
+    "novo": "Como se escreve 'a expressão condicional de ressalva, no sentido de exceto se' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'permanece' em espanhol?",
+    "antigo": "Como se escreve 'permanece' em espanhol?",
+    "novo": "Como se escreve 'a forma verbal que indica que algo continua no mesmo estado' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'grande' em espanhol?",
+    "antigo": "Como se escreve 'grande' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que indica tamanho elevado' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'camisa' em espanhol?",
+    "antigo": "Como se escreve 'camisa' em espanhol?",
+    "novo": "Como se escreve 'a peça de roupa usada na parte de cima do corpo, geralmente com botões' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'rápido' em espanhol?",
+    "antigo": "Como se escreve 'rápido' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que indica velocidade elevada' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'triste' em espanhol?",
+    "antigo": "Como se escreve 'triste' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que descreve quem está com o humor abatido, melancólico' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'porque' em espanhol?",
+    "antigo": "Como se escreve 'porque' em espanhol?",
+    "novo": "Como se escreve 'a conjunção usada para explicar uma causa ou motivo' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'por favor' em espanhol?",
+    "antigo": "Como se escreve 'por favor' em espanhol?",
+    "novo": "Como se escreve 'a expressão usada para pedir algo educadamente' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'ocupado(a)' em espanhol?",
+    "antigo": "Como se escreve 'ocupado(a)' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que indica que alguém está sem tempo livre' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'terminar' em espanhol?",
+    "antigo": "Como se escreve 'terminar' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa concluir ou finalizar algo' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'antes de' em espanhol?",
+    "antigo": "Como se escreve 'antes de' em espanhol?",
+    "novo": "Como se escreve 'a expressão que indica que algo acontece anteriormente a outra coisa' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'médico(a)' em espanhol?",
+    "antigo": "Como se escreve 'médico(a)' em espanhol?",
+    "novo": "Como se escreve 'o substantivo que indica o profissional formado em medicina' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'descansar' em espanhol?",
+    "antigo": "Como se escreve 'descansar' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa repousar ou relaxar' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'barato(a)' em espanhol?",
+    "antigo": "Como se escreve 'barato(a)' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que indica preço baixo' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'devolver' em espanhol?",
+    "antigo": "Como se escreve 'devolver' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa entregar de volta algo emprestado ou comprado' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'cancelar' em espanhol?",
+    "antigo": "Como se escreve 'cancelar' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa desfazer algo que estava planejado' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'a menos que' em espanhol?",
+    "antigo": "Como se escreve 'a menos que' em espanhol?",
+    "novo": "Como se escreve 'a expressão condicional que indica uma condição necessária, no sentido de só se' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'difícil' em espanhol?",
+    "antigo": "Como se escreve 'difícil' em espanhol?",
+    "novo": "Como se escreve 'o adjetivo que indica que algo exige esforço para ser feito ou entendido' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'entender' em espanhol?",
+    "antigo": "Como se escreve 'entender' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa compreender algo' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'explicar' em espanhol?",
+    "antigo": "Como se escreve 'explicar' em espanhol?",
+    "novo": "Como se escreve 'o verbo que significa tornar algo compreensível para outra pessoa' em espanhol?"
+  },
+  {
+    "territory_id": "espanhol_intermediario",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'antes de' novamente para fixar em espanhol?",
+    "antigo": "Como se escreve 'antes de' novamente para fixar em espanhol?",
+    "novo": "Como se escreve 'a expressão que indica um momento anterior a outro, de forma a se planejar com folga' em espanhol?"
+  },
+  {
+    "territory_id": "frances_basico",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'triste' em francês?",
+    "antigo": "Como se escreve 'triste' em francês?",
+    "novo": "Como se escreve 'o adjetivo que descreve quem está com o humor abatido, melancólico' em francês?"
+  },
+  {
+    "territory_id": "ingles_avancado",
+    "tipo": "prompt",
+    "prompt_original": "Como se escreve 'confirmar' em inglês?",
+    "antigo": "Como se escreve 'confirmar' em inglês?",
+    "novo": "Como se escreve 'o verbo que significa validar ou reafirmar algo como certo' em inglês?"
+  },
+  {
+    "territory_id": "palavras",
+    "tipo": "hint",
+    "hint_index": 1,
+    "prompt_original": "Em 'Ele foi um dos alunos que mais ___ no torneio', qual preenchimento segue a concordância culta?",
+    "antigo": "Pense em quantos alunos, ao todo, se destacaram no torneio.",
+    "novo": "Pense em quantos alunos, ao todo, tiveram esse desempenho no torneio — isso define se o verbo vai para singular ou plural."
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "tipo": "prompt",
+    "prompt_original": "Complete: O menino ___ chegou cedo. (cansado)",
+    "antigo": "Complete: O menino ___ chegou cedo. (cansado)",
+    "novo": "Complete: O menino ___ chegou cedo."
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "tipo": "prompt",
+    "prompt_original": "Complete: Ela é ___ inteligente. (bastante)",
+    "antigo": "Complete: Ela é ___ inteligente. (bastante)",
+    "novo": "Complete: Ela é ___ inteligente."
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "tipo": "prompt",
+    "prompt_original": "Complete: É ___ entrada de estranhos. (proibido)",
+    "antigo": "Complete: É ___ entrada de estranhos. (proibido)",
+    "novo": "Complete: É ___ entrada de estranhos."
+  },
+  {
+    "territory_id": "linguagem_concordancia_nominal",
+    "tipo": "prompt",
+    "prompt_original": "Complete: Comprei duas camisas ___. (azul-marinho)",
+    "antigo": "Complete: Comprei duas camisas ___. (azul-marinho)",
+    "novo": "Complete: Comprei duas camisas ___."
+  },
+  {
+    "territory_id": "internet_gigantes",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Quem fundou o Google?",
+    "antigo": "Pense no tema: 'Google, Larry Page e Sergey Brin'.",
+    "novo": "Pense nos dois fundadores, ambos ex-alunos de doutorado em Stanford."
+  },
+  {
+    "territory_id": "internet_gigantes",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Quem foi o primeiro CEO oficial do Google?",
+    "antigo": "Pense no tema: 'Google, Larry Page e Sergey Brin'.",
+    "novo": "Pense em quem ocupou o cargo antes de Eric Schmidt assumir como CEO em 2001."
+  },
+  {
+    "territory_id": "internet_gigantes",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em Moscou, país de origem de qual dos dois fundadores do Google?",
+    "antigo": "Pense no tema: 'Google, Larry Page e Sergey Brin'.",
+    "novo": "Pense em qual dos dois fundadores nasceu fora dos Estados Unidos e emigrou ainda criança."
+  },
+  {
+    "territory_id": "internet_gigantes",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Quem fundou o Facebook?",
+    "antigo": "Pense no tema: 'Facebook e Mark Zuckerberg'.",
+    "novo": "Pense no estudante de Harvard que criou a rede em seu dormitório universitário, em 2004."
+  },
+  {
+    "territory_id": "internet_sistemas_operacionais",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Quem criou o Linux?",
+    "antigo": "Pense no tema: 'Linux e Linus Torvalds'.",
+    "novo": "Pense no estudante finlandês que criou o sistema em 1991 como projeto pessoal."
+  },
+  {
+    "territory_id": "internet_sistemas_operacionais",
+    "tipo": "prompt",
+    "prompt_original": "O Android é um sistema de código aberto ou fechado?",
+    "antigo": "O Android é um sistema de código aberto ou fechado?",
+    "novo": "Qual é a natureza do código-fonte do sistema operacional Android?"
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 1998?",
+    "antigo": "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+    "novo": "Pense no ano: 1998, marcado pela consagração de Zidane."
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Qual seleção conquistou seu primeiro título mundial nessa edição, jogando em casa?",
+    "antigo": "Pense no tema: 'França 1998 e a Consagração de Zidane'.",
+    "novo": "Pense no ano: 1998, marcado pela consagração de Zidane."
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Qual seleção conquistou seu pentacampeonato mundial nessa edição?",
+    "antigo": "Pense no tema: 'Coreia/Japão 2002 e o Pentacampeonato Brasileiro'.",
+    "novo": "Pense na Copa de 2002, disputada na Coreia do Sul e no Japão."
+  },
+  {
+    "territory_id": "copa_mundo_era_moderna",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 2018?",
+    "antigo": "Pense no tema: 'Rússia 2018 e o Título Histórico de Messi no Catar 2022'.",
+    "novo": "Pense no ano: 2018, edição anterior ao título histórico de Messi no Catar, em 2022."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Qual seleção conquistou o bicampeonato mundial nessa Copa?",
+    "antigo": "Pense no tema: 'Chile 1962 e o Bicampeonato Brasileiro'.",
+    "novo": "Pense na Copa de 1962, disputada no Chile."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 1966?",
+    "antigo": "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+    "novo": "Pense no ano: 1966, marcado pelo episódio do Gol Fantasma."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Qual seleção conquistou seu único título mundial até hoje nessa edição?",
+    "antigo": "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+    "novo": "Pense no ano: 1966, marcado pelo episódio do Gol Fantasma."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Como ficou conhecido o gol decisivo e controverso marcado por Geoff Hurst na prorrogação daquela final?",
+    "antigo": "Pense no tema: 'Inglaterra 1966 e o Gol Fantasma'.",
+    "novo": "Pense na final de 1966, entre Inglaterra e Alemanha Ocidental, decidida na prorrogação."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 1970?",
+    "antigo": "Pense no tema: 'México 1970 e o Tricampeonato Brasileiro'.",
+    "novo": "Pense no ano: 1970, quando o Brasil conquistou seu tricampeonato mundial."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 1978, na qual o anfitrião conquistou seu primeiro título mundial?",
+    "antigo": "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+    "novo": "Pense no ano: 1978, quando o país-sede conquistou seu primeiro título mundial."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 1982?",
+    "antigo": "Pense no tema: 'Argentina 1978 e Espanha 1982'.",
+    "novo": "Pense no ano: 1982, a edição seguinte à de 1978 na Argentina."
+  },
+  {
+    "territory_id": "copa_mundo_expansao",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi disputada a Copa do Mundo de 1990?",
+    "antigo": "Pense no tema: 'Itália 1990 e o Tetracampeonato Brasileiro em 1994'.",
+    "novo": "Pense no ano: 1990, quatro anos antes do tetracampeonato brasileiro de 1994."
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em que país foi realizada a primeira Copa do Mundo da história, em 1930?",
+    "antigo": "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+    "novo": "Pense na primeira edição da história da Copa do Mundo, em 1930."
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Qual seleção foi a campeã dessa primeira Copa do Mundo?",
+    "antigo": "Pense no tema: 'A Copa de 1930 no Uruguai'.",
+    "novo": "Pense na primeira edição da história da Copa do Mundo, em 1930."
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Como ficou conhecida a derrota do Brasil para o Uruguai na final da Copa do Mundo de 1950?",
+    "antigo": "Pense no tema: 'O Maracanazo — Copa de 1950 no Brasil'.",
+    "novo": "Pense na final da Copa de 1950, disputada no Maracanã, no Rio de Janeiro."
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Em qual país foi disputada essa Copa?",
+    "antigo": "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+    "novo": "Pense no ano: 1958, marcado pela estreia de Pelé e o primeiro título brasileiro."
+  },
+  {
+    "territory_id": "copa_mundo_primeiras_copas",
+    "tipo": "hint",
+    "hint_index": 0,
+    "prompt_original": "Contra qual seleção o Brasil venceu a final de 1958, pelo placar de 5 a 2?",
+    "antigo": "Pense no tema: 'Suécia 1958 — A Estreia de Pelé e o Primeiro Título Brasileiro'.",
+    "novo": "Pense no ano: 1958, marcado pela estreia de Pelé e o primeiro título brasileiro."
+  }
+]

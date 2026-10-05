@@ -38,7 +38,7 @@
   {
     "territory_id": "tecnologia_fundamentos",
     "difficulty_level": 1,
-    "prompt": "Qual é o nome do arquivo digital que armazena fotos, vídeos ou documentos, organizados dentro do sistema do computador?",
+    "prompt": "Como se chama a unidade de dados digitais (como uma foto, vídeo ou documento) salva e organizada dentro do sistema de um computador?",
     "options": [
       "Arquivo",
       "Servidor",
