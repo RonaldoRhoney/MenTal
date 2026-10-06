@@ -10,6 +10,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/app_version_service.dart';
 import '../services/feed_activity_service.dart';
 import '../services/movement_service.dart';
+import '../services/review_prompt_service.dart';
 import '../services/world_celebration_service.dart';
 import '../territories.dart';
 import '../theme/agent_neon.dart';
@@ -1781,6 +1782,11 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
         duration: const Duration(seconds: 4),
       ),
     );
+    // MENTAL_ASO_GOOGLE_PLAY_ESPECIFICACAO_TECNICA_V1.1.md §17/§24 item 6 —
+    // pedido de avaliação só depois que a celebração já teve tempo de
+    // aparecer por inteiro (nunca compete visualmente com ela), sempre
+    // igual pra todo usuário elegível (nunca filtra quem recebe o convite).
+    Future.delayed(const Duration(seconds: 3), ReviewPromptService.maybeRequestReview);
   }
 
   Future<void> _handleReturned() async {
