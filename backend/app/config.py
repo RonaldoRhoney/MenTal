@@ -321,6 +321,11 @@ IDIOMA_TERRITORY_IDS = {
     # usar uma ou outra, nunca corrigir uma como erro (§6 do doc).
     "ingles_amebre_basico", "ingles_amebre_intermediario", "ingles_amebre_avancado",
     "ingles_amebre_relampago_basico", "ingles_amebre_relampago_intermediario", "ingles_amebre_relampago_avancado",
+    # Par Perfeito de Inglês, formato "Complete a frase" (MUNDO_IDIOMAS_INGLES_PAR_
+    # PERFEITO_V1.md, 06/10/2026) — o Mental Lingo deve alertar sobre pares confundíveis
+    # (homófonos, pares mínimos etc.) quando o jogador usar um errado numa conversa.
+    "ingles_parperfeito_basico", "ingles_parperfeito_intermediario", "ingles_parperfeito_avancado",
+    "ingles_parperfeito_relampago_basico", "ingles_parperfeito_relampago_intermediario", "ingles_parperfeito_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca
@@ -365,6 +370,10 @@ ALWAYS_TIMED_TERRITORIES = {
     # 03/10/2026): mesmo padrão — território próprio, sempre cronometrado, conteúdo
     # distinto (formato MCQ normal, não é cápsula de texto).
     "ingles_amebre_relampago_basico", "ingles_amebre_relampago_intermediario", "ingles_amebre_relampago_avancado",
+    # Par Perfeito de Inglês Relâmpago, formato "Complete a frase" (MUNDO_IDIOMAS_INGLES_
+    # PAR_PERFEITO_V1.md, 06/10/2026): mesmo padrão — território próprio, sempre
+    # cronometrado, conteúdo distinto (formato MCQ normal, não é cápsula de texto).
+    "ingles_parperfeito_relampago_basico", "ingles_parperfeito_relampago_intermediario", "ingles_parperfeito_relampago_avancado",
 }
 
 # V6 — Mundo dos Valores (05/09/2026): oposto de ALWAYS_TIMED_

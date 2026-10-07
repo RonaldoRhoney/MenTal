@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: The medicine had no ___ at all.",
+    "options": [
+      "no affect at",
+      "no effect at",
+      "no effected at",
+      "no effective at"
+    ],
+    "correct_answer": "no effect at",
+    "explanation": "A forma certa é \"no effect at\". Substantivo (o resultado).",
+    "hints": [
+      "Substantivo (o resultado).",
+      "Pense em 'side effect'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: I happily ___ the invitation.",
+    "options": [
+      "happily accept the",
+      "happily except the",
+      "happily accepted the",
+      "happily exception the"
+    ],
+    "correct_answer": "happily accepted the",
+    "explanation": "A forma certa é \"happily accepted the\". Verbo no passado (aceitei).",
+    "hints": [
+      "Verbo no passado (aceitei).",
+      "Pense em 'to accept' no passado."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: All students passed ___ one.",
+    "options": [
+      "passed accept one",
+      "passed except one",
+      "passed accepted one",
+      "passed exception one"
+    ],
+    "correct_answer": "passed except one",
+    "explanation": "A forma certa é \"passed except one\". Significa 'exceto'.",
+    "hints": [
+      "Significa 'exceto'.",
+      "Pense em 'all... except one'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: Our ___ called a meeting for today.",
+    "options": [
+      "Our principal called",
+      "Our principle called",
+      "Our principals called",
+      "Our principled called"
+    ],
+    "correct_answer": "Our principal called",
+    "explanation": "A forma certa é \"Our principal called\". A pessoa (diretor/diretora).",
+    "hints": [
+      "A pessoa (diretor/diretora).",
+      "Pense em 'school principal'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: Fairness is a key ___ in this company.",
+    "options": [
+      "key principal in",
+      "key principle in",
+      "key principals in",
+      "key principled in"
+    ],
+    "correct_answer": "key principle in",
+    "explanation": "A forma certa é \"key principle in\". Valor, regra de conduta.",
+    "hints": [
+      "Valor, regra de conduta.",
+      "Pense em 'a guiding principle'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: I bought some ___ for my new notebook.",
+    "options": [
+      "some stationary for",
+      "some stationery for",
+      "some station for",
+      "some stationed for"
+    ],
+    "correct_answer": "some stationery for",
+    "explanation": "A forma certa é \"some stationery for\". Material de escritório.",
+    "hints": [
+      "Material de escritório.",
+      "Pense em 'stationery store'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: Keep the ladder ___ while I climb.",
+    "options": [
+      "ladder stationary while",
+      "ladder stationery while",
+      "ladder station while",
+      "ladder stationed while"
+    ],
+    "correct_answer": "ladder stationary while",
+    "explanation": "A forma certa é \"ladder stationary while\". Adjetivo (parado, imóvel).",
+    "hints": [
+      "Adjetivo (parado, imóvel).",
+      "Pense em algo que não se move."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: The sauce is a great ___ to the fish.",
+    "options": [
+      "great complement to",
+      "great compliment to",
+      "great complemented to",
+      "great complimentary to"
+    ],
+    "correct_answer": "great complement to",
+    "explanation": "A forma certa é \"great complement to\". Algo que combina/completa.",
+    "hints": [
+      "Algo que combina/completa.",
+      "Pense em 'to complement a dish'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: Thanks for the ___ on my cooking.",
+    "options": [
+      "the complement on",
+      "the compliment on",
+      "the complemented on",
+      "the complimentary on"
+    ],
+    "correct_answer": "the compliment on",
+    "explanation": "A forma certa é \"the compliment on\". Um elogio.",
+    "hints": [
+      "Um elogio.",
+      "Pense em 'to pay a compliment'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: ___ phone keeps ringing?",
+    "options": [
+      "Who's phone",
+      "Whose phone",
+      "Who phone",
+      "Whos phone"
+    ],
+    "correct_answer": "Whose phone",
+    "explanation": "A forma certa é \"Whose phone\". Pergunta de posse.",
+    "hints": [
+      "Pergunta de posse.",
+      "Pense em 'de quem é o celular'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ in charge of this project?",
+    "options": [
+      "Who's in",
+      "Whose in",
+      "Who in",
+      "Whos in"
+    ],
+    "correct_answer": "Who's in",
+    "explanation": "A forma certa é \"Who's in\". Contração de 'who is'.",
+    "hints": [
+      "Contração de 'who is'.",
+      "Reescreva como 'Who is in charge?'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ idea was this?",
+    "options": [
+      "Your idea",
+      "You're idea",
+      "Yore idea",
+      "Yor idea"
+    ],
+    "correct_answer": "Your idea",
+    "explanation": "A forma certa é \"Your idea\". Pronome possessivo.",
+    "hints": [
+      "Pronome possessivo.",
+      "Pergunta de quem foi a ideia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ doing great!",
+    "options": [
+      "Your doing",
+      "You're doing",
+      "Yore doing",
+      "Yor doing"
+    ],
+    "correct_answer": "You're doing",
+    "explanation": "A forma certa é \"You're doing\". Contração de 'you are'.",
+    "hints": [
+      "Contração de 'you are'.",
+      "Reescreva como 'You are doing great'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: The cat licked ___ paw.",
+    "options": [
+      "licked its paw",
+      "licked it's paw",
+      "licked its' paw",
+      "licked their paw"
+    ],
+    "correct_answer": "licked its paw",
+    "explanation": "A forma certa é \"licked its paw\". Pronome possessivo, sem apóstrofo.",
+    "hints": [
+      "Pronome possessivo, sem apóstrofo.",
+      "Posse, não contração."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ almost midnight.",
+    "options": [
+      "Its almost",
+      "It's almost",
+      "Its' almost",
+      "Their almost"
+    ],
+    "correct_answer": "It's almost",
+    "explanation": "A forma certa é \"It's almost\". Contração de 'it is'.",
+    "hints": [
+      "Contração de 'it is'.",
+      "Reescreva como 'It is almost midnight'."
+    ],
+    "age_reviewed": true
+  }
+]

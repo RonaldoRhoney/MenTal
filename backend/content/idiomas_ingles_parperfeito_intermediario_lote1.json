@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: The new policy had a big ___ on sales.",
+    "options": [
+      "big affect on",
+      "big effect on",
+      "big effected on",
+      "big effective on"
+    ],
+    "correct_answer": "big effect on",
+    "explanation": "A forma certa é \"big effect on\". É o substantivo (o resultado, o impacto em si).",
+    "hints": [
+      "É o substantivo (o resultado, o impacto em si).",
+      "Pense em 'cause and effect'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: I ___ your gift, thank you!",
+    "options": [
+      "I accept your",
+      "I except your",
+      "I accepted your",
+      "I exception your"
+    ],
+    "correct_answer": "I accept your",
+    "explanation": "A forma certa é \"I accept your\". É o verbo (receber algo de boa vontade).",
+    "hints": [
+      "É o verbo (receber algo de boa vontade).",
+      "Pense em 'to accept a gift'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: Everyone came to the party ___ John.",
+    "options": [
+      "party accept John",
+      "party except John",
+      "party accepted John",
+      "party exception John"
+    ],
+    "correct_answer": "party except John",
+    "explanation": "A forma certa é \"party except John\". Significa 'exceto, com exceção de'.",
+    "hints": [
+      "Significa 'exceto, com exceção de'.",
+      "Pense em 'everyone... except him'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: Please take a seat; the ___ will see you soon.",
+    "options": [
+      "the principal will",
+      "the principle will",
+      "the principals will",
+      "the principled will"
+    ],
+    "correct_answer": "the principal will",
+    "explanation": "A forma certa é \"the principal will\". É a pessoa (diretor/diretora da escola).",
+    "hints": [
+      "É a pessoa (diretor/diretora da escola).",
+      "Pense em 'the school principal'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 1,
+    "prompt": "Complete: Honesty is an important ___ to live by.",
+    "options": [
+      "important principal to",
+      "important principle to",
+      "important principals to",
+      "important principled to"
+    ],
+    "correct_answer": "important principle to",
+    "explanation": "A forma certa é \"important principle to\". É o substantivo abstrato (um valor, uma regra de conduta).",
+    "hints": [
+      "É o substantivo abstrato (um valor, uma regra de conduta).",
+      "Pense em 'moral principle'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: I need to buy some ___ for the office, like pens and paper.",
+    "options": [
+      "some stationary for",
+      "some stationery for",
+      "some station for",
+      "some stationed for"
+    ],
+    "correct_answer": "some stationery for",
+    "explanation": "A forma certa é \"some stationery for\". É material de escritório/papelaria.",
+    "hints": [
+      "É material de escritório/papelaria.",
+      "Pense em 'stationery store' — pens, paper, envelopes."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: The car remained completely ___ during the storm.",
+    "options": [
+      "completely stationary during",
+      "completely stationery during",
+      "completely station during",
+      "completely stationed during"
+    ],
+    "correct_answer": "completely stationary during",
+    "explanation": "A forma certa é \"completely stationary during\". É o adjetivo (parado, imóvel).",
+    "hints": [
+      "É o adjetivo (parado, imóvel).",
+      "Pense em 'stationary bike' — que não se move."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: Her red scarf was a nice ___ to the black coat.",
+    "options": [
+      "nice complement to",
+      "nice compliment to",
+      "nice complemented to",
+      "nice complimentary to"
+    ],
+    "correct_answer": "nice complement to",
+    "explanation": "A forma certa é \"nice complement to\". Significa 'complemento', algo que combina e completa outra coisa.",
+    "hints": [
+      "Significa 'complemento', algo que combina e completa outra coisa.",
+      "Pense em 'to complement an outfit'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: He gave her a lovely ___ about her painting.",
+    "options": [
+      "lovely complement about",
+      "lovely compliment about",
+      "lovely complemented about",
+      "lovely complimentary about"
+    ],
+    "correct_answer": "lovely compliment about",
+    "explanation": "A forma certa é \"lovely compliment about\". É um elogio verbal.",
+    "hints": [
+      "É um elogio verbal.",
+      "Pense em 'to pay someone a compliment'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 2,
+    "prompt": "Complete: ___ bag is this on the table?",
+    "options": [
+      "Who's bag",
+      "Whose bag",
+      "Who bag",
+      "Whos bag"
+    ],
+    "correct_answer": "Whose bag",
+    "explanation": "A forma certa é \"Whose bag\". Pergunta de posse (de quem é a bolsa).",
+    "hints": [
+      "Pergunta de posse (de quem é a bolsa).",
+      "Reescreva como 'To whom does this bag belong?'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ coming to the meeting later?",
+    "options": [
+      "Who's coming",
+      "Whose coming",
+      "Who coming",
+      "Whos coming"
+    ],
+    "correct_answer": "Who's coming",
+    "explanation": "A forma certa é \"Who's coming\". É a contração de 'who is'.",
+    "hints": [
+      "É a contração de 'who is'.",
+      "Reescreva mentalmente como 'Who is coming...?'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ bike is faster than mine.",
+    "options": [
+      "Your bike",
+      "You're bike",
+      "Yore bike",
+      "Yor bike"
+    ],
+    "correct_answer": "Your bike",
+    "explanation": "A forma certa é \"Your bike\". É um pronome possessivo (de quem é a bike).",
+    "hints": [
+      "É um pronome possessivo (de quem é a bike).",
+      "Pense em 'your house', 'your dog'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ going to love this movie.",
+    "options": [
+      "Your going",
+      "You're going",
+      "Yore going",
+      "Yor going"
+    ],
+    "correct_answer": "You're going",
+    "explanation": "A forma certa é \"You're going\". É a contração de 'you are'.",
+    "hints": [
+      "É a contração de 'you are'.",
+      "Reescreva mentalmente como 'You are going to love it'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: The dog wagged ___ tail happily.",
+    "options": [
+      "wagged its tail",
+      "wagged it's tail",
+      "wagged its' tail",
+      "wagged their tail"
+    ],
+    "correct_answer": "wagged its tail",
+    "explanation": "A forma certa é \"wagged its tail\". É um pronome possessivo (de quem é o rabo).",
+    "hints": [
+      "É um pronome possessivo (de quem é o rabo).",
+      "Sem apóstrofo — é posse, não contração."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_intermediario",
+    "difficulty_level": 3,
+    "prompt": "Complete: ___ raining outside.",
+    "options": [
+      "Its raining",
+      "It's raining",
+      "Its' raining",
+      "Their raining"
+    ],
+    "correct_answer": "It's raining",
+    "explanation": "A forma certa é \"It's raining\". É a contração de 'it is'.",
+    "hints": [
+      "É a contração de 'it is'.",
+      "Reescreva mentalmente como 'It is raining outside'."
+    ],
+    "age_reviewed": true
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: He handled the rumor with great ___.",
+    "options": [
+      "great discreet",
+      "great discrete",
+      "great discretion",
+      "great discredit"
+    ],
+    "correct_answer": "great discretion",
+    "explanation": "A forma certa é \"great discretion\". Substantivo (discrição, bom senso).",
+    "hints": [
+      "Substantivo (discrição, bom senso).",
+      "Pense em 'handle with discretion'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: The data was split into ___ groups.",
+    "options": [
+      "into discreet groups",
+      "into discrete groups",
+      "into discretion groups",
+      "into discredit groups"
+    ],
+    "correct_answer": "into discrete groups",
+    "explanation": "A forma certa é \"into discrete groups\". Significa 'separado, distinto'.",
+    "hints": [
+      "Significa 'separado, distinto'.",
+      "Pense em categorias separadas, não em segredo."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: The teacher tried to ___ a response from the shy student.",
+    "options": [
+      "to elicit a",
+      "to illicit a",
+      "to elicited a",
+      "to illicitly a"
+    ],
+    "correct_answer": "to elicit a",
+    "explanation": "A forma certa é \"to elicit a\". Verbo (extrair uma resposta/reação).",
+    "hints": [
+      "Verbo (extrair uma resposta/reação).",
+      "Nada a ver com ilegalidade."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: They were caught in an ___ deal.",
+    "options": [
+      "an elicit deal",
+      "an illicit deal",
+      "an elicited deal",
+      "an illicitly deal"
+    ],
+    "correct_answer": "an illicit deal",
+    "explanation": "A forma certa é \"an illicit deal\". Adjetivo (ilegal).",
+    "hints": [
+      "Adjetivo (ilegal).",
+      "Pense em algo contra a lei."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: How much ___ is it to the nearest town?",
+    "options": [
+      "much farther is",
+      "much further is",
+      "much far is",
+      "much father is"
+    ],
+    "correct_answer": "much farther is",
+    "explanation": "A forma certa é \"much farther is\". Distância física.",
+    "hints": [
+      "Distância física.",
+      "Pergunta sobre quilômetros."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: Nothing could be ___ from the truth.",
+    "options": [
+      "be farther from",
+      "be further from",
+      "be far from",
+      "be father from"
+    ],
+    "correct_answer": "be further from",
+    "explanation": "A forma certa é \"be further from\". Sentido figurado/abstrato.",
+    "hints": [
+      "Sentido figurado/abstrato.",
+      "É uma expressão fixa bem conhecida sobre afastamento da verdade."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: Smoke began to ___ the room.",
+    "options": [
+      "to envelop the",
+      "to envelope the",
+      "to enveloped the",
+      "to enveloping the"
+    ],
+    "correct_answer": "to envelop the",
+    "explanation": "A forma certa é \"to envelop the\". Verbo (envolver completamente).",
+    "hints": [
+      "Verbo (envolver completamente).",
+      "Ação de cobrir por todos os lados."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: She sealed the ___ before mailing it.",
+    "options": [
+      "the envelop before",
+      "the envelope before",
+      "the enveloped before",
+      "the enveloping before"
+    ],
+    "correct_answer": "the envelope before",
+    "explanation": "A forma certa é \"the envelope before\". Substantivo (o objeto de papel).",
+    "hints": [
+      "Substantivo (o objeto de papel).",
+      "O que se sela e envia pelo correio."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: He let out a long ___ of relief.",
+    "options": [
+      "long breath of",
+      "long breathe of",
+      "long breadth of",
+      "long breaths of"
+    ],
+    "correct_answer": "long breath of",
+    "explanation": "A forma certa é \"long breath of\". Substantivo (o ar, numa expressão fixa).",
+    "hints": [
+      "Substantivo (o ar, numa expressão fixa).",
+      "Pense em 'a sigh of relief', mesma estrutura."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: It's hard to ___ in this thin mountain air.",
+    "options": [
+      "to breath in",
+      "to breathe in",
+      "to breadth in",
+      "to breaths in"
+    ],
+    "correct_answer": "to breathe in",
+    "explanation": "A forma certa é \"to breathe in\". Verbo (respirar).",
+    "hints": [
+      "Verbo (respirar).",
+      "Ação de puxar e soltar o ar."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: We skipped ___ and went straight to coffee.",
+    "options": [
+      "skipped desert and",
+      "skipped dessert and",
+      "skipped deserted and",
+      "skipped desserts and"
+    ],
+    "correct_answer": "skipped dessert and",
+    "explanation": "A forma certa é \"skipped dessert and\". A sobremesa.",
+    "hints": [
+      "A sobremesa.",
+      "Parte doce do fim da refeição."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: The expedition crossed a vast ___.",
+    "options": [
+      "vast desert",
+      "vast dessert",
+      "vast deserted",
+      "vast desserts"
+    ],
+    "correct_answer": "vast desert",
+    "explanation": "A forma certa é \"vast desert\". O deserto.",
+    "hints": [
+      "O deserto.",
+      "Lugar árido, cheio de areia."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: A bolt of ___ struck the old tree.",
+    "options": [
+      "of lightning struck",
+      "of lightening struck",
+      "of lighting struck",
+      "of lightened struck"
+    ],
+    "correct_answer": "of lightning struck",
+    "explanation": "A forma certa é \"of lightning struck\". O raio (fenômeno elétrico).",
+    "hints": [
+      "O raio (fenômeno elétrico).",
+      "Vem sempre acompanhado de trovão."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: Her mood was clearly ___ after the good news.",
+    "options": [
+      "clearly lightning after",
+      "clearly lightening after",
+      "clearly lighting after",
+      "clearly lightened after"
+    ],
+    "correct_answer": "clearly lightening after",
+    "explanation": "A forma certa é \"clearly lightening after\". Verbo 'to lighten' no gerúndio (ficando mais leve/claro).",
+    "hints": [
+      "Verbo 'to lighten' no gerúndio (ficando mais leve/claro).",
+      "Sobre humor melhorando, não sobre raios."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: The ___ will meet to decide the city budget.",
+    "options": [
+      "The council will",
+      "The counsel will",
+      "The councilor will",
+      "The counseled will"
+    ],
+    "correct_answer": "The council will",
+    "explanation": "A forma certa é \"The council will\". O órgão/grupo de pessoas.",
+    "hints": [
+      "O órgão/grupo de pessoas.",
+      "Pense em 'city council meeting'."
+    ],
+    "age_reviewed": true
+  }
+]

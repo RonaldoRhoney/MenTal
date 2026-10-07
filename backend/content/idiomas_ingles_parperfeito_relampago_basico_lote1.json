@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete: We're driving ___ the airport.",
+    "options": [
+      "driving to the",
+      "driving too the",
+      "driving two the",
+      "driving for the"
+    ],
+    "correct_answer": "driving to the",
+    "explanation": "A forma certa é \"driving to the\". Preposição de direção.",
+    "hints": [
+      "Preposição de direção.",
+      "Pense em 'going to a place'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete: I have ___ brothers.",
+    "options": [
+      "have to brothers",
+      "have too brothers",
+      "have two brothers",
+      "have few brothers"
+    ],
+    "correct_answer": "have two brothers",
+    "explanation": "A forma certa é \"have two brothers\". É o número 2.",
+    "hints": [
+      "É o número 2.",
+      "Conte: one, ___, three..."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete: It's ___ hot today.",
+    "options": [
+      "It's to hot",
+      "It's too hot",
+      "It's two hot",
+      "It's so hot"
+    ],
+    "correct_answer": "It's too hot",
+    "explanation": "A forma certa é \"It's too hot\". Significa 'demais'.",
+    "hints": [
+      "Significa 'demais'.",
+      "Pense em intensidade exagerada."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete: ___ house is very big.",
+    "options": [
+      "Their house",
+      "There house",
+      "They're house",
+      "There's house"
+    ],
+    "correct_answer": "Their house",
+    "explanation": "A forma certa é \"Their house\". Pronome possessivo.",
+    "hints": [
+      "Pronome possessivo.",
+      "Indica de quem é a casa, não um lugar."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 1,
+    "prompt": "Complete: Put the box over ___.",
+    "options": [
+      "over their",
+      "over there",
+      "over they're",
+      "over they"
+    ],
+    "correct_answer": "over there",
+    "explanation": "A forma certa é \"over there\". Indica lugar.",
+    "hints": [
+      "Indica lugar.",
+      "Advérbio de lugar, oposto de 'here'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete: ___ my best friends.",
+    "options": [
+      "Their my",
+      "There my",
+      "They're my",
+      "Them my"
+    ],
+    "correct_answer": "They're my",
+    "explanation": "A forma certa é \"They're my\". Contração de 'they are'.",
+    "hints": [
+      "Contração de 'they are'.",
+      "Reescreva como 'they are my best friends'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete: I'll ___ you an email tonight.",
+    "options": [
+      "I'll write you",
+      "I'll right you",
+      "I'll rite you",
+      "I'll wright you"
+    ],
+    "correct_answer": "I'll write you",
+    "explanation": "A forma certa é \"I'll write you\". Verbo de escrever.",
+    "hints": [
+      "Verbo de escrever.",
+      "Pense em 'write an email'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete: Is this the ___ answer?",
+    "options": [
+      "the write answer",
+      "the right answer",
+      "the rite answer",
+      "the wright answer"
+    ],
+    "correct_answer": "the right answer",
+    "explanation": "A forma certa é \"the right answer\". Significa 'certo, correto'.",
+    "hints": [
+      "Significa 'certo, correto'.",
+      "Oposto de 'wrong'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete: She's taller ___ her sister.",
+    "options": [
+      "taller then her",
+      "taller than her",
+      "taller that her",
+      "taller this her"
+    ],
+    "correct_answer": "taller than her",
+    "explanation": "A forma certa é \"taller than her\". Usado em comparações.",
+    "hints": [
+      "Usado em comparações.",
+      "Pense em 'taller than'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 2,
+    "prompt": "Complete: We'll eat, ___ watch a movie.",
+    "options": [
+      "eat then watch",
+      "eat than watch",
+      "eat that watch",
+      "eat this watch"
+    ],
+    "correct_answer": "eat then watch",
+    "explanation": "A forma certa é \"eat then watch\". Indica sequência no tempo.",
+    "hints": [
+      "Indica sequência no tempo.",
+      "Pense em 'first... then...'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete: The rope was too ___ to hold the weight.",
+    "options": [
+      "too loose to",
+      "too lose to",
+      "too lost to",
+      "too loss to"
+    ],
+    "correct_answer": "too loose to",
+    "explanation": "A forma certa é \"too loose to\". Adjetivo (frouxo).",
+    "hints": [
+      "Adjetivo (frouxo).",
+      "Descreve o estado da corda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete: Don't ___ hope.",
+    "options": [
+      "Don't loose hope",
+      "Don't lose hope",
+      "Don't lost hope",
+      "Don't loss hope"
+    ],
+    "correct_answer": "Don't lose hope",
+    "explanation": "A forma certa é \"Don't lose hope\". Verbo (perder).",
+    "hints": [
+      "Verbo (perder).",
+      "Pense em 'don't lose something'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete: She asked her mom for ___.",
+    "options": [
+      "for advice",
+      "for advise",
+      "for advisor",
+      "for advised"
+    ],
+    "correct_answer": "for advice",
+    "explanation": "A forma certa é \"for advice\". Substantivo (um conselho).",
+    "hints": [
+      "Substantivo (um conselho).",
+      "Pense em 'a piece of advice'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete: I'll ___ you to wait.",
+    "options": [
+      "I'll advice you",
+      "I'll advise you",
+      "I'll advisor you",
+      "I'll advised you"
+    ],
+    "correct_answer": "I'll advise you",
+    "explanation": "A forma certa é \"I'll advise you\". Verbo (aconselhar).",
+    "hints": [
+      "Verbo (aconselhar).",
+      "Pense em 'to advise someone to do something'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_relampago_basico",
+    "difficulty_level": 3,
+    "prompt": "Complete: Loud music can ___ your hearing.",
+    "options": [
+      "can affect your",
+      "can effect your",
+      "can effected your",
+      "can effective your"
+    ],
+    "correct_answer": "can affect your",
+    "explanation": "A forma certa é \"can affect your\". Verbo (influenciar, prejudicar).",
+    "hints": [
+      "Verbo (influenciar, prejudicar).",
+      "Pense em 'to affect your health'."
+    ],
+    "age_reviewed": true
+  }
+]

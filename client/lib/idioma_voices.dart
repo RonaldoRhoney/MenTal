@@ -47,3 +47,21 @@ String? voiceForTerritory(String territoryId) {
   final prefix = territoryId.split('_').first;
   return _kIdiomaVoiceByTerritoryPrefix[prefix];
 }
+
+/// MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_DIAGNOSTICO_TECNICO_V1.md §6/§7 —
+/// Par Perfeito é o primeiro território do app a precisar de MAIS de uma
+/// voz pro MESMO idioma (o jogador escolhe o sotaque que quer treinar,
+/// §6 do doc principal). Validado tecnicamente em 06/10/2026 (ver commit):
+/// três vozes sintetizadas de verdade (en-GB-SoniaNeural, en-GB-
+/// RyanNeural, en-US-AriaNeural como controle), todas devolveram áudio
+/// real sem erro; Rhoney ouviu as amostras e escolheu Ryan como a voz
+/// britânica. Função separada de `voiceForTerritory` (que continua só
+/// 1 voz fixa por idioma) pra não acoplar essa escolha de sotaque ao
+/// resto do Mundo dos Idiomas — nenhum outro território muda de
+/// comportamento.
+enum ParPerfeitoAccent { us, uk }
+
+String voiceForParPerfeitoAccent(ParPerfeitoAccent accent) => switch (accent) {
+      ParPerfeitoAccent.us => 'en-US-AriaNeural',
+      ParPerfeitoAccent.uk => 'en-GB-RyanNeural',
+    };

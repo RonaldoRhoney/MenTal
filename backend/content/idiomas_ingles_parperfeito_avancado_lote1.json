@@ -1,0 +1,272 @@
+[
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: She was very ___ about her plans, telling no one.",
+    "options": [
+      "very discreet about",
+      "very discrete about",
+      "very discretion about",
+      "very discredit about"
+    ],
+    "correct_answer": "very discreet about",
+    "explanation": "A forma certa é \"very discreet about\". Significa 'discreta', que guarda segredo.",
+    "hints": [
+      "Significa 'discreta', que guarda segredo.",
+      "Pense em 'to be discreet about something'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: Each student solved a ___ math problem.",
+    "options": [
+      "a discreet math",
+      "a discrete math",
+      "a discretion math",
+      "a discredit math"
+    ],
+    "correct_answer": "a discrete math",
+    "explanation": "A forma certa é \"a discrete math\". Significa 'distinto, separado', sem relação com discrição/segredo.",
+    "hints": [
+      "Significa 'distinto, separado', sem relação com discrição/segredo.",
+      "Pense em 'discrete units', 'discrete categories'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: The police couldn't ___ a confession from the suspect.",
+    "options": [
+      "couldn't elicit a",
+      "couldn't illicit a",
+      "couldn't elicited a",
+      "couldn't illicitly a"
+    ],
+    "correct_answer": "couldn't elicit a",
+    "explanation": "A forma certa é \"couldn't elicit a\". É o verbo (extrair, provocar uma resposta).",
+    "hints": [
+      "É o verbo (extrair, provocar uma resposta).",
+      "Pense em 'to elicit information'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: Selling those goods without a license is ___.",
+    "options": [
+      "is elicit",
+      "is illicit",
+      "is elicited",
+      "is illicitly"
+    ],
+    "correct_answer": "is illicit",
+    "explanation": "A forma certa é \"is illicit\". É o adjetivo (ilegal, proibido).",
+    "hints": [
+      "É o adjetivo (ilegal, proibido).",
+      "Pense em 'illicit drugs', 'illicit trade'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 1,
+    "prompt": "Complete: We need to walk a little ___ before we rest.",
+    "options": [
+      "little farther before",
+      "little further before",
+      "little far before",
+      "little father before"
+    ],
+    "correct_answer": "little farther before",
+    "explanation": "A forma certa é \"little farther before\". Usado pra distância física real.",
+    "hints": [
+      "Usado pra distância física real.",
+      "Pense em quilômetros, metros — distância que se anda."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: Let's discuss this topic ___ tomorrow.",
+    "options": [
+      "topic farther tomorrow",
+      "topic further tomorrow",
+      "topic far tomorrow",
+      "topic father tomorrow"
+    ],
+    "correct_answer": "topic further tomorrow",
+    "explanation": "A forma certa é \"topic further tomorrow\". Usado em sentido figurado (mais adiante, com mais profundidade).",
+    "hints": [
+      "Usado em sentido figurado (mais adiante, com mais profundidade).",
+      "Pense em 'further discussion', não distância física."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: The fog began to ___ the city.",
+    "options": [
+      "to envelop the",
+      "to envelope the",
+      "to enveloped the",
+      "to enveloping the"
+    ],
+    "correct_answer": "to envelop the",
+    "explanation": "A forma certa é \"to envelop the\". É o verbo (envolver, cobrir por completo).",
+    "hints": [
+      "É o verbo (envolver, cobrir por completo).",
+      "Sem 'e' no final — é ação, não objeto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: Please put the letter in the ___.",
+    "options": [
+      "the envelop",
+      "the envelope",
+      "the enveloped",
+      "the enveloping"
+    ],
+    "correct_answer": "the envelope",
+    "explanation": "A forma certa é \"the envelope\". É o substantivo (o objeto de papel onde se coloca a carta).",
+    "hints": [
+      "É o substantivo (o objeto de papel onde se coloca a carta).",
+      "Com 'e' no final — é o objeto."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: Take a deep ___ before you start.",
+    "options": [
+      "deep breath before",
+      "deep breathe before",
+      "deep breadth before",
+      "deep breaths before"
+    ],
+    "correct_answer": "deep breath before",
+    "explanation": "A forma certa é \"deep breath before\". É o substantivo (o ar que se respira de uma vez).",
+    "hints": [
+      "É o substantivo (o ar que se respira de uma vez).",
+      "Pense em 'a deep breath', 'out of breath'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 2,
+    "prompt": "Complete: Remember to ___ slowly while you meditate.",
+    "options": [
+      "to breath slowly",
+      "to breathe slowly",
+      "to breadth slowly",
+      "to breaths slowly"
+    ],
+    "correct_answer": "to breathe slowly",
+    "explanation": "A forma certa é \"to breathe slowly\". É o verbo (respirar).",
+    "hints": [
+      "É o verbo (respirar).",
+      "Pense em 'to breathe in and out'."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: For ___, we're having chocolate cake.",
+    "options": [
+      "For desert we're",
+      "For dessert we're",
+      "For deserted we're",
+      "For desserts we're"
+    ],
+    "correct_answer": "For dessert we're",
+    "explanation": "A forma certa é \"For dessert we're\". É a sobremesa (com dois 's').",
+    "hints": [
+      "É a sobremesa (com dois 's').",
+      "Pense na parte doce do fim da refeição."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: Camels can survive for days in the ___.",
+    "options": [
+      "the desert",
+      "the dessert",
+      "the deserted",
+      "the desserts"
+    ],
+    "correct_answer": "the desert",
+    "explanation": "A forma certa é \"the desert\". É o deserto, lugar árido (com um 's').",
+    "hints": [
+      "É o deserto, lugar árido (com um 's').",
+      "Pense em areia, calor, pouca água."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: The sky lit up with ___ during the storm.",
+    "options": [
+      "with lightning during",
+      "with lightening during",
+      "with lighting during",
+      "with lightened during"
+    ],
+    "correct_answer": "with lightning during",
+    "explanation": "A forma certa é \"with lightning during\". É o raio/relâmpago (fenômeno elétrico).",
+    "hints": [
+      "É o raio/relâmpago (fenômeno elétrico).",
+      "Pense em trovão e raio durante a tempestade."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: The sky was ___ as dawn approached.",
+    "options": [
+      "was lightning as",
+      "was lightening as",
+      "was lighting as",
+      "was lightened as"
+    ],
+    "correct_answer": "was lightening as",
+    "explanation": "A forma certa é \"was lightening as\". É o verbo 'to lighten' (clarear, ficar mais claro) no gerúndio.",
+    "hints": [
+      "É o verbo 'to lighten' (clarear, ficar mais claro) no gerúndio.",
+      "Pense em 'getting lighter', não em raios."
+    ],
+    "age_reviewed": true
+  },
+  {
+    "territory_id": "ingles_parperfeito_avancado",
+    "difficulty_level": 3,
+    "prompt": "Complete: The city ___ voted on the new law.",
+    "options": [
+      "city council voted",
+      "city counsel voted",
+      "city councilor voted",
+      "city counseled voted"
+    ],
+    "correct_answer": "city council voted",
+    "explanation": "A forma certa é \"city council voted\". É o grupo de pessoas (conselho municipal, órgão).",
+    "hints": [
+      "É o grupo de pessoas (conselho municipal, órgão).",
+      "Pense em 'city council', 'student council'."
+    ],
+    "age_reviewed": true
+  }
+]

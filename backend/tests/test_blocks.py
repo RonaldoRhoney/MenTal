@@ -183,6 +183,9 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_listening_avancado", "ingles_listening_basico", "ingles_listening_intermediario",
         "ingles_listening_relampago_avancado", "ingles_listening_relampago_basico",
         "ingles_listening_relampago_intermediario",
+        "ingles_parperfeito_avancado", "ingles_parperfeito_basico", "ingles_parperfeito_intermediario",
+        "ingles_parperfeito_relampago_avancado", "ingles_parperfeito_relampago_basico",
+        "ingles_parperfeito_relampago_intermediario",
         "ingles_phrasal_avancado", "ingles_phrasal_basico", "ingles_phrasal_intermediario",
         "ingles_phrasal_relampago_avancado", "ingles_phrasal_relampago_basico", "ingles_phrasal_relampago_intermediario",
         "ingles_preposicoes_avancado", "ingles_preposicoes_basico", "ingles_preposicoes_intermediario",
@@ -214,6 +217,8 @@ def test_idiomas_ingles_espanhol_frances_blocks_group_their_territories(client):
         "ingles_falsoscognatos_relampago_basico", "ingles_falsoscognatos_relampago_intermediario", "ingles_falsoscognatos_relampago_avancado",
         "ingles_preposicoes_basico", "ingles_preposicoes_intermediario", "ingles_preposicoes_avancado",
         "ingles_preposicoes_relampago_basico", "ingles_preposicoes_relampago_intermediario", "ingles_preposicoes_relampago_avancado",
+        "ingles_parperfeito_basico", "ingles_parperfeito_intermediario", "ingles_parperfeito_avancado",
+        "ingles_parperfeito_relampago_basico", "ingles_parperfeito_relampago_intermediario", "ingles_parperfeito_relampago_avancado",
         "espanhol_basico", "espanhol_intermediario", "espanhol_avancado",
         "frances_basico", "frances_intermediario", "frances_avancado",
     }.issubset(set(worlds["idiomas"]["territory_ids"]))
