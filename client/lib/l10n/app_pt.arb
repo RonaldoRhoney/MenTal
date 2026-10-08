@@ -3525,5 +3525,83 @@
   "homeCoachCardLabel": "Dica do My_Mental_AI",
   "@homeCoachCardLabel": {
     "description": "Home card label for the daily tip"
+  },
+  "guestPickerTitle": "Escolha um Mundo pra experimentar",
+  "@guestPickerTitle": {
+    "description": "Guest world picker screen title"
+  },
+  "guestPickerSubtitle": "Responda 3 questões antes de criar sua conta — sem compromisso.",
+  "@guestPickerSubtitle": {
+    "description": "Guest world picker screen subtitle"
+  },
+  "guestAlreadyHaveAccount": "Já tenho conta",
+  "@guestAlreadyHaveAccount": {
+    "description": "Button that skips the guest flow and goes straight to login"
+  },
+  "guestQuestionCounter": "Questão {current} de {total}",
+  "@guestQuestionCounter": {
+    "description": "Progress counter inside the guest challenge screen",
+    "placeholders": {
+      "current": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "guestAnswerSubmit": "Responder",
+  "@guestAnswerSubmit": {
+    "description": "Submit button on the guest challenge screen"
+  },
+  "guestAnswerContinue": "Continuar",
+  "@guestAnswerContinue": {
+    "description": "Continue button shown after feedback on the guest challenge screen"
+  },
+  "guestCorrectFeedback": "Você acertou!",
+  "@guestCorrectFeedback": {
+    "description": "Feedback shown when the guest answers correctly"
+  },
+  "guestIncorrectFeedback": "Não foi dessa vez.",
+  "@guestIncorrectFeedback": {
+    "description": "Feedback shown when the guest answers incorrectly"
+  },
+  "guestCorrectAnswerLabel": "Resposta certa: {answer}",
+  "@guestCorrectAnswerLabel": {
+    "description": "Shows the correct answer after the guest gets it wrong",
+    "placeholders": {
+      "answer": {"type": "String"}
+    }
+  },
+  "partialResultTitle": "Resultado parcial",
+  "@partialResultTitle": {
+    "description": "Partial result screen title, shown after the 3 guest questions"
+  },
+  "partialResultScore": "{correct} de {total} questões certas",
+  "@partialResultScore": {
+    "description": "Score summary on the partial result screen",
+    "placeholders": {
+      "correct": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  "partialResultXpProvisional": "+{xp} XP provisório",
+  "@partialResultXpProvisional": {
+    "description": "Provisional XP shown on the partial result screen",
+    "placeholders": {
+      "xp": {"type": "int"}
+    }
+  },
+  "partialResultXpNote": "Esse XP só vale depois que você criar sua conta.",
+  "@partialResultXpNote": {
+    "description": "Clarifies that provisional XP is not real yet"
+  },
+  "partialResultRankingNote": "Crie sua conta pra entrar no ranking.",
+  "@partialResultRankingNote": {
+    "description": "Explains ranking is not available to guests"
+  },
+  "partialResultCta": "Criar conta ou entrar",
+  "@partialResultCta": {
+    "description": "CTA button on the partial result screen"
+  },
+  "partialResultExplanation": "Sua conta preserva esse progresso — você não perde nada.",
+  "@partialResultExplanation": {
+    "description": "Reassurance text on the partial result screen"
   }
 }

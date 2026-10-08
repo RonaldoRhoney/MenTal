@@ -15,6 +15,7 @@ import '../services/world_celebration_service.dart';
 import '../territories.dart';
 import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
+import '../world_icons.dart' as world_icons;
 import '../widgets/celebration_overlay.dart';
 import '../widgets/mentalcoin.dart';
 import '../widgets/profile_photo.dart';
@@ -646,45 +647,10 @@ class _HomeScreenState extends State<HomeScreen> {
   /// anterior não precisava disso, só o nome). Mundo desconhecido (ainda
   /// não lançado no client, ex.: Gastronomia/Oceanos/Espaço em curadoria)
   /// cai num ícone genérico de "explorar", nunca quebra o carrossel.
-  IconData _worldIcon(String worldId) {
-    switch (worldId) {
-      case 'linguagem':
-        return Icons.menu_book_rounded;
-      case 'mente_logica':
-        return Icons.psychology_rounded;
-      case 'cultura_geral':
-        return Icons.public_rounded;
-      case 'descoberta':
-        return Icons.explore_rounded;
-      case 'idiomas':
-        return Icons.translate_rounded;
-      case 'valores':
-        return Icons.volunteer_activism_rounded;
-      case 'transito':
-        return Icons.traffic_rounded;
-      // DESMEMBRAMENTO_CULTURA_GERAL_V1.md (07/09/2026).
-      case 'esportes':
-        return Icons.sports_soccer_rounded;
-      case 'mitologia':
-        return Icons.castle_rounded;
-      case 'enem':
-        return Icons.school_rounded;
-      case 'concursos':
-        return Icons.gavel_rounded;
-      case 'tecnologia':
-        return Icons.memory_rounded;
-      case 'regioes_brasil':
-        return Icons.map_rounded;
-      case 'gastronomia':
-        return Icons.restaurant_rounded;
-      case 'oceanos':
-        return Icons.waves_rounded;
-      case 'espaco':
-        return Icons.rocket_launch_rounded;
-      default:
-        return Icons.travel_explore_rounded;
-    }
-  }
+  // Extraído pra lib/world_icons.dart (MENTAL_FLUXO_GUEST_3_QUESTOES_
+  // DIAGNOSTICO_TECNICO_V1.md) pra o seletor de Mundo do fluxo guest
+  // reaproveitar o mesmo mapeamento sem duplicá-lo.
+  IconData _worldIcon(String worldId) => world_icons.worldIcon(worldId);
 
   /// Agrupa territórios consecutivos do mesmo bloco (ou sem bloco) numa
   /// mesma "linha" de grid — cada grupo vira um título opcional (nome do

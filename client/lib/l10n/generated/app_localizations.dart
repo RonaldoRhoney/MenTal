@@ -4485,6 +4485,102 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Dica do My_Mental_AI'**
   String get homeCoachCardLabel;
+
+  /// Guest world picker screen title
+  ///
+  /// In pt, this message translates to:
+  /// **'Escolha um Mundo pra experimentar'**
+  String get guestPickerTitle;
+
+  /// Guest world picker screen subtitle
+  ///
+  /// In pt, this message translates to:
+  /// **'Responda 3 questões antes de criar sua conta — sem compromisso.'**
+  String get guestPickerSubtitle;
+
+  /// Button that skips the guest flow and goes straight to login
+  ///
+  /// In pt, this message translates to:
+  /// **'Já tenho conta'**
+  String get guestAlreadyHaveAccount;
+
+  /// Progress counter inside the guest challenge screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Questão {current} de {total}'**
+  String guestQuestionCounter(int current, int total);
+
+  /// Submit button on the guest challenge screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Responder'**
+  String get guestAnswerSubmit;
+
+  /// Continue button shown after feedback on the guest challenge screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get guestAnswerContinue;
+
+  /// Feedback shown when the guest answers correctly
+  ///
+  /// In pt, this message translates to:
+  /// **'Você acertou!'**
+  String get guestCorrectFeedback;
+
+  /// Feedback shown when the guest answers incorrectly
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi dessa vez.'**
+  String get guestIncorrectFeedback;
+
+  /// Shows the correct answer after the guest gets it wrong
+  ///
+  /// In pt, this message translates to:
+  /// **'Resposta certa: {answer}'**
+  String guestCorrectAnswerLabel(String answer);
+
+  /// Partial result screen title, shown after the 3 guest questions
+  ///
+  /// In pt, this message translates to:
+  /// **'Resultado parcial'**
+  String get partialResultTitle;
+
+  /// Score summary on the partial result screen
+  ///
+  /// In pt, this message translates to:
+  /// **'{correct} de {total} questões certas'**
+  String partialResultScore(int correct, int total);
+
+  /// Provisional XP shown on the partial result screen
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP provisório'**
+  String partialResultXpProvisional(int xp);
+
+  /// Clarifies that provisional XP is not real yet
+  ///
+  /// In pt, this message translates to:
+  /// **'Esse XP só vale depois que você criar sua conta.'**
+  String get partialResultXpNote;
+
+  /// Explains ranking is not available to guests
+  ///
+  /// In pt, this message translates to:
+  /// **'Crie sua conta pra entrar no ranking.'**
+  String get partialResultRankingNote;
+
+  /// CTA button on the partial result screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Criar conta ou entrar'**
+  String get partialResultCta;
+
+  /// Reassurance text on the partial result screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua conta preserva esse progresso — você não perde nada.'**
+  String get partialResultExplanation;
 }
 
 class _AppLocalizationsDelegate

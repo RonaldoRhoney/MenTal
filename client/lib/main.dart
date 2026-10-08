@@ -10,6 +10,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'api/api_client.dart';
 import 'l10n/generated/app_localizations.dart';
 import 'screens/age_gate_screen.dart';
+import 'screens/guest_world_picker_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/mandatory_onboarding_screen.dart';
@@ -17,6 +18,7 @@ import 'screens/movement_screen.dart';
 import 'screens/onboarding_tutorial_screen.dart';
 import 'screens/opening_experience_screen.dart';
 import 'screens/reset_password_screen.dart';
+import 'services/guest_challenge_service.dart';
 import 'services/onboarding_tutorial_service.dart';
 import 'services/push_service.dart';
 import 'services/theme_mode_service.dart';
@@ -160,6 +162,12 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // carrega em paralelo com a animação do splash (~2.2s), então
   // raramente há um frame de espera extra depois que o splash termina.
   bool? _tutorialSeen;
+  // MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md §3.4 — mesmo
+  // tri-state de _tutorialSeen, carregado de SharedPreferences
+  // (GuestChallengeService). null = ainda checando; true = pulou o fluxo
+  // guest (ou já migrou um progresso anterior) e vai direto pro login;
+  // false = ainda não viu/terminou o seletor de Mundo guest.
+  bool? _guestFlowDismissed;
   late final Stream<AuthState> _authStateStream;
   String? _lastAccessToken;
   StreamSubscription<RemoteMessage>? _pushOpenedSubscription;
@@ -190,6 +198,9 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     _updateClientFromSession(Supabase.instance.client.auth.currentSession);
     OnboardingTutorialService.hasSeen().then((seen) {
       if (mounted) setState(() => _tutorialSeen = seen);
+    });
+    GuestChallengeService.isDismissed().then((dismissed) {
+      if (mounted) setState(() => _guestFlowDismissed = dismissed);
     });
     // NOTIFICACAO_ICONE_M_MENTAL.md §4 — sinal enviado por
     // MovementTaskHandler.onNotificationPressed() (engine isolada do
@@ -291,6 +302,30 @@ class _AppEntryPointState extends State<AppEntryPoint> {
         if (mounted) PushService.instance.initializeAndRegister(_client!, context);
       });
       _checkProfileStatus(_client!);
+      _maybeMigrateGuestProgress(_client!);
+    }
+  }
+
+  // MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md §3.4 —
+  // fire-and-forget, mesmo padrão de PushService.initializeAndRegister
+  // logo acima: nunca deve atrasar nem bloquear a navegação pro Age
+  // Gate/Home. Só roda quando existe progresso guest local pendente —
+  // login "normal" (sem ter passado pelo fluxo guest) não encontra nada
+  // pra migrar e a chamada nem acontece.
+  Future<void> _maybeMigrateGuestProgress(ApiClient client) async {
+    final answers = await GuestChallengeService.getAnswers();
+    if (answers.isEmpty) return;
+    try {
+      await client.migrateGuestProgress(answers.map((a) => a.toJson()).toList());
+      await GuestChallengeService.clearProgress();
+    } on ApiException {
+      // Falha silenciosa (ver comentário de _attempt em api_client.dart,
+      // mesma filosofia de resiliência do PushService): o progresso guest
+      // local continua salvo e uma tentativa futura (próximo login,
+      // mesmo processo ou não) tenta migrar de novo — nunca perde dado,
+      // só adia. Idempotência garantida pelo backend (guest.py). _client
+      // já não é mais null neste ponto, então o seletor guest não
+      // reaparece de qualquer forma, independente deste resultado.
     }
   }
 
@@ -321,7 +356,11 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     if (_tutorialSeen == null) return 'tutorial-loading';
     if (!_tutorialSeen!) return 'tutorial';
     if (_passwordRecoveryPending) return 'password-recovery';
-    if (_client == null) return 'login';
+    if (_client == null) {
+      if (_guestFlowDismissed == null) return 'guest-loading';
+      if (!_guestFlowDismissed!) return 'guest';
+      return 'login';
+    }
     if (_ageCheckError != null) return 'age-check-error';
     if (_ageConfirmed == null) return 'age-loading';
     if (!_ageConfirmed!) return 'age-gate';
@@ -385,6 +424,17 @@ class _AppEntryPointState extends State<AppEntryPoint> {
 
         final client = _client;
         if (client == null) {
+          if (_guestFlowDismissed == null) {
+            return const Scaffold(body: Center(child: CircularProgressIndicator()));
+          }
+          if (!_guestFlowDismissed!) {
+            return GuestWorldPickerScreen(
+              baseUrl: kApiBaseUrl,
+              onSkipToLogin: () {
+                if (mounted) setState(() => _guestFlowDismissed = true);
+              },
+            );
+          }
           return const LoginScreen();
         }
 

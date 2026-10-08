@@ -562,6 +562,14 @@ RATE_LIMIT_HINT = (30, 60.0)
 RATE_LIMIT_SPACED_REVIEW_NEXT = (20, 60.0)
 RATE_LIMIT_SPACED_REVIEW_COUNT = (20, 60.0)
 RATE_LIMIT_BATTLE_CREATE = (10, 60.0)
+# MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md (07/10/2026) —
+# os 3 endpoints /guest/* são os ÚNICOS do app sem exigir token de
+# usuário autenticado (ver comentário no topo de routers/guest.py).
+# Chave por IP, não por user_id (não existe ainda nesse ponto do fluxo).
+# Só 3 perguntas por sessão de qualquer forma — limite generoso o
+# bastante pro uso normal, baixo o bastante pra não virar um jeito
+# gratuito de varrer conteúdo sem conta.
+RATE_LIMIT_GUEST = (20, 60.0)
 RATE_LIMIT_BATTLE_MY_CHALLENGE = (20, 60.0)
 RATE_LIMIT_MOVEMENT_COLLECT = (30, 60.0)
 RATE_LIMIT_WORD_PUZZLE_COMPLETE = (10, 60.0)

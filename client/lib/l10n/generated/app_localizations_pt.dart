@@ -2612,4 +2612,64 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get homeCoachCardLabel => 'Dica do My_Mental_AI';
+
+  @override
+  String get guestPickerTitle => 'Escolha um Mundo pra experimentar';
+
+  @override
+  String get guestPickerSubtitle =>
+      'Responda 3 questões antes de criar sua conta — sem compromisso.';
+
+  @override
+  String get guestAlreadyHaveAccount => 'Já tenho conta';
+
+  @override
+  String guestQuestionCounter(int current, int total) {
+    return 'Questão $current de $total';
+  }
+
+  @override
+  String get guestAnswerSubmit => 'Responder';
+
+  @override
+  String get guestAnswerContinue => 'Continuar';
+
+  @override
+  String get guestCorrectFeedback => 'Você acertou!';
+
+  @override
+  String get guestIncorrectFeedback => 'Não foi dessa vez.';
+
+  @override
+  String guestCorrectAnswerLabel(String answer) {
+    return 'Resposta certa: $answer';
+  }
+
+  @override
+  String get partialResultTitle => 'Resultado parcial';
+
+  @override
+  String partialResultScore(int correct, int total) {
+    return '$correct de $total questões certas';
+  }
+
+  @override
+  String partialResultXpProvisional(int xp) {
+    return '+$xp XP provisório';
+  }
+
+  @override
+  String get partialResultXpNote =>
+      'Esse XP só vale depois que você criar sua conta.';
+
+  @override
+  String get partialResultRankingNote =>
+      'Crie sua conta pra entrar no ranking.';
+
+  @override
+  String get partialResultCta => 'Criar conta ou entrar';
+
+  @override
+  String get partialResultExplanation =>
+      'Sua conta preserva esse progresso — você não perde nada.';
 }

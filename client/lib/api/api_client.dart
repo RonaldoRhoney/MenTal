@@ -155,6 +155,21 @@ class ApiClient {
     }
   }
 
+  // MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md §3.2 —
+  // chamado automaticamente logo após o primeiro login bem-sucedido,
+  // quando existe progresso guest local pendente (GuestChallengeService).
+  // O backend REPROCESSA cada resposta de verdade pelo mesmo caminho de
+  // POST /challenges/{id}/answer — nunca confia no `is_correct` que o
+  // client guardou localmente só pra exibição.
+  Future<Map<String, dynamic>> migrateGuestProgress(
+      List<Map<String, dynamic>> answers) async {
+    return _post(
+      _uri('/guest/migrate-progress'),
+      headers: _headers,
+      body: jsonEncode({'answers': answers}),
+    );
+  }
+
   // MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL é exclusivo pra maiores
   // de 18 anos — confirmação única, sem mais age_mode child/adult.
   Future<Map<String, dynamic>> confirmMajority() async {

@@ -31,18 +31,25 @@ void main() {
     await tester.pump();
 
     // Tutorial "Como usar o MENTAL" (29/08/2026) aparece uma vez, logo
-    // após o splash e antes do login — pula pra chegar na tela de login
-    // de verdade, que é o que este teste quer confirmar. Um pump extra
-    // dá tempo pro OnboardingTutorialService.hasSeen() (async, lê
-    // SharedPreferences) resolver antes de procurar o botão.
+    // após o splash e antes do login — pula pra chegar no próximo
+    // estágio. Um pump extra dá tempo pro
+    // OnboardingTutorialService.hasSeen() (async, lê SharedPreferences)
+    // resolver antes de procurar o botão.
     await tester.pump(const Duration(milliseconds: 100));
     expect(find.text('Pular'), findsOneWidget);
     await tester.tap(find.text('Pular'));
     // pumpAndSettle, não só pump(): o AnimatedSwitcher de main.dart
-    // (03/10/2026) crossfade entre tutorial→login por 420ms, mantendo os
-    // dois montados ao mesmo tempo nesse meio — um pump() só pegava o
-    // quadro no meio da transição, com "MENTAL" duplicado (um de cada
-    // tela, as duas aparecem com esse wordmark).
+    // (03/10/2026) crossfade entre estágios por 420ms, mantendo os dois
+    // montados ao mesmo tempo nesse meio.
+    await tester.pump(const Duration(milliseconds: 500));
+
+    // MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md
+    // (07/10/2026): sem sessão, o próximo estágio agora é o seletor de
+    // Mundo guest (3 questões antes do cadastro), não mais o login
+    // direto — "Já tenho conta" pula pra tela de login de verdade, que
+    // é o que este teste quer confirmar no fim (nunca tela em branco).
+    expect(find.text('Já tenho conta'), findsOneWidget);
+    await tester.tap(find.text('Já tenho conta'));
     await tester.pumpAndSettle();
 
     // MENTAL (BRAND.md §1: nome nunca aparece sozinho, sem o slogan por
