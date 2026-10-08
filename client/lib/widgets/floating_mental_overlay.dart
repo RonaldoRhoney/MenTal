@@ -29,14 +29,16 @@ class FloatingMentalOverlay extends StatefulWidget {
   State<FloatingMentalOverlay> createState() => _FloatingMentalOverlayState();
 }
 
-// Achado real testando no aparelho (08/10/2026, Rhoney: "toquei e não
-// abre o painel") — combinar `onTap`/`onLongPress` com `onPanUpdate` no
-// MESMO GestureDetector faz o reconhecedor de arrasto vencer a arena de
-// gestos com o mínimo tremor do dedo (inevitável em qualquer toque
-// humano), fazendo o toque nunca disparar. Detecção manual: acompanha
-// deslocamento total e duração do toque pra decidir, no `onPanEnd`, se
-// foi um toque (abre o painel), uma pressão longa sem mover (desliga)
-// ou um arrasto de verdade (já tratado ao vivo pelo onPanUpdate).
+// Achado real testando no aparelho (08/10/2026, 3 rodadas): combinar
+// onTap/onLongPress/onPanUpdate no mesmo GestureDetector (1ª rodada) e
+// depois onPanDown/onPanEnd/onPanCancel do PRÓPRIO GestureDetector (2ª
+// rodada, pensando ter corrigido via onPanCancel) continuaram sem
+// responder a toque real no aparelho, mesmo com teste automatizado
+// (tester.tap, movimento zero sintético) passando — a lógica de arena
+// de gestos do GestureDetector por trás de onPan* tem nuances de
+// threshold que não reproduzem fácil fora do dispositivo real. Troca
+// pra `Listener`: eventos de ponteiro CRUS (down/move/up/cancel), sem
+// nenhum reconhecedor/arena no meio — zero ambiguidade.
 const double _kTapSlop = 12;
 const Duration _kLongPressDuration = Duration(milliseconds: 500);
 
@@ -113,29 +115,23 @@ class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> with Sing
     return Positioned(
       left: clamped.dx,
       top: clamped.dy,
-      child: GestureDetector(
-        onPanDown: (_) {
+      child: Listener(
+        behavior: HitTestBehavior.opaque,
+        onPointerDown: (_) {
           _dragAccumulated = Offset.zero;
           _dragStartedAt = DateTime.now();
           _scheduleIdleTimer();
         },
-        onPanUpdate: (details) {
-          _dragAccumulated += details.delta;
-          final next = Offset(clamped.dx + details.delta.dx, clamped.dy + details.delta.dy);
+        onPointerMove: (event) {
+          _dragAccumulated += event.delta;
+          final next = Offset(clamped.dx + event.delta.dx, clamped.dy + event.delta.dy);
           _controller.updatePosition(Offset(
             next.dx.clamp(0, mediaSize.width - kFloatingMentalSize),
             next.dy.clamp(0, mediaSize.height - kFloatingMentalSize),
           ));
         },
-        // Achado real testando no aparelho (08/10/2026, 2ª rodada: "não
-        // está respondendo aos toques"): um toque puro, sem arrasto,
-        // nunca cruza o limiar de movimento do PanGestureRecognizer —
-        // ele chama `onPanCancel`, NUNCA `onPanEnd`, nesse caso. Minha
-        // lógica de toque só tratava onPanEnd, então todo toque de
-        // verdade era descartado silenciosamente. Os dois callbacks
-        // agora chamam a mesma lógica.
-        onPanEnd: (_) => _handlePanFinished(context, l10n, enabled),
-        onPanCancel: () => _handlePanFinished(context, l10n, enabled),
+        onPointerUp: (_) => _handlePanFinished(context, l10n, enabled),
+        onPointerCancel: (_) => _handlePanFinished(context, l10n, enabled),
         child: Semantics(
           button: true,
           label: enabled ? l10n.floatingMentalSemanticsEnabled : l10n.floatingMentalSemanticsDisabled,
