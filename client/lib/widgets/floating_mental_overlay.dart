@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../api/api_client.dart';
+import '../coach_helpers.dart';
 import '../l10n/generated/app_localizations.dart';
-import '../main.dart' show rootNavigatorKey;
-import '../screens/coach_screen.dart';
 import '../services/floating_mental_controller.dart';
 import '../theme/app_theme.dart';
 import 'mental_character.dart';
@@ -12,10 +12,14 @@ import 'mental_character.dart';
 /// MENTAL_AGENTE_FLUTUANTE_V1.md + MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_
 /// TECNICO_V1.md — personagem flutuante, montado uma única vez no
 /// `builder:` do MaterialApp (main.dart), por cima de qualquer tela.
-/// Conteúdo do painel de orientação é só texto estático nesta primeira
-/// fase (§5 do diagnóstico: categorias dinâmicas tipo "continuar de onde
-/// parou" ficam pra uma iteração futura, exigiriam threading de dado de
-/// progresso até aqui de fora da árvore normal de telas).
+///
+/// Atualização de 08/10/2026 (pedido de Rhoney: "My_Mental_AI deve ser
+/// removido e o agente flutuante assume seu lugar com todas suas
+/// características") — o painel não mostra mais dicas estáticas: ele
+/// chama GET /coach (mesma análise por regras, custo zero, que alimentava
+/// a extinta CoachScreen/MyMentalAiWorldCard — backend/app/coach.py
+/// continua intocado) e mostra o resumo + cartões de verdade, calculados
+/// a partir do progresso real do usuário.
 const double kFloatingMentalSize = 64;
 
 class FloatingMentalOverlay extends StatefulWidget {
@@ -123,31 +127,15 @@ class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> with Sing
             next.dy.clamp(0, mediaSize.height - kFloatingMentalSize),
           ));
         },
-        onPanEnd: (_) {
-          final startedAt = _dragStartedAt;
-          final movedEnough = _dragAccumulated.distance > _kTapSlop;
-          _dragStartedAt = null;
-          if (movedEnough || startedAt == null) return; // arrasto de verdade, já aplicado acima.
-
-          final heldFor = DateTime.now().difference(startedAt);
-          if (!enabled) {
-            // Desligado: só duplo toque reativa — dois toques rápidos
-            // (mesmo critério de "não moveu") dentro de 350ms.
-            final now = DateTime.now();
-            final last = _lastTapAt;
-            _lastTapAt = now;
-            if (last != null && now.difference(last) < const Duration(milliseconds: 350)) {
-              _lastTapAt = null;
-              _controller.setEnabled(true);
-            }
-            return;
-          }
-          if (heldFor >= _kLongPressDuration) {
-            _controller.setEnabled(false);
-          } else {
-            _openPanel(context, l10n);
-          }
-        },
+        // Achado real testando no aparelho (08/10/2026, 2ª rodada: "não
+        // está respondendo aos toques"): um toque puro, sem arrasto,
+        // nunca cruza o limiar de movimento do PanGestureRecognizer —
+        // ele chama `onPanCancel`, NUNCA `onPanEnd`, nesse caso. Minha
+        // lógica de toque só tratava onPanEnd, então todo toque de
+        // verdade era descartado silenciosamente. Os dois callbacks
+        // agora chamam a mesma lógica.
+        onPanEnd: (_) => _handlePanFinished(context, l10n, enabled),
+        onPanCancel: () => _handlePanFinished(context, l10n, enabled),
         child: Semantics(
           button: true,
           label: enabled ? l10n.floatingMentalSemanticsEnabled : l10n.floatingMentalSemanticsDisabled,
@@ -174,64 +162,209 @@ class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> with Sing
     );
   }
 
+  void _handlePanFinished(BuildContext context, AppLocalizations l10n, bool enabled) {
+    final startedAt = _dragStartedAt;
+    final movedEnough = _dragAccumulated.distance > _kTapSlop;
+    _dragStartedAt = null;
+    if (movedEnough || startedAt == null) return; // arrasto de verdade, já aplicado ao vivo no onPanUpdate.
+
+    final heldFor = DateTime.now().difference(startedAt);
+    if (!enabled) {
+      // Desligado: só duplo toque reativa — dois toques rápidos (mesmo
+      // critério de "não moveu") dentro de 350ms.
+      final now = DateTime.now();
+      final last = _lastTapAt;
+      _lastTapAt = now;
+      if (last != null && now.difference(last) < const Duration(milliseconds: 350)) {
+        _lastTapAt = null;
+        _controller.setEnabled(true);
+      }
+      return;
+    }
+    if (heldFor >= _kLongPressDuration) {
+      _controller.setEnabled(false);
+    } else {
+      _openPanel(context, l10n);
+    }
+  }
+
   void _openPanel(BuildContext context, AppLocalizations l10n) {
+    final client = FloatingMentalController.instance.currentClient;
+    if (client == null) return; // painel exige conta (sem fluxo guest aqui — ver §3 do diagnóstico).
     showModalBottomSheet(
       context: context,
       showDragHandle: true,
-      builder: (context) => _FloatingMentalPanel(l10n: l10n),
+      isScrollControlled: true,
+      builder: (context) => _FloatingMentalPanel(client: client),
     );
   }
 }
 
-class _FloatingMentalPanel extends StatelessWidget {
-  const _FloatingMentalPanel({required this.l10n});
+class _FloatingMentalPanel extends StatefulWidget {
+  const _FloatingMentalPanel({required this.client});
 
-  final AppLocalizations l10n;
+  final ApiClient client;
+
+  @override
+  State<_FloatingMentalPanel> createState() => _FloatingMentalPanelState();
+}
+
+class _FloatingMentalPanelState extends State<_FloatingMentalPanel> {
+  Map<String, dynamic>? _data;
+  bool _failed = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    setState(() => _failed = false);
+    try {
+      final data = await widget.client.getCoach();
+      if (mounted) setState(() => _data = data);
+    } on ApiException {
+      if (mounted && _data == null) setState(() => _failed = true);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    final tips = [
-      (l10n.floatingMentalTipStartTitle, l10n.floatingMentalTipStartBody),
-      (l10n.floatingMentalTipModesTitle, l10n.floatingMentalTipModesBody),
-      (l10n.floatingMentalTipStreakTitle, l10n.floatingMentalTipStreakBody),
-      (l10n.floatingMentalTipRewardsTitle, l10n.floatingMentalTipRewardsBody),
-      (l10n.floatingMentalTipMapTitle, l10n.floatingMentalTipMapBody),
-    ];
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+    final l10n = AppLocalizations.of(context)!;
+    final data = _data;
+    return DraggableScrollableSheet(
+      initialChildSize: 0.6,
+      minChildSize: 0.3,
+      maxChildSize: 0.9,
+      expand: false,
+      builder: (context, scrollController) {
+        return SafeArea(
+          child: ListView(
+            controller: scrollController,
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+            children: [
+              Row(
+                children: [
+                  const MentalCharacter(expression: MentalCharacterExpression.felizNeutro, size: 40),
+                  const SizedBox(width: 12),
+                  Expanded(child: Text(l10n.floatingMentalPanelTitle, style: Theme.of(context).textTheme.titleLarge)),
+                ],
+              ),
+              const SizedBox(height: 4),
+              Text(l10n.coachSubtitle, style: Theme.of(context).textTheme.bodySmall),
+              const SizedBox(height: 16),
+              if (data == null && !_failed)
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 40),
+                  child: Center(child: CircularProgressIndicator()),
+                )
+              else if (_failed)
+                Column(children: [
+                  Icon(Icons.cloud_off_rounded, size: 40, color: AppColors.muted),
+                  const SizedBox(height: 8),
+                  Text(l10n.coachLoadError, textAlign: TextAlign.center),
+                  TextButton(onPressed: _load, child: Text(l10n.feedbackReloadButton)),
+                ])
+              else ...[
+                _SummaryRow(summary: data!['summary'] as Map<String, dynamic>),
+                const SizedBox(height: 16),
+                for (final c in (data['cards'] as List).cast<Map<String, dynamic>>())
+                  _CoachCard(card: c, client: widget.client, onReturned: _load),
+              ],
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _SummaryRow extends StatelessWidget {
+  const _SummaryRow({required this.summary});
+
+  final Map<String, dynamic> summary;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final accuracy = ((summary['accuracy'] as num) * 100).round();
+    final rank = summary['weekly_rank'];
+    Widget chip(IconData icon, String label) => Chip(
+          avatar: Icon(icon, size: 16, color: AppColors.gold),
+          label: Text(label, style: const TextStyle(fontSize: 12)),
+        );
+    return Wrap(
+      key: const Key('coach_summary'),
+      spacing: 8,
+      runSpacing: 4,
+      children: [
+        chip(Icons.check_circle_outline_rounded, l10n.coachSummaryAnswers(summary['total_answers'] as int)),
+        if ((summary['total_answers'] as int) > 0) chip(Icons.percent_rounded, l10n.coachSummaryAccuracy(accuracy)),
+        chip(Icons.bolt_rounded, l10n.coachSummaryWeekXp(summary['weekly_xp'] as int)),
+        if (rank != null) chip(Icons.leaderboard_rounded, l10n.coachSummaryRank(rank as int)),
+      ],
+    );
+  }
+}
+
+class _CoachCard extends StatelessWidget {
+  const _CoachCard({required this.card, required this.client, required this.onReturned});
+
+  final Map<String, dynamic> card;
+  final ApiClient client;
+  final VoidCallback onReturned;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final territoryId = card['territory_id'] as String?;
+    final action = card['action'] as Map<String, dynamic>?;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Container(
+        key: Key('coach_card_${card['id']}'),
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: AppColors.bg2,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: AppColors.gold.withValues(alpha: 0.25)),
+        ),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                const MentalCharacter(expression: MentalCharacterExpression.felizNeutro, size: 40),
-                const SizedBox(width: 12),
-                Expanded(child: Text(l10n.floatingMentalPanelTitle, style: Theme.of(context).textTheme.titleLarge)),
+                Icon(coachIcon(card['id'] as String), color: AppColors.gold, size: 22),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(coachText(l10n, card['title'] as String, territoryId),
+                      style: Theme.of(context).textTheme.titleMedium),
+                ),
               ],
             ),
-            const SizedBox(height: 16),
-            for (final (title, body) in tips) ...[
-              Text(title, style: Theme.of(context).textTheme.titleSmall?.copyWith(color: AppColors.gold)),
-              const SizedBox(height: 2),
-              Text(body, style: Theme.of(context).textTheme.bodyMedium),
-              const SizedBox(height: 14),
-            ],
-            if (FloatingMentalController.instance.currentClient case final client?)
+            const SizedBox(height: 8),
+            Text(coachText(l10n, card['body'] as String, territoryId), style: Theme.of(context).textTheme.bodyMedium),
+            if (action != null) ...[
+              const SizedBox(height: 10),
               Align(
-                alignment: Alignment.centerLeft,
-                child: TextButton.icon(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                    rootNavigatorKey.currentState?.push(
-                      MaterialPageRoute(builder: (_) => CoachScreen(client: client)),
-                    );
+                alignment: Alignment.centerRight,
+                child: OutlinedButton(
+                  key: Key('coach_action_${card['id']}'),
+                  style: OutlinedButton.styleFrom(minimumSize: const Size(0, 36), padding: const EdgeInsets.symmetric(horizontal: 16)),
+                  onPressed: () async {
+                    // Sem pop antes: o destino abre POR CIMA do painel (que
+                    // é um modal bottom sheet), mesmo padrão já usado pela
+                    // extinta CoachScreen (tela cheia, nunca fechava
+                    // sozinha) — evita usar um context de widget prestes a
+                    // ser desmontado.
+                    await openCoachAction(context, client, action);
+                    onReturned();
                   },
-                  icon: const Icon(Icons.auto_awesome_rounded, size: 16),
-                  label: Text(l10n.floatingMentalSeeMoreTips),
+                  child: Text(l10n.coachGoButton),
                 ),
               ),
+            ],
           ],
         ),
       ),

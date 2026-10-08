@@ -22,7 +22,6 @@ import '../widgets/update_available_dialog.dart';
 import 'battles_screen.dart';
 import 'profile_screen.dart';
 import 'challenge_screen.dart';
-import 'coach_screen.dart';
 import 'mental_lingo_screen.dart';
 import 'feed_screen.dart';
 import 'feedback_screen.dart';
@@ -791,13 +790,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ?.copyWith(color: AppColors.muted),
                           ),
                           // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md
-                          // §6 (aprovado por Rhoney 08/10/2026): o selo "Dica
-                          // do My_Mental_AI" que ficava aqui saiu — o
-                          // personagem Mental flutuante (floating_mental_
-                          // overlay.dart) ocupa esse lugar agora, visível em
-                          // toda a Home, não só dentro deste card. CoachScreen
-                          // continua alcançável pelo painel de dicas do
-                          // personagem ("ver mais dicas").
+                          // §6 + atualização de 08/10/2026 (My_Mental_AI
+                          // removido, pedido de Rhoney: "o agente flutuante
+                          // assume seu lugar com todas suas características")
+                          // — o selo e a tela separada saíram; o personagem
+                          // Mental flutuante (floating_mental_overlay.dart)
+                          // ocupa o lugar e mostra o mesmo resumo/dicas
+                          // calculados pelo backend (GET /coach) direto no
+                          // painel dele, visível em toda a Home.
                           const SizedBox(height: 6),
                           // §3.3 — grid de 5 cards (Progresso/Ranking/Amigos/
                           // Movimento/Feed), todos com o mesmo tamanho.
@@ -1649,7 +1649,6 @@ class _WorldDetailScreen extends StatefulWidget {
 }
 
 class _WorldDetailScreenState extends State<_WorldDetailScreen> {
-  Map<String, dynamic>? _worldCoachCard;
   late final CelebrationController _celebration;
   late bool _alreadyCompletedWhenOpened;
 
@@ -1658,25 +1657,12 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
     super.initState();
     _celebration = CelebrationController();
     _alreadyCompletedWhenOpened = widget.completed;
-    _loadWorldCoach();
   }
 
   @override
   void dispose() {
     _celebration.dispose();
     super.dispose();
-  }
-
-  Future<void> _loadWorldCoach() async {
-    final worldId = widget.worldId;
-    if (worldId == null || worldId == 'idiomas') return;
-    try {
-      final data = await widget.client.getWorldCoach(worldId);
-      if (mounted)
-        setState(() => _worldCoachCard = data['card'] as Map<String, dynamic>?);
-    } on ApiException {
-      // o cartão simplesmente não aparece
-    }
   }
 
   // MUNDO_IDIOMAS_PROGRESSAO_POR_FASE_V1.md §7 — celebração de Mundo
@@ -1711,20 +1697,11 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
   Future<void> _handleReturned() async {
     await widget.refreshProgress();
     if (mounted) setState(() {});
-    _loadWorldCoach();
     await _maybeCelebrateWorldCompletion();
-  }
-
-  Widget _buildWorldCoachCard(AppLocalizations l10n) {
-    final card = _worldCoachCard;
-    if (card == null) return const SizedBox.shrink();
-    return MyMentalAiWorldCard(
-        card: card, client: widget.client, onReturned: _loadWorldCoach);
   }
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
     // CelebrationOverlay (§7) envolve a tela inteira — mesmo widget já
     // usado no resultado do Desafio pra conquista de nível/território/
     // badge (MICROINTERACTIONS.md §3, "mesma família visual").
@@ -1749,12 +1726,9 @@ class _WorldDetailScreenState extends State<_WorldDetailScreen> {
             padding: const EdgeInsets.all(16),
             children: [
               // MENTAL LINGO (aprovado 23/09/2026): só no Mundo dos Idiomas —
-              // é o Mundo que ganha agente de voz PRÓPRIO em vez do card
-              // genérico do My_Mental_AI (_buildWorldCoachCard já pula
-              // 'idiomas' sozinho, ver _loadWorldCoach).
+              // é o Mundo que ganha agente de voz PRÓPRIO.
               if (widget.worldId == 'idiomas')
                 MentalLingoBanner(client: widget.client),
-              _buildWorldCoachCard(l10n),
               ...widget.buildChildren(_handleReturned),
             ],
           ),
