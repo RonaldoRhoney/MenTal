@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../l10n/generated/app_localizations.dart';
@@ -23,23 +25,65 @@ class FloatingMentalOverlay extends StatefulWidget {
   State<FloatingMentalOverlay> createState() => _FloatingMentalOverlayState();
 }
 
-class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> {
+// Achado real testando no aparelho (08/10/2026, Rhoney: "toquei e não
+// abre o painel") — combinar `onTap`/`onLongPress` com `onPanUpdate` no
+// MESMO GestureDetector faz o reconhecedor de arrasto vencer a arena de
+// gestos com o mínimo tremor do dedo (inevitável em qualquer toque
+// humano), fazendo o toque nunca disparar. Detecção manual: acompanha
+// deslocamento total e duração do toque pra decidir, no `onPanEnd`, se
+// foi um toque (abre o painel), uma pressão longa sem mover (desliga)
+// ou um arrasto de verdade (já tratado ao vivo pelo onPanUpdate).
+const double _kTapSlop = 12;
+const Duration _kLongPressDuration = Duration(milliseconds: 500);
+
+class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> with SingleTickerProviderStateMixin {
   final _controller = FloatingMentalController.instance;
+  Offset _dragAccumulated = Offset.zero;
+  DateTime? _dragStartedAt;
+  DateTime? _lastTapAt;
+
+  // MENTAL_AGENTE_FLUTUANTE_V1.md, atualização de 08/10/2026 (pedido de
+  // Rhoney): a cada 5s sem toque/arrasto, um pulinho curto convida à
+  // interação — atualiza a regra original do documento ("no máximo um
+  // sinal discreto, uma vez por sessão"); nunca abre o painel sozinho,
+  // só chama atenção visualmente. Qualquer interação (onPanDown abaixo)
+  // reinicia a contagem de 5s.
+  late final AnimationController _bounceController =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 500));
+  late final Animation<double> _bounceOffset = TweenSequence<double>([
+    TweenSequenceItem(tween: Tween(begin: 0.0, end: -16.0).chain(CurveTween(curve: Curves.easeOut)), weight: 1),
+    TweenSequenceItem(tween: Tween(begin: -16.0, end: 0.0).chain(CurveTween(curve: Curves.bounceOut)), weight: 1),
+  ]).animate(_bounceController);
+  Timer? _idleTimer;
 
   @override
   void initState() {
     super.initState();
     _controller.addListener(_onChange);
+    _scheduleIdleTimer();
   }
 
   @override
   void dispose() {
     _controller.removeListener(_onChange);
+    _idleTimer?.cancel();
+    _bounceController.dispose();
     super.dispose();
   }
 
   void _onChange() {
     if (mounted) setState(() {});
+  }
+
+  void _scheduleIdleTimer() {
+    _idleTimer?.cancel();
+    _idleTimer = Timer.periodic(const Duration(seconds: 5), (_) => _playIdleBounce());
+  }
+
+  void _playIdleBounce() {
+    if (!mounted || !_controller.visible) return;
+    if (MediaQuery.of(context).disableAnimations) return;
+    _bounceController.forward(from: 0);
   }
 
   @override
@@ -66,39 +110,62 @@ class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> {
       left: clamped.dx,
       top: clamped.dy,
       child: GestureDetector(
+        onPanDown: (_) {
+          _dragAccumulated = Offset.zero;
+          _dragStartedAt = DateTime.now();
+          _scheduleIdleTimer();
+        },
         onPanUpdate: (details) {
+          _dragAccumulated += details.delta;
           final next = Offset(clamped.dx + details.delta.dx, clamped.dy + details.delta.dy);
           _controller.updatePosition(Offset(
             next.dx.clamp(0, mediaSize.width - kFloatingMentalSize),
             next.dy.clamp(0, mediaSize.height - kFloatingMentalSize),
           ));
         },
-        // Tap e long-press só fazem sentido ligado; desligado, só o
-        // duplo toque importa (sem `onTap` nesse estado — registrar tap
-        // E doubleTap no mesmo GestureDetector obriga o Flutter a
-        // esperar ~300ms pra desambiguar, atrasando TODO toque único).
-        onTap: enabled ? () => _openPanel(context, l10n) : null,
-        onLongPress: enabled ? () => _controller.setEnabled(false) : null,
-        onDoubleTap: enabled ? null : () => _controller.setEnabled(true),
+        onPanEnd: (_) {
+          final startedAt = _dragStartedAt;
+          final movedEnough = _dragAccumulated.distance > _kTapSlop;
+          _dragStartedAt = null;
+          if (movedEnough || startedAt == null) return; // arrasto de verdade, já aplicado acima.
+
+          final heldFor = DateTime.now().difference(startedAt);
+          if (!enabled) {
+            // Desligado: só duplo toque reativa — dois toques rápidos
+            // (mesmo critério de "não moveu") dentro de 350ms.
+            final now = DateTime.now();
+            final last = _lastTapAt;
+            _lastTapAt = now;
+            if (last != null && now.difference(last) < const Duration(milliseconds: 350)) {
+              _lastTapAt = null;
+              _controller.setEnabled(true);
+            }
+            return;
+          }
+          if (heldFor >= _kLongPressDuration) {
+            _controller.setEnabled(false);
+          } else {
+            _openPanel(context, l10n);
+          }
+        },
         child: Semantics(
           button: true,
           label: enabled ? l10n.floatingMentalSemanticsEnabled : l10n.floatingMentalSemanticsDisabled,
-          child: Opacity(
-            opacity: enabled ? 1.0 : 0.4,
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.bg2,
-                boxShadow: [
-                  BoxShadow(color: Colors.black.withValues(alpha: 0.2), blurRadius: 8, offset: const Offset(0, 3)),
-                ],
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(6),
-                child: MentalCharacter(
-                  expression: MentalCharacterExpression.apontando,
-                  size: kFloatingMentalSize - 12,
-                ),
+          // Ação semântica própria (leitor de tela ativa por gesto
+          // diferente do toque físico) — independente da detecção
+          // manual de toque/arrasto acima, que é só pro dedo na tela.
+          onTap: enabled ? () => _openPanel(context, l10n) : () => _controller.setEnabled(true),
+          child: AnimatedBuilder(
+            animation: _bounceOffset,
+            builder: (context, child) => Transform.translate(
+              offset: Offset(0, _bounceOffset.value),
+              child: child,
+            ),
+            child: Opacity(
+              opacity: enabled ? 1.0 : 0.4,
+              child: const MentalCharacter(
+                expression: MentalCharacterExpression.apontando,
+                size: kFloatingMentalSize,
               ),
             ),
           ),
