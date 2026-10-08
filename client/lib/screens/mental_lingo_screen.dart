@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../api/api_client.dart';
 import '../idioma_voices.dart';
+import '../services/floating_mental_controller.dart';
 import '../services/lingo_translator.dart';
 import '../services/mental_lingo_service.dart';
 import '../services/tts_service.dart';
@@ -344,6 +345,10 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
   void initState() {
     super.initState();
     _loadCaptureModePreference();
+    // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §2/§7 — Mundo dos
+    // Idiomas nunca muda (decisão original do documento), o personagem
+    // flutuante some enquanto o LINGO está aberto.
+    FloatingMentalController.instance.pushHidden();
   }
 
   static const _kCaptureModePrefKey = 'mental_lingo_capture_mode';
@@ -734,6 +739,7 @@ class _MentalLingoScreenState extends State<MentalLingoScreen> {
 
   @override
   void dispose() {
+    FloatingMentalController.instance.popHidden();
     _safetyTimer?.cancel();
     _finalizeTimeoutTimer?.cancel();
     _stillListeningTimer?.cancel();

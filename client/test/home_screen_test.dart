@@ -326,11 +326,11 @@ void main() {
   });
 
   testWidgets(
-      'My_Mental_AI: só o nome aparece no topo da Home, clicável, sem card de dica',
+      'MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §6: o selo My_Mental_AI saiu da Home (personagem flutuante ocupa o lugar)',
       (tester) async {
     SharedPreferences.setMockInitialValues({});
     await pumpTall(tester, homeApp(_FakeApiClient()));
-    expect(find.byKey(const Key('home_coach_name')), findsOneWidget);
+    expect(find.byKey(const Key('home_coach_name')), findsNothing);
     expect(find.byKey(const Key('home_coach_card')), findsNothing);
   });
 

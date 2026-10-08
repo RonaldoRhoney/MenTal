@@ -2672,4 +2672,55 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get partialResultExplanation =>
       'Sua conta preserva esse progresso — você não perde nada.';
+
+  @override
+  String get floatingMentalSemanticsEnabled => 'Mental, toque para dicas';
+
+  @override
+  String get floatingMentalSemanticsDisabled =>
+      'Mental desativado, toque duas vezes para ativar';
+
+  @override
+  String get floatingMentalPanelTitle => 'Dicas do Mental';
+
+  @override
+  String get floatingMentalTipStartTitle => 'Por onde começar';
+
+  @override
+  String get floatingMentalTipStartBody =>
+      'Escolha qualquer Mundo na Home e comece pelo Desafio Básico — você pode alternar entre Mundos a qualquer momento.';
+
+  @override
+  String get floatingMentalTipModesTitle => 'Como funciona cada modo';
+
+  @override
+  String get floatingMentalTipModesBody =>
+      'Desafio é no seu ritmo. Relâmpago tem cronômetro e desbloqueia depois do Desafio. Batalha é contra outro jogador, em tempo real.';
+
+  @override
+  String get floatingMentalTipStreakTitle => 'Sequência diária';
+
+  @override
+  String get floatingMentalTipStreakBody =>
+      'Jogue todo dia pra manter sua sequência viva — ela aparece no seu perfil e no ranking.';
+
+  @override
+  String get floatingMentalTipRewardsTitle => 'Recompensas e MentalCoins';
+
+  @override
+  String get floatingMentalTipRewardsBody =>
+      'Você ganha XP e MentalCoins respondendo certo. MentalCoins trocam por itens e vantagens dentro do app.';
+
+  @override
+  String get floatingMentalTipMapTitle => 'Mapa de Trajetória';
+
+  @override
+  String get floatingMentalTipMapBody =>
+      'Acompanhe sua jornada pelos Mundos no mapa Universo/Galáxia, dentro do menu Progresso.';
+
+  @override
+  String get floatingMentalSettingsToggleTitle => 'Personagem Mental flutuante';
+
+  @override
+  String get floatingMentalSeeMoreTips => 'Ver mais dicas com o My_Mental_AI';
 }

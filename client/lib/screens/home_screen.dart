@@ -13,7 +13,6 @@ import '../services/movement_service.dart';
 import '../services/review_prompt_service.dart';
 import '../services/world_celebration_service.dart';
 import '../territories.dart';
-import '../theme/agent_neon.dart';
 import '../theme/app_theme.dart';
 import '../world_icons.dart' as world_icons;
 import '../widgets/celebration_overlay.dart';
@@ -791,61 +790,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 .bodySmall
                                 ?.copyWith(color: AppColors.muted),
                           ),
-                          const SizedBox(height: 10),
-                          // Pedido de Rhoney (23/09/2026, revisado no mesmo
-                          // dia: "deixe-o profissional, ajuste melhor o
-                          // design"): a dica do My_Mental_AI saiu da Home
-                          // como card (poluía a tela) — só o NOME fica no
-                          // topo, clicável, abrindo a CoachScreen (dicas
-                          // gerais). Selo compacto (não um botão genérico
-                          // nem texto solto), mesma linguagem visual dos
-                          // cartões do app (borda de acento sobre bg2), pra
-                          // ler como identidade do agente, não como aviso.
-                          // Dica focada por Mundo mora dentro de cada Mundo
-                          // (_WorldDetailScreen).
-                          Align(
-                            alignment: Alignment.center,
-                            child: Material(
-                              color: Colors.transparent,
-                              child: InkWell(
-                                key: const Key('home_coach_name'),
-                                borderRadius: BorderRadius.circular(24),
-                                onTap: () => Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (_) => CoachScreen(
-                                            client: widget.client))),
-                                child: Container(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(6, 6, 14, 6),
-                                  decoration: agentNeonDecoration(radius: 24),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(4),
-                                        decoration: BoxDecoration(
-                                          color: kAgentNavy,
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                              color: kAgentCyan, width: 1.5),
-                                        ),
-                                        child: const Icon(
-                                            Icons.auto_awesome_rounded,
-                                            size: 12,
-                                            color: Colors.white),
-                                      ),
-                                      const SizedBox(width: 8),
-                                      const AgentNameText(fontSize: 12.5),
-                                      const SizedBox(width: 2),
-                                      const Icon(Icons.chevron_right_rounded,
-                                          size: 16, color: kAgentCyan),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 16),
+                          // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md
+                          // §6 (aprovado por Rhoney 08/10/2026): o selo "Dica
+                          // do My_Mental_AI" que ficava aqui saiu — o
+                          // personagem Mental flutuante (floating_mental_
+                          // overlay.dart) ocupa esse lugar agora, visível em
+                          // toda a Home, não só dentro deste card. CoachScreen
+                          // continua alcançável pelo painel de dicas do
+                          // personagem ("ver mais dicas").
+                          const SizedBox(height: 6),
                           // §3.3 — grid de 5 cards (Progresso/Ranking/Amigos/
                           // Movimento/Feed), todos com o mesmo tamanho.
                           // REORGANIZACAO_MENUS_HOME_V1.md (06/09/2026): o 5º

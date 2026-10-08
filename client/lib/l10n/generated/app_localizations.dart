@@ -4581,6 +4581,96 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Sua conta preserva esse progresso — você não perde nada.'**
   String get partialResultExplanation;
+
+  /// Accessibility label for the floating character when enabled
+  ///
+  /// In pt, this message translates to:
+  /// **'Mental, toque para dicas'**
+  String get floatingMentalSemanticsEnabled;
+
+  /// Accessibility label for the floating character when disabled
+  ///
+  /// In pt, this message translates to:
+  /// **'Mental desativado, toque duas vezes para ativar'**
+  String get floatingMentalSemanticsDisabled;
+
+  /// Title of the floating character's tips panel
+  ///
+  /// In pt, this message translates to:
+  /// **'Dicas do Mental'**
+  String get floatingMentalPanelTitle;
+
+  /// Tips panel section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Por onde começar'**
+  String get floatingMentalTipStartTitle;
+
+  /// Tips panel section body
+  ///
+  /// In pt, this message translates to:
+  /// **'Escolha qualquer Mundo na Home e comece pelo Desafio Básico — você pode alternar entre Mundos a qualquer momento.'**
+  String get floatingMentalTipStartBody;
+
+  /// Tips panel section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Como funciona cada modo'**
+  String get floatingMentalTipModesTitle;
+
+  /// Tips panel section body
+  ///
+  /// In pt, this message translates to:
+  /// **'Desafio é no seu ritmo. Relâmpago tem cronômetro e desbloqueia depois do Desafio. Batalha é contra outro jogador, em tempo real.'**
+  String get floatingMentalTipModesBody;
+
+  /// Tips panel section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Sequência diária'**
+  String get floatingMentalTipStreakTitle;
+
+  /// Tips panel section body
+  ///
+  /// In pt, this message translates to:
+  /// **'Jogue todo dia pra manter sua sequência viva — ela aparece no seu perfil e no ranking.'**
+  String get floatingMentalTipStreakBody;
+
+  /// Tips panel section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Recompensas e MentalCoins'**
+  String get floatingMentalTipRewardsTitle;
+
+  /// Tips panel section body
+  ///
+  /// In pt, this message translates to:
+  /// **'Você ganha XP e MentalCoins respondendo certo. MentalCoins trocam por itens e vantagens dentro do app.'**
+  String get floatingMentalTipRewardsBody;
+
+  /// Tips panel section title
+  ///
+  /// In pt, this message translates to:
+  /// **'Mapa de Trajetória'**
+  String get floatingMentalTipMapTitle;
+
+  /// Tips panel section body
+  ///
+  /// In pt, this message translates to:
+  /// **'Acompanhe sua jornada pelos Mundos no mapa Universo/Galáxia, dentro do menu Progresso.'**
+  String get floatingMentalTipMapBody;
+
+  /// Settings screen toggle label for the floating character
+  ///
+  /// In pt, this message translates to:
+  /// **'Personagem Mental flutuante'**
+  String get floatingMentalSettingsToggleTitle;
+
+  /// Link inside the floating character's tips panel to the full CoachScreen
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver mais dicas com o My_Mental_AI'**
+  String get floatingMentalSeeMoreTips;
 }
 
 class _AppLocalizationsDelegate

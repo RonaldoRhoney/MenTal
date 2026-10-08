@@ -10,6 +10,7 @@ import '../color_challenge.dart';
 import '../idioma_voices.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
+import '../services/floating_mental_controller.dart';
 import '../services/tts_service.dart';
 import '../theme/app_theme.dart';
 import '../visual_options.dart';
@@ -237,10 +238,18 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     _coinsRise = CoinsRiseController();
     _audioPlayer = AudioPlayer();
     _loadNextChallenge();
+    // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §2/§7 — v1 esconde
+    // o personagem flutuante pela tela inteira (não só durante a pergunta),
+    // simplificação deliberada: cobre tanto "nunca dar dica da resposta"
+    // quanto "nunca aparecer dentro do Mundo dos Idiomas" (todo território
+    // passa por aqui) com uma única chamada, sem precisar distinguir fase
+    // ou território.
+    FloatingMentalController.instance.pushHidden();
   }
 
   @override
   void dispose() {
+    FloatingMentalController.instance.popHidden();
     _countdownTimer?.cancel();
     _remainingMsTick.dispose();
     _celebration.dispose();

@@ -8,6 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../main.dart' show kPrivacyPolicyUrl;
 import '../services/feedback_service.dart';
+import '../services/floating_mental_controller.dart';
 import '../services/share_service.dart';
 import '../services/theme_mode_service.dart';
 import '../theme/app_theme.dart';
@@ -76,10 +77,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void initState() {
     super.initState();
     _load();
+    // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §3/§7 (dúvida #6
+    // do documento original) — some enquanto Ajustes está aberto.
+    FloatingMentalController.instance.pushHidden();
   }
 
   @override
   void dispose() {
+    FloatingMentalController.instance.popHidden();
     _coinsRise.dispose();
     super.dispose();
   }
@@ -308,6 +313,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                           .setVolume(value);
                                     }
                                   : null,
+                            ),
+                            // MENTAL_AGENTE_FLUTUANTE_V1.md — dúvida #1
+                            // (como desligar a primeira vez): toggle em
+                            // Ajustes, mesmo padrão dos outros acima;
+                            // pressionar-e-segurar o personagem é o
+                            // segundo caminho (floating_mental_overlay.dart).
+                            ListenableBuilder(
+                              listenable: FloatingMentalController.instance,
+                              builder: (context, _) {
+                                return _CompactSwitchRow(
+                                  icon: Icons.emoji_people_rounded,
+                                  title: l10n.floatingMentalSettingsToggleTitle,
+                                  value: FloatingMentalController.instance.enabled,
+                                  onChanged: (value) =>
+                                      FloatingMentalController.instance.setEnabled(value),
+                                );
+                              },
                             ),
                           ],
                         ),

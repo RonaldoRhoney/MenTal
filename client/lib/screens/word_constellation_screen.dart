@@ -7,6 +7,7 @@ import '../api/api_client.dart';
 import '../idioma_voices.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/feedback_service.dart';
+import '../services/floating_mental_controller.dart';
 import '../services/tts_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/pulse_in.dart';
@@ -68,6 +69,16 @@ class _WordConstellationScreenState extends State<WordConstellationScreen> {
   void initState() {
     super.initState();
     _load();
+    // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §2/§7 — Mundo dos
+    // Idiomas nunca muda, mesma regra de challenge_screen.dart/
+    // mental_lingo_screen.dart.
+    FloatingMentalController.instance.pushHidden();
+  }
+
+  @override
+  void dispose() {
+    FloatingMentalController.instance.popHidden();
+    super.dispose();
   }
 
   Future<void> _load() async {

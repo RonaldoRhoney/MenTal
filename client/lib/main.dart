@@ -18,11 +18,13 @@ import 'screens/movement_screen.dart';
 import 'screens/onboarding_tutorial_screen.dart';
 import 'screens/opening_experience_screen.dart';
 import 'screens/reset_password_screen.dart';
+import 'services/floating_mental_controller.dart';
 import 'services/guest_challenge_service.dart';
 import 'services/onboarding_tutorial_service.dart';
 import 'services/push_service.dart';
 import 'services/theme_mode_service.dart';
 import 'theme/app_theme.dart';
+import 'widgets/floating_mental_overlay.dart';
 import 'widgets/game_background.dart';
 
 /// Produção (Render) por padrão — qualquer build normal (incluindo os
@@ -118,7 +120,18 @@ class MentalApp extends StatelessWidget {
           // repetir o gradiente tela por tela. Cada Scaffold continua com
           // backgroundColor transparente (AppTheme.themeData) pra deixar o
           // gradiente aparecer por trás.
-          builder: (context, child) => GameBackground(child: child ?? const SizedBox.shrink()),
+          // MENTAL_AGENTE_FLUTUANTE_V1.md — o personagem flutuante entra
+          // DENTRO do Stack do GameBackground (não por cima dele), pra
+          // continuar por trás de qualquer modal/diálogo que o Flutter
+          // empilhe acima do Navigator (eles não passam por este builder).
+          builder: (context, child) => GameBackground(
+            child: Stack(
+              children: [
+                child ?? const SizedBox.shrink(),
+                const FloatingMentalOverlay(),
+              ],
+            ),
+          ),
           // Não-const de propósito: precisa ser uma instância NOVA a
           // cada rebuild do MaterialApp (ListenableBuilder acima) pro
           // toggle de tom realmente descer e reconstruir a árvore
@@ -202,6 +215,7 @@ class _AppEntryPointState extends State<AppEntryPoint> {
     GuestChallengeService.isDismissed().then((dismissed) {
       if (mounted) setState(() => _guestFlowDismissed = dismissed);
     });
+    FloatingMentalController.instance.load();
     // NOTIFICACAO_ICONE_M_MENTAL.md §4 — sinal enviado por
     // MovementTaskHandler.onNotificationPressed() (engine isolada do
     // foreground service) ao tocar na notificação persistente de
@@ -290,6 +304,10 @@ class _AppEntryPointState extends State<AppEntryPoint> {
       _ageCheckError = null;
       _onboardingCompleted = null;
     });
+    // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §6 — painel do
+    // personagem flutuante usa isto pra abrir CoachScreen ("ver mais
+    // dicas"); null no logout, mesma vida útil do ApiClient da sessão.
+    FloatingMentalController.instance.currentClient = _client;
     if (accessToken != null) {
       // Fire-and-forget: registro de push nunca deve atrasar a navegação
       // pro Age Gate/Home (PushService já é resiliente a qualquer falha).
@@ -514,6 +532,14 @@ class _AppEntryPointState extends State<AppEntryPoint> {
           );
         }
 
+        // MENTAL_AGENTE_FLUTUANTE_DIAGNOSTICO_TECNICO_V1.md §3 — vira
+        // true uma única vez por sessão do app, liberando o personagem
+        // flutuante (addPostFrameCallback: nunca chamar notifyListeners,
+        // que aciona o setState de outro widget, no meio do build desta
+        // árvore).
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          FloatingMentalController.instance.setHomeReached();
+        });
         return HomeScreen(client: client);
       },
     );

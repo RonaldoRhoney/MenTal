@@ -3603,5 +3603,65 @@
   "partialResultExplanation": "Sua conta preserva esse progresso — você não perde nada.",
   "@partialResultExplanation": {
     "description": "Reassurance text on the partial result screen"
+  },
+  "floatingMentalSemanticsEnabled": "Mental, toque para dicas",
+  "@floatingMentalSemanticsEnabled": {
+    "description": "Accessibility label for the floating character when enabled"
+  },
+  "floatingMentalSemanticsDisabled": "Mental desativado, toque duas vezes para ativar",
+  "@floatingMentalSemanticsDisabled": {
+    "description": "Accessibility label for the floating character when disabled"
+  },
+  "floatingMentalPanelTitle": "Dicas do Mental",
+  "@floatingMentalPanelTitle": {
+    "description": "Title of the floating character's tips panel"
+  },
+  "floatingMentalTipStartTitle": "Por onde começar",
+  "@floatingMentalTipStartTitle": {
+    "description": "Tips panel section title"
+  },
+  "floatingMentalTipStartBody": "Escolha qualquer Mundo na Home e comece pelo Desafio Básico — você pode alternar entre Mundos a qualquer momento.",
+  "@floatingMentalTipStartBody": {
+    "description": "Tips panel section body"
+  },
+  "floatingMentalTipModesTitle": "Como funciona cada modo",
+  "@floatingMentalTipModesTitle": {
+    "description": "Tips panel section title"
+  },
+  "floatingMentalTipModesBody": "Desafio é no seu ritmo. Relâmpago tem cronômetro e desbloqueia depois do Desafio. Batalha é contra outro jogador, em tempo real.",
+  "@floatingMentalTipModesBody": {
+    "description": "Tips panel section body"
+  },
+  "floatingMentalTipStreakTitle": "Sequência diária",
+  "@floatingMentalTipStreakTitle": {
+    "description": "Tips panel section title"
+  },
+  "floatingMentalTipStreakBody": "Jogue todo dia pra manter sua sequência viva — ela aparece no seu perfil e no ranking.",
+  "@floatingMentalTipStreakBody": {
+    "description": "Tips panel section body"
+  },
+  "floatingMentalTipRewardsTitle": "Recompensas e MentalCoins",
+  "@floatingMentalTipRewardsTitle": {
+    "description": "Tips panel section title"
+  },
+  "floatingMentalTipRewardsBody": "Você ganha XP e MentalCoins respondendo certo. MentalCoins trocam por itens e vantagens dentro do app.",
+  "@floatingMentalTipRewardsBody": {
+    "description": "Tips panel section body"
+  },
+  "floatingMentalTipMapTitle": "Mapa de Trajetória",
+  "@floatingMentalTipMapTitle": {
+    "description": "Tips panel section title"
+  },
+  "floatingMentalTipMapBody": "Acompanhe sua jornada pelos Mundos no mapa Universo/Galáxia, dentro do menu Progresso.",
+  "@floatingMentalTipMapBody": {
+    "description": "Tips panel section body"
+  },
+  "floatingMentalSettingsToggleTitle": "Personagem Mental flutuante",
+  "@floatingMentalSettingsToggleTitle": {
+    "description": "Settings screen toggle label for the floating character"
+  },
+  "floatingMentalSeeMoreTips": "Ver mais dicas com o My_Mental_AI",
+  "@floatingMentalSeeMoreTips": {
+    "description": "Link inside the floating character's tips panel to the full CoachScreen"
   }
 }
