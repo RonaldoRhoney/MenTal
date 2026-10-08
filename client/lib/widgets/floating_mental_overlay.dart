@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../api/api_client.dart';
 import '../coach_helpers.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../main.dart' show rootNavigatorKey;
 import '../services/floating_mental_controller.dart';
 import '../theme/app_theme.dart';
 import 'mental_character.dart';
@@ -187,8 +188,17 @@ class _FloatingMentalOverlayState extends State<FloatingMentalOverlay> with Sing
   void _openPanel(BuildContext context, AppLocalizations l10n) {
     final client = FloatingMentalController.instance.currentClient;
     if (client == null) return; // painel exige conta (sem fluxo guest aqui — ver §3 do diagnóstico).
+    // Achado real testando no aparelho (08/10/2026, 4ª rodada: o toque
+    // era detectado e _openPanel rodava sem erro, mas nenhum painel
+    // aparecia) — este widget é montado no builder do MaterialApp, como
+    // IRMÃO do Navigator (não descendente dele), então o BuildContext
+    // local não enxerga o Navigator de verdade. rootNavigatorKey (já
+    // usado por _navigateToMovement em main.dart) aponta pro Navigator
+    // real — showModalBottomSheet com ele funciona de verdade.
+    final navigatorContext = rootNavigatorKey.currentContext;
+    if (navigatorContext == null) return;
     showModalBottomSheet(
-      context: context,
+      context: navigatorContext,
       showDragHandle: true,
       isScrollControlled: true,
       builder: (context) => _FloatingMentalPanel(client: client),

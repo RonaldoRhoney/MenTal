@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:mental/api/api_client.dart';
 import 'package:mental/l10n/generated/app_localizations.dart';
+import 'package:mental/main.dart' show rootNavigatorKey;
 import 'package:mental/services/floating_mental_controller.dart';
 import 'package:mental/widgets/floating_mental_overlay.dart';
 
@@ -27,6 +28,12 @@ Widget _app(ApiClient client) {
   FloatingMentalController.instance.currentClient = client;
   FloatingMentalController.instance.setHomeReached();
   return MaterialApp(
+    // showModalBottomSheet usa rootNavigatorKey.currentContext (achado
+    // real testando no aparelho, 08/10/2026: o painel sem isso pedia
+    // showModalBottomSheet com um context que não está dentro da árvore
+    // do Navigator, já que FloatingMentalOverlay é montado como IRMÃO
+    // do Navigator no builder do MaterialApp, não descendente dele).
+    navigatorKey: rootNavigatorKey,
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     home: const Stack(children: [SizedBox.expand(), FloatingMentalOverlay()]),
