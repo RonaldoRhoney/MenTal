@@ -35,6 +35,14 @@ class ParPerfeitoScreen extends StatefulWidget {
   State<ParPerfeitoScreen> createState() => _ParPerfeitoScreenState();
 }
 
+// Paleta da identidade MENTAL (MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §9:
+// "dourado/teal/violeta, tema de constelação") — cada par formado recebe
+// uma cor própria do ciclo, e os DOIS cards do par compartilham a MESMA
+// cor (pedido de Rhoney, 09/10/2026: "quando o usuário tocar nos dois
+// cards correspondentes às resposta corretas os dois cards ficam com a
+// mesma cor"). Cicla quando a rodada tem mais pares que cores.
+List<Color> get _kMatchPalette => [AppColors.gold, AppColors.teal, AppColors.purple];
+
 class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
   List<Map<String, dynamic>>? _items;
   List<Map<String, dynamic>> _leftCards = [];
@@ -43,6 +51,7 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
   final Set<String> _matchedIds = {};
   final Set<String> _firstTryCorrectIds = {};
   final Set<String> _wrongAttemptIds = {};
+  final Map<String, Color> _matchedColor = {};
   bool _loading = true;
   String? _error;
   bool _roundFinished = false;
@@ -103,6 +112,14 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
         _rightCards = right;
         _loading = false;
       });
+      // Pedido de Rhoney (09/10/2026): "ao combinar as respostas,
+      // imediatamente o áudio deve ser pronunciado" — pré-sintetiza a
+      // pronúncia de TODOS os pares da rodada assim que ela carrega, em
+      // segundo plano, pra tocar sem nenhum atraso de rede no momento
+      // do acerto (TtsService.preload já existe pra isso).
+      for (final item in items) {
+        TtsService.instance.preload(item['word_en'] as String, voice: voiceForParPerfeitoAccent(ParPerfeitoAccent.us));
+      }
     } on ApiException catch (e) {
       if (!mounted) return;
       setState(() {
@@ -124,14 +141,17 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
 
     if (selected == id) {
       if (!_wrongAttemptIds.contains(id)) _firstTryCorrectIds.add(id);
+      final palette = _kMatchPalette;
+      final color = palette[_matchedIds.length % palette.length];
       setState(() {
         _matchedIds.add(id);
+        _matchedColor[id] = color;
         _selectedLeftId = null;
       });
       FeedbackService.instance.play(FeedbackSound.correct);
       final wordEn = _items!.firstWhere((i) => i['id'] == id)['word_en'] as String;
       TtsService.instance.speak(wordEn, voice: voiceForParPerfeitoAccent(ParPerfeitoAccent.us));
-      WidgetsBinding.instance.addPostFrameCallback((_) => _drawLineFor(id));
+      WidgetsBinding.instance.addPostFrameCallback((_) => _drawLineFor(id, color));
       if (_matchedIds.length == _items!.length) {
         Future.delayed(const Duration(milliseconds: 700), _finishRound);
       }
@@ -145,7 +165,7 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
     }
   }
 
-  void _drawLineFor(String id) {
+  void _drawLineFor(String id, Color color) {
     final stackBox = _stackKey.currentContext?.findRenderObject() as RenderBox?;
     final leftBox = _leftPositionKeys[id]?.currentContext?.findRenderObject() as RenderBox?;
     final rightBox = _rightPositionKeys[id]?.currentContext?.findRenderObject() as RenderBox?;
@@ -153,7 +173,7 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
     final start = stackBox.globalToLocal(leftBox.localToGlobal(leftBox.size.centerRight(Offset.zero)));
     final end = stackBox.globalToLocal(rightBox.localToGlobal(rightBox.size.centerLeft(Offset.zero)));
     if (!mounted) return;
-    setState(() => _lines.add(_LineSegment(start, end)));
+    setState(() => _lines.add(_LineSegment(start, end, color)));
   }
 
   Future<void> _finishRound() async {
@@ -200,11 +220,14 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
     }
     if (_roundFinished) return _buildRoundSummary(context, l10n);
 
-    return Stack(
-      key: _stackKey,
+    final total = _items!.length;
+    final done = _matchedIds.length;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -213,23 +236,56 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColors.muted),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 16),
-              Expanded(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(child: _buildColumn(_leftCards, isLeft: true)),
-                    const SizedBox(width: 14),
-                    Expanded(child: _buildColumn(_rightCards, isLeft: false)),
-                  ],
-                ),
+              const SizedBox(height: 14),
+              Row(
+                children: [
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: TweenAnimationBuilder<double>(
+                        duration: const Duration(milliseconds: 350),
+                        curve: Curves.easeOut,
+                        tween: Tween(begin: 0, end: total == 0 ? 0 : done / total),
+                        builder: (context, value, _) => LinearProgressIndicator(
+                          value: value,
+                          minHeight: 8,
+                          backgroundColor: AppColors.bg2,
+                          color: AppColors.gold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Text(
+                    '$done/$total',
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(color: AppColors.gold, fontWeight: FontWeight.w700),
+                  ),
+                ],
               ),
             ],
           ),
         ),
-        Positioned.fill(
-          child: IgnorePointer(
-            child: CustomPaint(painter: _LinesPainter(_lines)),
+        Expanded(
+          child: Stack(
+            key: _stackKey,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(child: _buildColumn(_leftCards, isLeft: true)),
+                    const SizedBox(width: 16),
+                    Expanded(child: _buildColumn(_rightCards, isLeft: false)),
+                  ],
+                ),
+              ),
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: CustomPaint(painter: _LinesPainter(_lines)),
+                ),
+              ),
+            ],
           ),
         ),
       ],
@@ -248,36 +304,73 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
         final selected = isLeft && _selectedLeftId == id;
         final shakeKey = isLeft ? _leftShakeKeys[id] : _rightShakeKeys[id];
         final positionKey = isLeft ? _leftPositionKeys[id] : _rightPositionKeys[id];
-        return _ShakeCard(
-          key: shakeKey,
-          child: Opacity(
-            opacity: matched ? 0.35 : 1.0,
-            child: Material(
-              key: positionKey,
-              color: selected ? AppColors.gold.withValues(alpha: 0.18) : AppColors.bg2,
-              borderRadius: BorderRadius.circular(18),
-              child: InkWell(
+        final matchColor = _matchedColor[id];
+
+        return _StaggeredEntrance(
+          index: index,
+          child: _ShakeCard(
+            key: shakeKey,
+            child: AnimatedScale(
+              scale: matched ? 1.04 : 1.0,
+              duration: const Duration(milliseconds: 220),
+              curve: Curves.easeOutBack,
+              child: Material(
+                key: positionKey,
+                color: Colors.transparent,
                 borderRadius: BorderRadius.circular(18),
-                onTap: matched ? null : () => isLeft ? _onTapLeft(id) : _onTapRight(id),
-                child: Container(
-                  constraints: const BoxConstraints(minHeight: 64),
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(18),
-                    border: Border.all(
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(18),
+                  onTap: matched ? null : () => isLeft ? _onTapLeft(id) : _onTapRight(id),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 220),
+                    curve: Curves.easeOut,
+                    constraints: const BoxConstraints(minHeight: 66),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
                       color: matched
-                          ? AppColors.teal
+                          ? matchColor?.withValues(alpha: 0.16)
                           : selected
-                              ? AppColors.gold
-                              : AppColors.muted.withValues(alpha: 0.3),
-                      width: selected || matched ? 2 : 1,
+                              ? AppColors.gold.withValues(alpha: 0.16)
+                              : AppColors.bg2,
+                      border: Border.all(
+                        color: matched
+                            ? matchColor ?? AppColors.teal
+                            : selected
+                                ? AppColors.gold
+                                : AppColors.muted.withValues(alpha: 0.28),
+                        width: selected || matched ? 2 : 1,
+                      ),
+                      boxShadow: [
+                        if (matched)
+                          BoxShadow(color: (matchColor ?? AppColors.teal).withValues(alpha: 0.35), blurRadius: 14, spreadRadius: 1)
+                        else if (selected)
+                          BoxShadow(color: AppColors.gold.withValues(alpha: 0.25), blurRadius: 10)
+                        else
+                          BoxShadow(color: Colors.black.withValues(alpha: 0.18), blurRadius: 4, offset: const Offset(0, 2)),
+                      ],
                     ),
-                  ),
-                  child: Text(
-                    card['text'] as String,
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            card['text'] as String,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  fontWeight: matched || selected ? FontWeight.w600 : FontWeight.normal,
+                                  color: matched ? matchColor : null,
+                                ),
+                          ),
+                        ),
+                        if (matched) ...[
+                          const SizedBox(width: 6),
+                          Icon(Icons.check_circle_rounded, size: 18, color: matchColor),
+                        ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -324,9 +417,10 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
 
 
 class _LineSegment {
-  const _LineSegment(this.start, this.end);
+  const _LineSegment(this.start, this.end, this.color);
   final Offset start;
   final Offset end;
+  final Color color;
 }
 
 class _LinesPainter extends CustomPainter {
@@ -337,14 +431,14 @@ class _LinesPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     for (final line in lines) {
       final glowPaint = Paint()
-        ..color = AppColors.teal.withValues(alpha: 0.5)
-        ..strokeWidth = 6
+        ..color = line.color.withValues(alpha: 0.45)
+        ..strokeWidth = 7
         ..strokeCap = StrokeCap.round
-        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6);
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 7);
       canvas.drawLine(line.start, line.end, glowPaint);
       final corePaint = Paint()
-        ..color = AppColors.gold
-        ..strokeWidth = 2
+        ..color = line.color
+        ..strokeWidth = 2.5
         ..strokeCap = StrokeCap.round;
       canvas.drawLine(line.start, line.end, corePaint);
     }
@@ -393,6 +487,57 @@ class _ShakeCardState extends State<_ShakeCard> with SingleTickerProviderStateMi
       animation: _offset,
       builder: (context, child) => Transform.translate(offset: Offset(_offset.value, 0), child: child),
       child: widget.child,
+    );
+  }
+}
+
+/// Entrada escalonada dos cards ao carregar a rodada — pedido de Rhoney
+/// (09/10/2026, "deixe tudo mais dinâmico, melhore o UI, estilo
+/// profissional"): fade + leve subida, um card de cada vez, em vez de
+/// toda a tela aparecer de uma só vez. Respeita "reduzir movimento".
+class _StaggeredEntrance extends StatefulWidget {
+  const _StaggeredEntrance({required this.index, required this.child});
+
+  final int index;
+  final Widget child;
+
+  @override
+  State<_StaggeredEntrance> createState() => _StaggeredEntranceState();
+}
+
+class _StaggeredEntranceState extends State<_StaggeredEntrance> with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
+  late final Animation<double> _opacity = CurvedAnimation(parent: _controller, curve: Curves.easeOut);
+  late final Animation<Offset> _slide =
+      Tween(begin: const Offset(0, 0.15), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic));
+  bool _started = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_started) return;
+    _started = true;
+    if (MediaQuery.of(context).disableAnimations) {
+      _controller.value = 1.0;
+      return;
+    }
+    Future.delayed(Duration(milliseconds: 40 * widget.index), () {
+      if (mounted) _controller.forward();
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (MediaQuery.of(context).disableAnimations) return widget.child;
+    return FadeTransition(
+      opacity: _opacity,
+      child: SlideTransition(position: _slide, child: widget.child),
     );
   }
 }

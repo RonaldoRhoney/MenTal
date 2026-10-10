@@ -444,6 +444,18 @@ String territoryLabel(AppLocalizations l10n, String territoryId) {
       return l10n.territoryFrancesIntermediario;
     case 'frances_avancado':
       return l10n.territoryFrancesAvancado;
+    case 'ingles_parperfeito_basico':
+      return l10n.territoryInglesParperfeitoBasico;
+    case 'ingles_parperfeito_intermediario':
+      return l10n.territoryInglesParperfeitoIntermediario;
+    case 'ingles_parperfeito_avancado':
+      return l10n.territoryInglesParperfeitoAvancado;
+    case 'ingles_parperfeito_relampago_basico':
+      return l10n.territoryInglesParperfeitoRelampagoBasico;
+    case 'ingles_parperfeito_relampago_intermediario':
+      return l10n.territoryInglesParperfeitoRelampagoIntermediario;
+    case 'ingles_parperfeito_relampago_avancado':
+      return l10n.territoryInglesParperfeitoRelampagoAvancado;
     case 'ingles_phrasal_basico':
       return l10n.territoryInglesPhrasalBasico;
     case 'ingles_phrasal_intermediario':

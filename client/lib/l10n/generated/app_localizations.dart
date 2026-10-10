@@ -556,6 +556,42 @@ abstract class AppLocalizations {
   /// **'Francês Avançado'**
   String get territoryFrancesAvancado;
 
+  /// Territory display name — English Par Perfeito card-matching game, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito: Básico'**
+  String get territoryInglesParperfeitoBasico;
+
+  /// Territory display name — English Par Perfeito card-matching game, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito: Intermediário'**
+  String get territoryInglesParperfeitoIntermediario;
+
+  /// Territory display name — English Par Perfeito card-matching game, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito: Avançado'**
+  String get territoryInglesParperfeitoAvancado;
+
+  /// Territory display name — English Par Perfeito card-matching game, timed mode, basic level
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito Relâmpago: Básico'**
+  String get territoryInglesParperfeitoRelampagoBasico;
+
+  /// Territory display name — English Par Perfeito card-matching game, timed mode, intermediate level
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito Relâmpago: Intermediário'**
+  String get territoryInglesParperfeitoRelampagoIntermediario;
+
+  /// Territory display name — English Par Perfeito card-matching game, timed mode, advanced level
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito Relâmpago: Avançado'**
+  String get territoryInglesParperfeitoRelampagoAvancado;
+
   /// Territory display name — English phrasal verbs, basic level
   ///
   /// In pt, this message translates to:

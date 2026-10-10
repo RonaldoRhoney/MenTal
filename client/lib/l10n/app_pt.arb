@@ -326,6 +326,30 @@
     "description": "Territory display name"
   },
   "territoryFrancesAvancado": "Francês Avançado",
+  "territoryInglesParperfeitoBasico": "Par Perfeito: Básico",
+  "@territoryInglesParperfeitoBasico": {
+    "description": "Territory display name — English Par Perfeito card-matching game, basic level"
+  },
+  "territoryInglesParperfeitoIntermediario": "Par Perfeito: Intermediário",
+  "@territoryInglesParperfeitoIntermediario": {
+    "description": "Territory display name — English Par Perfeito card-matching game, intermediate level"
+  },
+  "territoryInglesParperfeitoAvancado": "Par Perfeito: Avançado",
+  "@territoryInglesParperfeitoAvancado": {
+    "description": "Territory display name — English Par Perfeito card-matching game, advanced level"
+  },
+  "territoryInglesParperfeitoRelampagoBasico": "Par Perfeito Relâmpago: Básico",
+  "@territoryInglesParperfeitoRelampagoBasico": {
+    "description": "Territory display name — English Par Perfeito card-matching game, timed mode, basic level"
+  },
+  "territoryInglesParperfeitoRelampagoIntermediario": "Par Perfeito Relâmpago: Intermediário",
+  "@territoryInglesParperfeitoRelampagoIntermediario": {
+    "description": "Territory display name — English Par Perfeito card-matching game, timed mode, intermediate level"
+  },
+  "territoryInglesParperfeitoRelampagoAvancado": "Par Perfeito Relâmpago: Avançado",
+  "@territoryInglesParperfeitoRelampagoAvancado": {
+    "description": "Territory display name — English Par Perfeito card-matching game, timed mode, advanced level"
+  },
   "territoryInglesPhrasalBasico": "Phrasal Verbs: Básico",
   "@territoryInglesPhrasalBasico": {
     "description": "Territory display name — English phrasal verbs, basic level"
