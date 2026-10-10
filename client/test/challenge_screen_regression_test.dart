@@ -1019,4 +1019,60 @@ void main() {
           find.widgetWithText(FilledButton, 'Próximo desafio'), findsOneWidget);
     });
   });
+
+  group('checkpoint a cada 5 desafios (pedido de Rhoney, 10/10/2026)', () {
+    testWidgets(
+        'a cada 5 desafios completos mostra o resumo, e "Continuar" segue jogando sem voltar pro Início',
+        (tester) async {
+      final payload = _baseAnswerPayload();
+      final client = _CelebrationFakeApiClient(answerPayload: payload);
+      await _pumpChallengeScreen(tester, client);
+
+      for (var i = 2; i <= 5; i++) {
+        await tester.tap(find.widgetWithText(FilledButton, 'Próximo desafio'));
+        await tester.pumpAndSettle();
+        await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
+        await tester.pump();
+        await tester
+            .tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+
+      expect(find.text('5 concluídos!'), findsOneWidget);
+      expect(find.widgetWithText(FilledButton, 'Continuar'), findsOneWidget);
+      expect(
+          find.widgetWithText(FilledButton, 'Próximo desafio'), findsNothing);
+
+      await tester.tap(find.widgetWithText(FilledButton, 'Continuar'));
+      await tester.pumpAndSettle();
+
+      // Segue jogando — carregou o próximo desafio, não voltou pro Início.
+      expect(find.text('Quanto é 2 + 2?'), findsOneWidget);
+      expect(find.text('5 concluídos!'), findsNothing);
+    });
+
+    testWidgets(
+        'o resumo de checkpoint mostra só o grupo de 5 atual, não o total acumulado',
+        (tester) async {
+      final payload = _baseAnswerPayload()..['xp_awarded'] = 10;
+      final client = _CelebrationFakeApiClient(answerPayload: payload);
+      await _pumpChallengeScreen(tester, client);
+
+      for (var i = 2; i <= 5; i++) {
+        await tester.tap(find.widgetWithText(FilledButton, 'Próximo desafio'));
+        await tester.pumpAndSettle();
+        await tester.tap(find.widgetWithText(RadioListTile<String>, '4'));
+        await tester.pump();
+        await tester
+            .tap(find.widgetWithText(FilledButton, 'Confirmar resposta'));
+        await tester.pump();
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+
+      // 5 respostas de 10 XP cada = 50, nunca mais que isso (não é soma de
+      // uma sessão mais longa).
+      expect(find.text('50'), findsOneWidget);
+    });
+  });
 }

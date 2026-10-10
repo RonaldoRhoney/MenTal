@@ -51,10 +51,15 @@ create table if not exists mental.par_perfeito_rounds (
 create index if not exists ix_par_perfeito_rounds_user_territory
     on mental.par_perfeito_rounds (user_id, territory_id, issued_at desc);
 
+-- Postgres não tem min()/max() nativo pra uuid (achado em produção,
+-- 10/10/2026, rodando esta migration: "function min(uuid) does not
+-- exist") — distinct on resolve o mesmo "mantém só 1 linha por grupo"
+-- sem depender de agregação sobre uuid.
 delete from mental.par_perfeito_matches a
 where a.id not in (
-    select min(b.id) from mental.par_perfeito_matches b
-    group by b.user_id, b.item_id
+    select distinct on (user_id, item_id) id
+    from mental.par_perfeito_matches
+    order by user_id, item_id, created_at
 );
 
 alter table mental.par_perfeito_matches

@@ -1,6 +1,6 @@
 # Política de Privacidade — MENTAL
 
-**Última atualização:** 2 de outubro de 2026
+**Última atualização:** 10 de outubro de 2026
 
 Esta Política de Privacidade descreve como o aplicativo **MENTAL**, desenvolvido por **RhoneyInc**, coleta, usa e protege as informações dos usuários.
 
@@ -109,6 +109,7 @@ Utilizamos os seguintes serviços de terceiros para operar o aplicativo, cada um
 - **Facebook Login** — autenticação opcional, apenas quando o usuário escolhe esse método de login.
 - **GitHub Pages** — hospeda esta página de política, sem receber dados do app.
 - **Reconhecimento de voz do sistema Android** — usado só quando você usa o MENTAL LINGO (assistente de voz). O áudio é processado pelo próprio sistema operacional do seu aparelho; dependendo do modelo/configuração do aparelho, esse processamento pode ser feito localmente ou pelo serviço de reconhecimento de voz padrão do Android. Não enviamos esse áudio a nenhum outro serviço — nenhuma IA generativa de terceiros é usada pelo MENTAL LINGO (ver seção 2.3).
+- **Microsoft Edge TTS** — usado para a pronúncia em áudio de palavras/frases em inglês (ex.: Par Perfeito, Mundo dos Idiomas). O texto a ser pronunciado e o IP do aparelho são enviados a um serviço da Microsoft para gerar o áudio; não usamos esse serviço para nenhuma outra finalidade.
 
 Nenhum desses serviços recebe dados além do estritamente necessário para sua função, e nenhum é utilizado para publicidade direcionada.
 

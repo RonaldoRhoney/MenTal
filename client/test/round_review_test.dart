@@ -126,7 +126,7 @@ void main() {
     await tester.tap(find.text('Não, obrigado'));
     await tester.pump();
 
-    expect(find.text('Você completou todos os desafios disponíveis aqui por agora!'), findsOneWidget);
+    expect(find.text('Lição concluída!'), findsOneWidget);
     expect(find.widgetWithText(FilledButton, 'Voltar para o Início'), findsOneWidget);
   });
 

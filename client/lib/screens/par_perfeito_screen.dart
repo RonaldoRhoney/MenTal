@@ -295,13 +295,15 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(child: _buildColumn(_leftCards, isLeft: true)),
-                    const SizedBox(width: 16),
-                    Expanded(child: _buildColumn(_rightCards, isLeft: false)),
-                  ],
+                child: Center(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(child: _buildColumn(_leftCards, isLeft: true)),
+                      const SizedBox(width: 16),
+                      Expanded(child: _buildColumn(_rightCards, isLeft: false)),
+                    ],
+                  ),
                 ),
               ),
               Positioned.fill(
@@ -319,16 +321,19 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
   // Pedido de Rhoney (10/10/2026): "use a tela proporcionalmente, a
   // parte debaixo ficou com uma grande espaço" — com só 5 pares por
   // rodada, uma ListView rolável deixava os cards compactados no topo e
-  // o resto da tela vazio. Cards agora ESTICAM pra preencher toda a
-  // altura disponível (Expanded por card, sem rolagem), como no
-  // formato de referência de pareamento.
+  // o resto da tela vazio. Primeira tentativa esticou cada card com
+  // Expanded (ocupando a tela inteira), mas isso deixou os cards
+  // enormes e vazios ("sem UI, sem profissionalismo", mesmo pedido,
+  // testado em seguida) — a correção certa é manter os cards num
+  // tamanho confortável e fixo e CENTRALIZAR o bloco inteiro
+  // verticalmente (ver Center no Stack pai), deixando o espaço sobrando
+  // dividido em cima/embaixo em vez de esticar o conteúdo.
   Widget _buildColumn(List<Map<String, dynamic>> cards,
       {required bool isLeft}) {
     final children = <Widget>[];
     for (var index = 0; index < cards.length; index++) {
-      if (index > 0) children.add(const SizedBox(height: 12));
-      children.add(
-          Expanded(child: _buildCard(cards[index], index, isLeft: isLeft)));
+      if (index > 0) children.add(const SizedBox(height: 14));
+      children.add(_buildCard(cards[index], index, isLeft: isLeft));
     }
     return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch, children: children);
@@ -363,6 +368,7 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 220),
                 curve: Curves.easeOut,
+                constraints: const BoxConstraints(minHeight: 72),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                 alignment: Alignment.center,

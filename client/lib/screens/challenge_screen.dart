@@ -33,8 +33,12 @@ import '../widgets/share_achievement_button.dart';
 String explanationForResult(String explanation, bool isCorrect) {
   if (isCorrect) return explanation;
   final stripped = explanation.replaceFirst(
-      RegExp(r'^\s*(Correto|Isso mesmo|Muito bem|Exato|Certo)[!.]\s*', caseSensitive: false), '');
-  return stripped.isEmpty ? explanation : stripped[0].toUpperCase() + stripped.substring(1);
+      RegExp(r'^\s*(Correto|Isso mesmo|Muito bem|Exato|Certo)[!.]\s*',
+          caseSensitive: false),
+      '');
+  return stripped.isEmpty
+      ? explanation
+      : stripped[0].toUpperCase() + stripped.substring(1);
 }
 
 /// Enunciado do desafio. Quando o prompt traz um TEXTO-BASE antes da pergunta
@@ -71,7 +75,8 @@ class ChallengePromptText extends StatelessWidget {
           child: Text(passage, style: theme.bodyLarge?.copyWith(height: 1.5)),
         ),
         const SizedBox(height: 16),
-        Text(question, key: const Key('prompt_question'), style: theme.titleLarge),
+        Text(question,
+            key: const Key('prompt_question'), style: theme.titleLarge),
       ],
     );
   }
@@ -209,6 +214,52 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   bool _inRoundReview = false;
   final List<String> _reviewQueue = [];
 
+  // Pedido de Rhoney (10/10/2026): tela de "lição concluída" (XP total,
+  // precisão, tempo) ao fim do lote — mesmo espírito de
+  // _roundErrorChallengeIds (só em memória desta tela, nunca
+  // persistido). timedOut nunca entra na contagem de precisão, mesmo
+  // raciocínio de Não-Humilhação já usado no resto da tela.
+  int _batchXpTotal = 0;
+  int _batchAnsweredCount = 0;
+  int _batchCorrectCount = 0;
+  DateTime? _batchStartedAt;
+
+  // Pedido de Rhoney (10/10/2026, ajuste do mesmo dia): o resumo também
+  // aparece a cada 5 desafios completos, não só quando o lote inteiro
+  // acaba — contadores À PARTE dos _batch* acima (que continuam sendo o
+  // total da sessão inteira, usado no resumo de fim de lote de
+  // verdade). Resetam a cada checkpoint mostrado; ao tocar "Continuar"
+  // o jogo segue pro próximo desafio sem voltar pro Início.
+  int _groupXpTotal = 0;
+  int _groupAnsweredCount = 0;
+  int _groupCorrectCount = 0;
+  DateTime? _groupStartedAt;
+  static const _groupCheckpointSize = 5;
+
+  void _trackBatchStatsIfNeeded(Map<String, dynamic> result) {
+    if (_inRoundReview) return;
+    final timedOut = result['timed_out'] as bool? ?? false;
+    final xpAwarded = result['xp_awarded'] as int? ?? 0;
+    _batchXpTotal += xpAwarded;
+    _groupXpTotal += xpAwarded;
+    _groupStartedAt ??= DateTime.now();
+    if (!timedOut) {
+      _batchAnsweredCount += 1;
+      _groupAnsweredCount += 1;
+      if (result['is_correct'] as bool) {
+        _batchCorrectCount += 1;
+        _groupCorrectCount += 1;
+      }
+    }
+  }
+
+  void _resetGroupCheckpoint() {
+    _groupXpTotal = 0;
+    _groupAnsweredCount = 0;
+    _groupCorrectCount = 0;
+    _groupStartedAt = null;
+  }
+
   // Pedido de Rhoney (19/09/2026, teste real): no Relâmpago (todos os
   // Mundos, não só Idiomas), errar permite 1 correção imediata (via
   // GET /reattempt, mesmo mecanismo da revisão de fim de rodada acima —
@@ -234,6 +285,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
   @override
   void initState() {
     super.initState();
+    _batchStartedAt = DateTime.now();
     _celebration = CelebrationController();
     _coinsRise = CoinsRiseController();
     _audioPlayer = AudioPlayer();
@@ -512,6 +564,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         setState(() {
           _result = result;
           _trackRoundErrorIfNeeded(result);
+          _trackBatchStatsIfNeeded(result);
         });
         _triggerFeedback(result);
       }
@@ -549,6 +602,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         setState(() {
           _result = result;
           _trackRoundErrorIfNeeded(result);
+          _trackBatchStatsIfNeeded(result);
         });
         _triggerFeedback(result);
       }
@@ -614,7 +668,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _listeningAudioPlaying = true;
       _listeningAudioFailed = false;
     });
-    final ok = await TtsService.instance.speak(text, voice: voice, speed: _ttsSpeed);
+    final ok =
+        await TtsService.instance.speak(text, voice: voice, speed: _ttsSpeed);
     if (mounted) {
       setState(() {
         _listeningAudioPlaying = false;
@@ -634,7 +689,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
       _ttsSpeaking = true;
       _ttsFailed = false;
     });
-    final ok = await TtsService.instance.speak(text, voice: voice, speed: _ttsSpeed);
+    final ok =
+        await TtsService.instance.speak(text, voice: voice, speed: _ttsSpeed);
     if (mounted) {
       setState(() {
         _ttsSpeaking = false;
@@ -651,9 +707,11 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
     final voice = voiceForTerritory(widget.territoryId);
     if (voice == null) return;
     final prompt = challenge['prompt'] as String?;
-    if (prompt != null) TtsService.instance.preload(prompt, voice: voice, speed: _ttsSpeed);
+    if (prompt != null)
+      TtsService.instance.preload(prompt, voice: voice, speed: _ttsSpeed);
     final audioScript = challenge['audio_script'] as String?;
-    if (audioScript != null) TtsService.instance.preload(audioScript, voice: voice, speed: _ttsSpeed);
+    if (audioScript != null)
+      TtsService.instance.preload(audioScript, voice: voice, speed: _ttsSpeed);
     final options = (challenge['options'] as List?)?.cast<String>();
     if (options != null) {
       for (final option in options) {
@@ -676,6 +734,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
         setState(() {
           _result = result;
           _trackRoundErrorIfNeeded(result);
+          _trackBatchStatsIfNeeded(result);
         });
         _triggerFeedback(result);
       }
@@ -1107,9 +1166,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           onPressed: _listeningAudioPlaying
               ? null
               : () => _playListeningAudioScript(audioScript, voice),
-          icon: Icon(_listeningAudioHasPlayedOnce
-              ? Icons.replay
-              : Icons.volume_up),
+          icon: Icon(
+              _listeningAudioHasPlayedOnce ? Icons.replay : Icons.volume_up),
           label: Text(_listeningAudioHasPlayedOnce
               ? l10n.listeningAudioReplayButton
               : l10n.listeningAudioPlayButton),
@@ -1173,7 +1231,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           Text(
             l10n.audioSourceCreditLabel(sourceName),
             textAlign: TextAlign.center,
-            style: AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
+            style:
+                AppTheme.technicalStyle(color: AppColors.muted, fontSize: 12),
           ),
         ],
         const SizedBox(height: 16),
@@ -1317,14 +1376,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   // só pra territórios de idioma falado (idioma_voices.
                   // dart); Libras e todo o resto do app não mostra nada
                   // aqui, comportamento idêntico ao de antes.
-                  if (voiceForTerritory(widget.territoryId) case final voice?) ...[
+                  if (voiceForTerritory(widget.territoryId)
+                      case final voice?) ...[
                     _TtsSpeedSelector(
                       speed: _ttsSpeed,
                       onChanged: (speed) => setState(() => _ttsSpeed = speed),
                     ),
                     if (_ttsFailed) ...[
                       const SizedBox(height: 6),
-                      Text(l10n.audioLoadErrorMessage, style: TextStyle(color: AppColors.error)),
+                      Text(l10n.audioLoadErrorMessage,
+                          style: TextStyle(color: AppColors.error)),
                     ],
                     const SizedBox(height: 8),
                     // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md §2.2.1 (ajuste de
@@ -1336,7 +1397,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                       groupValue: _selectedOption,
                       onChanged: (value) {
                         setState(() => _selectedOption = value);
-                        if (value != null && !_ttsSpeaking) _speakOption(value, voice);
+                        if (value != null && !_ttsSpeaking)
+                          _speakOption(value, voice);
                       },
                       child: Column(
                         children: options
@@ -1346,7 +1408,9 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                                   secondary: _DuolingoSpeakerButton(
                                     tooltip: l10n.audioPlayButton,
                                     speaking: _ttsSpeaking,
-                                    onTap: _ttsSpeaking ? null : () => _speakOption(option, voice),
+                                    onTap: _ttsSpeaking
+                                        ? null
+                                        : () => _speakOption(option, voice),
                                   ),
                                 ))
                             .toList(),
@@ -1547,34 +1611,34 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                     const SizedBox(height: 12),
                   ],
                 ] else
-                  // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — pedido de Rhoney
-                  // (19/09/2026, teste real): o Relâmpago também precisa
-                  // de áudio nas alternativas de idioma falado, mesmo
-                  // território que já tem áudio no modo normal. Sem
-                  // botão de seletor de velocidade aqui (tempo é curto)
-                  // — toca sempre na velocidade normal, sem atrasar o
-                  // tempo de resposta (nunca aguarda o áudio terminar
-                  // antes de confirmar a resposta).
-                  if (voiceForTerritory(widget.territoryId) case final voice?)
-                    for (final option in options) ...[
-                      OutlinedButton.icon(
-                        onPressed: _submitted
-                            ? null
-                            : () => _submitOption(option, speakVoice: voice),
-                        icon: const Icon(Icons.volume_up_rounded, size: 18),
-                        label: Text(option),
-                      ),
-                      const SizedBox(height: 12),
-                    ]
-                  else
-                    for (final option in options) ...[
-                      OutlinedButton(
-                        onPressed:
-                            _submitted ? null : () => _submitOption(option),
-                        child: Text(option),
-                      ),
-                      const SizedBox(height: 12),
-                    ],
+                // MUNDO_IDIOMAS_AUDIO_E_LIBRAS_V1.md — pedido de Rhoney
+                // (19/09/2026, teste real): o Relâmpago também precisa
+                // de áudio nas alternativas de idioma falado, mesmo
+                // território que já tem áudio no modo normal. Sem
+                // botão de seletor de velocidade aqui (tempo é curto)
+                // — toca sempre na velocidade normal, sem atrasar o
+                // tempo de resposta (nunca aguarda o áudio terminar
+                // antes de confirmar a resposta).
+                if (voiceForTerritory(widget.territoryId) case final voice?)
+                  for (final option in options) ...[
+                    OutlinedButton.icon(
+                      onPressed: _submitted
+                          ? null
+                          : () => _submitOption(option, speakVoice: voice),
+                      icon: const Icon(Icons.volume_up_rounded, size: 18),
+                      label: Text(option),
+                    ),
+                    const SizedBox(height: 12),
+                  ]
+                else
+                  for (final option in options) ...[
+                    OutlinedButton(
+                      onPressed:
+                          _submitted ? null : () => _submitOption(option),
+                      child: Text(option),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
               ],
             ),
           ),
@@ -1730,7 +1794,8 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                 Text(l10n.correctAnswerLabel(
                     _displayAnswer(result['correct_answer'] as String))),
                 const SizedBox(height: 12),
-                Text(explanationForResult(result['explanation'] as String, isCorrect)),
+                Text(explanationForResult(
+                    result['explanation'] as String, isCorrect)),
                 const SizedBox(height: 12),
                 Text(
                   l10n.xpEarnedLabel(
@@ -1922,12 +1987,16 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
             ],
           ),
         ] else if (batchExhausted) ...[
-          Text(
-            l10n.batchCompletedMessage,
-            textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.muted),
+          _buildBatchCompletedSummary(
+            context,
+            l10n,
+            title: l10n.batchCompletedTitle,
+            xpTotal: _batchXpTotal,
+            answeredCount: _batchAnsweredCount,
+            correctCount: _batchCorrectCount,
+            startedAt: _batchStartedAt,
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 20),
           FilledButton(
             onPressed: () =>
                 Navigator.of(context).popUntil((route) => route.isFirst),
@@ -1967,10 +2036,103 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
           // desafio individual. O backend já calcula level_up/new_level
           // pra decidir a celebração; reaproveita o mesmo sinal aqui.
           _buildLevelFeedback()
-        else
+        else if (!_inRoundReview &&
+            _groupAnsweredCount >= _groupCheckpointSize) ...[
+          // Pedido de Rhoney (10/10/2026): o resumo também aparece a
+          // cada _groupCheckpointSize desafios completos, não só no fim
+          // do lote inteiro — "Continuar" segue pro próximo desafio sem
+          // voltar pro Início (diferente do resumo de fim de lote
+          // acima).
+          _buildBatchCompletedSummary(
+            context,
+            l10n,
+            title: l10n.groupCheckpointTitle,
+            xpTotal: _groupXpTotal,
+            answeredCount: _groupAnsweredCount,
+            correctCount: _groupCorrectCount,
+            startedAt: _groupStartedAt,
+          ),
+          const SizedBox(height: 20),
+          FilledButton(
+            onPressed: () {
+              _resetGroupCheckpoint();
+              _loadNextChallenge();
+            },
+            child: Text(l10n.groupCheckpointContinueButton),
+          ),
+        ] else
           FilledButton(
               onPressed: _loadNextChallenge,
               child: Text(l10n.nextChallengeButton)),
+      ],
+    );
+  }
+
+  /// Pedido de Rhoney (10/10/2026, inspirado no resumo de lição de apps
+  /// de idiomas conhecidos — "mesma ideia, com os padrões visuais do
+  /// MENTAL: cores, personagem, etc"): fim de lote ganha um resumo de
+  /// verdade (XP total, precisão, tempo), não só uma frase + botão.
+  /// Paleta dourado/teal/violeta (identidade MENTAL, mesma de Par
+  /// Perfeito) no lugar do verde/azul/amarelo do app de referência, e o
+  /// personagem Mental (comemorando) no lugar do mascote deles.
+  Widget _buildBatchCompletedSummary(
+    BuildContext context,
+    AppLocalizations l10n, {
+    required String title,
+    required int xpTotal,
+    required int answeredCount,
+    required int correctCount,
+    required DateTime? startedAt,
+  }) {
+    final accuracy = answeredCount == 0
+        ? 100
+        : ((correctCount / answeredCount) * 100).round();
+    final elapsed = startedAt == null
+        ? Duration.zero
+        : DateTime.now().difference(startedAt);
+    final minutes = elapsed.inMinutes;
+    final seconds = elapsed.inSeconds % 60;
+    final timeLabel = '$minutes:${seconds.toString().padLeft(2, '0')}';
+
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const MentalCharacter(
+            expression: MentalCharacterExpression.comemorando, size: 110),
+        const SizedBox(height: 12),
+        Text(
+          title,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge
+              ?.copyWith(color: AppColors.gold, fontWeight: FontWeight.w700),
+        ),
+        const SizedBox(height: 16),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _StatChip(
+              icon: Icons.bolt_rounded,
+              color: AppColors.gold,
+              label: l10n.batchCompletedXpLabel,
+              value: '$xpTotal',
+            ),
+            const SizedBox(width: 10),
+            _StatChip(
+              icon: Icons.track_changes_rounded,
+              color: AppColors.teal,
+              label: l10n.batchCompletedAccuracyLabel,
+              value: '$accuracy%',
+            ),
+            const SizedBox(width: 10),
+            _StatChip(
+              icon: Icons.timer_rounded,
+              color: AppColors.purple,
+              label: l10n.batchCompletedTimeLabel,
+              value: timeLabel,
+            ),
+          ],
+        ),
       ],
     );
   }
@@ -2090,7 +2252,8 @@ class _NewChallengeBadge extends StatelessWidget {
 /// (não um IconButton solto). Opacidade reduzida + sem toque enquanto
 /// está tocando (mesmo estado de _ttsSpeaking que já existia).
 class _DuolingoSpeakerButton extends StatelessWidget {
-  const _DuolingoSpeakerButton({required this.speaking, required this.onTap, required this.tooltip});
+  const _DuolingoSpeakerButton(
+      {required this.speaking, required this.onTap, required this.tooltip});
 
   final bool speaking;
   final VoidCallback? onTap;
@@ -2110,7 +2273,8 @@ class _DuolingoSpeakerButton extends StatelessWidget {
             onTap: onTap,
             child: const Padding(
               padding: EdgeInsets.all(8),
-              child: Icon(Icons.volume_up_rounded, color: Colors.white, size: 20),
+              child:
+                  Icon(Icons.volume_up_rounded, color: Colors.white, size: 20),
             ),
           ),
         ),
@@ -2135,8 +2299,12 @@ class _TtsSpeedSelector extends StatelessWidget {
         selected: selected,
         onSelected: (_) => onChanged(value),
         selectedColor: AppColors.teal.withValues(alpha: 0.25),
-        labelStyle: TextStyle(color: selected ? AppColors.teal : AppColors.muted, fontSize: 12),
-        side: BorderSide(color: selected ? AppColors.teal : AppColors.muted.withValues(alpha: 0.3)),
+        labelStyle: TextStyle(
+            color: selected ? AppColors.teal : AppColors.muted, fontSize: 12),
+        side: BorderSide(
+            color: selected
+                ? AppColors.teal
+                : AppColors.muted.withValues(alpha: 0.3)),
       );
     }
 
@@ -2147,6 +2315,59 @@ class _TtsSpeedSelector extends StatelessWidget {
         chip(TtsSpeed.fast, l10n.ttsSpeedFastLabel),
         chip(TtsSpeed.veryFast, l10n.ttsSpeedVeryFastLabel),
       ],
+    );
+  }
+}
+
+/// Chip de estatística do resumo de fim de lote (XP/precisão/tempo) —
+/// ver _buildBatchCompletedSummary.
+class _StatChip extends StatelessWidget {
+  const _StatChip({
+    required this.icon,
+    required this.color,
+    required this.label,
+    required this.value,
+  });
+
+  final IconData icon;
+  final Color color;
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: color.withValues(alpha: 0.4)),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, color: color, size: 22),
+            const SizedBox(height: 6),
+            Text(
+              value,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(color: color, fontWeight: FontWeight.w700),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              label,
+              textAlign: TextAlign.center,
+              style: Theme.of(context)
+                  .textTheme
+                  .labelSmall
+                  ?.copyWith(color: AppColors.muted, letterSpacing: 0.4),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

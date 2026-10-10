@@ -777,6 +777,24 @@ class AppLocalizationsPt extends AppLocalizations {
   String get batchCompletedBackToHomeButton => 'Voltar para o Início';
 
   @override
+  String get batchCompletedTitle => 'Lição concluída!';
+
+  @override
+  String get batchCompletedXpLabel => 'TOTAL DE XP';
+
+  @override
+  String get batchCompletedAccuracyLabel => 'PRECISÃO';
+
+  @override
+  String get batchCompletedTimeLabel => 'TEMPO';
+
+  @override
+  String get groupCheckpointTitle => '5 concluídos!';
+
+  @override
+  String get groupCheckpointContinueButton => 'Continuar';
+
+  @override
   String roundReviewOfferMessage(int count) {
     String _temp0 = intl.Intl.pluralLogic(
       count,

@@ -1444,6 +1444,42 @@ abstract class AppLocalizations {
   /// **'Voltar para o Início'**
   String get batchCompletedBackToHomeButton;
 
+  /// Headline on the end-of-batch results summary
+  ///
+  /// In pt, this message translates to:
+  /// **'Lição concluída!'**
+  String get batchCompletedTitle;
+
+  /// Label for the XP earned stat chip in the end-of-batch results summary
+  ///
+  /// In pt, this message translates to:
+  /// **'TOTAL DE XP'**
+  String get batchCompletedXpLabel;
+
+  /// Label for the accuracy percentage stat chip in the end-of-batch results summary
+  ///
+  /// In pt, this message translates to:
+  /// **'PRECISÃO'**
+  String get batchCompletedAccuracyLabel;
+
+  /// Label for the elapsed time stat chip in the end-of-batch results summary
+  ///
+  /// In pt, this message translates to:
+  /// **'TEMPO'**
+  String get batchCompletedTimeLabel;
+
+  /// Headline on the every-5-challenges checkpoint results summary
+  ///
+  /// In pt, this message translates to:
+  /// **'5 concluídos!'**
+  String get groupCheckpointTitle;
+
+  /// Button to proceed to the next challenge after the every-5-challenges checkpoint summary
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get groupCheckpointContinueButton;
+
   /// Shown at the end of a batch when the player got at least one question wrong, offering to review just the wrong ones
   ///
   /// In pt, this message translates to:

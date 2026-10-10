@@ -972,6 +972,30 @@
   "@batchCompletedBackToHomeButton": {
     "description": "Button to return to Home after completing a full batch of challenges"
   },
+  "batchCompletedTitle": "Lição concluída!",
+  "@batchCompletedTitle": {
+    "description": "Headline on the end-of-batch results summary"
+  },
+  "batchCompletedXpLabel": "TOTAL DE XP",
+  "@batchCompletedXpLabel": {
+    "description": "Label for the XP earned stat chip in the end-of-batch results summary"
+  },
+  "batchCompletedAccuracyLabel": "PRECISÃO",
+  "@batchCompletedAccuracyLabel": {
+    "description": "Label for the accuracy percentage stat chip in the end-of-batch results summary"
+  },
+  "batchCompletedTimeLabel": "TEMPO",
+  "@batchCompletedTimeLabel": {
+    "description": "Label for the elapsed time stat chip in the end-of-batch results summary"
+  },
+  "groupCheckpointTitle": "5 concluídos!",
+  "@groupCheckpointTitle": {
+    "description": "Headline on the every-5-challenges checkpoint results summary"
+  },
+  "groupCheckpointContinueButton": "Continuar",
+  "@groupCheckpointContinueButton": {
+    "description": "Button to proceed to the next challenge after the every-5-challenges checkpoint summary"
+  },
   "roundReviewOfferMessage": "{count, plural, one{Você errou 1 pergunta nesta rodada.} other{Você errou {count} perguntas nesta rodada.}}",
   "@roundReviewOfferMessage": {
     "description": "Shown at the end of a batch when the player got at least one question wrong, offering to review just the wrong ones",
