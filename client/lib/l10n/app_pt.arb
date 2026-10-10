@@ -3615,5 +3615,31 @@
   "floatingMentalSettingsToggleTitle": "Personagem Mental flutuante",
   "@floatingMentalSettingsToggleTitle": {
     "description": "Settings screen toggle label for the floating character"
+  },
+  "parPerfeitoInstruction": "Toque uma palavra em inglês e depois o significado em português pra formar o par.",
+  "@parPerfeitoInstruction": {
+    "description": "Instruction text on top of the Par Perfeito card-matching screen"
+  },
+  "parPerfeitoRoundSummary": "{count, plural, =1{Você formou 1 par!} other{Você formou {count} pares!}}",
+  "@parPerfeitoRoundSummary": {
+    "description": "Round summary title on Par Perfeito completion",
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "parPerfeitoXpAwarded": "+{xp} XP",
+  "@parPerfeitoXpAwarded": {
+    "description": "XP awarded shown on Par Perfeito round summary",
+    "placeholders": {
+      "xp": {"type": "int"}
+    }
+  },
+  "parPerfeitoPlayAgain": "Jogar de novo",
+  "@parPerfeitoPlayAgain": {
+    "description": "Play again button on Par Perfeito round summary"
+  },
+  "parPerfeitoBackButton": "Voltar",
+  "@parPerfeitoBackButton": {
+    "description": "Back button on Par Perfeito round summary"
   }
 }

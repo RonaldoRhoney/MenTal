@@ -2682,4 +2682,30 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get floatingMentalSettingsToggleTitle => 'Personagem Mental flutuante';
+
+  @override
+  String get parPerfeitoInstruction =>
+      'Toque uma palavra em inglês e depois o significado em português pra formar o par.';
+
+  @override
+  String parPerfeitoRoundSummary(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Você formou $count pares!',
+      one: 'Você formou 1 par!',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String parPerfeitoXpAwarded(int xp) {
+    return '+$xp XP';
+  }
+
+  @override
+  String get parPerfeitoPlayAgain => 'Jogar de novo';
+
+  @override
+  String get parPerfeitoBackButton => 'Voltar';
 }

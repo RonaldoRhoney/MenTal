@@ -325,6 +325,33 @@ class WordPuzzleCompleteResponse(BaseModel):
     already_completed_before: bool
 
 
+class ParPerfeitoItemOut(BaseModel):
+    # MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §3 — formato "Pares de
+    # cards": a rodada inteira (palavra + significado) é visível desde o
+    # início, mesmo raciocínio de WordPuzzleOut (sem resposta escondida
+    # pra proteger nesse formato).
+    id: str
+    word_en: str
+    meaning_pt: str
+
+
+class ParPerfeitoRoundOut(BaseModel):
+    territory_id: str
+    difficulty_level: int
+    items: list[ParPerfeitoItemOut]
+
+
+class ParPerfeitoCompleteRoundRequest(BaseModel):
+    territory_id: str
+    # Teto generoso (rodada real tem no máximo 6 pares, §3) — mesmo
+    # raciocínio de WordPuzzleCompleteRequest.found_words.
+    item_ids: list[str] = Field(max_length=20)
+
+
+class ParPerfeitoCompleteRoundResponse(BaseModel):
+    xp_awarded_total: int
+
+
 class HintRequest(BaseModel):
     attempt_id: str
 

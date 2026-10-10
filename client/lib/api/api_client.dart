@@ -771,6 +771,26 @@ class ApiClient {
     );
   }
 
+  // MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §3 — formato "Pares de
+  // cards". A rodada inteira já vem visível (sem resposta escondida).
+  Future<Map<String, dynamic>> nextParPerfeitoRound(String territoryId) async {
+    return _get(
+      _uri('/par-perfeito/round', {'territory_id': territoryId}),
+      headers: _headers,
+    );
+  }
+
+  Future<Map<String, dynamic>> completeParPerfeitoRound({
+    required String territoryId,
+    required List<String> itemIds,
+  }) async {
+    return _post(
+      _uri('/par-perfeito/complete-round'),
+      headers: _headers,
+      body: jsonEncode({'territory_id': territoryId, 'item_ids': itemIds}),
+    );
+  }
+
   // Admin_Dashboard/ADMIN_PAINEL_IN_APP_V1.md — só retorna dado de verdade pra
   // role=admin (backend rejeita com 403 pra qualquer outro usuário).
   // SCREENSHOTS_LOJA_E_AVISO_ATUALIZACAO_V1.md §2 — endpoint público

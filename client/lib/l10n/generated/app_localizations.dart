@@ -4599,6 +4599,36 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Personagem Mental flutuante'**
   String get floatingMentalSettingsToggleTitle;
+
+  /// Instruction text on top of the Par Perfeito card-matching screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Toque uma palavra em inglês e depois o significado em português pra formar o par.'**
+  String get parPerfeitoInstruction;
+
+  /// Round summary title on Par Perfeito completion
+  ///
+  /// In pt, this message translates to:
+  /// **'{count, plural, =1{Você formou 1 par!} other{Você formou {count} pares!}}'**
+  String parPerfeitoRoundSummary(int count);
+
+  /// XP awarded shown on Par Perfeito round summary
+  ///
+  /// In pt, this message translates to:
+  /// **'+{xp} XP'**
+  String parPerfeitoXpAwarded(int xp);
+
+  /// Play again button on Par Perfeito round summary
+  ///
+  /// In pt, this message translates to:
+  /// **'Jogar de novo'**
+  String get parPerfeitoPlayAgain;
+
+  /// Back button on Par Perfeito round summary
+  ///
+  /// In pt, this message translates to:
+  /// **'Voltar'**
+  String get parPerfeitoBackButton;
 }
 
 class _AppLocalizationsDelegate

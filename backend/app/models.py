@@ -817,6 +817,47 @@ class WordPuzzleResult(Base):
     xp_awarded: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
 
+class ParPerfeitoItem(Base):
+    """
+    MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §3/§14 — formato "Pares de
+    cards" (migration 122, Fase B, pedido de Rhoney 08-09/10/2026).
+    Estrutura DELIBERADAMENTE diferente de Challenge, mesmo raciocínio de
+    WordPuzzle (ver comentário lá): a rodada inteira (todas as palavras E
+    todos os significados) é visível ao jogador desde o início — não há
+    "resposta escondida" pra proteger num jogo de formar pares, o desafio
+    real é lembrar/reconhecer, não adivinhar entre alternativas.
+    """
+
+    __tablename__ = "par_perfeito_items"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
+    difficulty_level: Mapped[int] = mapped_column(Integer, default=1)
+    word_en: Mapped[str] = mapped_column(String)
+    meaning_pt: Mapped[str] = mapped_column(String)
+    age_reviewed: Mapped[bool] = mapped_column(Boolean, default=False)
+
+
+class ParPerfeitoMatch(Base):
+    """
+    Uma linha por PAR respondido (equivalente ao Attempt de Challenge).
+    REGRA_OFICIAL (MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §10, proposta
+    aceita): só o acerto na PRIMEIRA tentativa gera XP — o client só
+    reporta no fim da rodada os pares que formou sem nenhum erro antes;
+    o servidor confere idempotência (nunca credita XP duas vezes pro
+    mesmo item+usuário, mesmo em reenvio de rede) antes de aplicar
+    economy.apply_answer_xp, igual a qualquer resposta de Challenge.
+    """
+
+    __tablename__ = "par_perfeito_matches"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    item_id: Mapped[str] = mapped_column(UUIDType, ForeignKey("par_perfeito_items.id"))
+    xp_awarded: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class LevelFeedback(Base):
     __tablename__ = "level_feedback"
 

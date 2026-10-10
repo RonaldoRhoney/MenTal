@@ -29,6 +29,7 @@ import 'friends_screen.dart';
 import 'mentalcoins_screen.dart';
 import 'movement_screen.dart';
 import 'notifications_screen.dart';
+import 'par_perfeito_screen.dart';
 import 'trajectory_map_screen.dart';
 import 'progress_screen.dart';
 import 'ranking_screen.dart';
@@ -2084,6 +2085,59 @@ class _TerritoryCard extends StatelessWidget {
             await Navigator.of(context).push(
               MaterialPageRoute(
                   builder: (_) => WordSearchScreen(
+                      client: client,
+                      territoryId: territoryId,
+                      territoryLabel: label)),
+            );
+            onReturned();
+          },
+          child: Container(
+            padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: progressColor.withValues(alpha: 0.5)),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    l10n.newChallengeButton(label),
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+    // MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §3/§9 — formato "Pares de
+    // cards" (Fase B, pedido de Rhoney 08-09/10/2026, com imagem de
+    // referência). Estrutura de jogo própria (duas colunas de cards,
+    // sem pergunta+alternativas) — nunca abre ChallengeScreen, mesmo
+    // raciocínio de caca_palavras acima. Só os níveis normais (sem
+    // Relâmpago, que continua no formato "Complete a frase" existente
+    // por enquanto — fora de escopo desta entrega).
+    if (territoryId == 'ingles_parperfeito_basico' ||
+        territoryId == 'ingles_parperfeito_intermediario' ||
+        territoryId == 'ingles_parperfeito_avancado') {
+      return Material(
+        color: AppColors.bg2,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () async {
+            await Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: (_) => ParPerfeitoScreen(
                       client: client,
                       territoryId: territoryId,
                       territoryLabel: label)),

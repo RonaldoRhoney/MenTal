@@ -6050,6 +6050,15 @@ _CONTENT_DIR = Path(__file__).resolve().parent.parent / "content"
 for _path in sorted(_CONTENT_DIR.glob("idiomas_*.json")):
     CHALLENGES.extend(json.loads(_path.read_text(encoding="utf-8")))
 
+# MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §3/§14 — formato "Pares de
+# cards" (Fase B, 09/10/2026): tabela própria (ParPerfeitoItem), nunca
+# Challenge — mesmo padrão de carregar de content/ em vez de duplicar
+# inline, mesma fonte usada em produção via
+# scripts/append_production_par_perfeito_items.py.
+PAR_PERFEITO_ITEMS: list[dict] = []
+for _path in sorted(_CONTENT_DIR.glob("par_perfeito_*.json")):
+    PAR_PERFEITO_ITEMS.extend(json.loads(_path.read_text(encoding="utf-8")))
+
 # V6 — Mundo dos Valores: 159 desafios ("cápsula de texto + perguntas",
 # reading_passage), mesmo padrão de carregar direto de content/ em vez
 # de duplicar inline (ver Mundo_dos_Valores/README.md e scripts/convert_valores_content.py).
@@ -6162,6 +6171,10 @@ def seed_if_empty(db: Session) -> None:
         for level, content in enumerate(hints, start=1):
             db.add(models.ChallengeHint(challenge_id=challenge.id, hint_level=level, content=content))
         db.commit()
+
+    for item in PAR_PERFEITO_ITEMS:
+        db.add(models.ParPerfeitoItem(**item))
+    db.commit()
 
     for b in BADGES:
         db.add(models.Badge(**b))
