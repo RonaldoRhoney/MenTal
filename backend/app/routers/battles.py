@@ -37,6 +37,17 @@ def create_battle(
     if territory is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "TERRITORY_NOT_FOUND", "message": body.territory_id}})
 
+    # Achado ALTO de auditoria de segurança (flagado 07/10/2026, corrigido
+    # 09/10/2026, pré-AAB): create_battle nunca checava is_territory_
+    # unlocked — dava pra batalhar em qualquer território, mesmo travado
+    # pela progressão sequencial ou (quando MONETIZATION_ENABLED=true)
+    # sem assinatura, já que create_served_attempt também não checa isso
+    # e cria um Attempt "grandfather" que destrava o território pra
+    # sempre pro desafiante (is_territory_sequentially_reachable conta
+    # qualquer Attempt como progresso válido).
+    if not services.is_territory_unlocked(db, user_id, territory):
+        raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_LOCKED", "message": "Requires active subscription"}})
+
     if not (config.ADAPTIVE_DIFFICULTY_MIN_LEVEL <= body.difficulty_level <= config.ADAPTIVE_DIFFICULTY_MAX_LEVEL):
         raise HTTPException(status_code=400, detail={"error": {"code": "INVALID_DIFFICULTY_LEVEL", "message": str(body.difficulty_level)}})
 

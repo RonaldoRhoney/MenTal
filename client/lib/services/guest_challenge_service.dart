@@ -14,6 +14,7 @@ class GuestAnswer {
     required this.submittedAnswer,
     required this.isCorrect,
     required this.xpPreview,
+    required this.completionToken,
   });
 
   final String challengeId;
@@ -24,12 +25,20 @@ class GuestAnswer {
   // recalculado no cliente. O XP de verdade sai de /guest/migrate-
   // progress, recalculado do zero pelo backend.
   final int xpPreview;
+  // Achado crítico de auditoria de segurança (09/10/2026) — recibo
+  // assinado devolvido por POST /guest/challenges/{id}/answer, provando
+  // que ESTE (challengeId, submittedAnswer) foi gradeado de verdade
+  // pelo fluxo guest. Exigido por POST /guest/migrate-progress; sem
+  // isso, qualquer par challenge_id+submitted_answer "correto" virava
+  // XP e progresso de território reais sem nunca ter sido jogado.
+  final String completionToken;
 
   Map<String, dynamic> toJson() => {
         'challenge_id': challengeId,
         'submitted_answer': submittedAnswer,
         'is_correct': isCorrect,
         'xp_preview': xpPreview,
+        'completion_token': completionToken,
       };
 
   static GuestAnswer fromJson(Map<String, dynamic> json) => GuestAnswer(
@@ -37,6 +46,7 @@ class GuestAnswer {
         submittedAnswer: json['submitted_answer'] as String,
         isCorrect: json['is_correct'] as bool,
         xpPreview: json['xp_preview'] as int? ?? 0,
+        completionToken: json['completion_token'] as String? ?? '',
       );
 }
 

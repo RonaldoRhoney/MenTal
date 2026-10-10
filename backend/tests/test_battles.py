@@ -41,6 +41,28 @@ def test_cannot_battle_a_non_friend(client):
     assert resp.json()["error"]["code"] == "NOT_FRIENDS"
 
 
+def test_cannot_battle_in_a_locked_territory(client):
+    """
+    Achado ALTO de auditoria de segurança (flagado 07/10/2026, corrigido
+    09/10/2026, pré-AAB): create_battle nunca checava is_territory_
+    unlocked — dava pra batalhar (e criar um Attempt "grandfather" que
+    destrava o território pra sempre) em qualquer território, mesmo
+    travado pela progressão sequencial. 'ingles_intermediario' exige
+    'ingles_basico' concluído antes, pela família sequencial de Idiomas
+    — um usuário novo nunca tem isso.
+    """
+    user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
+    headers_a, _headers_b = _make_friends(client, user_a, user_b)
+
+    resp = client.post(
+        "/battles",
+        json={"opponent_user_id": user_b, "territory_id": "ingles_intermediario", "difficulty_level": 1},
+        headers=headers_a,
+    )
+    assert resp.status_code == 403
+    assert resp.json()["error"]["code"] == "TERRITORY_LOCKED"
+
+
 def test_create_battle_returns_challenger_challenge_and_notifies_opponent(client):
     user_a, user_b = str(uuid.uuid4()), str(uuid.uuid4())
     headers_a, headers_b = _make_friends(client, user_a, user_b)

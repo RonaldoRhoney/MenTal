@@ -15,9 +15,43 @@ dados brutos das 3 respostas, e /guest/migrate-progress REPROCESSA cada
 uma de verdade pelo mesmo caminho de POST /challenges/{id}/answer,
 sujeito ao mesmo teto diário — fecha a brecha de forjar XP alto no
 cliente.
+
+ACHADOS CRÍTICOS de auditoria de segurança pré-AAB (09/10/2026),
+corrigidos nesta versão:
+
+C1 (parcial — risco residual documentado, ver nota no fim do arquivo):
+POST /guest/challenges/{id}/answer aceitava QUALQUER challenge_id
+existente no banco (inclusive de território pago/avançado) e devolvia
+correct_answer de graça, sem exigir conta — um oráculo gratuito de
+resposta certa. Corrigido: (a) só território "primeira etapa de algum
+Mundo" é aceito (_is_guest_allowed_territory); (b) o endpoint agora
+exige um `serve_token` assinado pelo servidor, emitido só por GET
+/guest/challenges/next — fecha a sondagem de challenge_id arbitrário
+não servido antes.
+
+C2 (fechado): POST /guest/migrate-progress criava Attempt e creditava
+XP/progresso de território REAL pra qualquer challenge_id+
+submitted_answer que o cliente mandasse, sem nenhuma prova de que
+aquela resposta passou pelo fluxo guest de verdade — dava pra fabricar
+XP e "desbloquear" território pago sem nunca ter jogado. Corrigido: o
+endpoint agora exige um `completion_token` assinado, emitido só por
+POST /guest/challenges/{id}/answer, provando que aquele
+(challenge_id, submitted_answer) exato foi processado de verdade pelo
+fluxo guest antes de ser migrado.
+
+A4 (fechado): migrate-progress usava get_current_user_id (sem exigir
+maioridade confirmada) e era chamado pelo client ANTES da tela de
+idade — uma conta que nunca confirmou 18+ podia acumular Attempt/XP
+reais. Agora exige require_age_confirmed_user_id; client (main.dart)
+passou a chamar isto só depois do Age Gate.
 """
 
+import hashlib
+import hmac
+import json
 import random
+import time
+from base64 import urlsafe_b64decode, urlsafe_b64encode
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field
@@ -25,7 +59,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .. import config, models, schemas, scoring, services
-from ..auth import get_current_user_id
+from ..auth import require_age_confirmed_user_id
 from ..db import get_db
 from .challenges import submit_answer as _submit_answer
 
@@ -39,6 +73,61 @@ def _client_ip(request: Request) -> str:
     # services.enforce_rate_limit (ver comentário lá: zero-cost, por
     # processo único).
     return request.client.host if request.client else "unknown"
+
+
+def _is_guest_allowed_territory(db: Session, territory_id: str) -> bool:
+    """
+    Só território que é a PRIMEIRA etapa de algum Mundo (menor
+    display_order dentre os territórios daquele world_id) pode ser
+    jogado sem conta — fecha a rota pra não virar um jeito de pular a
+    trava sequencial normal em territórios avançados/Relâmpago/pagos.
+    """
+    territory = db.get(models.Territory, territory_id)
+    if territory is None or territory.world_id is None:
+        return False
+    first_territory_id = db.execute(
+        select(models.Territory.id)
+        .where(models.Territory.world_id == territory.world_id)
+        .order_by(models.Territory.display_order)
+        .limit(1)
+    ).scalar_one_or_none()
+    return territory_id == first_territory_id
+
+
+def _sign(payload: dict) -> str:
+    """
+    Recibo assinado HMAC-SHA256 — propósito único: provar que um passo
+    do fluxo guest (servir um desafio, ou gradear uma resposta) realmente
+    aconteceu no servidor, sem precisar de sessão/estado persistido (o
+    fluxo guest é deliberadamente stateless). NUNCA usado como prova de
+    identidade de usuário — só de integridade de conteúdo de preview
+    público. `exp` sempre incluso pelo chamador.
+    """
+    payload_json = json.dumps(payload, separators=(",", ":"), sort_keys=True)
+    payload_b64 = urlsafe_b64encode(payload_json.encode()).decode()
+    sig = hmac.new(config.GUEST_RECEIPT_SECRET.encode(), payload_b64.encode(), hashlib.sha256).hexdigest()
+    return f"{payload_b64}.{sig}"
+
+
+def _verify(token: str) -> dict | None:
+    try:
+        payload_b64, sig = token.rsplit(".", 1)
+    except ValueError:
+        return None
+    expected_sig = hmac.new(config.GUEST_RECEIPT_SECRET.encode(), payload_b64.encode(), hashlib.sha256).hexdigest()
+    if not hmac.compare_digest(sig, expected_sig):
+        return None
+    try:
+        payload = json.loads(urlsafe_b64decode(payload_b64.encode()).decode())
+    except Exception:
+        return None
+    if payload.get("exp", 0) < time.time():
+        return None
+    return payload
+
+
+def _hash_answer(text: str) -> str:
+    return hashlib.sha256(text.encode()).hexdigest()
 
 
 class GuestWorldOut(BaseModel):
@@ -74,17 +163,7 @@ def guest_next_challenge(request: Request, territory_id: str, db: Session = Depe
     if territory is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "TERRITORY_NOT_FOUND", "message": territory_id}})
 
-    # Só território que é a PRIMEIRA etapa de algum Mundo (menor
-    # display_order dentre os territórios daquele world_id) pode ser
-    # jogado sem conta — fecha a rota pra não virar um jeito de pular a
-    # trava sequencial normal em territórios avançados/Relâmpago.
-    first_territory_id = db.execute(
-        select(models.Territory.id)
-        .where(models.Territory.world_id == territory.world_id)
-        .order_by(models.Territory.display_order)
-        .limit(1)
-    ).scalar_one_or_none()
-    if territory.world_id is None or territory_id != first_territory_id:
+    if not _is_guest_allowed_territory(db, territory_id):
         raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_NOT_ALLOWED_FOR_GUEST", "message": territory_id}})
 
     candidates = (
@@ -110,9 +189,12 @@ def guest_next_challenge(request: Request, territory_id: str, db: Session = Depe
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
     )
 
+    serve_token = _sign({"challenge_id": challenge.id, "exp": time.time() + config.GUEST_RECEIPT_TTL_SECONDS})
+
     return schemas.ChallengeOut(
         challenge_id=challenge.id,
         attempt_id=None,
+        serve_token=serve_token,
         territory_id=challenge.territory_id,
         difficulty_level=challenge.difficulty_level,
         prompt=challenge.prompt,
@@ -136,6 +218,9 @@ def guest_next_challenge(request: Request, territory_id: str, db: Session = Depe
 
 class GuestAnswerRequest(BaseModel):
     submitted_answer: str = Field(max_length=300)
+    # Emitido por GET /guest/challenges/next — prova que o servidor
+    # realmente serviu ESTE challenge_id antes de gradear a resposta.
+    serve_token: str
 
 
 class GuestAnswerResponse(BaseModel):
@@ -143,15 +228,24 @@ class GuestAnswerResponse(BaseModel):
     correct_answer: str
     explanation: str
     xp_preview: int
+    # Prova de que este (challenge_id, submitted_answer) foi gradeado de
+    # verdade aqui — exigido por POST /guest/migrate-progress.
+    completion_token: str
 
 
 @router.post("/challenges/{challenge_id}/answer", response_model=GuestAnswerResponse)
 def guest_submit_answer(challenge_id: str, body: GuestAnswerRequest, request: Request, db: Session = Depends(get_db)):
     services.enforce_rate_limit("guest_challenges_answer", _client_ip(request), max_calls=config.RATE_LIMIT_GUEST[0], window_seconds=config.RATE_LIMIT_GUEST[1])
 
+    serve_payload = _verify(body.serve_token)
+    if serve_payload is None or serve_payload.get("challenge_id") != challenge_id:
+        raise HTTPException(status_code=403, detail={"error": {"code": "INVALID_SERVE_TOKEN", "message": "Desafio não foi servido por este fluxo."}})
+
     challenge = db.get(models.Challenge, challenge_id)
     if challenge is None:
         raise HTTPException(status_code=404, detail={"error": {"code": "CHALLENGE_NOT_FOUND", "message": challenge_id}})
+    if not _is_guest_allowed_territory(db, challenge.territory_id):
+        raise HTTPException(status_code=403, detail={"error": {"code": "TERRITORY_NOT_ALLOWED_FOR_GUEST", "message": challenge.territory_id}})
 
     # Território de guest nunca é cronometrado (só "primeira etapa",
     # nunca Relâmpago) — timed_out sempre False aqui, igual o resto do
@@ -159,17 +253,25 @@ def guest_submit_answer(challenge_id: str, body: GuestAnswerRequest, request: Re
     is_correct = services.is_submitted_answer_correct(challenge, body.submitted_answer, timed_out=False)
     xp_preview = scoring.xp_base_for(challenge.difficulty_level) if is_correct else 0
 
+    completion_token = _sign({
+        "challenge_id": challenge_id,
+        "answer_hash": _hash_answer(body.submitted_answer),
+        "exp": time.time() + config.GUEST_RECEIPT_TTL_SECONDS,
+    })
+
     return GuestAnswerResponse(
         is_correct=is_correct,
         correct_answer=challenge.correct_answer,
         explanation=challenge.explanation,
         xp_preview=xp_preview,
+        completion_token=completion_token,
     )
 
 
 class GuestMigrateAnswer(BaseModel):
     challenge_id: str
     submitted_answer: str = Field(max_length=300)
+    completion_token: str
 
 
 class GuestMigrateRequest(BaseModel):
@@ -183,13 +285,29 @@ class GuestMigrateResponse(BaseModel):
 @router.post("/migrate-progress", response_model=GuestMigrateResponse)
 def migrate_guest_progress(
     body: GuestMigrateRequest,
-    user_id: str = Depends(get_current_user_id),
+    user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
     xp_awarded_total = 0
     for item in body.answers:
+        # Prova de que ESTE (challenge_id, submitted_answer) foi
+        # realmente processado por POST /guest/challenges/{id}/answer —
+        # sem isso, qualquer par challenge_id+submitted_answer "correto"
+        # (descoberto por fora, ex. via o próprio endpoint de resposta)
+        # virava XP e progresso de território reais sem nunca ter
+        # passado pelo fluxo guest de verdade.
+        completion_payload = _verify(item.completion_token)
+        if completion_payload is None:
+            continue
+        if completion_payload.get("challenge_id") != item.challenge_id:
+            continue
+        if completion_payload.get("answer_hash") != _hash_answer(item.submitted_answer):
+            continue
+
         challenge = db.get(models.Challenge, item.challenge_id)
         if challenge is None:
+            continue
+        if not _is_guest_allowed_territory(db, challenge.territory_id):
             continue
 
         # Idempotência (diagnóstico §3.2): se este user_id já tem
@@ -222,3 +340,21 @@ def migrate_guest_progress(
         xp_awarded_total += answer_out.xp_awarded
 
     return GuestMigrateResponse(xp_awarded_total=xp_awarded_total)
+
+# Risco residual documentado (C1, auditoria 09/10/2026): GET /guest/
+# challenges/next + POST /guest/.../answer ainda revelam correct_answer
+# de conteúdo real das 16 primeiras etapas de Mundo (as mesmas usadas
+# por jogadores autenticados) pra quem repetir a chamada o suficiente —
+# isso é inerente a mostrar conteúdo real num preview público sem exigir
+# conta, decisão de produto já tomada no documento original (§2 do
+# diagnóstico: "mesmo sem conta, a resposta certa nunca pode ir pro
+# cliente antes de ele responder" — mas DEPOIS de responder, sempre
+# mostra, de propósito, pra servir de aprendizado). O serve_token acima
+# fecha a sondagem de challenge_id ARBITRÁRIO (não servido antes), mas
+# não impede alguém de chamar /next repetidas vezes pra colecionar
+# respostas dos itens de preview — mitigado hoje só pelo rate limit
+# (RATE_LIMIT_GUEST). Se Rhoney quiser fechar esse resíduo por completo,
+# a solução correta é um banco de conteúdo EXCLUSIVO de preview guest,
+# nunca compartilhado com o conteúdo real jogado por usuário autenticado
+# — mudança de produto/conteúdo, não só de código, fora do escopo desta
+# correção.

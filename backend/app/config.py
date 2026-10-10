@@ -38,6 +38,31 @@ SUPABASE_SERVICE_ROLE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
 # auth.py recusa subir (fail loud) em vez de fail-open.
 ALLOW_DEV_INSECURE_AUTH = os.environ.get("MENTAL_ALLOW_DEV_INSECURE_AUTH", "").lower() == "true"
 
+# Achado CRÍTICO de auditoria de segurança (09/10/2026, pré-AAB) — os 3
+# endpoints /guest/* (routers/guest.py) aceitavam qualquer challenge_id
+# em POST /guest/challenges/{id}/answer e POST /guest/migrate-progress,
+# sem nenhuma prova de que o servidor realmente serviu aquele desafio
+# àquela pessoa: dava pra fabricar Attempt e creditar XP/progresso de
+# território real sem nunca ter jogado (migrate-progress), e sondar a
+# resposta certa de qualquer desafio das 16 primeiras etapas de Mundo
+# sem precisar de conta (oráculo). Corrigido com um recibo assinado
+# (HMAC-SHA256): GET /guest/challenges/next assina {challenge_id, exp}
+# ("serve_token"); POST /guest/.../answer exige esse token, confere
+# contra o challenge_id da URL e a expiração, e devolve um recibo novo
+# {challenge_id, is_correct, exp} ("completion_token"); POST /guest/
+# migrate-progress exige o completion_token em vez de confiar no
+# submitted_answer puro — a idempotência por (user_id, challenge_id) já
+# existente em migrate-progress fecha replay do mesmo recibo.
+# MENTAL_GUEST_RECEIPT_SECRET precisa ser uma env var própria (nunca
+# reaproveitar SUPABASE_JWT_SECRET — segredos de sistemas diferentes
+# nunca se misturam); em dev/teste sem a env var, usa um valor fixo
+# (nunca None — None quebraria toda assinatura/verificação,
+# fail-loud é pior aqui que um segredo de dev previsível, já que ESTE
+# segredo nunca prova identidade de usuário, só integridade de conteúdo
+# de preview público).
+GUEST_RECEIPT_SECRET = os.environ.get("MENTAL_GUEST_RECEIPT_SECRET", "dev-insecure-guest-receipt-secret")
+GUEST_RECEIPT_TTL_SECONDS = 600
+
 # MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL passa a ser exclusivo pra
 # maiores de 18 anos — sem mais age gate multi-público nem
 # child_safe_mode. Versão dos Termos aceitos no momento da confirmação

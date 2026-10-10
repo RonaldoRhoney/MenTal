@@ -132,6 +132,13 @@ class ChallengeOut(BaseModel):
     # batalha, que continua usando GET /battles/{id}/my-challenge (o
     # client ainda gera o próprio attempt_id nesse caso específico).
     attempt_id: str | None = None
+    # Achado crítico de auditoria de segurança (09/10/2026) — só
+    # preenchido por GET /guest/challenges/next (routers/guest.py):
+    # recibo assinado provando que o servidor serviu ESTE challenge_id
+    # pelo fluxo guest, exigido de volta por POST /guest/challenges/
+    # {id}/answer. None em todo o resto do app (fluxo autenticado usa
+    # attempt_id pra essa mesma garantia).
+    serve_token: str | None = None
     territory_id: str
     difficulty_level: int
     prompt: str

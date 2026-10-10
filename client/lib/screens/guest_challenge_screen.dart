@@ -61,12 +61,17 @@ class _GuestChallengeScreenState extends State<GuestChallengeScreen> {
     if (challenge == null || selected == null || _submitting) return;
     setState(() => _submitting = true);
     try {
-      final result = await _guestClient.submitAnswer(challenge['challenge_id'] as String, selected);
+      final result = await _guestClient.submitAnswer(
+        challenge['challenge_id'] as String,
+        selected,
+        serveToken: challenge['serve_token'] as String,
+      );
       await GuestChallengeService.addAnswer(GuestAnswer(
         challengeId: challenge['challenge_id'] as String,
         submittedAnswer: selected,
         isCorrect: result['is_correct'] as bool,
         xpPreview: result['xp_preview'] as int,
+        completionToken: result['completion_token'] as String,
       ));
       if (!mounted) return;
       setState(() {

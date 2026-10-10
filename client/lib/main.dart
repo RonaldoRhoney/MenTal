@@ -320,16 +320,17 @@ class _AppEntryPointState extends State<AppEntryPoint> {
         if (mounted) PushService.instance.initializeAndRegister(_client!, context);
       });
       _checkProfileStatus(_client!);
-      _maybeMigrateGuestProgress(_client!);
     }
   }
 
   // MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md §3.4 —
   // fire-and-forget, mesmo padrão de PushService.initializeAndRegister
-  // logo acima: nunca deve atrasar nem bloquear a navegação pro Age
-  // Gate/Home. Só roda quando existe progresso guest local pendente —
-  // login "normal" (sem ter passado pelo fluxo guest) não encontra nada
-  // pra migrar e a chamada nem acontece.
+  // acima: nunca deve atrasar nem bloquear a navegação. Só roda quando
+  // existe progresso guest local pendente — login "normal" (sem ter
+  // passado pelo fluxo guest) não encontra nada pra migrar e a chamada
+  // nem acontece. Chamado só depois do Age Gate confirmado (ver
+  // AgeGateScreen.onDone acima) — nunca antes, já que o endpoint exige
+  // maioridade confirmada (achado crítico de segurança, 09/10/2026).
   Future<void> _maybeMigrateGuestProgress(ApiClient client) async {
     final answers = await GuestChallengeService.getAnswers();
     if (answers.isEmpty) return;
@@ -503,7 +504,16 @@ class _AppEntryPointState extends State<AppEntryPoint> {
         if (!ageConfirmed) {
           return AgeGateScreen(
             client: client,
-            onDone: () => setState(() => _ageConfirmed = true),
+            onDone: () {
+              setState(() => _ageConfirmed = true);
+              // Achado crítico de auditoria de segurança (09/10/2026) —
+              // migrate-progress exige maioridade confirmada
+              // (require_age_confirmed_user_id); chamado só AQUI agora,
+              // nunca antes do Age Gate (era chamado logo após o login
+              // em _updateClientFromSession, permitindo que uma conta
+              // que nunca confirmasse 18+ acumulasse Attempt/XP reais).
+              _maybeMigrateGuestProgress(client);
+            },
           );
         }
 

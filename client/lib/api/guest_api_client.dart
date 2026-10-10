@@ -71,10 +71,15 @@ class GuestApiClient {
     return body as Map<String, dynamic>;
   }
 
-  Future<Map<String, dynamic>> submitAnswer(String challengeId, String submittedAnswer) async {
+  // Achado crítico de auditoria de segurança (09/10/2026) — serveToken
+  // vem de nextChallenge() (campo serve_token) e prova ao backend que
+  // ESTE challenge_id foi realmente servido pelo fluxo guest antes de
+  // gradear a resposta; sem ele o endpoint vira um oráculo de resposta
+  // certa pra qualquer challenge_id. Ver backend/app/routers/guest.py.
+  Future<Map<String, dynamic>> submitAnswer(String challengeId, String submittedAnswer, {required String serveToken}) async {
     final body = await _post(
       _uri('/guest/challenges/$challengeId/answer'),
-      jsonEncode({'submitted_answer': submittedAnswer}),
+      jsonEncode({'submitted_answer': submittedAnswer, 'serve_token': serveToken}),
     );
     return body as Map<String, dynamic>;
   }

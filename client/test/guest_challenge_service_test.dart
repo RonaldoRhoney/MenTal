@@ -25,10 +25,10 @@ void main() {
 
   test('addAnswer() acumula em ordem, preservando xp_preview e is_correct', () async {
     await GuestChallengeService.addAnswer(
-      const GuestAnswer(challengeId: 'c1', submittedAnswer: 'x', isCorrect: false, xpPreview: 0),
+      const GuestAnswer(challengeId: 'c1', submittedAnswer: 'x', isCorrect: false, xpPreview: 0, completionToken: 'tok1'),
     );
     await GuestChallengeService.addAnswer(
-      const GuestAnswer(challengeId: 'c2', submittedAnswer: 'y', isCorrect: true, xpPreview: 3),
+      const GuestAnswer(challengeId: 'c2', submittedAnswer: 'y', isCorrect: true, xpPreview: 3, completionToken: 'tok2'),
     );
 
     final answers = await GuestChallengeService.getAnswers();
@@ -49,7 +49,7 @@ void main() {
   test('clearProgress() remove território e respostas, mas não mexe em dismissed', () async {
     await GuestChallengeService.setTerritoryId('libras');
     await GuestChallengeService.addAnswer(
-      const GuestAnswer(challengeId: 'c1', submittedAnswer: 'x', isCorrect: true, xpPreview: 3),
+      const GuestAnswer(challengeId: 'c1', submittedAnswer: 'x', isCorrect: true, xpPreview: 3, completionToken: 'tok1'),
     );
     await GuestChallengeService.dismiss();
 
@@ -61,7 +61,7 @@ void main() {
   });
 
   test('toJson()/fromJson() preservam todos os campos', () {
-    const answer = GuestAnswer(challengeId: 'c1', submittedAnswer: 'resposta', isCorrect: true, xpPreview: 5);
+    const answer = GuestAnswer(challengeId: 'c1', submittedAnswer: 'resposta', isCorrect: true, xpPreview: 5, completionToken: 'tok1');
     final roundTripped = GuestAnswer.fromJson(answer.toJson());
     expect(roundTripped.challengeId, answer.challengeId);
     expect(roundTripped.submittedAnswer, answer.submittedAnswer);
