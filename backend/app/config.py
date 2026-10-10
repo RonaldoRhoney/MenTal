@@ -63,6 +63,15 @@ ALLOW_DEV_INSECURE_AUTH = os.environ.get("MENTAL_ALLOW_DEV_INSECURE_AUTH", "").l
 GUEST_RECEIPT_SECRET = os.environ.get("MENTAL_GUEST_RECEIPT_SECRET", "dev-insecure-guest-receipt-secret")
 GUEST_RECEIPT_TTL_SECONDS = 600
 
+# Achado C1 de auditoria de segurança, fechado de verdade em 10/10/2026
+# (ver guest.py) — no máximo este tanto de challenge_ids DIFERENTES
+# visíveis por (IP, território) dentro da janela, igual ao tamanho do
+# preview que o fluxo sempre pretendeu mostrar (GuestChallengeService.
+# maxQuestions no client). Janela de 24h: reseta por dia, pra não
+# bloquear pra sempre um IP compartilhado (ex.: NAT de operadora).
+GUEST_MAX_DISTINCT_CHALLENGES = 3
+GUEST_DISTINCT_WINDOW_SECONDS = 86400
+
 # MENTAL-DIR-001/POL-002 (24/08/2026): MENTAL passa a ser exclusivo pra
 # maiores de 18 anos — sem mais age gate multi-público nem
 # child_safe_mode. Versão dos Termos aceitos no momento da confirmação
@@ -351,6 +360,22 @@ IDIOMA_TERRITORY_IDS = {
     # (homófonos, pares mínimos etc.) quando o jogador usar um errado numa conversa.
     "ingles_parperfeito_basico", "ingles_parperfeito_intermediario", "ingles_parperfeito_avancado",
     "ingles_parperfeito_relampago_basico", "ingles_parperfeito_relampago_intermediario", "ingles_parperfeito_relampago_avancado",
+}
+
+# Listening Ativo (MUNDO_IDIOMAS_INGLES_LISTENING_V1.md) — achado de auditoria de
+# consistência de conteúdo (09/10/2026): era o único mini-mundo recente de Inglês fora do
+# Mental Lingo, sem nenhum comentário explicando a exclusão (diferente de todos os
+# outros). Confirmado com Rhoney (10/10/2026) que era lacuna, não decisão deliberada — MAS
+# deliberadamente NÃO entra em IDIOMA_TERRITORY_IDS: esse conjunto também libera a
+# Constelação de Palavras (rodada de reconhecimento de significado), e os prompts de
+# listening ("O que ela gosta?") são perguntas de compreensão auditiva, não "traduza X" —
+# test_todo_desafio_idiomas_de_palavra_unica_tem_significado_extraivel_e_distratores
+# (teste permanente da lição de 19/09/2026) provou isso na prática: 10 dos 90 itens têm
+# resposta de uma palavra só e prompt fora do template esperado. Conjunto próprio, só pro
+# Mental Lingo reconhecer/explicar o conteúdo em conversa.
+MENTAL_LINGO_TERRITORY_IDS = IDIOMA_TERRITORY_IDS | {
+    "ingles_listening_basico", "ingles_listening_intermediario", "ingles_listening_avancado",
+    "ingles_listening_relampago_basico", "ingles_listening_relampago_intermediario", "ingles_listening_relampago_avancado",
 }
 
 # Territórios onde o formato com tempo é OBRIGATÓRIO e único (nunca

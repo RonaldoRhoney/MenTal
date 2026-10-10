@@ -1,5 +1,10 @@
 import uuid
 
+from sqlalchemy import select
+
+from app import models
+from app.db import SessionLocal
+
 from .conftest import auth_header
 
 
@@ -86,6 +91,46 @@ def test_complete_round_ignores_item_ids_from_another_territory(client):
     )
     assert resp.status_code == 200
     assert resp.json()["xp_awarded_total"] == 0
+
+
+def test_complete_round_rejects_item_ids_not_in_the_latest_registered_round(client):
+    """
+    Achado A2 de auditoria de segurança (09/10/2026, migration 123):
+    antes desta correção, GET /par-perfeito/round não registrava nada —
+    dava pra chamar várias vezes sem nunca jogar, juntar os item_ids de
+    cada rodada, e mandar tudo de uma vez pra /complete-round pra
+    crédito de XP de uma "rodada" que nunca existiu de verdade (PoC do
+    agente: 40 chamadas, 30 ids, 90 XP em <1s). Agora só os item_ids
+    DENTRO da rodada mais recente registrada são aceitos — simulado
+    aqui inserindo uma rodada "antiga" direto no banco com um item_id
+    que nunca esteve na rodada real mais recente do usuário.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    with SessionLocal() as db:
+        all_item_ids = [
+            row[0]
+            for row in db.execute(
+                select(models.ParPerfeitoItem.id).where(models.ParPerfeitoItem.territory_id == "ingles_parperfeito_basico")
+            ).all()
+        ]
+
+    round_resp = client.get("/par-perfeito/round", params={"territory_id": "ingles_parperfeito_basico"}, headers=headers)
+    served_ids = {item["id"] for item in round_resp.json()["items"]}
+    stale_item_id = next(i for i in all_item_ids if i not in served_ids)
+
+    xp_before = client.get("/progress", headers=headers).json()["xp_total"]
+    resp = client.post(
+        "/par-perfeito/complete-round",
+        json={"territory_id": "ingles_parperfeito_basico", "item_ids": [stale_item_id]},
+        headers=headers,
+    )
+    assert resp.status_code == 200
+    assert resp.json()["xp_awarded_total"] == 0
+    xp_after = client.get("/progress", headers=headers).json()["xp_total"]
+    assert xp_after == xp_before
 
 
 def test_complete_round_requires_territory_unlocked(client):

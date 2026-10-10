@@ -44,6 +44,19 @@ maioridade confirmada) e era chamado pelo client ANTES da tela de
 idade — uma conta que nunca confirmou 18+ podia acumular Attempt/XP
 reais. Agora exige require_age_confirmed_user_id; client (main.dart)
 passou a chamar isto só depois do Age Gate.
+
+C1 (fechado de verdade, 10/10/2026): o risco residual documentado
+abaixo até esta correção — repetir GET /next sem limite pra "garimpar"
+o deck inteiro de um território liberado pra guest — é fechado sem
+precisar de um banco de conteúdo exclusivo de preview (mudança de
+produto maior, adiada): o fluxo sempre foi desenhado pra NO MÁXIMO 3
+perguntas por visita (GuestChallengeService.maxQuestions no client),
+só que o servidor nunca impunha isso. Agora impõe: no máximo
+GUEST_MAX_DISTINCT_CHALLENGES challenge_ids DIFERENTES por (IP,
+território) dentro de GUEST_DISTINCT_WINDOW_SECONDS — depois disso,
+/next só torna a servir um dos já vistos (nunca um challenge_id novo
+daquele território), então o "deck" exposto por IP fica permanentemente
+limitado a esse punhado pequeno, nunca o território inteiro.
 """
 
 import hashlib
@@ -52,6 +65,7 @@ import json
 import random
 import time
 from base64 import urlsafe_b64decode, urlsafe_b64encode
+from collections import defaultdict
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel, Field
@@ -64,6 +78,30 @@ from ..db import get_db
 from .challenges import submit_answer as _submit_answer
 
 router = APIRouter(prefix="/guest", tags=["guest"])
+
+# C1 (10/10/2026) — ver nota no topo do arquivo. Mesmo padrão em memória
+# já aceito por services._rate_limit_hits (zero-custo, processo único no
+# Render); a lista se auto-poda a cada chamada (entradas fora da janela
+# saem), então o único resíduo de memória é a CHAVE (ip:território) em
+# si — mesma característica já aceita e documentada (M2) pro rate
+# limiter genérico, não resolvida aqui de novo por ser um achado à parte.
+_guest_served_challenge_ids: dict[str, list[tuple[str, float]]] = defaultdict(list)
+
+
+def _pick_challenge_for_guest(candidates: list[models.Challenge], ip: str, territory_id: str) -> models.Challenge:
+    key = f"{ip}:{territory_id}"
+    now = time.monotonic()
+    cutoff = now - config.GUEST_DISTINCT_WINDOW_SECONDS
+    seen = _guest_served_challenge_ids[key]
+    while seen and seen[0][1] < cutoff:
+        seen.pop(0)
+    seen_ids = {challenge_id for challenge_id, _ in seen}
+    already_seen_candidates = [c for c in candidates if c.id in seen_ids]
+    if len(seen_ids) >= config.GUEST_MAX_DISTINCT_CHALLENGES and already_seen_candidates:
+        return random.choice(already_seen_candidates)
+    challenge = random.choice(candidates)
+    seen.append((challenge.id, now))
+    return challenge
 
 
 def _client_ip(request: Request) -> str:
@@ -183,7 +221,7 @@ def guest_next_challenge(request: Request, territory_id: str, db: Session = Depe
     # guest não tem user_id de verdade pra atrelar ChallengeBatchProgress,
     # e são só 3 perguntas descartáveis — um sorteio simples já evita
     # repetição óbvia sem precisar de infraestrutura nova.
-    challenge = random.choice(candidates)
+    challenge = _pick_challenge_for_guest(candidates, _client_ip(request), territory_id)
     options = services.shuffled_options(challenge.options) if challenge.options else challenge.options
     hints_available = len(
         db.execute(select(models.ChallengeHint).where(models.ChallengeHint.challenge_id == challenge.id)).scalars().all()
@@ -341,20 +379,16 @@ def migrate_guest_progress(
 
     return GuestMigrateResponse(xp_awarded_total=xp_awarded_total)
 
-# Risco residual documentado (C1, auditoria 09/10/2026): GET /guest/
-# challenges/next + POST /guest/.../answer ainda revelam correct_answer
-# de conteúdo real das 16 primeiras etapas de Mundo (as mesmas usadas
-# por jogadores autenticados) pra quem repetir a chamada o suficiente —
-# isso é inerente a mostrar conteúdo real num preview público sem exigir
-# conta, decisão de produto já tomada no documento original (§2 do
-# diagnóstico: "mesmo sem conta, a resposta certa nunca pode ir pro
-# cliente antes de ele responder" — mas DEPOIS de responder, sempre
-# mostra, de propósito, pra servir de aprendizado). O serve_token acima
-# fecha a sondagem de challenge_id ARBITRÁRIO (não servido antes), mas
-# não impede alguém de chamar /next repetidas vezes pra colecionar
-# respostas dos itens de preview — mitigado hoje só pelo rate limit
-# (RATE_LIMIT_GUEST). Se Rhoney quiser fechar esse resíduo por completo,
-# a solução correta é um banco de conteúdo EXCLUSIVO de preview guest,
-# nunca compartilhado com o conteúdo real jogado por usuário autenticado
-# — mudança de produto/conteúdo, não só de código, fora do escopo desta
-# correção.
+# C1 fechado (10/10/2026, ver nota no topo do arquivo): até esta
+# correção, GET /guest/challenges/next + POST /guest/.../answer
+# revelavam correct_answer de conteúdo real das 16 primeiras etapas de
+# Mundo pra quem repetisse a chamada o suficiente, mitigado só pelo
+# rate limit genérico (chamadas/minuto, não challenge_ids DIFERENTES
+# vistos). _pick_challenge_for_guest agora limita a no máximo
+# GUEST_MAX_DISTINCT_CHALLENGES challenge_ids diferentes por (IP,
+# território) — exatamente o tamanho do preview que o fluxo sempre
+# pretendeu mostrar (3 perguntas, GuestChallengeService.maxQuestions),
+# nunca mais o território inteiro. Uma solução com banco de conteúdo
+# EXCLUSIVO de preview guest (nunca compartilhado com o conteúdo real)
+# continua sendo a opção mais forte caso o produto evolua, mas deixou
+# de ser necessária pra fechar o risco original.

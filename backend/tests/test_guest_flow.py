@@ -2,8 +2,9 @@ import uuid
 
 from sqlalchemy import select
 
-from app import models
+from app import config, models
 from app.db import SessionLocal
+from app.routers.guest import _pick_challenge_for_guest
 
 from .conftest import auth_header
 
@@ -275,6 +276,32 @@ def test_migrate_progress_ignores_challenge_from_non_entry_territory(client):
     progress = client.get("/progress", headers=headers).json()
     territory_entry = next(t for t in progress["territories"] if t["territory_id"] == "ingles_intermediario")
     assert territory_entry["xp_in_territory"] == 0
+
+
+def test_guest_next_challenge_never_exposes_more_than_the_preview_sized_deck(client):
+    """
+    C1 fechado de verdade (10/10/2026, ver guest.py): antes desta
+    correção, repetir GET /next sem limite deixava "garimpar" o deck
+    inteiro de um território liberado pra guest — mitigado só pelo rate
+    limit genérico (chamadas/minuto, não challenge_ids DIFERENTES
+    vistos). Testa _pick_challenge_for_guest diretamente (não via HTTP)
+    pra não disputar o rate limit em memória com os outros testes deste
+    arquivo, que compartilham o mesmo IP de TestClient: mesmo chamando
+    bem mais vezes que as 3 perguntas que o fluxo pretende mostrar,
+    nunca mais que config.GUEST_MAX_DISTINCT_CHALLENGES ids diferentes
+    aparecem pro mesmo (IP, território).
+    """
+    with SessionLocal() as db:
+        candidates = db.execute(
+            select(models.Challenge).where(models.Challenge.territory_id == "palavras")
+        ).scalars().all()
+
+    seen_ids = set()
+    fake_ip = "203.0.113.42"
+    for _ in range(10):
+        challenge = _pick_challenge_for_guest(candidates, fake_ip, "palavras")
+        seen_ids.add(challenge.id)
+    assert len(seen_ids) <= config.GUEST_MAX_DISTINCT_CHALLENGES
 
 
 def test_guest_endpoints_are_rate_limited(client):

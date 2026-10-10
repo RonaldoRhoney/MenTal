@@ -231,7 +231,7 @@ def _vocab_entries(db: Session) -> list[_VocabEntry]:
     Idiomas (~1.400 com o banco de 1.000 palavras) e aplicava regex em cada uma — lento
     com o Supabase remoto. Agora uma consulta agregada barata (contagem + menor/maior id)
     decide se o índice ainda vale; só reconstrói quando o conteúdo mudou."""
-    ids = sorted(config.IDIOMA_TERRITORY_IDS)
+    ids = sorted(config.MENTAL_LINGO_TERRITORY_IDS)
     try:
         # min/max sobre UUID não existe no Postgres (existe no SQLite dos testes) — por
         # isso o id vira texto antes de agregar.
@@ -591,9 +591,9 @@ def answer_question(db: Session, question: str) -> dict:
 
     target = _detect_language(lang_word) if lang_word else None
     territory_ids = (
-        [tid for tid in config.IDIOMA_TERRITORY_IDS if tid.startswith(target)]
+        [tid for tid in config.MENTAL_LINGO_TERRITORY_IDS if tid.startswith(target)]
         if target is not None
-        else list(config.IDIOMA_TERRITORY_IDS)
+        else list(config.MENTAL_LINGO_TERRITORY_IDS)
     )
     entries = _vocab_entries(db)
     allowed = set(territory_ids)

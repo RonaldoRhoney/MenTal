@@ -41,7 +41,8 @@ class ParPerfeitoScreen extends StatefulWidget {
 // cor (pedido de Rhoney, 09/10/2026: "quando o usuário tocar nos dois
 // cards correspondentes às resposta corretas os dois cards ficam com a
 // mesma cor"). Cicla quando a rodada tem mais pares que cores.
-List<Color> get _kMatchPalette => [AppColors.gold, AppColors.teal, AppColors.purple];
+List<Color> get _kMatchPalette =>
+    [AppColors.gold, AppColors.teal, AppColors.purple];
 
 class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
   List<Map<String, dynamic>>? _items;
@@ -90,10 +91,18 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
       _xpAwardedTotal = null;
     });
     try {
-      final round = await widget.client.nextParPerfeitoRound(widget.territoryId);
+      final round =
+          await widget.client.nextParPerfeitoRound(widget.territoryId);
       final items = (round['items'] as List).cast<Map<String, dynamic>>();
-      final left = items.map((i) => {'id': i['id'] as String, 'text': i['word_en'] as String}).toList()..shuffle();
-      final right = items.map((i) => {'id': i['id'] as String, 'text': i['meaning_pt'] as String}).toList()..shuffle();
+      final left = items
+          .map((i) => {'id': i['id'] as String, 'text': i['word_en'] as String})
+          .toList()
+        ..shuffle();
+      final right = items
+          .map((i) =>
+              {'id': i['id'] as String, 'text': i['meaning_pt'] as String})
+          .toList()
+        ..shuffle();
       _leftPositionKeys.clear();
       _rightPositionKeys.clear();
       _leftShakeKeys.clear();
@@ -118,7 +127,8 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
       // segundo plano, pra tocar sem nenhum atraso de rede no momento
       // do acerto (TtsService.preload já existe pra isso).
       for (final item in items) {
-        TtsService.instance.preload(item['word_en'] as String, voice: voiceForParPerfeitoAccent(ParPerfeitoAccent.us));
+        TtsService.instance.preload(item['word_en'] as String,
+            voice: voiceForParPerfeitoAccent(ParPerfeitoAccent.us));
       }
     } on ApiException catch (e) {
       if (!mounted) return;
@@ -149,9 +159,12 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
         _selectedLeftId = null;
       });
       FeedbackService.instance.play(FeedbackSound.correct);
-      final wordEn = _items!.firstWhere((i) => i['id'] == id)['word_en'] as String;
-      TtsService.instance.speak(wordEn, voice: voiceForParPerfeitoAccent(ParPerfeitoAccent.us));
-      WidgetsBinding.instance.addPostFrameCallback((_) => _drawLineFor(id, color));
+      final wordEn =
+          _items!.firstWhere((i) => i['id'] == id)['word_en'] as String;
+      TtsService.instance.speak(wordEn,
+          voice: voiceForParPerfeitoAccent(ParPerfeitoAccent.us));
+      WidgetsBinding.instance
+          .addPostFrameCallback((_) => _drawLineFor(id, color));
       if (_matchedIds.length == _items!.length) {
         Future.delayed(const Duration(milliseconds: 700), _finishRound);
       }
@@ -167,11 +180,15 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
 
   void _drawLineFor(String id, Color color) {
     final stackBox = _stackKey.currentContext?.findRenderObject() as RenderBox?;
-    final leftBox = _leftPositionKeys[id]?.currentContext?.findRenderObject() as RenderBox?;
-    final rightBox = _rightPositionKeys[id]?.currentContext?.findRenderObject() as RenderBox?;
+    final leftBox =
+        _leftPositionKeys[id]?.currentContext?.findRenderObject() as RenderBox?;
+    final rightBox = _rightPositionKeys[id]?.currentContext?.findRenderObject()
+        as RenderBox?;
     if (stackBox == null || leftBox == null || rightBox == null) return;
-    final start = stackBox.globalToLocal(leftBox.localToGlobal(leftBox.size.centerRight(Offset.zero)));
-    final end = stackBox.globalToLocal(rightBox.localToGlobal(rightBox.size.centerLeft(Offset.zero)));
+    final start = stackBox.globalToLocal(
+        leftBox.localToGlobal(leftBox.size.centerRight(Offset.zero)));
+    final end = stackBox.globalToLocal(
+        rightBox.localToGlobal(rightBox.size.centerLeft(Offset.zero)));
     if (!mounted) return;
     setState(() => _lines.add(_LineSegment(start, end, color)));
   }
@@ -210,7 +227,9 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(_error!, textAlign: TextAlign.center, style: TextStyle(color: AppColors.error)),
+              Text(_error!,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: AppColors.error)),
               const SizedBox(height: 16),
               FilledButton(onPressed: _load, child: Text(l10n.tryAgainButton)),
             ],
@@ -233,7 +252,10 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
             children: [
               Text(
                 l10n.parPerfeitoInstruction,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppColors.muted),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium
+                    ?.copyWith(color: AppColors.muted),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 14),
@@ -245,7 +267,8 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
                       child: TweenAnimationBuilder<double>(
                         duration: const Duration(milliseconds: 350),
                         curve: Curves.easeOut,
-                        tween: Tween(begin: 0, end: total == 0 ? 0 : done / total),
+                        tween:
+                            Tween(begin: 0, end: total == 0 ? 0 : done / total),
                         builder: (context, value, _) => LinearProgressIndicator(
                           value: value,
                           minHeight: 8,
@@ -258,7 +281,8 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
                   const SizedBox(width: 10),
                   Text(
                     '$done/$total',
-                    style: Theme.of(context).textTheme.labelLarge?.copyWith(color: AppColors.gold, fontWeight: FontWeight.w700),
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                        color: AppColors.gold, fontWeight: FontWeight.w700),
                   ),
                 ],
               ),
@@ -292,92 +316,117 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
     );
   }
 
-  Widget _buildColumn(List<Map<String, dynamic>> cards, {required bool isLeft}) {
-    return ListView.separated(
-      padding: EdgeInsets.zero,
-      itemCount: cards.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 12),
-      itemBuilder: (context, index) {
-        final card = cards[index];
-        final id = card['id'] as String;
-        final matched = _matchedIds.contains(id);
-        final selected = isLeft && _selectedLeftId == id;
-        final shakeKey = isLeft ? _leftShakeKeys[id] : _rightShakeKeys[id];
-        final positionKey = isLeft ? _leftPositionKeys[id] : _rightPositionKeys[id];
-        final matchColor = _matchedColor[id];
+  // Pedido de Rhoney (10/10/2026): "use a tela proporcionalmente, a
+  // parte debaixo ficou com uma grande espaço" — com só 5 pares por
+  // rodada, uma ListView rolável deixava os cards compactados no topo e
+  // o resto da tela vazio. Cards agora ESTICAM pra preencher toda a
+  // altura disponível (Expanded por card, sem rolagem), como no
+  // formato de referência de pareamento.
+  Widget _buildColumn(List<Map<String, dynamic>> cards,
+      {required bool isLeft}) {
+    final children = <Widget>[];
+    for (var index = 0; index < cards.length; index++) {
+      if (index > 0) children.add(const SizedBox(height: 12));
+      children.add(
+          Expanded(child: _buildCard(cards[index], index, isLeft: isLeft)));
+    }
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch, children: children);
+  }
 
-        return _StaggeredEntrance(
-          index: index,
-          child: _ShakeCard(
-            key: shakeKey,
-            child: AnimatedScale(
-              scale: matched ? 1.04 : 1.0,
-              duration: const Duration(milliseconds: 220),
-              curve: Curves.easeOutBack,
-              child: Material(
-                key: positionKey,
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(18),
-                child: InkWell(
+  Widget _buildCard(Map<String, dynamic> card, int index,
+      {required bool isLeft}) {
+    final id = card['id'] as String;
+    final matched = _matchedIds.contains(id);
+    final selected = isLeft && _selectedLeftId == id;
+    final shakeKey = isLeft ? _leftShakeKeys[id] : _rightShakeKeys[id];
+    final positionKey = isLeft ? _leftPositionKeys[id] : _rightPositionKeys[id];
+    final matchColor = _matchedColor[id];
+
+    return _StaggeredEntrance(
+      index: index,
+      child: _ShakeCard(
+        key: shakeKey,
+        child: AnimatedScale(
+          scale: matched ? 1.04 : 1.0,
+          duration: const Duration(milliseconds: 220),
+          curve: Curves.easeOutBack,
+          child: Material(
+            key: positionKey,
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(18),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(18),
+              onTap: matched
+                  ? null
+                  : () => isLeft ? _onTapLeft(id) : _onTapRight(id),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 220),
+                curve: Curves.easeOut,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
-                  onTap: matched ? null : () => isLeft ? _onTapLeft(id) : _onTapRight(id),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 220),
-                    curve: Curves.easeOut,
-                    constraints: const BoxConstraints(minHeight: 66),
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      color: matched
-                          ? matchColor?.withValues(alpha: 0.16)
-                          : selected
-                              ? AppColors.gold.withValues(alpha: 0.16)
-                              : AppColors.bg2,
-                      border: Border.all(
-                        color: matched
-                            ? matchColor ?? AppColors.teal
-                            : selected
-                                ? AppColors.gold
-                                : AppColors.muted.withValues(alpha: 0.28),
-                        width: selected || matched ? 2 : 1,
-                      ),
-                      boxShadow: [
-                        if (matched)
-                          BoxShadow(color: (matchColor ?? AppColors.teal).withValues(alpha: 0.35), blurRadius: 14, spreadRadius: 1)
-                        else if (selected)
-                          BoxShadow(color: AppColors.gold.withValues(alpha: 0.25), blurRadius: 10)
-                        else
-                          BoxShadow(color: Colors.black.withValues(alpha: 0.18), blurRadius: 4, offset: const Offset(0, 2)),
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          child: Text(
-                            card['text'] as String,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                  fontWeight: matched || selected ? FontWeight.w600 : FontWeight.normal,
-                                  color: matched ? matchColor : null,
-                                ),
-                          ),
-                        ),
-                        if (matched) ...[
-                          const SizedBox(width: 6),
-                          Icon(Icons.check_circle_rounded, size: 18, color: matchColor),
-                        ],
-                      ],
-                    ),
+                  color: matched
+                      ? matchColor?.withValues(alpha: 0.16)
+                      : selected
+                          ? AppColors.gold.withValues(alpha: 0.16)
+                          : AppColors.bg2,
+                  border: Border.all(
+                    color: matched
+                        ? matchColor ?? AppColors.teal
+                        : selected
+                            ? AppColors.gold
+                            : AppColors.muted.withValues(alpha: 0.28),
+                    width: selected || matched ? 2 : 1,
                   ),
+                  boxShadow: [
+                    if (matched)
+                      BoxShadow(
+                          color: (matchColor ?? AppColors.teal)
+                              .withValues(alpha: 0.35),
+                          blurRadius: 14,
+                          spreadRadius: 1)
+                    else if (selected)
+                      BoxShadow(
+                          color: AppColors.gold.withValues(alpha: 0.25),
+                          blurRadius: 10)
+                    else
+                      BoxShadow(
+                          color: Colors.black.withValues(alpha: 0.18),
+                          blurRadius: 4,
+                          offset: const Offset(0, 2)),
+                  ],
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        card['text'] as String,
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              fontWeight: matched || selected
+                                  ? FontWeight.w600
+                                  : FontWeight.normal,
+                              color: matched ? matchColor : null,
+                            ),
+                      ),
+                    ),
+                    if (matched) ...[
+                      const SizedBox(width: 6),
+                      Icon(Icons.check_circle_rounded,
+                          size: 18, color: matchColor),
+                    ],
+                  ],
                 ),
               ),
             ),
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 
@@ -398,23 +447,30 @@ class _ParPerfeitoScreenState extends State<ParPerfeitoScreen> {
             ),
             const SizedBox(height: 8),
             if (xp == null)
-              const Padding(padding: EdgeInsets.all(12), child: CircularProgressIndicator())
+              const Padding(
+                  padding: EdgeInsets.all(12),
+                  child: CircularProgressIndicator())
             else
               Text(
                 l10n.parPerfeitoXpAwarded(xp),
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(color: AppColors.gold),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(color: AppColors.gold),
               ),
             const SizedBox(height: 28),
-            FilledButton(onPressed: _load, child: Text(l10n.parPerfeitoPlayAgain)),
+            FilledButton(
+                onPressed: _load, child: Text(l10n.parPerfeitoPlayAgain)),
             const SizedBox(height: 10),
-            TextButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.parPerfeitoBackButton)),
+            TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(l10n.parPerfeitoBackButton)),
           ],
         ),
       ),
     );
   }
 }
-
 
 class _LineSegment {
   const _LineSegment(this.start, this.end, this.color);
@@ -445,7 +501,8 @@ class _LinesPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant _LinesPainter oldDelegate) => oldDelegate.lines.length != lines.length;
+  bool shouldRepaint(covariant _LinesPainter oldDelegate) =>
+      oldDelegate.lines.length != lines.length;
 }
 
 /// Achado real testando o personagem flutuante (08/10/2026) — combinar
@@ -461,8 +518,10 @@ class _ShakeCard extends StatefulWidget {
   State<_ShakeCard> createState() => _ShakeCardState();
 }
 
-class _ShakeCardState extends State<_ShakeCard> with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 360));
+class _ShakeCardState extends State<_ShakeCard>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+      vsync: this, duration: const Duration(milliseconds: 360));
   late final Animation<double> _offset = TweenSequence<double>([
     TweenSequenceItem(tween: Tween(begin: 0.0, end: -8.0), weight: 1),
     TweenSequenceItem(tween: Tween(begin: -8.0, end: 8.0), weight: 1),
@@ -485,7 +544,8 @@ class _ShakeCardState extends State<_ShakeCard> with SingleTickerProviderStateMi
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: _offset,
-      builder: (context, child) => Transform.translate(offset: Offset(_offset.value, 0), child: child),
+      builder: (context, child) =>
+          Transform.translate(offset: Offset(_offset.value, 0), child: child),
       child: widget.child,
     );
   }
@@ -505,11 +565,15 @@ class _StaggeredEntrance extends StatefulWidget {
   State<_StaggeredEntrance> createState() => _StaggeredEntranceState();
 }
 
-class _StaggeredEntranceState extends State<_StaggeredEntrance> with SingleTickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
-  late final Animation<double> _opacity = CurvedAnimation(parent: _controller, curve: Curves.easeOut);
+class _StaggeredEntranceState extends State<_StaggeredEntrance>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+      vsync: this, duration: const Duration(milliseconds: 320));
+  late final Animation<double> _opacity =
+      CurvedAnimation(parent: _controller, curve: Curves.easeOut);
   late final Animation<Offset> _slide =
-      Tween(begin: const Offset(0, 0.15), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic));
+      Tween(begin: const Offset(0, 0.15), end: Offset.zero).animate(
+          CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic));
   bool _started = false;
 
   @override

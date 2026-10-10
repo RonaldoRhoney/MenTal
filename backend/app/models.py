@@ -858,6 +858,29 @@ class ParPerfeitoMatch(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
+class ParPerfeitoRound(Base):
+    """
+    Achado A2 de auditoria de segurança (09/10/2026, corrigido migration
+    123): GET /par-perfeito/round não registrava NADA no servidor — dava
+    pra chamar sem limite, "garimpando" os ids de item de várias rodadas
+    (sem nunca formar nenhum par de verdade), e depois mandar tudo de
+    uma vez pra POST /complete-round pra crédito de XP de uma rodada que
+    nunca existiu (PoC do agente: 40 chamadas, 30 ids, 90 XP em <1s).
+    Agora GET /round grava os item_ids sorteados; POST /complete-round
+    só aceita item_ids que estejam contidos na rodada mais recente
+    registrada pro mesmo (user_id, territory_id) — no máximo os
+    _ROUND_SIZE itens de UMA rodada real, nunca a soma de várias.
+    """
+
+    __tablename__ = "par_perfeito_rounds"
+
+    id: Mapped[str] = mapped_column(UUIDType, primary_key=True, default=new_uuid)
+    user_id: Mapped[str] = mapped_column(UUIDType)
+    territory_id: Mapped[str] = mapped_column(String, ForeignKey("territories.id"))
+    item_ids: Mapped[list] = mapped_column(JSON)
+    issued_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
+
+
 class LevelFeedback(Base):
     __tablename__ = "level_feedback"
 

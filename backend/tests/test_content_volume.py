@@ -20,7 +20,17 @@ REQUIRED_DIFFICULTY_LEVELS = (1, 2, 3)
 # `challenges` (mecânica própria: WordPuzzle, com seu próprio critério
 # de volume em test_palavras_relampago.py/testes específicos). O
 # critério do item 7 é especificamente sobre território de MCQ.
-NON_MCQ_TERRITORY_IDS = {"caca_palavras"}
+#
+# Par Perfeito "Pares de cards" (Fase B, 08-09/10/2026, migration 123):
+# ingles_parperfeito_{basico,intermediario,avancado} migraram de vez
+# pra ParPerfeitoItem (mesmo raciocínio de WordPuzzle) — o conteúdo
+# antigo em Challenge pra esses 3 (formato "Complete a frase") virou
+# conteúdo morto, removido na migration 123. As variantes _relampago_
+# continuam no formato antigo (Challenge), por isso NÃO entram aqui.
+NON_MCQ_TERRITORY_IDS = {
+    "caca_palavras",
+    "ingles_parperfeito_basico", "ingles_parperfeito_intermediario", "ingles_parperfeito_avancado",
+}
 
 # V5 — Mundo dos Idiomas: cada território JÁ É um nível (ingles_basico,
 # ingles_intermediario, ingles_avancado, ...) — a progressão de
