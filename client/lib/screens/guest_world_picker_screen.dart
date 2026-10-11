@@ -7,6 +7,7 @@ import '../services/guest_challenge_service.dart';
 import '../theme/app_theme.dart';
 import '../world_icons.dart';
 import 'guest_challenge_screen.dart';
+import 'guest_par_perfeito_screen.dart';
 
 /// MENTAL_FLUXO_GUEST_3_QUESTOES_DIAGNOSTICO_TECNICO_V1.md §3.4 — primeira
 /// tela do fluxo guest, antes do login. Lista Mundos via GET /guest/worlds
@@ -113,12 +114,19 @@ class _GuestWorldPickerScreenState extends State<GuestWorldPickerScreen> {
           onTap: () async {
             await GuestChallengeService.setTerritoryId(world['territory_id'] as String);
             if (!context.mounted) return;
+            // Pedido de Rhoney (10/10/2026): Mundo dos Idiomas abre no
+            // jogo Par Perfeito (pareamento de cards), nunca no quiz —
+            // backend decide isso via game_type em GET /guest/worlds,
+            // nunca inferido do world_id aqui no client.
+            final gameType = world['game_type'] as String? ?? 'quiz';
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (_) => GuestChallengeScreen(
-                  baseUrl: widget.baseUrl,
-                  territoryId: world['territory_id'] as String,
-                ),
+                builder: (_) => gameType == 'par_perfeito'
+                    ? GuestParPerfeitoScreen(baseUrl: widget.baseUrl)
+                    : GuestChallengeScreen(
+                        baseUrl: widget.baseUrl,
+                        territoryId: world['territory_id'] as String,
+                      ),
               ),
             );
           },

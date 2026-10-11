@@ -162,11 +162,15 @@ class ApiClient {
   // POST /challenges/{id}/answer — nunca confia no `is_correct` que o
   // client guardou localmente só pra exibição.
   Future<Map<String, dynamic>> migrateGuestProgress(
-      List<Map<String, dynamic>> answers) async {
+      List<Map<String, dynamic>> answers,
+      {Map<String, dynamic>? parPerfeito}) async {
     return _post(
       _uri('/guest/migrate-progress'),
       headers: _headers,
-      body: jsonEncode({'answers': answers}),
+      body: jsonEncode({
+        'answers': answers,
+        if (parPerfeito != null) 'par_perfeito': parPerfeito,
+      }),
     );
   }
 

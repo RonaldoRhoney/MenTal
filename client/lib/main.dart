@@ -333,9 +333,18 @@ class _AppEntryPointState extends State<AppEntryPoint> {
   // maioridade confirmada (achado crítico de segurança, 09/10/2026).
   Future<void> _maybeMigrateGuestProgress(ApiClient client) async {
     final answers = await GuestChallengeService.getAnswers();
-    if (answers.isEmpty) return;
+    final parPerfeito = await GuestChallengeService.getParPerfeitoProgress();
+    if (answers.isEmpty && parPerfeito == null) return;
     try {
-      await client.migrateGuestProgress(answers.map((a) => a.toJson()).toList());
+      await client.migrateGuestProgress(
+        answers.map((a) => a.toJson()).toList(),
+        parPerfeito: parPerfeito == null
+            ? null
+            : {
+                'round_token': parPerfeito.roundToken,
+                'item_ids': parPerfeito.firstTryCorrectItemIds,
+              },
+      );
       await GuestChallengeService.clearProgress();
     } on ApiException {
       // Falha silenciosa (ver comentário de _attempt em api_client.dart,

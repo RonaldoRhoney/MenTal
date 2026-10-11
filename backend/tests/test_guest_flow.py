@@ -4,7 +4,7 @@ from sqlalchemy import select
 
 from app import config, models
 from app.db import SessionLocal
-from app.routers.guest import _pick_challenge_for_guest
+from app.routers.guest import _pick_challenge_for_guest, _pick_par_perfeito_items_for_guest
 
 from .conftest import auth_header
 
@@ -23,8 +23,16 @@ def test_guest_worlds_lists_first_territory_of_each_world(client):
     assert body, "esperado pelo menos 1 mundo"
     world_ids = {w["world_id"] for w in body}
     assert "idiomas" in world_ids
+    # Pedido de Rhoney (10/10/2026): Mundo dos Idiomas abre no Par
+    # Perfeito de Inglês básico, não no território de menor
+    # display_order (que continua sendo libras, só não é mais usado
+    # como entrada guest deste Mundo específico).
     idiomas_entry = next(w for w in body if w["world_id"] == "idiomas")
-    assert idiomas_entry["territory_id"] == "libras"
+    assert idiomas_entry["territory_id"] == config.GUEST_PAR_PERFEITO_TERRITORY_ID
+    assert idiomas_entry["game_type"] == "par_perfeito"
+
+    other_entry = next(w for w in body if w["world_id"] != "idiomas")
+    assert other_entry["game_type"] == "quiz"
 
 
 def test_guest_next_challenge_works_without_auth(client):
@@ -310,3 +318,171 @@ def test_guest_endpoints_are_rate_limited(client):
     assert resp.status_code in (200, 429)
     if resp.status_code == 429:
         assert resp.json()["error"]["code"] == "RATE_LIMIT_EXCEEDED"
+
+
+def test_guest_par_perfeito_round_works_without_auth(client):
+    resp = client.get("/guest/par-perfeito/round")
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["territory_id"] == config.GUEST_PAR_PERFEITO_TERRITORY_ID
+    assert len(body["items"]) == config.GUEST_PAR_PERFEITO_ROUND_SIZE
+    assert body["round_token"]
+    for item in body["items"]:
+        assert item["word_en"]
+        assert item["meaning_pt"]
+
+
+def test_migrate_progress_awards_real_xp_for_guest_par_perfeito_round(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    round_resp = client.get("/guest/par-perfeito/round")
+    round_body = round_resp.json()
+    item_ids = [item["id"] for item in round_body["items"]]
+
+    xp_before = client.get("/progress", headers=headers).json()["xp_total"]
+    migrate_resp = client.post(
+        "/guest/migrate-progress",
+        json={"par_perfeito": {"round_token": round_body["round_token"], "item_ids": item_ids}},
+        headers=headers,
+    )
+    assert migrate_resp.status_code == 200
+    assert migrate_resp.json()["xp_awarded_total"] > 0
+
+    xp_after = client.get("/progress", headers=headers).json()["xp_total"]
+    assert xp_after - xp_before == migrate_resp.json()["xp_awarded_total"]
+
+
+def test_migrate_progress_par_perfeito_is_idempotent(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    round_resp = client.get("/guest/par-perfeito/round")
+    round_body = round_resp.json()
+    item_ids = [item["id"] for item in round_body["items"]]
+    payload = {"par_perfeito": {"round_token": round_body["round_token"], "item_ids": item_ids}}
+
+    first = client.post("/guest/migrate-progress", json=payload, headers=headers)
+    second = client.post("/guest/migrate-progress", json=payload, headers=headers)
+    assert first.json()["xp_awarded_total"] > 0
+    assert second.json()["xp_awarded_total"] == 0
+
+
+def test_migrate_progress_rejects_par_perfeito_item_ids_outside_the_served_round(client):
+    """
+    Mesma defesa do achado A2 do fluxo autenticado (par_perfeito.py): um
+    item_id real do território, mas NUNCA incluído na rodada provada
+    pelo round_token, não pode ser creditado — fecha o garimpo de ids
+    somados de várias chamadas de GET /round nunca realmente jogadas.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    round_a = client.get("/guest/par-perfeito/round").json()
+    round_b = client.get("/guest/par-perfeito/round").json()
+    foreign_item_ids = [i for i in (item["id"] for item in round_b["items"]) if i not in {it["id"] for it in round_a["items"]}]
+
+    xp_before = client.get("/progress", headers=headers).json()["xp_total"]
+    resp = client.post(
+        "/guest/migrate-progress",
+        json={"par_perfeito": {"round_token": round_a["round_token"], "item_ids": foreign_item_ids}},
+        headers=headers,
+    )
+    assert resp.status_code == 200
+    assert resp.json()["xp_awarded_total"] == 0
+    xp_after = client.get("/progress", headers=headers).json()["xp_total"]
+    assert xp_after == xp_before
+
+
+def test_migrate_progress_rejects_forged_par_perfeito_round_token(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    round_body = client.get("/guest/par-perfeito/round").json()
+    item_ids = [item["id"] for item in round_body["items"]]
+
+    xp_before = client.get("/progress", headers=headers).json()["xp_total"]
+    resp = client.post(
+        "/guest/migrate-progress",
+        json={"par_perfeito": {"round_token": "forjado.assinatura", "item_ids": item_ids}},
+        headers=headers,
+    )
+    assert resp.status_code == 200
+    assert resp.json()["xp_awarded_total"] == 0
+    xp_after = client.get("/progress", headers=headers).json()["xp_total"]
+    assert xp_after == xp_before
+
+
+def test_migrate_progress_rejects_a_serve_or_completion_token_as_par_perfeito_round_token(client):
+    """
+    Achado de auditoria (mental-security, 10/10/2026): serve_token e
+    completion_token (do quiz) não têm territory_id/round_item_ids no
+    payload, então nunca passam a checagem de round_token mesmo sendo
+    assinaturas HMAC válidas — confirma que não dá pra reaproveitar um
+    recibo de um fluxo guest pro outro.
+    """
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    quiz_next = client.get("/guest/challenges/next", params={"territory_id": "libras"})
+    serve_token = quiz_next.json()["serve_token"]
+
+    round_body = client.get("/guest/par-perfeito/round").json()
+    item_ids = [item["id"] for item in round_body["items"]]
+
+    xp_before = client.get("/progress", headers=headers).json()["xp_total"]
+    resp = client.post(
+        "/guest/migrate-progress",
+        json={"par_perfeito": {"round_token": serve_token, "item_ids": item_ids}},
+        headers=headers,
+    )
+    assert resp.status_code == 200
+    assert resp.json()["xp_awarded_total"] == 0
+    xp_after = client.get("/progress", headers=headers).json()["xp_total"]
+    assert xp_after == xp_before
+
+
+def test_migrate_progress_rejects_more_par_perfeito_item_ids_than_a_round(client):
+    user = str(uuid.uuid4())
+    headers = auth_header(user)
+    client.post("/age-gate", json={"age_confirmed": True}, headers=headers)
+
+    round_body = client.get("/guest/par-perfeito/round").json()
+    too_many = [item["id"] for item in round_body["items"]] + ["x"] * config.GUEST_PAR_PERFEITO_ROUND_SIZE
+
+    resp = client.post(
+        "/guest/migrate-progress",
+        json={"par_perfeito": {"round_token": round_body["round_token"], "item_ids": too_many}},
+        headers=headers,
+    )
+    assert resp.status_code == 422
+
+
+def test_guest_par_perfeito_round_never_exposes_more_than_the_preview_sized_deck(client):
+    """
+    Mesmo raciocínio de test_guest_next_challenge_never_exposes_more_
+    than_the_preview_sized_deck (achado C1), generalizado pro Par
+    Perfeito (achado da auditoria de 10/10/2026): _pick_par_perfeito_
+    items_for_guest nunca deve expor mais que GUEST_MAX_DISTINCT_
+    CHALLENGES item_ids DIFERENTES pro mesmo (IP, território), mesmo
+    chamado bem mais vezes que uma visita guest real pediria.
+    """
+    territory_id = config.GUEST_PAR_PERFEITO_TERRITORY_ID
+    with SessionLocal() as db:
+        candidates = db.execute(
+            select(models.ParPerfeitoItem)
+            .where(models.ParPerfeitoItem.territory_id == territory_id)
+            .where(models.ParPerfeitoItem.difficulty_level == 1)
+        ).scalars().all()
+
+    seen_ids = set()
+    fake_ip = "203.0.113.99"
+    for _ in range(10):
+        chosen = _pick_par_perfeito_items_for_guest(candidates, fake_ip, territory_id, config.GUEST_PAR_PERFEITO_ROUND_SIZE)
+        seen_ids.update(item.id for item in chosen)
+    assert len(seen_ids) <= config.GUEST_MAX_DISTINCT_CHALLENGES

@@ -50,11 +50,40 @@ class GuestAnswer {
       );
 }
 
+/// Pedido de Rhoney (10/10/2026) — progresso local do fluxo guest de Par
+/// Perfeito (Inglês básico), equivalente ao GuestAnswer acima mas pro
+/// formato de pareamento: guarda só o round_token (prova de que o
+/// servidor serviu estes item_ids juntos) e os item_ids que o visitante
+/// formou sem erro — o XP de verdade só é calculado em
+/// /guest/migrate-progress, nunca aqui.
+class GuestParPerfeitoProgress {
+  const GuestParPerfeitoProgress({
+    required this.roundToken,
+    required this.firstTryCorrectItemIds,
+  });
+
+  final String roundToken;
+  final List<String> firstTryCorrectItemIds;
+
+  Map<String, dynamic> toJson() => {
+        'round_token': roundToken,
+        'item_ids': firstTryCorrectItemIds,
+      };
+
+  static GuestParPerfeitoProgress fromJson(Map<String, dynamic> json) =>
+      GuestParPerfeitoProgress(
+        roundToken: json['round_token'] as String,
+        firstTryCorrectItemIds:
+            (json['item_ids'] as List).cast<String>(),
+      );
+}
+
 class GuestChallengeService {
   GuestChallengeService._();
 
   static const _kTerritoryIdKey = 'guest_flow_territory_id_v1';
   static const _kAnswersKey = 'guest_flow_answers_v1';
+  static const _kParPerfeitoKey = 'guest_flow_par_perfeito_v1';
   static const _kDismissedKey = 'guest_flow_dismissed_v1';
 
   static const maxQuestions = 3;
@@ -93,6 +122,28 @@ class GuestChallengeService {
     } catch (_) {}
   }
 
+  static Future<GuestParPerfeitoProgress?> getParPerfeitoProgress() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final raw = prefs.getString(_kParPerfeitoKey);
+      if (raw == null) return null;
+      return GuestParPerfeitoProgress.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  // Só uma rodada por visita guest (os 3 pares da amostra) — sobrescreve
+  // qualquer tentativa anterior, mesmo padrão de "1 sessão guest, nunca
+  // acumula entre jogadas" já aceito pro quiz (addAnswer acima soma,
+  // porque ali são 3 perguntas distintas; aqui é 1 rodada só).
+  static Future<void> setParPerfeitoProgress(GuestParPerfeitoProgress progress) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_kParPerfeitoKey, jsonEncode(progress.toJson()));
+    } catch (_) {}
+  }
+
   /// Botão "Já tenho conta" (pode pular o fluxo guest a qualquer
   /// momento, mesmo sem ter respondido nenhuma questão ainda) e também
   /// marcado automaticamente depois que a migração pós-login é
@@ -123,6 +174,7 @@ class GuestChallengeService {
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove(_kTerritoryIdKey);
       await prefs.remove(_kAnswersKey);
+      await prefs.remove(_kParPerfeitoKey);
     } catch (_) {}
   }
 }

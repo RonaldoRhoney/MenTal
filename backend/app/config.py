@@ -620,6 +620,26 @@ RATE_LIMIT_BATTLE_CREATE = (10, 60.0)
 # bastante pro uso normal, baixo o bastante pra não virar um jeito
 # gratuito de varrer conteúdo sem conta.
 RATE_LIMIT_GUEST = (20, 60.0)
+# Pedido de Rhoney (10/10/2026): os 3 primeiros desafios do fluxo guest
+# do Mundo dos Idiomas passam a ser Par Perfeito (Inglês básico) em vez
+# do quiz de Libras. Allow-list de UM território só, deliberadamente
+# hardcoded (não "qualquer território de Par Perfeito") — mesmo
+# raciocínio de _is_guest_allowed_territory: a superfície exposta sem
+# conta precisa ser o menor conjunto possível, nunca inferida por
+# padrão de nome. Rodada reduzida pra 3 pares (não os 5 do jogo
+# autenticado) pra bater com o tamanho do preview guest já estabelecido
+# (GuestChallengeService.maxQuestions).
+GUEST_PAR_PERFEITO_TERRITORY_ID = "ingles_parperfeito_basico"
+GUEST_PAR_PERFEITO_ROUND_SIZE = 3
+# Achado de auditoria de segurança (mental-security, 10/10/2026):
+# POST /guest/migrate-progress nunca teve rate limit — uma conta JÁ
+# LOGADA podia repetir indefinidamente "pedir rodada guest + migrar"
+# sem nunca ter jogado de verdade. A idempotência por item já impede
+# crédito duplo do MESMO par/desafio, e o teto diário de XP (150)
+# limita o estrago agregado, mas nada impedia a chamada repetida em
+# si. Janela generosa o bastante pra um retry legítimo de rede (a
+# migração roda uma vez, automaticamente, após o cadastro).
+RATE_LIMIT_GUEST_MIGRATE = (10, 60.0)
 RATE_LIMIT_BATTLE_MY_CHALLENGE = (20, 60.0)
 RATE_LIMIT_MOVEMENT_COLLECT = (30, 60.0)
 # MUNDO_IDIOMAS_INGLES_PAR_PERFEITO_V1.md §3/§10 — formato "Pares de

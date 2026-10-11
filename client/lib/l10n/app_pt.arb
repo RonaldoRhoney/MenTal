@@ -3582,6 +3582,10 @@
   "@guestAlreadyHaveAccount": {
     "description": "Button that skips the guest flow and goes straight to login"
   },
+  "guestParPerfeitoTitle": "Par Perfeito — Inglês básico",
+  "@guestParPerfeitoTitle": {
+    "description": "Title of the guest (no-login) Par Perfeito preview screen"
+  },
   "guestQuestionCounter": "Questão {current} de {total}",
   "@guestQuestionCounter": {
     "description": "Progress counter inside the guest challenge screen",

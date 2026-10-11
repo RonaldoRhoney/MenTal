@@ -31,10 +31,16 @@ class _PartialResultScreenState extends State<PartialResultScreen> {
 
   Future<void> _loadScore() async {
     final answers = await GuestChallengeService.getAnswers();
+    final parPerfeito = await GuestChallengeService.getParPerfeitoProgress();
     if (!mounted) return;
+    // Par Perfeito guest não tem XP provisório calculado no cliente (o
+    // formato nunca mostra XP por par antes de logar, só quando a
+    // migração processa de verdade) — conta pro placar de acerto, não
+    // pro provisório de XP.
+    final parPerfeitoMatched = parPerfeito?.firstTryCorrectItemIds.length ?? 0;
     setState(() {
-      _total = answers.length;
-      _correct = answers.where((a) => a.isCorrect).length;
+      _total = answers.length + (parPerfeito == null ? 0 : parPerfeito.firstTryCorrectItemIds.length);
+      _correct = answers.where((a) => a.isCorrect).length + parPerfeitoMatched;
       _xpTotal = answers.fold(0, (sum, a) => sum + a.xpPreview);
       _loading = false;
     });

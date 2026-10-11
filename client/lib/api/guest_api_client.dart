@@ -83,4 +83,14 @@ class GuestApiClient {
     );
     return body as Map<String, dynamic>;
   }
+
+  // Pedido de Rhoney (10/10/2026): os 3 primeiros desafios sem login do
+  // Mundo dos Idiomas passam a ser Par Perfeito (Inglês básico), não o
+  // quiz de múltipla escolha. round_token (no corpo da resposta) prova
+  // ao backend que estes item_ids foram servidos juntos — exigido por
+  // POST /guest/migrate-progress antes de creditar XP real.
+  Future<Map<String, dynamic>> nextParPerfeitoRound() async {
+    final body = await _get(_uri('/guest/par-perfeito/round'));
+    return body as Map<String, dynamic>;
+  }
 }

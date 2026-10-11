@@ -4570,6 +4570,12 @@ abstract class AppLocalizations {
   /// **'Já tenho conta'**
   String get guestAlreadyHaveAccount;
 
+  /// Title of the guest (no-login) Par Perfeito preview screen
+  ///
+  /// In pt, this message translates to:
+  /// **'Par Perfeito — Inglês básico'**
+  String get guestParPerfeitoTitle;
+
   /// Progress counter inside the guest challenge screen
   ///
   /// In pt, this message translates to:

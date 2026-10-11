@@ -16,6 +16,44 @@ router = APIRouter()
 _ROUND_SIZE = 5
 
 
+def credit_match_if_new(db: Session, user_id: str, item_id: str, territory_id: str, today) -> int:
+    """
+    Núcleo de crédito de XP de um par do Par Perfeito — extraído de
+    complete_par_perfeito_round pra ser reaproveitado por
+    routers/guest.py (migração de progresso guest, 10/10/2026): mesma
+    idempotência (nunca credita duas vezes o mesmo item+usuário) e
+    mesmo commit atômico de Match+XP, nunca uma segunda implementação
+    da regra. Retorna o XP de perfil creditado (0 se já tinha sido
+    creditado antes, ou se o item não pertence ao território informado).
+    """
+    item = db.get(models.ParPerfeitoItem, item_id)
+    if item is None or item.territory_id != territory_id:
+        return 0
+
+    already_awarded = (
+        db.execute(
+            select(models.ParPerfeitoMatch.id)
+            .where(models.ParPerfeitoMatch.user_id == user_id)
+            .where(models.ParPerfeitoMatch.item_id == item_id)
+            .limit(1)
+        ).scalar_one_or_none()
+        is not None
+    )
+    if already_awarded:
+        return 0
+
+    base_xp = scoring.xp_base_for(item.difficulty_level)
+    profile = services.get_or_create_profile(db, user_id, for_update=True)
+    db.refresh(profile, with_for_update=True)
+    answer_xp = economy.apply_answer_xp(db, user_id, base_xp, today)
+    profile.xp_total += answer_xp.profile_xp
+    profile.level = scoring.level_from_xp(profile.xp_total)
+    db.add(models.ParPerfeitoMatch(user_id=user_id, item_id=item_id, xp_awarded=answer_xp.profile_xp))
+    db.commit()
+    services.apply_xp_to_territory(db, user_id, territory_id, answer_xp.territory_xp)
+    return answer_xp.profile_xp
+
+
 @router.get("/par-perfeito/round", response_model=schemas.ParPerfeitoRoundOut)
 def next_par_perfeito_round(
     territory_id: str,
@@ -112,36 +150,6 @@ def complete_par_perfeito_round(
     for item_id in body.item_ids:
         if item_id not in allowed_item_ids:
             continue
-        item = db.get(models.ParPerfeitoItem, item_id)
-        if item is None or item.territory_id != body.territory_id:
-            continue
-
-        already_awarded = (
-            db.execute(
-                select(models.ParPerfeitoMatch.id)
-                .where(models.ParPerfeitoMatch.user_id == user_id)
-                .where(models.ParPerfeitoMatch.item_id == item_id)
-                .limit(1)
-            ).scalar_one_or_none()
-            is not None
-        )
-        if already_awarded:
-            continue
-
-        base_xp = scoring.xp_base_for(item.difficulty_level)
-        profile = services.get_or_create_profile(db, user_id, for_update=True)
-        db.refresh(profile, with_for_update=True)
-        answer_xp = economy.apply_answer_xp(db, user_id, base_xp, today)
-        profile.xp_total += answer_xp.profile_xp
-        profile.level = scoring.level_from_xp(profile.xp_total)
-        # Achado de qualidade de código (09/10/2026): o Match era
-        # inserido DEPOIS do commit do XP — uma corrida (crash entre os
-        # dois commits) podia deixar o XP creditado sem o registro que
-        # prova idempotência, abrindo brecha pra crédito duplo num
-        # reenvio. Agora os dois commitam juntos, atomicamente.
-        db.add(models.ParPerfeitoMatch(user_id=user_id, item_id=item_id, xp_awarded=answer_xp.profile_xp))
-        db.commit()
-        services.apply_xp_to_territory(db, user_id, body.territory_id, answer_xp.territory_xp)
-        xp_awarded_total += answer_xp.profile_xp
+        xp_awarded_total += credit_match_if_new(db, user_id, item_id, body.territory_id, today)
 
     return schemas.ParPerfeitoCompleteRoundResponse(xp_awarded_total=xp_awarded_total)

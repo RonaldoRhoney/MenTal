@@ -2661,6 +2661,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get guestAlreadyHaveAccount => 'Já tenho conta';
 
   @override
+  String get guestParPerfeitoTitle => 'Par Perfeito — Inglês básico';
+
+  @override
   String guestQuestionCounter(int current, int total) {
     return 'Questão $current de $total';
   }

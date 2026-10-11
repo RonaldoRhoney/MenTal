@@ -75,7 +75,9 @@ from sqlalchemy.orm import Session
 from .. import config, models, schemas, scoring, services
 from ..auth import require_age_confirmed_user_id
 from ..db import get_db
+from ..timeutil import brasilia_today
 from .challenges import submit_answer as _submit_answer
+from .par_perfeito import credit_match_if_new as _credit_par_perfeito_match_if_new
 
 router = APIRouter(prefix="/guest", tags=["guest"])
 
@@ -102,6 +104,51 @@ def _pick_challenge_for_guest(candidates: list[models.Challenge], ip: str, terri
     challenge = random.choice(candidates)
     seen.append((challenge.id, now))
     return challenge
+
+
+# Achado de auditoria de segurança (mental-security, 10/10/2026): GET
+# /guest/par-perfeito/round sorteava livre entre TODOS os itens do
+# território em toda chamada, sem o mesmo teto de ids DISTINTOS por
+# (IP, território) que _pick_challenge_for_guest já impõe pro quiz —
+# reabria a forma do achado C1 (território inteiro "garimpável" num
+# IP só, só que sem oráculo de resposta certa pra proteger aqui, já
+# que o formato nunca escondeu resposta). Mesmo padrão de memória/
+# janela, generalizado pra devolver ROUND_SIZE itens por chamada em
+# vez de 1: enquanto o IP não tiver visto GUEST_MAX_DISTINCT_CHALLENGES
+# itens diferentes daquele território, cada rodada completa o que
+# falta com itens novos; depois disso, toda rodada sorteia só dentre
+# os já vistos — nunca mais o território inteiro.
+_guest_served_par_perfeito_item_ids: dict[str, list[tuple[str, float]]] = defaultdict(list)
+
+
+def _pick_par_perfeito_items_for_guest(
+    candidates: list[models.ParPerfeitoItem], ip: str, territory_id: str, round_size: int
+) -> list[models.ParPerfeitoItem]:
+    key = f"pp:{ip}:{territory_id}"
+    now = time.monotonic()
+    cutoff = now - config.GUEST_DISTINCT_WINDOW_SECONDS
+    seen = _guest_served_par_perfeito_item_ids[key]
+    while seen and seen[0][1] < cutoff:
+        seen.pop(0)
+    seen_ids = {item_id for item_id, _ in seen}
+    by_id = {c.id: c for c in candidates}
+
+    if len(seen_ids) >= config.GUEST_MAX_DISTINCT_CHALLENGES:
+        pool = [by_id[i] for i in seen_ids if i in by_id]
+        return random.sample(pool, k=min(round_size, len(pool)))
+
+    room = config.GUEST_MAX_DISTINCT_CHALLENGES - len(seen_ids)
+    unseen = [c for c in candidates if c.id not in seen_ids]
+    new_items = random.sample(unseen, k=min(room, round_size, len(unseen))) if unseen else []
+    for item in new_items:
+        seen.append((item.id, now))
+
+    remaining = round_size - len(new_items)
+    if remaining > 0:
+        new_ids = {item.id for item in new_items}
+        fill_pool = [by_id[i] for i in (seen_ids | new_ids) if i in by_id and i not in new_ids]
+        new_items += random.sample(fill_pool, k=min(remaining, len(fill_pool))) if fill_pool else []
+    return new_items
 
 
 def _client_ip(request: Request) -> str:
@@ -172,6 +219,12 @@ class GuestWorldOut(BaseModel):
     world_id: str
     world_name: str
     territory_id: str
+    # Pedido de Rhoney (10/10/2026): o Mundo dos Idiomas passou a abrir
+    # no jogo Par Perfeito (pareamento de cards), não no quiz de
+    # múltipla escolha — o client precisa saber qual tela abrir.
+    # "quiz" é o default/único valor pra todo mundo que não tiver essa
+    # regra especial (nunca inferido do nome do território).
+    game_type: str = "quiz"
 
 
 @router.get("/worlds", response_model=list[GuestWorldOut])
@@ -181,6 +234,21 @@ def list_guest_worlds(request: Request, db: Session = Depends(get_db)):
     worlds = db.execute(select(models.World).order_by(models.World.display_order)).scalars().all()
     out: list[GuestWorldOut] = []
     for world in worlds:
+        # Pedido de Rhoney (10/10/2026): no Mundo dos Idiomas, os 3
+        # primeiros desafios sem login são Par Perfeito de Inglês
+        # básico, não o território de menor display_order (hoje
+        # Libras). Território fixo (config.GUEST_PAR_PERFEITO_
+        # TERRITORY_ID), nunca inferido — mesma allow-list usada por
+        # _is_guest_allowed_par_perfeito_territory abaixo.
+        if world.id == "idiomas":
+            out.append(GuestWorldOut(
+                world_id=world.id,
+                world_name=world.name,
+                territory_id=config.GUEST_PAR_PERFEITO_TERRITORY_ID,
+                game_type="par_perfeito",
+            ))
+            continue
+
         first_territory = db.execute(
             select(models.Territory)
             .where(models.Territory.world_id == world.id)
@@ -191,6 +259,16 @@ def list_guest_worlds(request: Request, db: Session = Depends(get_db)):
             continue
         out.append(GuestWorldOut(world_id=world.id, world_name=world.name, territory_id=first_territory.id))
     return out
+
+
+def _is_guest_allowed_par_perfeito_territory(territory_id: str) -> bool:
+    """
+    Allow-list de UM território só, deliberadamente hardcoded (ver
+    config.GUEST_PAR_PERFEITO_TERRITORY_ID) — nunca "qualquer território
+    de Par Perfeito", mesmo espírito restritivo de
+    _is_guest_allowed_territory pro quiz.
+    """
+    return territory_id == config.GUEST_PAR_PERFEITO_TERRITORY_ID
 
 
 @router.get("/challenges/next", response_model=schemas.ChallengeOut)
@@ -254,6 +332,52 @@ def guest_next_challenge(request: Request, territory_id: str, db: Session = Depe
     )
 
 
+class GuestParPerfeitoRoundOut(BaseModel):
+    territory_id: str
+    difficulty_level: int
+    items: list[schemas.ParPerfeitoItemOut]
+    # Prova de que o servidor serviu ESTES item_ids juntos, nesta
+    # rodada — exigido por POST /guest/migrate-progress antes de
+    # creditar XP real, mesmo raciocínio do achado A2 (ver
+    # par_perfeito.py: GET /round sempre precisa registrar o que
+    # sorteou, nunca confiar no que o client diz ter formado).
+    round_token: str
+
+
+@router.get("/par-perfeito/round", response_model=GuestParPerfeitoRoundOut)
+def guest_next_par_perfeito_round(request: Request, db: Session = Depends(get_db)):
+    services.enforce_rate_limit("guest_par_perfeito_round", _client_ip(request), max_calls=config.RATE_LIMIT_GUEST[0], window_seconds=config.RATE_LIMIT_GUEST[1])
+
+    territory_id = config.GUEST_PAR_PERFEITO_TERRITORY_ID
+    candidates = (
+        db.execute(
+            select(models.ParPerfeitoItem)
+            .where(models.ParPerfeitoItem.territory_id == territory_id)
+            .where(models.ParPerfeitoItem.difficulty_level == 1)
+        )
+        .scalars()
+        .all()
+    )
+    if not candidates:
+        raise HTTPException(status_code=404, detail={"error": {"code": "NO_PAR_PERFEITO_ITEMS_AVAILABLE", "message": territory_id}})
+
+    chosen = _pick_par_perfeito_items_for_guest(
+        candidates, _client_ip(request), territory_id, config.GUEST_PAR_PERFEITO_ROUND_SIZE
+    )
+    round_token = _sign({
+        "round_item_ids": [item.id for item in chosen],
+        "territory_id": territory_id,
+        "exp": time.time() + config.GUEST_RECEIPT_TTL_SECONDS,
+    })
+
+    return GuestParPerfeitoRoundOut(
+        territory_id=territory_id,
+        difficulty_level=chosen[0].difficulty_level,
+        items=[schemas.ParPerfeitoItemOut(id=item.id, word_en=item.word_en, meaning_pt=item.meaning_pt) for item in chosen],
+        round_token=round_token,
+    )
+
+
 class GuestAnswerRequest(BaseModel):
     submitted_answer: str = Field(max_length=300)
     # Emitido por GET /guest/challenges/next — prova que o servidor
@@ -312,8 +436,21 @@ class GuestMigrateAnswer(BaseModel):
     completion_token: str
 
 
+class GuestMigrateParPerfeito(BaseModel):
+    # Emitido por GET /guest/par-perfeito/round — prova que ESTES
+    # item_ids foram servidos juntos, como uma rodada real (mesmo
+    # raciocínio do achado A2 em par_perfeito.py).
+    round_token: str
+    # Pares que o visitante formou sem nenhum erro antes, só reportado
+    # aqui no fim (mesmo contrato de POST /par-perfeito/complete-round
+    # autenticado) — teto = GUEST_PAR_PERFEITO_ROUND_SIZE, nunca mais
+    # que uma rodada guest inteira.
+    item_ids: list[str] = Field(max_length=config.GUEST_PAR_PERFEITO_ROUND_SIZE)
+
+
 class GuestMigrateRequest(BaseModel):
-    answers: list[GuestMigrateAnswer] = Field(max_length=3)
+    answers: list[GuestMigrateAnswer] = Field(default_factory=list, max_length=3)
+    par_perfeito: GuestMigrateParPerfeito | None = None
 
 
 class GuestMigrateResponse(BaseModel):
@@ -326,6 +463,10 @@ def migrate_guest_progress(
     user_id: str = Depends(require_age_confirmed_user_id),
     db: Session = Depends(get_db),
 ):
+    services.enforce_rate_limit(
+        "guest_migrate_progress", user_id, max_calls=config.RATE_LIMIT_GUEST_MIGRATE[0], window_seconds=config.RATE_LIMIT_GUEST_MIGRATE[1]
+    )
+
     xp_awarded_total = 0
     for item in body.answers:
         # Prova de que ESTE (challenge_id, submitted_answer) foi
@@ -376,6 +517,27 @@ def migrate_guest_progress(
             db,
         )
         xp_awarded_total += answer_out.xp_awarded
+
+    if body.par_perfeito is not None:
+        round_payload = _verify(body.par_perfeito.round_token)
+        territory_id = config.GUEST_PAR_PERFEITO_TERRITORY_ID
+        territory = db.get(models.Territory, territory_id)
+        if (
+            round_payload is not None
+            and round_payload.get("territory_id") == territory_id
+            and _is_guest_allowed_par_perfeito_territory(territory_id)
+            and territory is not None
+            and services.is_territory_unlocked(db, user_id, territory)
+        ):
+            # Mesma defesa do achado A2: só credita item_id que estava
+            # DENTRO desta rodada servida — nunca a soma de várias
+            # chamadas de GET /round nunca realmente jogadas.
+            allowed_item_ids = set(round_payload.get("round_item_ids") or [])
+            today = brasilia_today()
+            for item_id in body.par_perfeito.item_ids:
+                if item_id not in allowed_item_ids:
+                    continue
+                xp_awarded_total += _credit_par_perfeito_match_if_new(db, user_id, item_id, territory_id, today)
 
     return GuestMigrateResponse(xp_awarded_total=xp_awarded_total)
 
